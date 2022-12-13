@@ -1,41 +1,39 @@
 ---
 logo: /images/footer-logo.svg
-logo_url: /home
-copyright: "MyCompany. All rights reserved."
+logo_url: /
+copyright: "CHIPS Alliance"
 social:
-  - link: "https://www.facebook.com/mycompany"
-    icon: "ph-facebook-logo"
-  - link: "https://www.instagram.com/mycompany"
-    icon: "ph-instagram-logo"
-  - link: "https://www.twitter.com/mycompany"
+  - link: "https://twitter.com/chipsalliance"
     icon: "ph-twitter-logo"
-  - link: "https://www.github.com/mycompany"
+  - link: "https://github.com/chipsalliance"
     icon: "ph-github-logo"
-  - link: "https://www.youtube.com/mycompany"
-    icon: "ph-youtube-logo"
+  - link: "https://www.linkedin.com/company/chipsalliance/"
+    icon: "ph-linkein-logo"
 sections:
   -
-    title: Main Pages
+    title: About
     links:
-      - link: "/"
-        text: "Home"
-      - link: "/feature"
-        text: "Feature"
-      - link: "/pricing"
-        text: "Price"
-      - link: "/about"
-        text: "About"
+      - link: "/about/members"
+        text: "Members"
+      - link: "/about/governance"
+        text: "Governance"
+      - link: "/about/contact"
+        text: "Contact"
+      - link: "/about/getting-started"
+        text: "Getting Started"
   -
     title: "Community"
     links:
+      - link: "/projects"
+        text: "Projects"
+      - link: "/events"
+        text: "Events"
+  -
+    title: "News"
+    links:
+      - link: "/category/announcements"
+        text: "Announcements"
       - link: "/blog"
         text: "Blog"
-      - link: "/404.html"
-        text: "404"
-  -
-    title: "Company"
-    links:
-      - link: "/contact"
-        text: "Contact"
-      - link: "/privacy"
-        text: "Privacy and Policy"
+      - link: "/annual-report"
+        text: "Annual Report"

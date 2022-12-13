@@ -1,6 +1,6 @@
-baseURL = ''
+baseURL = 'https://chipsalliance.org/'
 languageCode = 'en-us'
-title = 'Sendit'
+title = 'CHIPS Alliance'
 
 
 [module]
