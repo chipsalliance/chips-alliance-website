@@ -53,13 +53,7 @@
   padding-bottom: 0;
   margin-right: 0;
   font-size: 1.25rem;
-  width: 155px;
-}
-
-@include media-breakpoint-down-sm {
-  .navbar-brand {
-    flex: 1;
-  }
+  width: 170px;
 }
 
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
@@ -110,19 +104,6 @@
       right: 1.5rem;
       left: unset;
       box-shadow: 0px 40px 60px rgba(189, 189, 189, 0.25);
-    }
-    &-toggle {
-      &:after {
-        content: "\f107";
-        font-family: FontAwesome;
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        border-top: none;
-        padding: $base-padding * 0;
-        margin-right: 0 !important;
-      }
     }
     li.dropdown-megamenu-column-items {
       padding: 1.25rem 0rem;
@@ -236,15 +217,6 @@
         margin-left: -3rem;
         border-radius: 0;
         margin-top: -60px;
-      }
-      &-toggle {
-        &:after {
-          font-size: 1rem;
-          position: relative;
-          transform: translateY(-5%);
-          padding: 0;
-          margin: 0;
-        }
       }
       &-item {
         text-align: left;
