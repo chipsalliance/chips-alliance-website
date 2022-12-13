@@ -17,8 +17,10 @@
     {{ $style := resources.Get "/scss/theme.scss" | resources.ToCSS |
     resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{$style.Permalink}}" />
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon/cropped-favicon-1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/images/favicon/cropped-favicon-1-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/images/favicon/cropped-favicon-1-180x180.png" />
+    <meta name="msapplication-TileImage" content="/images/favicon/cropped-favicon-1-270x270.png" />
   </head>
   <body>
     {{ partial "navbar.html" . }} {{ block "main" . }} {{ end }} {{ partial
