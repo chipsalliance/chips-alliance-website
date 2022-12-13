@@ -3,125 +3,122 @@
 {{ $current := . }}
 <header>
    <nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id="mainnavigationBar">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="/">
-            <img src="/images/chips_alliance.svg" alt="Nav-Logo" />
-         </a>
-         <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-         >
-            <span class="navbar-toggler-default">
-               <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-               >
-                  <line
-                     x1="3.5"
-                     y1="5.5"
-                     x2="21.5"
-                     y2="5.5"
-                     stroke="#292D32"
-                     stroke-width="3"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                  />
-                  <line
-                     x1="4.5"
-                     y1="12.5"
-                     x2="21.5"
-                     y2="12.5"
-                     stroke="#292D32"
-                     stroke-width="3"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                  />
-                  <line
-                     x1="11.5"
-                     y1="19.5"
-                     x2="21.5"
-                     y2="19.5"
-                     stroke="#292D32"
-                     stroke-width="3"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                  />
-               </svg>
-            </span>
-            <span class="navbar-toggler-toggled">
-               <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 28 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-               >
-                  <path
-                     d="M21.5 6.5L6.5 21.5"
-                     stroke="#404152"
-                     stroke-width="3"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                  />
-                  <path
-                     d="M21.5 21.5L6.5 6.5"
-                     stroke="#404152"
-                     stroke-width="3"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                  />
-               </svg>
-            </span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-20 mb-lg-0">
+      <a class="navbar-brand" href="/">
+         <img src="/images/chips_alliance.svg" alt="Nav-Logo" />
+      </a>
+      <button
+         class="navbar-toggler"
+         type="button"
+         data-bs-toggle="collapse"
+         data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent"
+         aria-expanded="false"
+         aria-label="Toggle navigation"
+      >
+         <span class="navbar-toggler-default">
+            <svg
+               width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <line
+                  x1="3.5"
+                  y1="5.5"
+                  x2="21.5"
+                  y2="5.5"
+                  stroke="#292D32"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               />
+               <line
+                  x1="4.5"
+                  y1="12.5"
+                  x2="21.5"
+                  y2="12.5"
+                  stroke="#292D32"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               />
+               <line
+                  x1="11.5"
+                  y1="19.5"
+                  x2="21.5"
+                  y2="19.5"
+                  stroke="#292D32"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               />
+            </svg>
+         </span>
+         <span class="navbar-toggler-toggled">
+            <svg
+               width="20"
+               height="20"
+               viewBox="0 0 28 28"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  d="M21.5 6.5L6.5 21.5"
+                  stroke="#404152"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               />
+               <path
+                  d="M21.5 21.5L6.5 6.5"
+                  stroke="#404152"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+               />
+            </svg>
+         </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav mx-auto mb-20 mb-lg-0">
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "about" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                  About
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Members</a>
+                  <a class="dropdown-item" href="#">Governance</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                  <a class="dropdown-item" href="#">Getting Started</a>
+               </div>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {{ if eq $current.RelPermalink "/projects/" }}active{{ end }}" href="/projects/">
+                  Projects
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {{ if eq $current.RelPermalink "/events/" }}active{{ end }}" href="/events/">
+                  Events
+               </a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "/blog/" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                  News
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Announcements</a>
+                  <a class="dropdown-item" href="/blog/">Blog</a>
+                  <a class="dropdown-item" href="#">Annual Report</a>
+               </div>
+            </li>
 
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "about" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
-                     About
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="#">Members</a>
-                     <a class="dropdown-item" href="#">Governance</a>
-                     <a class="dropdown-item" href="#">Contact</a>
-                     <a class="dropdown-item" href="#">Getting Started</a>
-                  </div>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link {{ if eq $current.RelPermalink "/projects/" }}active{{ end }}" href="/projects/">
-                    Projects
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link {{ if eq $current.RelPermalink "/events/" }}active{{ end }}" href="/events/">
-                    Events
-                  </a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "/blog/" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
-                     News
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="#">Announcements</a>
-                     <a class="dropdown-item" href="/blog/">Blog</a>
-                     <a class="dropdown-item" href="#">Annual Report</a>
-                  </div>
-               </li>
-
-            </ul>
-         </div>
-         <div class="d-none d-lg-block">
-            <div class="nav-item">
-               <a href="/join/" class="btn btn-sm btn-links">Join</a>
-            </div>
+         </ul>
+      </div>
+      <div class="d-none d-lg-block">
+         <div class="nav-item">
+            <a href="/join/" class="btn btn-sm btn-links">Join</a>
          </div>
       </div>
    </nav>
