@@ -1,5 +1,5 @@
 ---
-logo: /images/footer-logo.svg
+logo: "/images/chips_alliance.svg"
 logo_url: /
 copyright: "CHIPS Alliance"
 social:
@@ -8,7 +8,7 @@ social:
   - link: "https://github.com/chipsalliance"
     icon: "ph-github-logo"
   - link: "https://www.linkedin.com/company/chipsalliance/"
-    icon: "ph-linkein-logo"
+    icon: "ph-linkedin-logo"
 sections:
   -
     title: About
