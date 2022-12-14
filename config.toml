@@ -1,4 +1,4 @@
-baseURL = 'https://chipsalliance.org/'
+baseURL = 'https://chipsalliance.github.io/chips-alliance-website'
 languageCode = 'en-us'
 title = 'CHIPS Alliance'
 
