@@ -153,12 +153,12 @@
       margin-right: -13px;
       z-index: 1;
       img {
-        max-height: 700px;
+        max-height: 550px;
         border-radius: 20px 0 0 20px;
       }
       &-shape {
         position: absolute;
-        top: -26%;
+        top: -29%;
         left: 3%;
         z-index: -1;
         @include media-breakpoint-down-lg {

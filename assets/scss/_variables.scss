@@ -1,8 +1,6 @@
-//Import fonts from https://fonts.google.com/
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 // Font Variables
-$font-primary: "Sora", sans-serif;
-$font-secondary: "Space Grotesk", sans-serif;
+$font-primary: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,Roboto,Ubuntu,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$font-secondary: $font-primary;
 $base-font-size: 1rem;
 $regular-font-weight: 400;
 $medium-font-weight: 500;

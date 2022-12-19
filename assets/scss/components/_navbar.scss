@@ -7,7 +7,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   padding-right: 5.4rem; // default: null
   padding-bottom: 1.5rem;
   padding-left: 5.4rem; // default: null
@@ -289,6 +289,20 @@
   svg {
     path {
       stroke: $color-white;
+    }
+  }
+}
+
+@include media-breakpoint-up-lg {
+  .lfprojects {
+    background: #252525;
+    padding-left: 5.4rem;
+    width: 100%;
+    line-height: 33px;
+    height: 33px;
+    img {
+      max-width: 270px;
+      vertical-align: middle;
     }
   }
 }
