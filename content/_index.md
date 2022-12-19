@@ -7,7 +7,7 @@ content_blocks:
       description: >-
          With Sendit, you can quickly create beautiful rich emails that capture
          a reader's attention, engage them, and convert them into customers.
-      image_path: /images/hero/hero-image-2.png
+      image_path: /images/hero/home-hero.jpg
       link:
          text: Try This Free
          url: /sign-up

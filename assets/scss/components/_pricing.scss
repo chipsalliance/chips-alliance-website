@@ -277,7 +277,7 @@
           font-family: $font-primary;
           font-weight: 600;
           margin: 0 10px;
-          border: 1px solid rgba(229, 59, 42, 0.3);
+          border: 1px solid $color-primary-transparent;
         }
         .active {
           background: $color-primary;

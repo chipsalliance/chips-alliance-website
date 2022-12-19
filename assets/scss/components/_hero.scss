@@ -153,7 +153,8 @@
       margin-right: -13px;
       z-index: 1;
       img {
-        border-radius: 0px;
+        max-height: 700px;
+        border-radius: 20px 0 0 20px;
       }
       &-shape {
         position: absolute;
