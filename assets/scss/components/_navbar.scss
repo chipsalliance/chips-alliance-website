@@ -7,21 +7,12 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding-top: 3rem;
-  padding-right: 5.4rem; // default: null
-  padding-bottom: 1.5rem;
-  padding-left: 5.4rem; // default: null
+  padding: 3.4rem 5.4rem 1.4rem;
   background-color: none;
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
 
-  @include media-breakpoint-down-xxl {
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-  }
   @include media-breakpoint-only-lg {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     .btn-links {
       padding: 0.75rem 1rem;
     }
@@ -226,7 +217,6 @@
 //Sticky Navbar
 
 .sticky-nav {
-  padding: $base-padding $base-padding * 2 !important;
   background: $color-white;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
   z-index: 1000;
@@ -297,6 +287,7 @@
   .lfprojects {
     background: #252525;
     padding-left: 5.4rem;
+    z-index: 10000;
     width: 100%;
     line-height: 33px;
     height: 33px;
