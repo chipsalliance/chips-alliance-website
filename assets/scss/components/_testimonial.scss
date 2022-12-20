@@ -38,7 +38,6 @@
          color: $color-cyan-dark;
          font-weight: 500;
          line-height: 36.3px;
-         letter-spacing: -0.4px;
          @include media-breakpoint-down-md {
             font-size: $base-font-size * 1.25;
          }

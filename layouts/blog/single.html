@@ -12,9 +12,11 @@
                         <li class="list-inline-item">
                            <p>{{.Date | time.Format ":date_long"}}</p>
                         </li>
+                        {{with .Params.author}}
                         <li class="list-inline-item">
-                           <p>{{.Params.author}}</p>
+                           <p>{{.}}</p>
                         </li>
+                        {{end}}
                         <li class="list-inline-item">
                            <p>{{ .ReadingTime }} <span>minutes</span></p>
                         </li>

@@ -112,7 +112,7 @@
                   News
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/blog/announcements/" }}active{{ end }}" href="#">Announcements</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/announcements/" }}active{{ end }}" href="/categories/announcements/">Announcements</a>
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/blog/" }}active{{ end }}" href="/blog/">Blog</a>
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/annual-report/" }}active{{ end }}" href="/annual-report/">Annual Report</a>
                </div>

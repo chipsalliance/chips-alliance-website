@@ -91,7 +91,6 @@
       margin-bottom: $base-margin * 0.7;
       font-size: 20px;
       line-height: 33px;
-      letter-spacing: -0.8px;
       @include media-breakpoint-down-sm {
         font-size: $base-font-size * 1.1;
         line-height: 29.7px;
@@ -107,7 +106,6 @@
         list-style: disc;
         margin-bottom: $base-margin * 1.3;
         font-weight: 500;
-        letter-spacing: -0.8px;
         @include media-breakpoint-down-sm {
           font-size: $base-font-size * 1.1;
           margin-bottom: $base-margin * 1;
@@ -158,7 +156,6 @@
         font-size: $base-font-size * 1.3;
         font-weight: 500;
         line-height: 36.3px;
-        letter-spacing: -0.4px;
         padding-right: 50px;
         padding-right: $base-padding * 9;
         margin-bottom: $base-margin * 3.1;
@@ -329,7 +326,6 @@
             margin-bottom: $base-margin * 1.3;
             font-weight: 500;
             font-family: $font-secondary;
-            letter-spacing: -0.4px;
             @include media-breakpoint-down-xl {
               font-size: $base-font-size * 1.1;
               margin-bottom: $base-margin * 1;
@@ -398,7 +394,6 @@
                 margin-bottom: $base-margin * 0.8;
                 font-family: $font-secondary;
                 font-weight: 500;
-                letter-spacing: -0.4px;
                 list-style: disc;
                 &:last-child {
                   margin-bottom: 0;

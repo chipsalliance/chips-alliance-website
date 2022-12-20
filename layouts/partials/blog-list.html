@@ -28,6 +28,10 @@
                      <a href="{{ $href }}">{{ . | humanize }}</a>
                      {{ end }}
                   </div>
+                  <div class="blog-post-date">
+                     {{.Date | time.Format ":date_long"}}
+                  </div>
+
                   <div class="blog-post-title">
                      <a href="{{ .RelPermalink }}" class="">{{.Title}}</a>
                   </div>

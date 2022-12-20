@@ -47,7 +47,7 @@
    // start block section
    &-post {
       position: relative;
-      margin-bottom: $base-margin * 3.2;
+      margin-bottom: $base-margin * 6.2;
       &-thumb {
          border-radius: 20px;
          margin-bottom: $base-margin * 1.9;
@@ -74,6 +74,9 @@
             margin-bottom: $base-margin * 0.9;
             font-family: $font-primary;
          }
+      }
+      &-date {
+         margin-bottom: $base-margin * 0.9;
       }
       &-title {
          a {
@@ -209,34 +212,15 @@
          }
          p {
             font-size: $base-font-size * 1.1;
-            margin-bottom: $base-margin * 5;
+            margin-bottom: $base-margin * 1.5;
             line-height: 29px;
             @include media-breakpoint-down-xl {
                margin-bottom: $base-margin * 3.1;
             }
          }
 
-         ul {
-            margin-bottom: 0;
-            li {
-               list-style: decimal;
-               &::marker {
-                  font-size: $base-font-size * 1.6;
-               }
-               h4 {
-                  font-size: $base-font-size * 1.6;
-                  margin: 0 0 $base-margin * 1.25 $base-margin * 0.5;
-                  font-weight: 600;
-               }
-               p {
-                  margin-bottom: $base-margin * 3;
-                  font-size: $base-font-size * 1.1;
-                  font-weight: 500;
-                  @include media-breakpoint-down-xl {
-                     margin-bottom: $base-margin * 2;
-                  }
-               }
-            }
+         img {
+            width: 100%;
          }
       }
       .social-icon {

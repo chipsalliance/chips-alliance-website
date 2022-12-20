@@ -48,7 +48,6 @@
       font-size: $base-font-size * 4;
       font-weight: 700;
       line-height: 1.31;
-      letter-spacing: 0.05px;
       font-variant: lining-nums;
       @include media-breakpoint-down-xxl {
         font-size: $base-font-size * 3;
@@ -86,7 +85,6 @@
       p {
         color: $color-header;
         font-size: $base-font-size * 1.35;
-        letter-spacing: -0.4px;
         margin-bottom: 0;
         @include media-breakpoint-down-xxl {
           font-size: $base-font-size * 1;

@@ -45,7 +45,6 @@
         position: relative;
         font-size: $base-font-size * 4;
         line-height: 81.25px;
-        letter-spacing: -0.4px;
         margin-bottom: $base-margin * 1.5;
         @include media-breakpoint-down-xxl {
           font-size: $base-font-size * 3.4;
@@ -69,7 +68,6 @@
         color: $color-text-light;
         font-weight: $medium-font-weight;
         line-height: 36.3px;
-        letter-spacing: -0.4px;
         margin-bottom: $base-margin * 9;
         @include media-breakpoint-down-xxl {
           margin-bottom: $base-margin * 5;
