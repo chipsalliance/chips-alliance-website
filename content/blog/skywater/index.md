@@ -2,6 +2,7 @@
 date: 2022-08-06T00:00:00Z
 title: Skywater
 categories:
+  - Blog
 author: 
 thumbImg:
   image_path: /images/chips-alliance-share.png

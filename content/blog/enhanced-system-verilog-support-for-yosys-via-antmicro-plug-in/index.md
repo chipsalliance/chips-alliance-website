@@ -2,6 +2,7 @@
 date: 2022-06-30T00:00:00Z
 title: Enhanced System Verilog Support for Yosys via Antmicro plug-in
 categories:
+  - Blog
 author: 
 thumbImg:
   image_path: /images/chips-alliance-share.png

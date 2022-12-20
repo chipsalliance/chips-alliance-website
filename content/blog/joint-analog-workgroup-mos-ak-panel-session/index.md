@@ -2,6 +2,7 @@
 date: 2022-12-05T00:00:00Z
 title: Joint Analog Workgroup / MOS-AK Panel Session
 categories:
+  - Blog
 author: 
 thumbImg:
   image_path: /images/chips-alliance-share.png

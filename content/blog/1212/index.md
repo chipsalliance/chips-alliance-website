@@ -2,6 +2,7 @@
 date: 2022-08-05T00:00:00Z
 title: Antmicro DDR5 Rowhammer Testing Framework
 categories:
+  - Blog
 author: 
 thumbImg:
   image_path: /blog/1212/DDR5-photo.png

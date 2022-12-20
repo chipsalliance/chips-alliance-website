@@ -2,6 +2,7 @@
 date: 2022-02-01T00:00:00Z
 title: "Towards UVM: Using Coroutines for Low-overhead Dynamic Scheduling in Verilator"
 categories:
+  - Blog
 author: 
 thumbImg:
   image_path: /blog/towards-uvm-using-coroutines/verilation-diagram.svg

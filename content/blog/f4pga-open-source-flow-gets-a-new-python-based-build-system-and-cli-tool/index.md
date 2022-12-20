@@ -2,6 +2,7 @@
 date: 2022-10-09T00:00:00Z
 title: F4PGA open source flow gets a new Python-based build system and CLI tool
 categories:
+  - Blog
 author: 
 thumbImg:
   image_path: /blog/f4pga-open-source-flow-gets-a-new-python-based-build-system-and-cli-tool/F4PGA_Python_toolchain_CLI_tool-2048x1153.png
