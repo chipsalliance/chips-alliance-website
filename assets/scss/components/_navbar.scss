@@ -75,6 +75,7 @@
     z-index: 9;
     &.active {
       color: $color-primary;
+      font-weight: 600;
     }
     &:hover {
       color: $color-primary;
