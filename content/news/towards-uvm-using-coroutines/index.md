@@ -5,9 +5,9 @@ categories:
   - Blog
 author: 
 thumbImg:
-  image_path: /blog/towards-uvm-using-coroutines/verilation-diagram.svg
+  image_path: /news/towards-uvm-using-coroutines/verilation-diagram.svg
 featuredImg:
-  image_path: /blog/towards-uvm-using-coroutines/verilation-diagram.svg
+  image_path: /news/towards-uvm-using-coroutines/verilation-diagram.svg
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/coroutines-for-dynamic-scheduling-in-verilator/).*

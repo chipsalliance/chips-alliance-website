@@ -45,12 +45,12 @@
       <div class="row">
          <div class="col-md-12">
             <div class="blog-section">
-               <h2 class="blog-section-title">Recent Blog</h2>
+               <h2 class="blog-section-title">Recent News</h2>
             </div>
          </div>
       </div>
       <div class="row">
-         {{ range ( where site.RegularPages "Section" "blog" | first 3 ) }}
+         {{ range ( where site.RegularPages "Section" "news" | first 3 ) }}
          <div class="col-lg-4 col-md-6">
             <article class="blog-post">
                <div class="blog-post-thumb">
@@ -64,6 +64,9 @@
                      .) }}
                      <a href="{{ $href }}">{{ . | humanize }}</a>
                      {{ end }}
+                  </div>
+                  <div class="blog-post-date">
+                     {{.Date | time.Format ":date_long"}}
                   </div>
                   <div class="blog-post-title">
                      <a href="{{.Permalink | relURL}}">{{.Params.title}}</a>
