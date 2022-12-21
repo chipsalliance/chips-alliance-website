@@ -222,6 +222,13 @@
          img {
             width: 100%;
          }
+
+         blockquote {
+            margin: 1.5rem 0 2rem 2rem;
+            padding: 1rem 0 0.01rem 1rem;
+            border-left: 3px solid $color-text-light;
+            font-style: italic;
+         }
       }
       .social-icon {
          position: fixed;

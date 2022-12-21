@@ -7,8 +7,9 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: 3.4rem 5.4rem 1.4rem;
+  padding: 3rem 5.4rem 1rem;
   background-color: none;
+  opacity: .97;
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
 
@@ -292,7 +293,7 @@
     line-height: 33px;
     height: 33px;
     img {
-      max-width: 270px;
+      width: 280px;
       vertical-align: middle;
     }
   }
