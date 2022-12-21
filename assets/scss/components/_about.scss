@@ -34,7 +34,7 @@
     }
 
     &-content {
-      padding: $base-padding * 6 0 $base-padding * 4.1;
+      padding: $base-padding * 6 0 $base-padding * 4.1 $base-padding * 3;
       @include media-breakpoint-down-xxl {
         padding: $base-padding * 3 0 $base-padding * 4.1;
       }

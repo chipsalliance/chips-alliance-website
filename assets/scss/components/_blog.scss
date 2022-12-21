@@ -1,17 +1,8 @@
 /********** 
  16. Blog Page and Section Styles
 **********/
-.blog {
-   margin-top: -$base-margin * 22;
-   @include media-breakpoint-down-xxl {
-      margin-top: -$base-margin * 19.5;
-   }
-   @include media-breakpoint-down-xl {
-      margin-top: -$base-margin * 10.5;
-   }
-   @include media-breakpoint-down-sm {
-      margin-top: -$base-margin * 11;
-   }
+.blog, .page {
+   margin-top: $base-margin * 3;
    // start block hero section
    &-hero {
       background: $color-header-light;
@@ -343,4 +334,18 @@
          }
       }
    }
+}
+
+.page-details {
+   padding: $base-padding * 4 0 $base-padding * 4.4;
+   @include media-breakpoint-down-xxl {
+      padding: $base-padding * 3 0 $base-padding * 4.4;
+   }
+   @include media-breakpoint-down-xl {
+      padding: $base-padding * 3 0 $base-padding * 2;
+   }
+   @include media-breakpoint-down-sm {
+      padding: $base-padding * 3 0 $base-padding * 2;
+   }
+
 }

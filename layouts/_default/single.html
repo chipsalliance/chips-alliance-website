@@ -1,3 +1,19 @@
-{{ define "main" }} {{ partial "bookshop_bindings" `.Params` }} {{ partial
+{{ define "main" }} 
+
+{{ partial "bookshop_bindings" `.Params` }} {{ partial
 "bookshop_bindings" `.Params.content_blocks` }} {{ partial "bookshop_partial"
-(slice "page" .Params.content_blocks) }} {{ end }}
+(slice "page" .Params.content_blocks) }} 
+
+<section class="page-details">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <article class="blog-single">
+                <div style="max-width: 900px; margin: 0 auto">{{.Content}}</div>
+             </article>
+          </div>
+       </div>
+    </div>
+ </section>
+
+{{ end }}

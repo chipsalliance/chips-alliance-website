@@ -11,3 +11,6 @@ path = 'local/component-library'
 
 [[module.imports]]
 path = 'github.com/cloudcannon/bookshop/hugo/v3'
+
+[markup.goldmark.renderer]
+unsafe= true

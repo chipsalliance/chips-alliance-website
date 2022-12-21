@@ -110,9 +110,9 @@
     }
     &-content {
       margin-top: $base-margin * 3;
-      padding-left: $base-padding * 18;
+      padding-left: $base-padding * 7;
       @include media-breakpoint-down-xxxl {
-        padding-left: $base-padding * 9;
+        padding-left: $base-padding * 7;
       }
       @include media-breakpoint-down-xxl {
         padding-left: $base-padding * 5;

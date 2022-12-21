@@ -24,6 +24,14 @@
     }
 
     &-content {
+      padding-left: $base-padding * 7;
+      @include media-breakpoint-down-xxxl {
+        padding-left: $base-padding * 7;
+      }
+      @include media-breakpoint-down-xxl {
+        padding-left: $base-padding * 5;
+      }
+
       h1 {
         font-size: $base-font-size * 4;
         margin-bottom: $base-margin * 1.5;
