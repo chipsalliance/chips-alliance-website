@@ -8,8 +8,8 @@ content_blocks:
          CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.
       image_path: /images/hero/home-hero.jpg
       link:
-         text: Get Started at CHIPS Alliance
-         url: /geting-started
+         text: Subscribe to our mailing list
+         url: https://lists.chipsalliance.org/g/main/subgroups
    -
       _bookshop_name: global/counter
       title: About CHIPS
@@ -74,6 +74,11 @@ content_blocks:
 
 
 ## CHIPS Alliance Members
+
+{{< button
+link="/join/"
+label="Become a Member"
+>}}
 
 <iframe
 title="landscape"
