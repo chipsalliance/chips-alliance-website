@@ -1,39 +1,33 @@
 {{ define "main" }} 
 
-<section class="feature pt-sm-10 pt-5 pb-4">
+<section class="feature-hero">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 order-2 order-lg-1">
-          <div class="feature-item-content mb-xl-15 mb-md-10 mb-7 ps-xxl-8 ps-0">
-            <h2 class="pe-xl-0">{{.Title}}</h2>
+        <div class="col-lg-6">
+          <div class="feature-hero-content">
+            <h1 class="">{{.Title}}</h1>
             <p>{{.Description | markdownify}}</p>
-            <div class="Learn-more">
+            <div class="d-block mb-6">
               {{ with .Params.btn }}
-              <a href="{{.link}}" class="">
-                {{.text}}
-                <i class="ph-arrow-right"></i>
-              </a>
+              <a href="{{.link}}" class="btn btn-primary btn-lg"> {{.text}} </a>
               {{ end }}
             </div>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
-            <div class="card-image">
-              <img src="{{.Params.image_path}}" alt="card-images" loading="lazy" />
-            </div>
-            <div class="effect-two">
+        <div class="col-lg-6">
+          <div class="feature-hero-banner">
+            <img src="{{.Params.image_path}}" alt="banner-image" loading="lazy" />
+            <div class="shape">
               <img
-                src="/images/feature/effect-2.png"
-                alt="effect-image"
+                src="/images/feature/effect-4.png"
+                alt="shape"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
+</section>
 
 <section class="page-details">
     <div class="container">
