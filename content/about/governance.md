@@ -5,7 +5,7 @@ description: >-
 btn:
    link: https://participation-agreement.chipsalliance.org/
    text: Read Charter
-image_path: /images/niek-doup-Xf071ws2Icg-unsplash.jpg
+image_path: /images/feature/niek-doup-Xf071ws2Icg-unsplash.jpg
 ---
 
 In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community.  While the Technical Steering Community (TSC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations.

@@ -5,7 +5,7 @@
   position: relative;
   background: $color-header;
   &-wrapper {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     @include media-breakpoint-down-xxl {
       max-width: 1100px;
@@ -17,7 +17,7 @@
       max-width: 700px;
     }
     @include media-breakpoint-down-md {
-      max-width: 400px;
+      max-width: 600px;
     }
 
     .footer-logo {
