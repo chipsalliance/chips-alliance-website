@@ -1,2 +1,57 @@
 {{ define "main" }} {{ partial "bookshop_bindings" `.Params.content_blocks` }}
-{{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }} {{ end }}
+{{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+
+
+<section class="page-details">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <article class="blog-single">
+                <div style="max-width: 1200px; margin: 0 auto">{{.Content}}</div>
+             </article>
+          </div>
+       </div>
+    </div>
+ </section>
+
+
+ <section class="blog-related position-relative">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="blog-section">
+                <h2 class="blog-section-title">Recent News</h2>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          {{ range ( where site.RegularPages "Section" "news" | first 3 ) }}
+          <div class="col-lg-4 col-md-6">
+             <article class="blog-post">
+                <div class="blog-post-thumb">
+                   <a href="{{.Permalink | relURL}}">
+                      <img src="{{.Params.thumbImg.image_path}}" alt="blog-thum" />
+                   </a>
+                </div>
+                <div class="blog-post-content">
+                   <div class="blog-post-tag">
+                      {{ range .Params.categories }} {{ $href := print (absURL "categories/") (urlize
+                      .) }}
+                      <a href="{{ $href }}">{{ . | humanize }}</a>
+                      {{ end }}
+                   </div>
+                   <div class="blog-post-date">
+                      {{.Date | time.Format ":date_long"}}
+                   </div>
+                   <div class="blog-post-title">
+                      <a href="{{.Permalink | relURL}}">{{.Params.title}}</a>
+                   </div>
+                </div>
+             </article>
+          </div>
+          {{ end }}
+       </div>
+    </div>
+ </section>
+
+{{ end }}

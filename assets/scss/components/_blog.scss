@@ -54,6 +54,7 @@
          }
       }
       &-tag {
+         margin-bottom: 0.9rem;
          a {
             background: $color-secondary-light;
             border-radius: 6px;
@@ -325,8 +326,8 @@
    }
    /* start Related Blog Style */
    &-related {
-      padding: $base-padding * 7 0 $base-padding * 5;
-      background: $color-gray-dark;
+      padding: $base-padding * 3 0 $base-padding * 5;
+      background: $color-secondary;
       @include media-breakpoint-down-xl {
          padding: $base-padding * 5 0 $base-padding * 0;
       }

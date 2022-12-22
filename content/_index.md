@@ -3,52 +3,39 @@ title: Home
 content_blocks:
    -
       _bookshop_name: home/hero
-      title: Beautiful email campaigns
+      title: Welcome!
       description: >-
-         With Sendit, you can quickly create beautiful rich emails that capture
-         a reader's attention, engage them, and convert them into customers.
+         CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.
       image_path: /images/hero/home-hero.jpg
       link:
-         text: Try This Free
-         url: /sign-up
+         text: Get Started at CHIPS Alliance
+         url: /geting-started
    -
       _bookshop_name: global/counter
-      title: Scale your
-      title_suffix: Business
+      title: About CHIPS
+      title_suffix: Alliance
       description: >-
-         We have an extensive library of pre-written sales emails, proven
-         marketing templates, and more to get you started on your next project.
+         The CHIPS Alliance develops high-quality, open source hardware designs relevant to silicon devices and FPGAs. By creating an open and collaborative environment, CHIPS Alliance shares resources to lower the cost of development. Companies and individuals can work together to develop open source CPUs, various peripherals, and complex IP blocks. CHIPS Alliance is open to all organizations who are interested in collaborating on open source hardware or software tools to accelerate the creation of more efficient and innovative chip designs.
       alternateStyle: false
       numbers:
          -
-            number: 200
-            suffix: m
-            prefix: $
-            text: Venture capital raised
+            number: 20
+            text: Hosted projects
          -
             number: 2016
             text: Established in
          -
             number: 40
             suffix: +
-            text: Amazing team members
+            text: Team members
          -
-            number: 4322
+            number: 32
             suffix: +
-            text: Active users and growing
+            text: Member companies
    -
       _bookshop_name: home/video
       image_path: /images/video/video-thum.jpg
       videoUrl: https://vimeo.com/45830194
-   -
-      _bookshop_name: global/header
-      title: 'Sendit '
-      title_suffix: Features
-      no_top_pad: true
-      description: >-
-         Our platform offers the most advanced features including automated
-         email content creation, dynamic personalization, and customer
-         segmentation.
    -
       _bookshop_name: global/feature
       image_path: /images/feature/feature-card-one.png
@@ -83,33 +70,18 @@ content_blocks:
          link: /sign-up
          text: Try This Free
       reversed: false
-   -
-      _bookshop_name: global/testimonial
-      title: Build relationships that
-      title_suffix: last
-      description: >-
-         Customers from around the world are building game changing email
-         marketing campaigns.
-      slider:
-         -
-            image_path: /images/testimonial/logo-2.jpg
-            author: Pete Fish
-            designation: CMO at Clear Appeal
-            message: >-
-               Sendit has taken Clear Appeal to the next level with it's
-               beautiful targetted email campaigns.
-         -
-            image_path: /images/testimonial/logo-3.jpg
-            author: Dolly Watson
-            designation: Digital Marketer at Time Cop
-            message: >-
-               Wow, what a difference Sendit has made. My customers are more
-               engaged than ever.
-         -
-            image_path: /images/testimonial/logo-4.jpg
-            author: Simon Moriarty
-            designation: Head of Marketing at Pinnacle Mines
-            message: >-
-               I can't imagine life without Sendit now, I have no idea how we
-               were surviving before.
 ---
+
+
+## CHIPS Alliance Members
+
+<iframe
+title="landscape"
+id="landscape"
+src="https://landscape.lfph.io/card-mode?project=member&embed=yes"
+frameborder="0"
+scrolling="no"
+class="iframe-container"
+style="width: 100% ; min-width: 100%;"
+></iframe>
+<script defer src='//landscape.cncf.io/iframeResizer.js?ver=1671468192' id='landscape-resize-js'></script>
