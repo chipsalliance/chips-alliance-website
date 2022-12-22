@@ -1,0 +1,45 @@
+<h2>{{.Params.title}}</h2>
+<section class="specialfeature">
+      {{ if $.Get "reversed" }}
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
+            <div class="card-image">
+              <img src="{{.Params.imagesrc}}" alt="{{.Params.imagealt}}" loading="lazy" class="rounded"/>
+            </div>
+            <div class="effect-two">
+              <img
+                src="/images/feature/effect-2.png"
+                alt="effect-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          {{.Inner | markdownify}}
+        </div>
+      </div>
+      {{else}}
+      <div class="row align-items-center">
+        <div class="col-lg-8 order-2 order-lg-1">
+          {{.Inner | markdownify}}
+        </div>
+        <div class="col-lg-4 order-1 order-lg-2">
+          <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
+            <div class="card-image">
+              <img src="{{.Params.imagesrc}}" alt="{{.Params.imagealt}}" loading="lazy" class="rounded"/>
+            </div>
+            <div class="effect-two">
+              <img
+                src="/images/feature/effect-2.png"
+                alt="effect-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+  </section>
+  
