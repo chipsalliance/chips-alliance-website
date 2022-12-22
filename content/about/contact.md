@@ -1,33 +1,22 @@
 ---
 title: Contact
-content_blocks:
-  - _bookshop_name: contact/hero
-    title: Let's talk.
-    description: Have a question or suggestion? Feel free to drop us a message!
-  - _bookshop_name: contact/form
-    address:
-      heading: Office Address
-      address: 123 Train St, San Francisco, CA 9107
-    phone:
-      heading: Phone
-      cell: (123) 456 - 7895
-    email:
-      heading: Email
-      email: info@example.com
-    form:
-      heading: Say Hello
-      fullName:
-        heading: Full Name
-        placeHolder: Enter First Name
-      phoneNumber:
-        heading: Phone number
-        placeHolder: Enter Phone Number
-      email:
-        heading: Email Address
-        placeHolder: Enter Email Address
-      message:
-        heading: Your Message
-        placeHolder: Enter your message
-      submitBtn:
-        text: Send message
+description: >-
+    The CHIPS Alliance is always interested in hearing from our community, supporters, users of our projects, and anyone else interested in using our projects.
+image_path: /images/feature/48302010402_7eef97a236_o.jpg
+
 ---
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "8112310",
+    formId: "94557cae-71ce-4536-a54f-8eff19aab9f9",
+    sfdcCampaignId: "7012M000001FetwQAC"
+  });
+</script>
+
+## Mailing Address
+
+**CHIPS Alliance**
+1 Letterman Drive, Building D, Suite D4700
+San Francisco, CA 94129

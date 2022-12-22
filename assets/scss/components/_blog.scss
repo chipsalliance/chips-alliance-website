@@ -200,7 +200,12 @@
          h3 {
             font-size: $base-font-size * 1.9;
             margin-bottom: $base-margin * 1.5;
+            margin-top:  $base-margin * 2.5;
             line-height: 43px;
+         }
+         h4 {
+            margin-bottom: $base-margin * 1;
+            margin-top:  $base-margin * 2;
          }
          p {
             font-size: $base-font-size * 1.1;
