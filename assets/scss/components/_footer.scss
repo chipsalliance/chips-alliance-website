@@ -34,13 +34,16 @@
         }
       }
       p {
-        color: $color-secondary-dark;
+        color: $color-deactive;
         font-family: $font-primary;
-        font-size: $base-font-size * 0.9;
-        font-weight: 600;
+        font-size: $base-font-size * 0.7;
+        font-weight: 300;
         margin-bottom: $base-margin * 2.5;
-        @include media-breakpoint-down-sm {
-          margin-bottom: $base-margin * 3.3;
+        line-height: 1.4;
+        a {
+          color: $color-deactive;
+          font-weight: 600;
+          margin-bottom: 0;
         }
       }
       img {

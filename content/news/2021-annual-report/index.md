@@ -20,7 +20,7 @@ Comments and feedback are welcome at info@chipsalliance.org.
 > 
 > – **Zvonimir Bandic**, Governing Board Chair, CHIPS Alliance, and Senior Director, Western Digital
 
-## LEADING THE OPEN HARDWARE MOVEMENT
+## Leading The Open Hardware Movement
 
 - [Who we are](#who-we-are)
 - [Current Workgroups](#current-workgroups)
@@ -32,14 +32,14 @@ Comments and feedback are welcome at info@chipsalliance.org.
 - [News and Media Coverage](#chips-alliance-news)
 - [Looking Ahead](#looking-ahead)
 
-## WHO WE ARE
+## Who We Are
 
 CHIPS Alliance is a barrier free, open organization focused on developing open source hardware RTL and open source hardware and software development tools. The organization desires to lower the cost of chip development through collaboration, leveraging the diverse expertise and broad experience of its members. CHIPS Alliance encourages contributions and shared investments by providing vendor-neutral promotional events, documentation, tools and support for a variety of projects in our workgroups.
 
 Rob Mains serves as General Manager of the CHIPS Alliance. Rob joined the organization in January 2021, bringing more than 38 years of industry experience to the role. To learn more about Rob, please visit [here](https://chipsalliance.org/about/governance/). 
 
 
-## CURRENT WORKGROUPS
+## Current Workgroups
 
 The following workgroups are part of CHIPS Alliance:
 
@@ -52,7 +52,7 @@ The following workgroups are part of CHIPS Alliance:
 The organization is also working on setting up an Open Source Analog Design/Generators Working Group.
 
 
-## GROWING MEMBERSHIP
+## Growing Membership
 
 In March 2019, CHIPS Alliance was formed as a project under the Linux Foundation. The four founding members – Esperanto, Google, SiFive and Western Digital – set the aspirations for the group. CHIPS Alliance can be viewed as an extension of the mission started by organizations such as RISC-V International. RISC-V defines an open instruction set architecture (ISA) specification which paved the way for a plethora of open cores and CPU implementations, but does not instruct how to make the physical hardware and other building blocks needed to create practical open silicon. This is where CHIPS Alliance begins. Using open standards such as RISC-V, CHIPS Alliance is working to collaboratively build robust and industry-proven cores, peripherals and SoCs. 
 
@@ -61,12 +61,12 @@ Early on it became clear that lowering the barriers and cost of development woul
 CHIPS Alliance has grown to more than 25 members over the past year. The organization now boasts some of the world’s leading semiconductor manufacturers including Intel, Samsung, Futurewei and Alibaba. Software tools, IP and services companies in the organization include Antmicro, Codasip, Imperas, Qamcom and Verisilicon. Several notable universities and open source projects are also part of CHIPS Alliance such as UC Berkeley, IIT Madras, Yale University, OpenRoad, Munich University of Applied Sciences and UC San Diego. The complete membership list can be found at https://chipsalliance.org/about/members/
 
 
-## HOW DO I GET INVOLVED?
+## How Do I Get Involved?
 
 To aid new members and those who are interested in knowing more about CHIPS Alliance, we have created a [Getting Started Guide](https://github.com/chipsalliance/foundation). We encourage everyone to join our main [mailing list](https://github.com/chipsalliance/foundation/blob/master/tutorials/GROUPS.IO.md), follow us on social media channels [Twitter](https://twitter.com/chipsalliance) and [LinkedIn](https://www.linkedin.com/company/chipsalliance/), and engage in our technical community, which is not limited to members. If you see a particular workgroup you want to get involved in, you can join that specific mailing list and attend their meetings.
 
 
-## EVENTS OVER THE PAST YEAR
+## Events Over The Past Year
 
 CHIPS Alliance hosted a number of events over the past year, pivoting to virtual workshops and Meetups due to the pandemic. Below please find more information about the events CHIPS Alliance and its members participated in:
 
@@ -77,7 +77,7 @@ CHIPS Alliance hosted a number of events over the past year, pivoting to virtual
 - In November, CHIPS Alliance chair of Outreach Committee Michael Gielda gave a talk at [RISC-V Days Tokyo](http://riscv-association.jp/en/riscv-day-tokyo-2020-en/), discussing the ongoing activities towards enabling fully open source and CI-driven ASIC and FPGA development flows.
 - In December 2020, at the [RISC-V Summit](https://riscv.org/proceedings/2021/02/risc-v-summit-2020/), CHIPS Alliance Chairman Dr. Zvonimir Bandić gave a talk about OmniXtend, and Antmicro gave a talk describing its efforts towards enabling SystemVerilog support in open source tools.
 
-## TECHNICAL HIGHLIGHTS
+## Technical Highlights
 
 - CHIPS Alliance [announced](https://chipsalliance.org/announcement/2020/12/08/omnixtend/) a collaboration with RISC-V International to standardize an open unified memory coherency bus leveraging OmniXtend to foster innovation for data-centric applications.
 - CHIPS Alliance [released](https://chipsalliance.org/announcement/2020/07/16/aib-2-0-draft-specification/) the Advanced Interface Bus (AIB) version 2.0 draft specification on GitHub. The AIB standard is an open-source, royalty-free PHY-level standard for connecting multiple semiconductor die within the same package.
@@ -90,7 +90,7 @@ CHIPS Alliance hosted a number of events over the past year, pivoting to virtual
 - The [SweRV Instruction Set Simulator (ISS)](https://github.com/chipsalliance/SweRV-ISS), initially developed by Western Digital, offers full test bench support for the design of SweRV Cores.
 - The Chisel workgroup has also achieved a significant number of technical milestones, as presented on the [2020 Chisel Community Conference](https://events.linuxfoundation.org/chisel-community-conference/program/schedule/)
 
-## WHY MEMBERS JOIN CHIPS ALLIANCE
+## Why Members Join CHIPS Alliance
 
 The members of CHIPS Alliance join for a variety of reasons. Some organizations join to grow their business. Companies that fall into this group normally offer an open source solution, along with selling support and additional services to interested companies. As an example, Codasip has an open [SweRV package](https://codasip.com/swerv/#action) that anyone can access, a Pro version with commercial EDA tools, and customization and verification services available upon request.
 
@@ -99,7 +99,7 @@ Many organizations join CHIPS Alliance to accelerate development of a RTL IP/SoC
 Another reason companies join CHIPS Alliance is to accelerate adoption of IP or software. One such IP is AIB which was brought into CHIPS Alliance by Intel. AIB is a chiplet interconnect and is being adopted by a number of companies. [DARPA presented](https://www.darpa.mil/news-events/2020-03-25) on the benefits of AIB and how chiplets can accelerate SoC development.
 
 
-## CHIPS ALLIANCE NEWS
+## CHIPS Alliance News
 
 - [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://chipsalliance.org/announcement/2021/02/11/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 11, 2021
 - [CHIPS Alliance Brings on Rob Mains as New Executive Director](https://chipsalliance.org/announcement/2021/02/08/chips-alliance-brings-on-rob-mains-as-new-executive-director/) – Feb. 8, 2021
@@ -110,7 +110,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 - [CHIPS Alliance Announces AIB 2.0 Draft Specification to Accelerate Design of Open Source Chiplets](https://chipsalliance.org/announcement/2020/07/16/aib-2-0-draft-specification/) – July 16, 2020
 - [CHIPS Alliance’s Newly Enhanced SweRV Cores Available to All for Free](https://chipsalliance.org/announcement/2020/05/14/newly-enhanced-swerv-cores/) – May 14, 2020
 
-## MEMBER NEWS
+## Member News
 
 - [High-Throughput Open Source PCIe on Xilinx VU19P-Based ASIC Prototyping Platform](https://antmicro.com/blog/2021/02/high-throughput-open-source-pcie-on-xilinx-vu19/) – Antmicro, Feb. 11, 2021
 - [The UltraScale+ Processing Module is Released as Open Source Hardware](https://antmicro.com/blog/2021/01/ultrascale-plus-processing-module-released-open-hardware/) – Antmicro, Jan. 27, 2021
@@ -146,7 +146,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 - [The First RISC-V Hackathon in Israel](https://blog.westerndigital.com/risc-v-hackathon-israel/) – Western Digital, April 11, 2020
 - [Imperas Collaborates with Mentor on RISC-V Core RTL Coverage Driven Design Verification Analysis](https://www.imperas.com/articles/imperas-collaborates-with-mentor-on-risc-v-core-rtl-coverage-driven-design-verification) – Imperas, Feb. 21, 2020
 
-## MEDIA COVERAGE
+## Media Coverage
 
 - [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.design-reuse.com/news/49493/chips-alliance-antmicro-verisilicon-platinum-membership-level.html) – Feb. 16, 2021
 - [CHIPS Alliance Adds Antmicro and VeriSilicon](https://insidehpc.com/2021/02/chips-alliance-adds-antmicro-and-verisilicon/) – Feb. 12, 2021
@@ -174,6 +174,6 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 - [Intel Joins CHIPS Alliance to Foster Chiplet Ecosystem](https://www.tomshardware.com/news/intel-joins-chips-alliance-to-foster-chiplet-ecosystem) – Tom’s Hardware, Jan. 25, 2020
 - [Intel Joins CHIPS Alliance, Contributes Advanced Interface Bus](https://www.anandtech.com/show/15434/intel-joins-chips-alliance-contributes-advanced-interface-bus) – AnandTech, Jan. 24, 2020
 
-## LOOKING AHEAD
+## Looking Ahead
 
 Don’t miss the CHIPS Alliance Spring Workshop on March 30! [Learn more](https://www.eventbrite.com/e/chips-alliance-spring-workshop-tickets-142138836085) and register for free. Sign up for our [announcements list](https://lists.chipsalliance.org/g/announce) to be kept up-to-date on our events. The CHIPS Alliance has seen additional interest from a number of companies, organizations and nonprofits in joining our ecosystem, so we will continue to focus on growing our membership. As development accelerates and more output is generated, we anticipate this will foster even more interest in CHIPS Alliance and its open source solutions.
