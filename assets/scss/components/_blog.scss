@@ -5,10 +5,10 @@
    margin-top: $base-margin * 3;
    // start block hero section
    &-hero {
-      background: $color-header-light;
+      background: linear-gradient(to top,#fffbf3,#fffbf391 100%);
       text-align: center;
       h1 {
-         margin-bottom: $base-margin * 1.5;
+         margin-bottom: $base-margin * 3.5;
          @include media-breakpoint-down-lg {
             font-size: $base-font-size * 3.5;
          }

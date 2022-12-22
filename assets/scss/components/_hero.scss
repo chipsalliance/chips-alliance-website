@@ -86,7 +86,7 @@
   }
   &-two {
     position: relative;
-    background: $color-gray-dark;
+    background: linear-gradient(to top,#e0e3f5 0,#f1f3fd 100%);
     padding: $base-padding * 11.3 0 $base-padding * 5;
     z-index: 1;
     overflow: hidden;
