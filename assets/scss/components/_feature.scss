@@ -121,7 +121,7 @@
   &-hero,
   &-hero-two {
     background: $color-gray-dark;
-    padding: $base-padding * 8 0 $base-padding * 4;
+    padding: $base-padding * 12 0 $base-padding * 4;
     overflow: hidden;
     @include media-breakpoint-down-lg {
       padding: $base-padding * 9 0 $base-padding * 0;
@@ -186,7 +186,7 @@
       position: relative;
       img {
         z-index: 1;
-        max-width: 100%;
+        max-width: 500px;
       }
       .shape {
         position: absolute;
