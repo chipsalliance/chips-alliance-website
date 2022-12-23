@@ -27,6 +27,7 @@
     .card-image {
       z-index: 1;
       text-align: center;
+      position: relative;
       img {
         max-width: 600px;
         border-radius: 20px;
@@ -41,7 +42,7 @@
     .effect-three {
       position: absolute;
       top: -8%;
-      z-index: -1;
+      z-index: 0;
 
       img {
         @include media-breakpoint-down-xxl {
@@ -86,6 +87,7 @@
       @include media-breakpoint-down-sm {
         font-size: $base-font-size * 1.9;
         margin-bottom: $base-margin * 1.25;
+        margin-top: 1rem;
       }
     }
     p {
@@ -268,7 +270,7 @@
         position: absolute;
         bottom: -9%;
         left: -6%;
-        z-index: -1;
+        z-index: 0;
         @include media-breakpoint-down-lg {
           bottom: 55%;
           left: -5%;
@@ -286,7 +288,7 @@
         position: absolute;
         top: -9%;
         right: -10%;
-        z-index: -1;
+        z-index: 0;
         @include media-breakpoint-down-lg {
           top: 60%;
           right: -40%;
@@ -435,7 +437,7 @@
         position: absolute;
         bottom: -11%;
         left: -23%;
-        z-index: -1;
+        z-index: 0;
         @include media-breakpoint-down-xl {
           bottom: -4%;
           left: -23%;
@@ -448,7 +450,7 @@
         position: absolute;
         top: -11%;
         right: -4%;
-        z-index: -1;
+        z-index: 0;
         @include media-breakpoint-down-xxl {
           right: -10%;
         }
@@ -472,7 +474,7 @@
       .shape {
         top: 64%;
         right: 49%;
-        z-index: -1;
+        z-index: 0;
         @include media-breakpoint-down-xxl {
           top: 60%;
           right: 40%;
