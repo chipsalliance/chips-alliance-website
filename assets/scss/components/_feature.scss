@@ -28,7 +28,9 @@
       z-index: 1;
       text-align: center;
       img {
-        max-width: 100%;
+        max-width: 600px;
+        border-radius: 20px;
+        border: 1px solid $color-deactive;
         @include media-breakpoint-down-lg {
           width: 100%;
         }
