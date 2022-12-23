@@ -45,7 +45,7 @@ content_blocks:
       btn:
          link: https://lists.chipsalliance.org/g/main/subgroups
          text: Sign Up
-      reversed: true
+      reversed: false
 ---
 
 
