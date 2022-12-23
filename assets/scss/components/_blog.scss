@@ -40,12 +40,12 @@
       position: relative;
       margin-bottom: $base-margin * 6.2;
       &-thumb {
-         border-radius: 20px;
+         border-radius: 5px;
          margin-bottom: $base-margin * 1.9;
          overflow: hidden;
          img {
             transform: scale(1) rotate(0deg);
-            border-radius: 20px;
+            border-radius: 5px;
             width: 100%;
             transition: 0.5s ease-in-out;
          }

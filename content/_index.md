@@ -20,18 +20,18 @@ content_blocks:
       numbers:
          -
             number: 20
-            text: Hosted projects
+            text: Hosted Projects
          -
             number: 2016
             text: Established in
          -
             number: 40
             suffix: +
-            text: Team members
+            text: Team Members
          -
             number: 32
             suffix: +
-            text: Member companies
+            text: Member Companies
    -
       _bookshop_name: home/video
       image_path: /images/video/video-thum.jpg
