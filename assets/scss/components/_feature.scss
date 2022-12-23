@@ -43,7 +43,7 @@
       position: absolute;
       top: -8%;
       z-index: 0;
-
+      width: 100%;
       img {
         @include media-breakpoint-down-xxl {
           max-width: 100%;
@@ -197,6 +197,7 @@
         position: absolute;
         top: 2%;
         z-index: 0;
+        width: 100%;
         right: 0%;
       }
     }
@@ -271,6 +272,7 @@
         bottom: -9%;
         left: -6%;
         z-index: 0;
+        width: 100%;
         @include media-breakpoint-down-lg {
           bottom: 55%;
           left: -5%;
@@ -289,6 +291,7 @@
         top: -9%;
         right: -10%;
         z-index: 0;
+        width: 100%;
         @include media-breakpoint-down-lg {
           top: 60%;
           right: -40%;
@@ -438,6 +441,7 @@
         bottom: -11%;
         left: -23%;
         z-index: 0;
+        width: 100%;
         @include media-breakpoint-down-xl {
           bottom: -4%;
           left: -23%;
@@ -451,6 +455,7 @@
         top: -11%;
         right: -4%;
         z-index: 0;
+        width: 100%;
         @include media-breakpoint-down-xxl {
           right: -10%;
         }
@@ -475,6 +480,7 @@
         top: 64%;
         right: 49%;
         z-index: 0;
+        width: 100%;
         @include media-breakpoint-down-xxl {
           top: 60%;
           right: 40%;
