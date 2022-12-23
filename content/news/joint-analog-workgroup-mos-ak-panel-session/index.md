@@ -5,9 +5,9 @@ categories:
   - Blog
 author: 
 thumbImg:
-  image_path: /images/chips-alliance-share.png
+  image_path: /news/joint-analog-workgroup-mos-ak-panel-session/share.png
 featuredImg:
-  image_path: /images/chips-alliance-share.png
+  image_path: /news/joint-analog-workgroup-mos-ak-panel-session/share.png
 ---
 
 Please join us for a special joint panel webinar session for the CHIPS Alliance Analog Workgroup and MOS-AK Foundation.

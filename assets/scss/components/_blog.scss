@@ -155,6 +155,9 @@
          padding: $base-padding * 8.5 0 $base-padding * 2;
       }
       article {
+         max-width: 900px;
+         margin-left: auto;
+         margin-right: auto;
          position: relative;
          .inner-blog-details {
             @include media-breakpoint-down-sm {

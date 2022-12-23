@@ -5,9 +5,9 @@ categories:
   - Announcements
 author: 
 thumbImg:
-  image_path: /images/chips-alliance-share.png
+  image_path: /news/chips-alliance-fall-2022-technology-update-december-15/share.png
 featuredImg:
-  image_path: /images/chips-alliance-share.png
+  image_path: /news/chips-alliance-fall-2022-technology-update-december-15/share.png
 ---
 
 Please join us on December 15 at 8:30 am PT either in person at Google or virtually for a CHIPS technology update featuring many exciting speakers. Details and registration are here: [https://events.linuxfoundation.org/chips-biannual-technology-update/](https://events.linuxfoundation.org/chips-biannual-technology-update/)
