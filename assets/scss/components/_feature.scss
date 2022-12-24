@@ -91,10 +91,9 @@
       }
     }
     p {
-      color: $color-text-light;
-      margin-bottom: $base-margin * 0.7;
-      font-size: 20px;
-      line-height: 33px;
+      margin-bottom: $base-margin * 1;
+      font-size: 1.4rem;
+      line-height: 1.75;
       @include media-breakpoint-down-sm {
         font-size: $base-font-size * 1.1;
         line-height: 29.7px;
@@ -192,6 +191,7 @@
         z-index: 1;
         max-width: 500px;
         position: relative;
+        border-radius: 20px;
       }
       .shape {
         position: absolute;

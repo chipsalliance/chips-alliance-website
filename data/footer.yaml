@@ -13,27 +13,29 @@ sections:
   -
     title: About
     links:
-      - link: "/about/members"
+      - link: "/about/who-we-are/"
+        text: "Who We Are"
+      - link: "/about/members/"
         text: "Members"
-      - link: "/about/governance"
+      - link: "/about/governance/"
         text: "Governance"
-      - link: "/about/contact"
+      - link: "/about/contact/"
         text: "Contact"
-      - link: "/about/getting-started"
-        text: "Getting Started"
   -
     title: "Community"
     links:
-      - link: "/projects"
+      - link: "/getting-started/"
+        text: "Getting Started"
+      - link: "/projects/"
         text: "Projects"
-      - link: "/events"
+      - link: "/events/"
         text: "Events"
   -
     title: "News"
     links:
-      - link: "/category/announcements"
+      - link: "/categories/announcements/"
         text: "Announcements"
-      - link: "/blog"
+      - link: "/categories/blog/"
         text: "Blog"
-      - link: "/annual-report"
-        text: "Annual Report"
+      - link: "/categories/reports/"
+        text: "Reports"
