@@ -96,7 +96,9 @@ els.forEach(el => {
       for (var i = 0; i < btns.length; i++) {
          btns[i].addEventListener('click', function () {
             var current = document.getElementsByClassName('shows');
-            current[0].className = current[0].className.replace(' shows', '');
+            if (current.length > 0) {
+               current[0].className = current[0].className.replace(' shows', '');
+            }
             this.className += ' shows';
          });
       }

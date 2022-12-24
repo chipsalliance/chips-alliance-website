@@ -134,12 +134,12 @@
       padding: $base-padding * 8.5 0 $base-padding * 0;
     }
     &-content {
-      padding-left: $base-padding * 7;
+      padding-left: $base-padding * 3;
       @include media-breakpoint-down-xxxl {
-        padding-left: $base-padding * 7;
+        padding-left: $base-padding * 3;
       }
       @include media-breakpoint-down-xxl {
-        padding-left: $base-padding * 5;
+        padding-left: $base-padding * 2;
       }
       @include media-breakpoint-down-lg {
         padding-left: 0;

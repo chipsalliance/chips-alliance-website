@@ -19,6 +19,8 @@ sections:
         text: "Members"
       - link: "/about/governance/"
         text: "Governance"
+      - link: "/about/faq/"
+        text: "FAQ"
       - link: "/about/contact/"
         text: "Contact"
   -

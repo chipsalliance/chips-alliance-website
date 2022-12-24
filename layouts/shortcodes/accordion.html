@@ -1,0 +1,23 @@
+<div class="accordion-item">
+  <span>{{.Params.index}}</span>
+  <h2 class="accordion-header" id="heading{{.Params.index}}">
+    <button
+      class="accordion-button collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapse{{.Params.index}}"
+      aria-expanded="false"
+      aria-controls="collapse{{.Params.index}}"
+    >
+      <p class="header-content">{{.Params.title}}</p>
+    </button>
+  </h2>
+  <div
+    id="collapse{{.Params.index}}"
+    class="accordion-collapse collapse"
+    aria-labelledby="heading{{.Params.index}}"
+    data-bs-parent="#accordionExample"
+  >
+    <div class="accordion-body">{{.Inner | markdownify}}</div>
+  </div>
+</div>

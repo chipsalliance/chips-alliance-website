@@ -435,12 +435,13 @@ a {
 
 .accordion-header {
   margin-bottom: 0;
+  margin-top: 0;
   .header-content {
     position: relative;
     font-size: $base-font-size * 1.6;
     font-weight: 600;
     font-family: $font-secondary;
-    margin: $base-margin * 0 $base-margin * 25 $base-margin * 0 $base-margin * 0;
+    margin: $base-margin * 0 $base-margin * 4 $base-margin * 0 $base-margin * 0;
     line-height: 33px;
     @include media-breakpoint-down-xl {
       margin: $base-margin * 0 $base-margin * 5 $base-margin * 0 $base-margin *
@@ -462,8 +463,8 @@ a {
   background: $color-gray;
   border-radius: 14px !important;
   margin-bottom: 40px;
-  border: 1px solid $color-white;
-  padding: 28px 30px 28px 120px;
+  border: 1px solid $color-primary-light;
+  padding: 28px 30px 28px 90px;
   @include media-breakpoint-down-lg {
     margin-bottom: 20px;
     padding: 20px 20px 20px 60px;
@@ -472,12 +473,12 @@ a {
   span {
     position: absolute;
     display: inline-block;
-    left: 40px;
+    left: 20px;
     top: 22px;
     text-align: center;
     width: 49px;
     height: 49px;
-    line-height: 49px;
+    line-height: 44px;
     background: $color-secondary-dark;
     border: 2px solid $color-primary-light;
     border-radius: 50%;
@@ -506,12 +507,10 @@ a {
 }
 
 .accordion-body {
-  padding: $base-padding * 1.6 $base-padding * 10 $base-padding * 0
+  padding: $base-padding * 1.6 $base-padding * 2 $base-padding * 0
     $base-padding * 0;
-  font-size: 20px;
-  color: $color-text-light;
-  line-height: 33px;
-  font-family: $font-secondary;
+  font-size: 1.1rem;
+  line-height: 29px;
   @include media-breakpoint-down-xl {
     padding: $base-padding * 1.6 $base-padding * 0 $base-padding * 0
       $base-padding * 0;
