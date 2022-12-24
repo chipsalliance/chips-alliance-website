@@ -470,6 +470,10 @@ a {
     padding: 20px 20px 20px 60px;
   }
 
+  &.shows {
+    border: 1px solid $color-anchor;
+  }
+
   span {
     position: absolute;
     display: inline-block;
