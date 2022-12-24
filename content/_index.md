@@ -39,7 +39,7 @@ content_blocks:
    -
       _bookshop_name: global/feature
       image_path: /images/feature/mailing-lists.png
-      title: Sign up to our mailing lists!
+      title: Sign Up to our Groups!
       description: >-
          Browser the CHIPS Alliance mailing lists and join groups you are interested in.
       btn:
