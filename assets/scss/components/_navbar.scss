@@ -59,7 +59,8 @@
   justify-content: center;
   align-items: center;
   @include media-breakpoint-down-lg {
-    margin-top: $base-margin * 4.5 !important;
+    padding-bottom: 4rem;
+    margin-top: $base-margin * 3.5 !important;
     justify-content: start;
     align-items: start;
     // height: calc(100vh - 76px);
