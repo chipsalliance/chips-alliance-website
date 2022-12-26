@@ -312,8 +312,8 @@
 
          border-radius: 20px !important;
          &.active {
-            background: #e53b2a !important;
-            border-color: #e53b2a !important;
+            background: $color-tertiary !important;
+            border-color: $color-tertiary !important;
          }
          svg {
             margin-right: -2px;
@@ -321,7 +321,7 @@
          &:hover {
             svg {
                g {
-                  fill: #e53b2a;
+                  fill: $color-tertiary;
                }
             }
          }

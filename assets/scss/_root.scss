@@ -262,7 +262,7 @@ a {
     line-height: 81.25px;
     margin-bottom: $base-margin * 1.5;
     span {
-      color: $color-primary;
+      color: $color-tertiary;
     }
     @include media-breakpoint-down-xxl {
       font-size: $base-font-size * 3.5;
