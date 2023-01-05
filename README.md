@@ -1,6 +1,6 @@
 # CHIPS Alliance Website
 
-This site is based off of [the Sendit Hugo theme](https://github.com/CloudCannon/sendit-hugo-template) and powers (chipsalliance.org)[https://chipsalliance.org/].
+This site is based off of [the Sendit Hugo theme](https://github.com/CloudCannon/sendit-hugo-template) and powers [chipsalliance.org](https://chipsalliance.org/).
 
 ## Develop
 
