@@ -109,6 +109,11 @@
                   Events
                </a>
             </li>
+            <li class="nav-item">
+               <a class="nav-link {{ if eq $current.RelPermalink "/workgroups/" }}active{{ end }}" href="/workgroups/">
+                  Workgroups
+               </a>
+            </li>
             <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "/categories/" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
                   News

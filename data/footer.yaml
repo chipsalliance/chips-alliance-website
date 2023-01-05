@@ -32,6 +32,8 @@ sections:
         text: "Projects"
       - link: "/events/"
         text: "Events"
+      - link: "/workgroups/"
+        text: "Workgroups"
   -
     title: "News"
     links:
