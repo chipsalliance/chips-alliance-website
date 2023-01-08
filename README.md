@@ -4,7 +4,7 @@ This site is based off of [the Sendit Hugo theme](https://github.com/CloudCannon
 
 ## Develop
 
-This theme was built with [Hugo](https://gohugo.io/) version `0.96.0`, but should support newer versions as well.
+This theme was built with [Hugo](https://gohugo.io/) version `v0.108.0+extended`, but should support newer versions as well.
 
 ### Prerequisites
 * Hugo [install](https://gohugo.io/getting-started/installing/). `brew install hugo`
