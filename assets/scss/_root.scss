@@ -555,3 +555,12 @@ a {
     transform: scale(1) translate(-50%, -50%);
   }
 }
+
+pre {
+  padding: 1rem;
+  background: $color-secondary-dark;
+}
+
+code {
+  color: $color-text;
+}
