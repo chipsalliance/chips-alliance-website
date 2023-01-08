@@ -1,6 +1,197 @@
-{{ define "main" }} {{ partial "bookshop_bindings" `.Params.content_blocks` }}
-{{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+{{ define "main" }}
+<section class="feature-hero">
+   <div class="container">
+     <div class="row align-items-center">
+       <div class="col-lg-6">
+         <div class="feature-hero-content">
+           <h1 class="">{{.Title}}</h1>
+           <p>{{.Description | markdownify}}</p>
+           <div class="d-block mb-6">
+             {{ with .Params.btn }}
+             <a href="{{.link}}" class="btn btn-primary btn-lg"> {{.text}} </a>
+             {{ end }}
+           </div>
+         </div>
+       </div>
+       <div class="col-lg-6">
+         <div class="feature-hero-banner">
+           <img src="{{.Params.image_path}}" alt="banner-image" />
+           <div class="shape">
+             <img
+               src="/images/feature/effect-7.png"
+               alt="shape"
+             />
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+</section>
 
+<!--bookshop-live name(global/counter)-->
+<section
+class="counter-up "
+id="counter-up"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-header">
+          <h2>About CHIPS <span>Alliance</span></h2>
+          <p>The CHIPS Alliance develops high-quality, open source hardware designs relevant to silicon devices and FPGAs. By creating an open and collaborative environment, CHIPS Alliance shares resources to lower the cost of development. Companies and individuals can work together to develop open source CPUs, various peripherals, and complex IP blocks. CHIPS Alliance is open to all organizations who are interested in collaborating on open source hardware or software tools to accelerate the creation of more efficient and innovative chip designs.</p>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="counter-up-wrapper d-grid">
+          
+          <div class="counter-up-content">
+            <div class="counter-up-content-item">
+              <div class="counter-percent">
+                
+                <span class="counter">20</span>
+                
+              </div>
+              <p>Hosted Projects</p>
+            </div>
+          </div>
+          
+          <div class="counter-up-content">
+            <div class="counter-up-content-item">
+              <div class="counter-percent">
+                
+                <span class="counter">2016</span>
+                
+              </div>
+              <p>Established in</p>
+            </div>
+          </div>
+          
+          <div class="counter-up-content">
+            <div class="counter-up-content-item">
+              <div class="counter-percent">
+                
+                <span class="counter">40</span>
+                
+                <span class="percent">&#43;</span>
+                
+              </div>
+              <p>Team Members</p>
+            </div>
+          </div>
+          
+          <div class="counter-up-content">
+            <div class="counter-up-content-item">
+              <div class="counter-percent">
+                
+                <span class="counter">32</span>
+                
+                <span class="percent">&#43;</span>
+                
+              </div>
+              <p>Member Companies</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--bookshop-live end-->
+
+<!--bookshop-live name(home/video)-->
+<section class="video pb-xxl-22 pb-lg-18 pb-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="banner">
+          <div class="rounded-box">
+            <img
+              src="/images/video/video-thum.jpg"
+              class="w-100"
+              alt="banner-image"
+              loading="lazy"
+            />
+          </div>
+          <div class="effect-one">
+            <img
+              src="/images/video/effect-one.png"
+              alt="effect"
+              loading="lazy"
+            />
+          </div>
+          <div class="effect-two">
+            <img
+              src="/images/video/effect-two.png"
+              alt="effect"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="video-iframe d-flex align-items-center justify-content-center"
+          >
+            <div class="video-icon me-sm-9 me-8">
+              <a class="popup-vimeo" href="https://www.youtube.com/watch?v=bLfBFpACh2s">
+                <svg
+                  width="28"
+                  height="32"
+                  viewBox="0 0 28 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26 12.5359C28.6667 14.0755 28.6667 17.9245 26 19.4641L6.5 30.7224C3.83333 32.262 0.499998 30.3375 0.499999 27.2583L0.5 4.74167C0.5 1.66247 3.83333 -0.262033 6.5 1.27757L26 12.5359Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--bookshop-live end-->
+
+<!--bookshop-live name(global/feature)-->
+<section class="feature pt-sm-5 pt-5 pb-4">
+  <div class="container">
+    
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="feature-item-content ps-xxl-8 ps-0">
+          <h2 class="pe-xl-0">Sign Up to our Groups!</h2>
+          <p>Browser the CHIPS Alliance mailing lists and join groups you are interested in.</p>
+          <div class="Learn-more">
+            
+            <a href="https://lists.chipsalliance.org/g/main/subgroups" class="">
+              Sign Up
+              <i class="ph-arrow-right"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
+          <div class="card-image">
+            <img src="/images/feature/mailing-lists.png" alt="card-images" loading="lazy" />
+          </div>
+          <div class="effect-two">
+            <img
+              src="/images/feature/effect-2.png"
+              alt="effect-image"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!--bookshop-live end-->
 
 <section class="page-details">
     <div class="container">
@@ -10,49 +201,48 @@
           </div>
        </div>
     </div>
- </section>
+</section>
 
-
- <section class="blog-related position-relative">
-    <div class="container">
-       <div class="row">
-          <div class="col-md-12">
-             <div class="blog-section">
-                <h2 class="blog-section-title">Recent News</h2>
-             </div>
-          </div>
-       </div>
-       <div class="row">
-          {{ range ( where site.RegularPages "Section" "news" | first 3 ) }}
-          <div class="col-lg-4 col-md-6">
-             <article class="blog-post">
-                <div class="blog-post-thumb">
-                   <a href="{{.Permalink | relURL}}">
-                      <img src="{{.Params.thumbImg.image_path}}" alt="blog-thum" />
-                   </a>
-                </div>
-                <div class="blog-post-content">
-                   <div class="blog-post-tag">
-                      {{ range .Params.categories }} {{ $href := print (absURL "categories/") (urlize
-                      .) }}
-                      <a href="{{ $href }}">{{ . | humanize }}</a>
-                      {{ end }}
-                   </div>
-                   <div class="blog-post-date">
-                      {{.Date | time.Format ":date_long"}}
-                   </div>
-                   <div class="blog-post-title">
-                      <a href="{{.Permalink | relURL}}">{{.Params.title}}</a>
-                   </div>
-                </div>
-             </article>
+<section class="blog-related position-relative">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="blog-section">
+               <h2 class="blog-section-title">Recent News</h2>
+            </div>
          </div>
-          {{ end }}
-         <p>
-            <a href="/categories/blog/" class="btn btn-primary btn-lg"> Read more from our Blog </a>
-         </p>
-       </div>
-    </div>
- </section>
+      </div>
+      <div class="row">
+         {{ range ( where site.RegularPages "Section" "news" | first 3 ) }}
+         <div class="col-lg-4 col-md-6">
+            <article class="blog-post">
+               <div class="blog-post-thumb">
+                  <a href="{{.Permalink | relURL}}">
+                     <img src="{{.Params.thumbImg.image_path}}" alt="blog-thum" />
+                  </a>
+               </div>
+               <div class="blog-post-content">
+                  <div class="blog-post-tag">
+                     {{ range .Params.categories }} {{ $href := print (absURL "categories/") (urlize
+                     .) }}
+                     <a href="{{ $href }}">{{ . | humanize }}</a>
+                     {{ end }}
+                  </div>
+                  <div class="blog-post-date">
+                     {{.Date | time.Format ":date_long"}}
+                  </div>
+                  <div class="blog-post-title">
+                     <a href="{{.Permalink | relURL}}">{{.Params.title}}</a>
+                  </div>
+               </div>
+            </article>
+      </div>
+         {{ end }}
+      <p>
+         <a href="/categories/blog/" class="btn btn-primary btn-lg"> Read more from our Blog </a>
+      </p>
+      </div>
+   </div>
+</section>
 
 {{ end }}

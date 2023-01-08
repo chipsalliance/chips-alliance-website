@@ -1,53 +1,12 @@
 ---
-title: Home
-content_blocks:
-   -
-      _bookshop_name: home/hero
-      title: Welcome!
-      description: >-
-         CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.
-      image_path: /images/hero/home-hero.jpg
-      link:
-         text: Join Us
-         url: /join/
-   -
-      _bookshop_name: global/counter
-      title: About CHIPS
-      title_suffix: Alliance
-      description: >-
-         The CHIPS Alliance develops high-quality, open source hardware designs relevant to silicon devices and FPGAs. By creating an open and collaborative environment, CHIPS Alliance shares resources to lower the cost of development. Companies and individuals can work together to develop open source CPUs, various peripherals, and complex IP blocks. CHIPS Alliance is open to all organizations who are interested in collaborating on open source hardware or software tools to accelerate the creation of more efficient and innovative chip designs.
-      alternateStyle: false
-      numbers:
-         -
-            number: 20
-            text: Hosted Projects
-         -
-            number: 2016
-            text: Established in
-         -
-            number: 40
-            suffix: +
-            text: Team Members
-         -
-            number: 32
-            suffix: +
-            text: Member Companies
-   -
-      _bookshop_name: home/video
-      image_path: /images/video/video-thum.jpg
-      videoUrl: https://www.youtube.com/watch?v=bLfBFpACh2s
-   -
-      _bookshop_name: global/feature
-      image_path: /images/feature/mailing-lists.png
-      title: Sign Up to our Groups!
-      description: >-
-         Browser the CHIPS Alliance mailing lists and join groups you are interested in.
-      btn:
-         link: https://lists.chipsalliance.org/g/main/subgroups
-         text: Sign Up
-      reversed: false
+title: Welcome!
+description: >-
+   CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.
+image_path: /images/hero/home-hero.jpg
+btn:
+   text: Join Us
+   link: /join/
 ---
-
 
 ## CHIPS Alliance Members
 
