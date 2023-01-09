@@ -216,12 +216,14 @@ id="counter-up"
          {{ range ( where site.RegularPages "Section" "news" | first 3 ) }}
          <div class="col-lg-4 col-md-6">
             <article class="blog-post">
-               <div class="blog-post-thumb">
-                  <a href="{{.Permalink | relURL}}">
-                     <img src="{{.Params.thumbImg.image_path}}" alt="blog-thum" />
-                  </a>
-               </div>
-               <div class="blog-post-content">
+              <div class="blog-post-thumb">
+                <a href="{{ .RelPermalink }}">
+                   {{- with .Params.images }}
+                   <img src="{{ index . 0 | absURL }}" alt="blog-thumb" loading="lazy" />
+                   {{ end -}}
+                </a>
+             </div>
+             <div class="blog-post-content">
                   <div class="blog-post-tag">
                      {{ range .Params.categories }} {{ $href := print (absURL "categories/") (urlize
                      .) }}
