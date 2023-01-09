@@ -8,7 +8,6 @@ This theme was built with [Hugo](https://gohugo.io/) version `v0.108.0+extended`
 
 ### Prerequisites
 * Hugo [install](https://gohugo.io/getting-started/installing/). `brew install hugo`
-* Go [install](https://go.dev/learn/). `brew install go`
 
 ### Quickstart
 1. In the terminal at the root dir, run: `npm i`
