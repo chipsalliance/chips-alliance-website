@@ -4,10 +4,7 @@ title: Goings-on in the FuseSoC Project and Other Open Source Silicon Related Ne
 categories:
   - Blog
 author:
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published by [Olof Kindgren](https://olofkindgren.blogspot.com/2021/02/fossi-fever-2020.html)*

@@ -4,10 +4,7 @@ title: CHIPS Alliance Announces Xilinx as its Newest Member
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /news/xilinx-new-member/share.png
-featuredImg:
-  image_path: /news/xilinx-new-member/share.png
+images: ['/news/xilinx-new-member/share.png']
 ---
 
 *Xilinx to continue to drive forward open source FPGA innovation*

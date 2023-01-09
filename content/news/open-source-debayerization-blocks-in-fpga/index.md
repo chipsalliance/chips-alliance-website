@@ -4,10 +4,7 @@ title: Open Source Debayerization Blocks in FPGA
 categories:
   - Blog
 author: 
-thumbImg:
-  image_path: /news/open-source-debayerization-blocks-in-fpga/share.jpg
-featuredImg:
-  image_path: /news/open-source-debayerization-blocks-in-fpga/share.jpg
+images: ['/news/open-source-debayerization-blocks-in-fpga/share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/10/debayerization-blocks-in-fpga/).*

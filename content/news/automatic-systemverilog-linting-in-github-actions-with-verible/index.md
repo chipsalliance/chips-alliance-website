@@ -4,10 +4,7 @@ title: Automatic SystemVerilog Linting in GitHub Actions with Verible
 categories:
   - Blog
 author: 
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/08/verible-integration-with-github-actions/).*

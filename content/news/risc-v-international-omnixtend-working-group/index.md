@@ -4,10 +4,7 @@ title: CHIPS Alliance and RISC-V International Invite the RISC-V Community to Pa
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /news/risc-v-international-omnixtend-working-group/share.png
-featuredImg:
-  image_path: /news/risc-v-international-omnixtend-working-group/share.png
+images: ['/news/risc-v-international-omnixtend-working-group/share.png']
 ---
 
 *New joint working group will enhance the OmniXtend Cache Coherency architecture*

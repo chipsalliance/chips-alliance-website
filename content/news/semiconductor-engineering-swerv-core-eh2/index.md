@@ -4,10 +4,7 @@ title: "Semiconductor Engineering: About The SweRV Core EH2"
 categories:
   - Blog
 author:
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 In mid-May, CHIPS Alliance announced the open sourcing of the SweRV Core EH2 and SweRV Core EL2 designed by [Western Digital](https://www.westerndigital.com/company/innovations/risc-v). These cores, as well as the earlier EH1, are now supported by Codasip’s SweRV Core Support Package which provides all of the components necessary to design, implement, test, and write software for a SweRV Core-based system-on-chip. But what is SweRV Core EH2?

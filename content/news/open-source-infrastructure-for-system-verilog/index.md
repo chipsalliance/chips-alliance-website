@@ -4,10 +4,7 @@ title: Progress on Building Open Source Infrastructure for System Verilog
 categories:
   - Blog
 author: Rob Mains, General Manager of CHIPS Alliance
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 SystemVerilog is a rich hardware design description and verification language that is seeing increased usage in industry. In the second Deep Dive Cafe Talk by CHIPS Alliance on July 20, Henner Zeller, who is an software developer with Google, provided an excellent in depth technical talk on building out an open source tooling ecosystem around SystemVerilog to provide a common framework that can be used by both functional simulation applications as well as logic synthesis. In case you missed the live presentation, you can watch it [here](https://youtu.be/xLxNHBzmGiI). 

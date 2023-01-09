@@ -4,10 +4,7 @@ title: CHIPS Alliance Announces AIB 2.0 Draft Specification to Accelerate Design
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /images/announcement-share.jpg
-featuredImg:
-  image_path: /images/announcement-share.jpg
+images: ['/images/announcement-share.jpg']
 ---
 
 *AIB reduces design barriers, costs, and leverages generators to ease development of  chiplet-based designs*

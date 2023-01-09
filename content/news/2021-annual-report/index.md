@@ -4,10 +4,7 @@ title: 2021 Annual Report
 categories:
   - Reports
 author: 
-thumbImg:
-  image_path: /news/2021-annual-report/share.png
-featuredImg:
-  image_path: /news/2021-annual-report/share.png
+images: ['/news/2021-annual-report/share.png']
 ---
 
 CHIPS Alliance was founded in March 2019 to design high-quality, open source hardware register transfer level (RTL) and develop open source hardware and software design tools. By creating an open and collaborative environment, companies and organizations can develop innovative, cost effective hardware designs optimized for the requirements of today’s silicon devices and FPGAs.

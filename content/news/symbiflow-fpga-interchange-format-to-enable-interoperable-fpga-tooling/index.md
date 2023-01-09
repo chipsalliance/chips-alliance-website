@@ -4,10 +4,7 @@ title: SymbiFlow FPGA Interchange Format to Enable Interoperable FPGA Tooling
 categories:
   - Blog
 author: 
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/09/symbiflow-fpga-interchange-format/).*

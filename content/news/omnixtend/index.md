@@ -4,10 +4,7 @@ title: CHIPS Alliance to Collaborate with RISC-V to Standardize an Open Unified 
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /images/announcement-share.jpg
-featuredImg:
-  image_path: /images/announcement-share.jpg
+images: ['/images/announcement-share.jpg']
 ---
 
 *CHIPS Alliance to highlight OmniXtend advances at RISC-V Summit*

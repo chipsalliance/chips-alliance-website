@@ -4,10 +4,7 @@ title: Improving the OpenLane ASIC Build Flow with Open Source SystemVerilog Sup
 categories:
   - Blog
 author: 
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/10/openlane-asic-build-flow-with-systemverliog-support/).*

@@ -4,10 +4,7 @@ title: Antmicro DDR5 Rowhammer Testing Framework
 categories:
   - Blog
 author: 
-thumbImg:
-  image_path: /news/1212/share.png
-featuredImg:
-  image_path: /news/1212/share.png
+images: ['/news/1212/share.png']
 ---
 
 CHIPS Alliance is excited by the Antmicro announcement of the extensible, open, Rowhammer testing framework for DDR5. Read a detailed description of their work here: https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/

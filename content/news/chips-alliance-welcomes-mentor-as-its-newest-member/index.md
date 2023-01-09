@@ -4,10 +4,7 @@ title: CHIPS Alliance Welcomes Mentor as its Newest Member
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /images/announcement-share.jpg
-featuredImg:
-  image_path: /images/announcement-share.jpg
+images: ['/images/announcement-share.jpg']
 ---
 
 *Mentor to present at the virtual CHIPS Alliance Workshop on Sept. 17* 

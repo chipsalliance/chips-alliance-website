@@ -4,10 +4,7 @@ title: CHIPS SweRV Cores and the Open Tools Ecosystem
 categories:
   - Blog
 author:
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/07/swerv-cores-tools-ecosystem/).*

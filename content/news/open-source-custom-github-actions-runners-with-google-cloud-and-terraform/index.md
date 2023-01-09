@@ -4,10 +4,7 @@ title: Open Source Custom GitHub Actions Runners with Google Cloud and Terraform
 categories:
   - Blog
 author: 
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/08/open-source-github-actions-runners-with-gcp-and-terraform/).*

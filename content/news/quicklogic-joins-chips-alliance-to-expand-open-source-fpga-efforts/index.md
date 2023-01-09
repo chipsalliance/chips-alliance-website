@@ -4,10 +4,7 @@ title: QuickLogic Joins CHIPS Alliance to Expand Open Source FPGA Efforts
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /images/announcement-share.jpg
-featuredImg:
-  image_path: /images/announcement-share.jpg
+images: ['/images/announcement-share.jpg']
 ---
 
 *QuickLogic to present at the virtual CHIPS Alliance Workshop on Sept. 17* 

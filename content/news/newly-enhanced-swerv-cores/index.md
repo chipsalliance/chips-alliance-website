@@ -4,10 +4,7 @@ title: CHIPS Alliance’s Newly Enhanced SweRV Cores Available to All for Free
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /images/announcement-share.jpg
-featuredImg:
-  image_path: /images/announcement-share.jpg
+images: ['/images/announcement-share.jpg']
 ---
 
 *CHIPS Alliance to host online event to help community innovating with SweRV Core EH2 and EL2 Solutions*

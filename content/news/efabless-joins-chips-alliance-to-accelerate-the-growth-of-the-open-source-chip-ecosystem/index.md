@@ -4,10 +4,7 @@ title: Efabless Joins CHIPS Alliance to Accelerate the Growth of the Open Source
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /images/announcement-share.jpg
-featuredImg:
-  image_path: /images/announcement-share.jpg
+images: ['/images/announcement-share.jpg']
 ---
 
 *Efabless to give a talk on the OpenROAD project at the CHIPS Alliance Workshop on Sept. 17*

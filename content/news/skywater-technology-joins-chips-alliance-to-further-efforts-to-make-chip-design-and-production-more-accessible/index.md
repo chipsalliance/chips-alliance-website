@@ -4,10 +4,7 @@ title: SkyWater Technology Joins CHIPS Alliance to Further Efforts to Make Chip 
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /news/skywater-technology-joins-chips-alliance-to-further-efforts-to-make-chip-design-and-production-more-accessible/share.png
-featuredImg:
-  image_path: /news/skywater-technology-joins-chips-alliance-to-further-efforts-to-make-chip-design-and-production-more-accessible/share.png
+images: ['/news/skywater-technology-joins-chips-alliance-to-further-efforts-to-make-chip-design-and-production-more-accessible/share.png']
 ---
 
 *SkyWater furthers collaboration with CHIPS Alliance members on open source shuttle projects*

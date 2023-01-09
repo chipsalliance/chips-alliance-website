@@ -4,10 +4,7 @@ title: Antmicro’s ARVSOM RISC-V Module Announced
 categories:
   - Blog
 author:
-thumbImg:
-  image_path: /images/blog-share.jpg
-featuredImg:
-  image_path: /images/blog-share.jpg
+images: ['/images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/04/arv-som-announcement/).*

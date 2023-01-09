@@ -4,10 +4,7 @@ title: CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membersh
 categories:
   - Announcements
 author: 
-thumbImg:
-  image_path: /news/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/share.png
-featuredImg:
-  image_path: /news/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/share.png
+images: ['/news/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/share.png']
 ---
 
 *CHIPS Alliance continues to grow with more than 25 companies collaborating on open source hardware and software technologies*
