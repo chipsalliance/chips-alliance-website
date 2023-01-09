@@ -68,7 +68,7 @@
                   </a>
                </li>
                {{ end }} {{ $paginator := .Paginator }} {{ range $paginator.Pagers }}
-               <li class="page-item">
+               <li class="page-item number-page-button">
                   <a
                      class="page-link btn btn-secondary {{ if eq . $paginator }}active{{ end }}"
                      href="{{.URL}}"
