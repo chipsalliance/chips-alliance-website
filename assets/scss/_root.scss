@@ -12,6 +12,7 @@ body {
 }
 .bg-nav {
   background: rgba($color-secondary, 0.95);
+  opacity: 1 !important;
   &.sticky-nav {
     background: $color-white;
   }
