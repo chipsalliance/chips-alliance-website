@@ -4,3 +4,13 @@ title = 'CHIPS Alliance'
 
 [markup.goldmark.renderer]
 unsafe= true
+
+googleAnalytics = 'G-MEASUREMENT_ID'
+
+[params]
+  description = 'CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.'
+  images = ['images/chips-alliance-share.jpg']
+  title = 'CHIPS Alliance'
+
+[social]
+  twitter = 'chipsalliance'

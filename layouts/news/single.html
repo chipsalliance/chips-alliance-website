@@ -26,13 +26,16 @@
                      </ul>
                   </div>
                </div>
+
+               {{- with $.Params.images }}
                <div class="rounded-box mb-xxl-11 mb-8">
                   <img
-                     src="{{.Params.featuredImg.image_path}}"
+                     src="{{ index . 0 | absURL }}"
                      class="w-100"
                      alt="featured-image"
                   />
                </div>
+               {{ end -}}
                <div>{{.Content}}</div>
             </article>
          </div>

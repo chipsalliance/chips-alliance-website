@@ -18,7 +18,9 @@
             <article class="blog-post">
                <div class="blog-post-thumb">
                   <a href="{{ .RelPermalink }}">
-                     <img src="{{.Params.thumbImg.image_path}}" alt="blog-thumb" loading="lazy" />
+                     {{- with .Params.images }}
+                     <img src="{{ index . 0 | absURL }}" alt="blog-thumb" loading="lazy" />
+                     {{ end -}}
                   </a>
                </div>
                <div class="blog-post-content">
