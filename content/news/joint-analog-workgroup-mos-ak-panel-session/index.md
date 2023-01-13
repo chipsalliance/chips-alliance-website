@@ -4,7 +4,7 @@ title: Joint Analog Workgroup / MOS-AK Panel Session
 categories:
   - Blog
 author: 
-images: ['/news/joint-analog-workgroup-mos-ak-panel-session/share.png']
+images: ['news/joint-analog-workgroup-mos-ak-panel-session/share.png']
 ---
 
 Please join us for a special joint panel webinar session for the CHIPS Alliance Analog Workgroup and MOS-AK Foundation.

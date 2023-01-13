@@ -4,7 +4,7 @@ title: "Towards UVM: Using Coroutines for Low-overhead Dynamic Scheduling in Ver
 categories:
   - Blog
 author: 
-images: ['/news/towards-uvm-using-coroutines/share.png']
+images: ['news/towards-uvm-using-coroutines/share.png']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/coroutines-for-dynamic-scheduling-in-verilator/).*

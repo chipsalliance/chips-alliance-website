@@ -4,7 +4,7 @@ title: Software-driven ASIC Prototyping Using the Open Source SkyWater Shuttle
 categories:
   - Blog
 author: 
-images: ['/news/software-driven-asic-prototyping-using-the-open-source-skywater-shuttle/share.jpg']
+images: ['news/software-driven-asic-prototyping-using-the-open-source-skywater-shuttle/share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/sw-driven-asics-with-skywater-shuttle/).*

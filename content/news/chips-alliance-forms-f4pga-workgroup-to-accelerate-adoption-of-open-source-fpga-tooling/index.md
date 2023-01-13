@@ -4,7 +4,7 @@ title: CHIPS Alliance Forms F4PGA Workgroup to Accelerate Adoption of Open Sourc
 categories:
   - Announcements
 author: 
-images: ['/news/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling/share.png']
+images: ['news/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling/share.png']
 ---
 
 *New workgroup draws support from industry leaders as the open FPGA toolchain matures*

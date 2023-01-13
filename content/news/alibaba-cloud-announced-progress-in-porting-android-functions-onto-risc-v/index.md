@@ -4,7 +4,7 @@ title: Alibaba Cloud Announced Progress in Porting Android Functions onto RISC-V
 categories:
   - Announcements
 author: 
-images: ['/news/alibaba-cloud-announced-progress-in-porting-android-functions-onto-risc-v/share.png']
+images: ['news/alibaba-cloud-announced-progress-in-porting-android-functions-onto-risc-v/share.png']
 ---
 
 *The company also tops MLPerf Tiny v0.7 Benchmark with its IOT processor*

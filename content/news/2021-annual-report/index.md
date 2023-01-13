@@ -4,7 +4,7 @@ title: 2021 Annual Report
 categories:
   - Reports
 author: 
-images: ['/news/2021-annual-report/share.png']
+images: ['news/2021-annual-report/share.png']
 ---
 
 CHIPS Alliance was founded in March 2019 to design high-quality, open source hardware register transfer level (RTL) and develop open source hardware and software design tools. By creating an open and collaborative environment, companies and organizations can develop innovative, cost effective hardware designs optimized for the requirements of today’s silicon devices and FPGAs.
@@ -147,7 +147,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 
 - [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.design-reuse.com/news/49493/chips-alliance-antmicro-verisilicon-platinum-membership-level.html) – Feb. 16, 2021
 - [CHIPS Alliance Adds Antmicro and VeriSilicon](https://insidehpc.com/2021/02/chips-alliance-adds-antmicro-and-verisilicon/) – Feb. 12, 2021
-- [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.enterpriseai.news/2021/02/12/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 12, 2021
+- [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.enterprise.ai/news/2021/02/12/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 12, 2021
 - [CHIPS Alliance Brings on Rob Mains as New Executive Director](https://www.hpcwire.com/off-the-wire/chips-alliance-brings-on-rob-mains-as-new-executive-director/) – Feb. 11, 2021
 - [Week In Review: Design, Low Power](https://semiengineering.com/week-in-review-design-low-power-133/) – Feb. 12, 2021
 - CHIPS Alliance Hires New Director to Push Open-Source Chips Ecosystem into Next Gear – Feb. 8, 2021

@@ -4,7 +4,7 @@ title: SATA Design Implementation on FPGAs with Open Source Tools
 categories:
   - Blog
 author: 
-images: ['/news/sata-design-implementation-on-fpgas-with-open-source-tools/share.png']
+images: ['news/sata-design-implementation-on-fpgas-with-open-source-tools/share.png']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/sata-with-open-source-fpga-tools/).*
