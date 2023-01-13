@@ -5,7 +5,7 @@ description: >-
 image_path: images/hero/home-hero.jpg
 btn:
    text: Join Us
-   link: /join/
+   link: join/
 ---
 
 ## CHIPS Alliance Members
