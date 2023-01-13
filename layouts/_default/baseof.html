@@ -9,17 +9,17 @@
       content="width=device-width, initial-scale=1, maximum-scale=5"
     />
 
-    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="vendor/phosphor-icons/css/phosphor.css" rel="stylesheet" />
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+    <link href={{ relURL "vendor/bootstrap/bootstrap.min.css"}} rel="stylesheet" />
+    <link href={{ relURL "vendor/phosphor-icons/css/phosphor.css"}} rel="stylesheet" />
+    <link href={{ relURL "vendor/magnific-popup/magnific-popup.css"}} rel="stylesheet" />
 
     {{ $style := resources.Get "/scss/theme.scss" | resources.ToCSS |
     resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{$style.Permalink}}" />
-    <link rel="icon" href="images/favicon/cropped-favicon-1-32x32.png" sizes="32x32" />
-    <link rel="icon" href="images/favicon/cropped-favicon-1-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="images/favicon/cropped-favicon-1-180x180.png" />
-    <meta name="msapplication-TileImage" content="images/favicon/cropped-favicon-1-270x270.png" />
+    <link rel="stylesheet" href={{relURL $style.Permalink}} />
+    <link rel="icon" href={{relURL "images/favicon/cropped-favicon-1-32x32.png"}} sizes="32x32" />
+    <link rel="icon" href={{relURL "images/favicon/cropped-favicon-1-192x192.png"}} sizes="192x192" />
+    <link rel="apple-touch-icon" href={{relURL "images/favicon/cropped-favicon-1-180x180.png"}} />
+    <meta name="msapplication-TileImage" content={{relURL "images/favicon/cropped-favicon-1-270x270.png"}} />
     <script src="https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js"></script>
 
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
@@ -43,10 +43,10 @@
     {{ partial "navbar.html" . }} {{ block "main" . }} {{ end }} {{ partial
     "footer.html" . }}
 
-    <script src="vendor/jQuery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="vendor/counter-up/countup.js"></script>
-    <script src="vendor/magnific-popup/magnific-popup.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src={{ relURL "vendor/jQuery/jquery.min.js"}}></script>
+    <script src={{ relURL "vendor/bootstrap/bootstrap.bundle.min.js"}}></script>
+    <script src={{ relURL "vendor/counter-up/countup.js"}}></script>
+    <script src={{ relURL "vendor/magnific-popup/magnific-popup.min.js"}}></script>
+    <script src={{ relURL "js/script.js"}}></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
       <div class="col-lg-4">
         <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
           <div class="card-image">
-            <img src="{{.Params.imagesrc}}" alt="{{.Params.imagealt}}" loading="lazy" class="rounded"/>
+            <img src={{relURL .Params.imagesrc}} alt="{{.Params.imagealt}}" loading="lazy" class="rounded"/>
           </div>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="col-lg-4 order-1 order-lg-2">
         <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
             <div class="card-image">
-              <img src="{{.Params.imagesrc}}" alt="{{.Params.imagealt}}" loading="lazy" class="rounded"/>
+              <img src={{relURL .Params.imagesrc}} alt="{{.Params.imagealt}}" loading="lazy" class="rounded"/>
             </div>
         </div>
       </div>

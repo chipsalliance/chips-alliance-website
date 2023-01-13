@@ -15,10 +15,10 @@
        </div>
        <div class="col-lg-6">
          <div class="feature-hero-banner">
-           <img src="{{.Params.image_path}}" alt="banner-image" />
+           <img src={{relURL .Params.image_path}} alt="banner-image" />
            <div class="shape">
              <img
-               src="images/feature/effect-7.png"
+               src={{relURL "images/feature/effect-7.png"}}
                alt="shape"
              />
            </div>
@@ -107,7 +107,7 @@ id="counter-up"
         <div class="banner">
           <div class="rounded-box">
             <img
-              src="images/video/video-thum.jpg"
+              src={{relURL "images/video/video-thum.jpg"}}
               class="w-100"
               alt="banner-image"
               loading="lazy"
@@ -115,14 +115,14 @@ id="counter-up"
           </div>
           <div class="effect-one">
             <img
-              src="images/video/effect-one.png"
+              src={{relURL "images/video/effect-one.png"}}
               alt="effect"
               loading="lazy"
             />
           </div>
           <div class="effect-two">
             <img
-              src="images/video/effect-two.png"
+              src={{relURL "images/video/effect-two.png"}}
               alt="effect"
               loading="lazy"
             />
@@ -176,11 +176,11 @@ id="counter-up"
       <div class="col-lg-6 order-1 order-lg-2">
         <div class="feature-item-banner mb-sm-8 mb-lg-10 mb-xxl-15 mb-7">
           <div class="card-image">
-            <img src="images/feature/mailing-lists.png" alt="card-images" loading="lazy" />
+            <img src={{relURL "images/feature/mailing-lists.png"}} alt="card-images" loading="lazy" />
           </div>
           <div class="effect-two">
             <img
-              src="images/feature/effect-2.png"
+              src={{relURL "images/feature/effect-2.png"}}
               alt="effect-image"
               loading="lazy"
             />
@@ -217,7 +217,7 @@ id="counter-up"
          <div class="col-lg-4 col-md-6">
             <article class="blog-post">
               <div class="blog-post-thumb">
-                <a href="{{ .RelPermalink }}">
+                <a href={{relURL .RelPermalink }}>
                    {{- with .Params.images }}
                    <img src="{{ index . 0 | absURL }}" alt="blog-thumb" loading="lazy" />
                    {{ end -}}
@@ -241,7 +241,7 @@ id="counter-up"
       </div>
          {{ end }}
       <p>
-         <a href="/categories/blog/" class="btn btn-primary btn-sm"> Read more from our Blog </a>
+         <a href={{relURL "/categories/blog/"}} class="btn btn-primary btn-sm"> Read more from our Blog </a>
       </p>
       </div>
    </div>

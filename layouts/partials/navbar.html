@@ -3,12 +3,12 @@
 {{ $current := . }}
 <header>
    <div class="lfprojects position-fixed">
-      <a href="https://www.linuxfoundation.org/projects" target="_blank" rel="noopener noreferrer"><img src="images/lf-projects-banner-white.svg"></a>
+      <a href="https://www.linuxfoundation.org/projects" target="_blank" rel="noopener noreferrer"><img src={{ relURL "images/lf-projects-banner-white.svg"}}></a>
    </div>
 
    <nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id="mainnavigationBar">
-      <a class="navbar-brand" href="/">
-         <img src="images/chips_alliance.svg" alt="Nav-Logo" />
+      <a class="navbar-brand" href={{ relURL ""}}>
+         <img src={{ relURL "images/chips_alliance.svg" }} alt="Nav-Logo" />
       </a>
       <button
          class="navbar-toggler"
@@ -87,30 +87,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "about" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+               <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "about" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href={{ relURL "#"}}>
                   About
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/who-we-are/" }}active{{ end }}" href="about/who-we-are/">Who We Are</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/getting-started/" }}active{{ end }}" href="getting-started/">Getting Started</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/members/" }}active{{ end }}" href="about/members/">Members</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/governance/" }}active{{ end }}" href="about/governance/">Governance</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/faq/" }}active{{ end }}" href="about/faq/">FAQ</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/contact/" }}active{{ end }}" href="about/contact/">Contact</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/who-we-are/" }}active{{ end }}" href={{ relURL "about/who-we-are/"}} >Who We Are</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/getting-started/" }}active{{ end }}" href={{ relURL "getting-started/"}}>Getting Started</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/members/" }}active{{ end }}" href={{ relURL "about/members/"}}>Members</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/governance/" }}active{{ end }}" href={{ relURL "about/governance/"}}>Governance</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/faq/" }}active{{ end }}" href={{ relURL "about/faq/"}}>FAQ</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/about/contact/" }}active{{ end }}" href={{ relURL "about/contact/"}}>Contact</a>
                </div>
             </li>
             <li class="nav-item">
-               <a class="nav-link {{ if eq $current.RelPermalink "/projects/" }}active{{ end }}" href="projects/">
+               <a class="nav-link {{ if eq $current.RelPermalink "/projects/" }}active{{ end }}" href={{ relURL "projects/"}}>
                   Projects
                </a>
             </li>
             <li class="nav-item">
-               <a class="nav-link {{ if eq $current.RelPermalink "/events/" }}active{{ end }}" href="events/">
+               <a class="nav-link {{ if eq $current.RelPermalink "/events/" }}active{{ end }}" href={{ relURL "events/"}}>
                   Events
                </a>
             </li>
             <li class="nav-item">
-               <a class="nav-link {{ if eq $current.RelPermalink "/workgroups/" }}active{{ end }}" href="workgroups/">
+               <a class="nav-link {{ if eq $current.RelPermalink "/workgroups/" }}active{{ end }}" href={{ relURL "workgroups/"}}>
                   Workgroups
                </a>
             </li>
@@ -119,13 +119,13 @@
                   News
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/announcements/" }}active{{ end }}" href="categories/announcements/">Announcements</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/blog/" }}active{{ end }}" href="categories/blog/">Blog</a>
-                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/reports/" }}active{{ end }}" href="categories/reports/">Reports</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/announcements/" }}active{{ end }}" href={{ relURL "categories/announcements/"}}>Announcements</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/blog/" }}active{{ end }}" href={{ relURL "categories/blog/"}}>Blog</a>
+                  <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "/categories/reports/" }}active{{ end }}" href={{ relURL "categories/reports/"}}>Reports</a>
                </div>
             </li>
             <li class="nav-item">
-               <a class="nav-link {{ if eq $current.RelPermalink "/join/" }}active{{ end }}" href="join/">
+               <a class="nav-link {{ if eq $current.RelPermalink "/join/" }}active{{ end }}" href={{relURL "join/"}}>
                   Join
                </a>
             </li>
