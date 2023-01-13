@@ -35,7 +35,7 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
-      - run: hugo --minify
+      - run: hugo --minify --baseURL ${{ github.server_url }}/${{ github.repository }}/
       - run: cp -a static public
 
       - name: Deploy
