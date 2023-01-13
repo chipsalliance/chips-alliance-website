@@ -1,5 +1,5 @@
 ---
-logo: "/images/chips_alliance.svg"
+logo: "images/chips_alliance.svg"
 logo_url: /
 copyright: "CHIPS Alliance"
 social:
@@ -13,33 +13,33 @@ sections:
   -
     title: About
     links:
-      - link: "/about/who-we-are/"
+      - link: "about/who-we-are/"
         text: "Who We Are"
-      - link: "/about/members/"
+      - link: "about/members/"
         text: "Members"
-      - link: "/about/governance/"
+      - link: "about/governance/"
         text: "Governance"
-      - link: "/about/faq/"
+      - link: "about/faq/"
         text: "FAQ"
-      - link: "/about/contact/"
+      - link: "about/contact/"
         text: "Contact"
   -
     title: "Community"
     links:
-      - link: "/getting-started/"
+      - link: "getting-started/"
         text: "Getting Started"
-      - link: "/projects/"
+      - link: "projects/"
         text: "Projects"
-      - link: "/events/"
+      - link: "events/"
         text: "Events"
-      - link: "/workgroups/"
+      - link: "workgroups/"
         text: "Workgroups"
   -
     title: "News"
     links:
-      - link: "/categories/announcements/"
+      - link: "categories/announcements/"
         text: "Announcements"
-      - link: "/categories/blog/"
+      - link: "categories/blog/"
         text: "Blog"
-      - link: "/categories/reports/"
+      - link: "categories/reports/"
         text: "Reports"
