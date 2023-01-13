@@ -4,7 +4,7 @@ title: A Look Back at the CHIPS Alliance’s Incredible Growth
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 It’s been just over a year since the CHIPS Alliance was founded with the mission of making open source hardware development more accessible to companies, universities and individuals. We’re working to bring the dynamics of the hugely successful open source software development model into ASIC design, building on the groundwork set by the RISC-V community. Progress over the past year is detailed in our [Annual Report](https://chipsalliance.org/chips-alliance-2020-annual-report/). 
 

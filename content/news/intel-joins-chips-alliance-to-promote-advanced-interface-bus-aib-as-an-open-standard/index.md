@@ -4,7 +4,7 @@ title: Intel joins CHIPS Alliance to promote Advanced Interface Bus (AIB) as an 
 categories:
   - Announcements
 author: 
-images: ['/images/announcement-share.jpg']
+images: ['images/announcement-share.jpg']
 ---
 
 *Open development for SOCs gets major boost with new collaboration*

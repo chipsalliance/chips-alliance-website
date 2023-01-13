@@ -4,7 +4,7 @@ title: Enabling Open Source Ibex Synthesis and Simulation in Verilator/Yosys via
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/12/ibex-support-in-verilator-yosys-via-uhdm-surelog/).*

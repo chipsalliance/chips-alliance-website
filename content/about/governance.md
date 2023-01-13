@@ -5,14 +5,14 @@ description: >-
 btn:
    link: https://participation-agreement.chipsalliance.org/
    text: Read Charter
-image_path: /images/feature/niek-doup-Xf071ws2Icg-unsplash.jpg
+image_path: images/feature/niek-doup-Xf071ws2Icg-unsplash.jpg
 ---
 
 In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community.  While the Technical Steering Community (TSC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations.
 
 ## Rob Mains - General Manager
 {{< specialfeature 
-imagesrc="/images/team/rob-mains.jpg"
+imagesrc="images/team/rob-mains.jpg"
 imagealt="Rob Mains"
 >}}
 The General Manager works with the Governing Board, our members, and our projects to ensure the CHIPS Alliance is a healthy, sustainable, and neutral home for open source technical collaborations.
@@ -31,47 +31,47 @@ The Governing Board sets overall policy through our participation agreement and 
    name="Matt Cockrell"
    company="Google"
    role="CHIPS Alliance Chair"
-   imagesrc="/images/team/matt-cockrell.jpg"
+   imagesrc="images/team/matt-cockrell.jpg"
    >}}
    {{< teammember 
    name="Dave Ditzel"
    company="Esperanto"
-   imagesrc="/images/team/dave-ditzel.jpg"
+   imagesrc="images/team/dave-ditzel.jpg"
    >}}
    {{< teammember 
    name="Peter Gielda"
    company="Antmicro"
-   imagesrc="/images/team/peter-gielda.jpg"
+   imagesrc="images/team/peter-gielda.jpg"
    >}}
    {{< teammember 
    name="David Kehlet"
    company="Intel"
-   imagesrc="/images/team/david-kehlet.jpg"
+   imagesrc="images/team/david-kehlet.jpg"
    >}}
    {{< teammember 
    name="Yunsup Lee"
    company="Sifive"
-   imagesrc="/images/team/yunsup-lee.jpg"
+   imagesrc="images/team/yunsup-lee.jpg"
    >}}
    {{< teammember 
    name="Christoph Sandner"
    company="Infineon"
-   imagesrc="/images/team/christoph-sandner.jpg"
+   imagesrc="images/team/christoph-sandner.jpg"
    >}}
    {{< teammember 
    name="Lide Duan"
    company="Alibaba"
-   imagesrc="/images/team/lide-duan.jpg"
+   imagesrc="images/team/lide-duan.jpg"
    >}}
    {{< teammember 
    name="Wei Wu"
    company="Chinese Academy of Sciences"
-   imagesrc="/images/team/wei-wu.jpg"
+   imagesrc="images/team/wei-wu.jpg"
    >}}
    {{< teammember 
    name="Borivoje Nikolic"
    company="UC Berkeley"
-   imagesrc="/images/team/bora-nikolic.jpg"
+   imagesrc="images/team/bora-nikolic.jpg"
    >}}
 {{< /team >}}
 
@@ -85,7 +85,7 @@ The TSC operates openly and transparently, and consists of elected representativ
    {{< teammember 
    name="Henry Cook"
    role="Chair"
-   imagesrc="/images/team/generic-avatar.svg"
+   imagesrc="images/team/generic-avatar.svg"
    >}}
 {{< /team >}}
 
@@ -97,6 +97,6 @@ The Outreach Committee is responsible for organizing the external presence of th
    {{< teammember 
    name="Michael Gielda"
    role="Chair"
-   imagesrc="/images/team/michael-gielda.jpg"
+   imagesrc="images/team/michael-gielda.jpg"
    >}}
 {{< /team >}}

@@ -4,7 +4,7 @@ title: How Google is Applying Machine Learning to Macro Placement
 categories:
   - Blog
 author: 
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 CHIPS Alliance’s latest Deep Dive Cafe featured an outstanding talk by a Google physical design engineer, Young-Joon Lee, who has a PhD from Georgia Tech, and has been working on machine learning physical design projects for the past two years. 

@@ -4,7 +4,7 @@ title: Dynamic Scheduling in Verilator – Milestone Towards Open Source UVM
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/05/dynamic-scheduling-in-verilator/).*

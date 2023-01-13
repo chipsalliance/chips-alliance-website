@@ -2,7 +2,7 @@
 title: Getting Started
 description: >-
    The CHIPS Alliance develops high-quality, open source hardware designs and open source hardware design tools relevant to silicon devices and FPGAs.
-image_path: /images/feature/48302011232_72f8ed17c8_o.jpg
+image_path: images/feature/48302011232_72f8ed17c8_o.jpg
 
 ---
 

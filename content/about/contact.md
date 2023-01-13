@@ -2,7 +2,7 @@
 title: Contact
 description: >-
     The CHIPS Alliance is always interested in hearing from our community, supporters, users of our projects, and anyone else interested in using our projects.
-image_path: /images/feature/48302010402_7eef97a236_o.jpg
+image_path: images/feature/48302010402_7eef97a236_o.jpg
 
 ---
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>

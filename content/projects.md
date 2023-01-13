@@ -2,7 +2,7 @@
 title: Projects
 description: >-
    The CHIPS Alliance hosts multiple open source "projects", similar projects are organized into Workgroups.
-image_path: /images/feature/48302011232_72f8ed17c8_o.jpg
+image_path: images/feature/48302011232_72f8ed17c8_o.jpg
 
 ---
 

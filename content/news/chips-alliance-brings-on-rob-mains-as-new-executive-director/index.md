@@ -4,7 +4,7 @@ title: CHIPS Alliance Brings on Rob Mains as New Executive Director
 categories:
   - Announcements
 author: 
-images: ['/images/announcement-share.jpg']
+images: ['images/announcement-share.jpg']
 ---
 
 *Industry veteran to lead open hardware consortium democratizing silicon innovation*

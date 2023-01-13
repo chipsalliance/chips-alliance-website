@@ -4,7 +4,7 @@ title: New MPW-TWO Program Will Provide Fabrication For Fully Open Source Projec
 categories:
   - Blog
 author: Rob Mains, General Manager of CHIPS Alliance
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 CHIPS Alliance is excited to announce that the hardware development community can submit their open source design projects to Efabless.com for space on their forthcoming shuttle. This opportunity comes after the success of having 40 submissions for the MPW-ONE shuttle; 60% of those designs were submitted by first-time ASIC designers. [MPW-TWO](https://efabless.com/open_shuttle_program/2) is the second Open MPW Shuttle providing fabrication for fully open-source projects using the SkyWater Open Source PDK announced by Google and SkyWater. 

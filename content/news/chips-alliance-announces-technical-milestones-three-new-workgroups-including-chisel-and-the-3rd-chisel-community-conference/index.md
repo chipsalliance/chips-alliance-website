@@ -4,7 +4,7 @@ title: CHIPS Alliance announces technical milestones, three new workgroups inclu
 categories:
   - Announcements
 author: 
-images: ['/images/announcement-share.jpg']
+images: ['images/announcement-share.jpg']
 ---
 
 **SAN FRANCISCO, Nov. 7, 2019** — CHIPS Alliance, the leading consortium advancing common, open hardware for interfaces, processors and systems, today announced the creation of Interconnects, Rocket and Chisel workgroups. In addition, a November verification workshop in Munich and a Chisel conference in January will be held giving engineers an opportunity to learn about open source development efforts in CHIPS Alliance. Lastly, the CHIPS Alliance toolchain and cores workgroups have made contributions to open source development tools.

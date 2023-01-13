@@ -4,7 +4,7 @@ title: GitHub Actions Self-hosted Runners, Build Event Server and Google Cloud
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/03/github-actions-self-hosted-runners/).*

@@ -4,7 +4,7 @@ title: QuickLogic Announces Open Reconfigurable Computing Initiative
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *[Originally issued](https://ir.quicklogic.com/press-releases/detail/535/quicklogic-announces-open-reconfigurable-computing) by QuickLogic, the following press release announces the QORC initiative including the world’s first vendor-supported open FPGA toolchain using SymbiFlow, and describes the contribution of CHIPS Alliance members Antmicro and Google.*

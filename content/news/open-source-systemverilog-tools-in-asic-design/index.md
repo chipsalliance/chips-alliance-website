@@ -4,7 +4,7 @@ title: Open Source SystemVerilog Tools in ASIC Design
 categories:
   - Blog
 author: 
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/07/open-source-systemverilog-tools-in-asic-design/).*

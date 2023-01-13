@@ -4,7 +4,7 @@ title: High-Throughput Open Source PCIe on Xilinx VU19P-Based ASIC Prototyping P
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/02/high-throughput-open-source-pcie-on-xilinx-vu19/).*

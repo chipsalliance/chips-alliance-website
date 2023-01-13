@@ -4,7 +4,7 @@ title: "Advanced Co-simulation with Renode and Verilator: PolarFire SoC and Fast
 categories:
   - Blog
 author: 
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/06/advanced-co-simulation-with-renode-and-verilator/).*

@@ -4,7 +4,7 @@ title: Efabless Launches chipIgnite with SkyWater to Bring Chip Creation to the 
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 - Program includes a pre-designed carrier chip and automated open source design flow from Efabless

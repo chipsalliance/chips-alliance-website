@@ -5,7 +5,7 @@ description: >-
 btn:
    link: https://joinnow.platform.linuxfoundation.org/?project=chips
    text: Join Us
-image_path: /images/feature/48302010742_0a53e0557d_o.jpg
+image_path: images/feature/48302010742_0a53e0557d_o.jpg
 ---
 The CHIPS Alliance is an organization which works collaboratively to develop high quality, open source hardware designs relevant to silicon devices and FPGAs.  By sharing openly resources and ideas, we hope to lower the cost of hardware development.
 

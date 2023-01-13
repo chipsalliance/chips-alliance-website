@@ -4,7 +4,7 @@ title: Modular, Open-source FPGA-based LPDDR4 Test Platform
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/04/lpddr4-test-platform/).*

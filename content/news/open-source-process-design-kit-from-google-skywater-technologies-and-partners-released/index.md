@@ -4,7 +4,7 @@ title: Open Source Process Design Kit from Google, SkyWater Technologies and Par
 categories:
   - Blog
 author:
-images: ['/images/blog-share.jpg']
+images: ['images/blog-share.jpg']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/06/skywater-open-source-pdk/).*
