@@ -11,7 +11,7 @@ btn:
 ## CHIPS Alliance Members
 
 {{< button
-link="/join/"
+link="join/"
 label="Become a Member"
 >}}
 
