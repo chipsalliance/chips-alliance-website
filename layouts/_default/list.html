@@ -217,7 +217,7 @@ id="counter-up"
          <div class="col-lg-4 col-md-6">
             <article class="blog-post">
               <div class="blog-post-thumb">
-                <a href={{relURL .RelPermalink }}>
+                <a href={{ .RelPermalink }}>
                    {{- with .Params.images }}
                    <img src="{{ index . 0 | absURL }}" alt="blog-thumb" loading="lazy" />
                    {{ end -}}
