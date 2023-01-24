@@ -12,27 +12,18 @@ When an organization joins the CHIPS Alliance, they are making a tangible commit
 
 ## CHIPS Alliance Members
 
-### Platinum members
-
-{{< members level="platinum" >}}
-
-### Gold members
-
-{{< members level="gold" >}}
-
-### Silver members
-
-{{< members level="silver" >}}
-
-### Auditor members
-
-{{< members level="auditor" >}}
-
-### Associate members
-
-{{< members level="associate" >}}
-
 {{< button
 link="join/"
 label="Become a Member"
 >}}
+
+{{< members level="platinum" >}}
+
+{{< members level="gold" >}}
+
+{{< members level="silver" >}}
+
+{{< members level="auditor" >}}
+
+{{< members level="associate" >}}
+
