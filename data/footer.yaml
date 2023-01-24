@@ -28,8 +28,6 @@ sections:
     links:
       - link: "getting-started/"
         text: "Getting Started"
-      - link: "projects/"
-        text: "Projects"
       - link: "events/"
         text: "Events"
       - link: "workgroups/"
