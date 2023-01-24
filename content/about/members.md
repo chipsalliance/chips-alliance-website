@@ -12,13 +12,27 @@ When an organization joins the CHIPS Alliance, they are making a tangible commit
 
 ## CHIPS Alliance Members
 
-<iframe
-title="landscape"
-id="landscape"
-src="https://landscape.cncf.io/pages/members"
-frameborder="0"
-scrolling="no"
-class="iframe-container"
-style="width: 100% ; min-width: 100%;"
-></iframe>
-<script defer src='//landscape.cncf.io/iframeResizer.js?ver=1671468192' id='landscape-resize-js'></script>
+### Platinum members
+
+{{< members level="platinum" >}}
+
+### Gold members
+
+{{< members level="gold" >}}
+
+### Silver members
+
+{{< members level="silver" >}}
+
+### Auditor members
+
+{{< members level="auditor" >}}
+
+### Associate members
+
+{{< members level="associate" >}}
+
+{{< button
+link="join/"
+label="Become a Member"
+>}}

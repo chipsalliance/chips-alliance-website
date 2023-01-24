@@ -10,18 +10,27 @@ btn:
 
 ## CHIPS Alliance Members
 
+### Platinum members
+
+{{< members level="platinum" >}}
+
+### Gold members
+
+{{< members level="gold" >}}
+
+### Silver members
+
+{{< members level="silver" >}}
+
+### Auditor members
+
+{{< members level="auditor" >}}
+
+### Associate members
+
+{{< members level="associate" >}}
+
 {{< button
 link="join/"
 label="Become a Member"
 >}}
-
-<iframe
-title="landscape"
-id="landscape"
-src="https://landscape.lfph.io/card-mode?project=member&embed=yes"
-frameborder="0"
-scrolling="no"
-class="iframe-container"
-style="width: 100% ; min-width: 100%;"
-></iframe>
-<script defer src='//landscape.cncf.io/iframeResizer.js?ver=1671468192' id='landscape-resize-js'></script>
