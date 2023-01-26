@@ -85,7 +85,7 @@ No. Our Working Group and TSC meetings, as well as mailing lists, are all open. 
 index="11"
 title="How do you join the CHIPS Alliance?"
 >}}
-Click [here](/join/) to learn about joining CHIPS Alliance and see our membership documents, or email us at membership@chipsalliance.org.
+Click [here](../../join/) to learn about joining CHIPS Alliance and see our membership documents, or email us at membership@chipsalliance.org.
 {{< /accordion >}}
 
 {{< accordion
