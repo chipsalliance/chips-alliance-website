@@ -1,0 +1,17 @@
+members:
+  - member:
+    name: AMD
+    url: https://www.amd.com/en
+    image: amd.svg
+    level: platinum
+  - member:
+    name: Alibaba
+    url: https://www.alibabagroup.com/
+    image: alibaba.png
+    level: platinum
+  - member:
+    name: Antmicro
+    url: https://antmicro.com/
+    image: antmicro.png
+    level: platinum
+    
