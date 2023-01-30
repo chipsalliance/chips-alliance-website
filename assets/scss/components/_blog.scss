@@ -69,6 +69,8 @@
       }
       &-date {
          margin-bottom: $base-margin * 0.9;
+         font-size: $base-font-size * 1.1;
+         color: $color-cyan;
       }
       &-title {
          a {

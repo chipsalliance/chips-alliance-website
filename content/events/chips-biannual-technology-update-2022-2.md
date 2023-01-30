@@ -4,7 +4,7 @@ date: 2022-12-15
 external_url: https://events.linuxfoundation.org/chips-biannual-technology-update/
 ---
 
-Check out the presentations below, and [watch the replay here](https://www.youtube.com/watch?v=auXZdPwYs10!
+Check out the presentations below, and [watch the replay here](https://www.youtube.com/watch?v=auXZdPwYs10!)
 
 - Porting Android to RISC-V Alibaba – Guoyin Chen and Han Mao, Alibaba ([replay](https://youtu.be/auXZdPwYs10?t=218))
 - Practical Adoption of Open Source System Verilog Tools – Michael Gielda, Antmicro ([replay](https://youtu.be/auXZdPwYs10?t=1347))
