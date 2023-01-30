@@ -5,13 +5,217 @@ members:
     image: amd.svg
     level: platinum
   - member:
+    name: Antmicro
+    url: https://antmicro.com/
+    image: antmicro.png
+    level: platinum
+  - member:
     name: Alibaba
     url: https://www.alibabagroup.com/
     image: alibaba.png
     level: platinum
   - member:
-    name: Antmicro
-    url: https://antmicro.com/
-    image: antmicro.png
+    name: Google
+    url: https://google.com/
+    image: google.png
     level: platinum
-    
+  - member:
+    name: Infineon
+    url: https://www.infineon.com/
+    image: infineon.png
+    level: platinum
+  - member:
+    name: Intel
+    url: https://intel.com/
+    image: intel.png
+    level: platinum
+  - member:
+    name: Microsoft
+    url: https://www.microsoft.com/en-us/?ql=4
+    image: microsoft.svg
+    level: platinum
+  - member:
+    name: Rapid Silicon
+    url: https://rapidsilicon.com/
+    image: rapidsilicon.svg
+    level: platinum
+  - member:
+    name: SiFive
+    url: https://www.sifive.com/
+    image: sifive.png
+    level: platinum
+  - member:
+    name: VeriSilicon
+    url: https://verisilicon.com/
+    image: verisilicon.png
+    level: platinum
+  - member:
+    name: Western Digital
+    url: https://www.westerndigital.com/
+    image: western-digital.png
+    level: platinum
+  - member:
+    name: ISCAS
+    url: https://www.iscas.ac.cn/
+    image: iscas.png
+    level: gold
+  - member:
+    name: Futerwei
+    url: #
+    image: futurewei-tech.png
+    level: gold
+  - member:
+    name: Codasip
+    url: https://codasip.com/
+    image: codasip.png
+    level: silver
+  - member:
+    name: Efabless
+    url: https://efabless.com/
+    image: efabless.png
+    level: silver
+  - member:
+    name: Esperanto
+    url: https://www.esperanto.ai/
+    image: esperanto-tech.png
+    level: silver
+  - member:
+    name: Imperas
+    url: http://imperas.com/
+    image: imperas.png
+    level: silver
+  - member:
+    name: Metrics
+    url: https://metrics.ca/
+    image: metrics.png
+    level: silver
+  - member:
+    name: Nvidia
+    url: https://www.nvidia.com/en-us/
+    image: nvidia.jpg
+    level: silver
+  - member:
+    name: ProteanTecs
+    url: https://proteantecs.com/
+    image: proteantecs.svg
+    level: silver
+  - member:
+    name: Qamcom
+    url: https://www.qamcom.se/
+    image: qamcom.png
+    level: silver
+  - member:
+    name: Quicklogic
+    url: https://www.quicklogic.com/
+    image: quicklogic.png
+    level: silver
+  - member:
+    name: Siemens
+    url: https://eda.sw.siemens.com/en-US/
+    image: siemens.png
+    level: silver
+  - member:
+    name: Skywater
+    url: https://skywatertechnology.com/
+    image: skywater-technology.svg
+    level: silver
+  - member:
+    name: Zeroasic
+    url: https://www.zeroasic.com/
+    image: zero-asic.svg
+    level: silver
+  - member:
+    name: Precision Innovations
+    url: https://precisioninno.com/
+    image: precision-innovations.png
+    level: auditor
+  - member:
+    name: ASU
+    url: https://asu.edu/
+    image: arizona-state-u.svg
+    level: associate
+  - member:
+    name: Berkeley
+    url: https://www.berkeley.edu/admissions/
+    image: ucberkeley.svg
+    level: associate
+  - member:
+    name: BYU
+    url: https://www.byu.edu/
+    image: byu.svg
+    level: associate
+  - member:
+    name: IIT
+    url: https://www.iitm.ac.in/
+    image: iit.png
+    level: associate
+  - member:
+    name: Hochschule
+    url: https://www.hm.edu/
+    image: hochschule.png
+    level: associate
+  - member:
+    name: OpenRoad
+    url: #
+    image: openroad.png
+    level: associate
+  - member:
+    name: Rios
+    url: https://rioslab.org/
+    image: rios.png
+    level: associate
+  - member:
+    name: RISC-V
+    url: https://riscv.org/
+    image: risc-v.svg
+    level: associate
+  - member:
+    name: Stanford Engineering
+    url: https://engineering.stanford.edu/
+    image: stanford-eng.png
+    level: associate
+  - member:
+    name: UC Santa Cruz
+    url: https://www.ucsc.edu/
+    image: uc-santa-cruz.png
+    level: associate
+  - member:
+    name: UC San Diego
+    url: https://ucsd.edu/
+    image: uc-san-diego.png
+    level: associate
+  - member:
+    name: UIT
+    url: https://www.uit.edu/
+    image: uit-merl.png
+    level: associate
+  - member:
+    name: Nebrija
+    url: https://nebrija.es/
+    image: universidad-nebrija.png
+    level: associate
+  - member:
+    name: University de Kragujevac
+    url: https://kg.ac.rs/
+    image: university-kragujevac.png
+    level: associate
+  - member:
+    name: University of Manchester
+    url: https://www.manchester.ac.uk/
+    image: university-of-manchester.png
+    level: associate
+  - member:
+    name: University of Michigan
+    url: https://micl.engin.umich.edu/
+    image: university-of-michigan.png
+    level: associate
+  - member:
+    name: University of Minnesota
+    url: https://umn.edu/
+    image: university-of-minnesota.png
+    level: associate
+  - member:
+    name: Yale University
+    url: https://yale.edu/
+    image: yale-university.png
+    level: associate
