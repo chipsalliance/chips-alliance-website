@@ -41,7 +41,6 @@
                     {{ partial "event-card.html" . }}
                 {{ end }} 
       
-
                 <h2 id="past-events">Past Events</h2>
     
                 {{ range where .Pages.ByDate "Date" "le" (now.AddDate 0 0 -1) }}
