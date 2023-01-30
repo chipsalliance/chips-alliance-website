@@ -1,6 +1,7 @@
 ---
-title: Big Event 2
-date: March 3, 2023
+title: RISC-V at embedded world
+date: 2023-03-03
+external_url: https://events.linuxfoundation.org/riscv-at-embedded-world/
 ---
 
-Description about big event 2.
+RISC-V is a global standard available under an open, royalty-free license exhibiting at embedded world 2023 to highlight members and the broader RISC-V ecosystem.

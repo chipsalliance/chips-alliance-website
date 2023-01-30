@@ -1,0 +1,11 @@
+<article class="blog-post">
+    <div class="blog-post-content">
+        <h3>
+            <a href="{{ .Params.external_url }}" target="_blank" class="">{{.Title}}</a>
+        </h3>
+        <div class="blog-post-date">
+          {{.Date | time.Format ":date_long"}}
+        </div>
+      {{.Content}}
+    </div>
+</article>

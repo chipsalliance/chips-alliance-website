@@ -1,6 +1,7 @@
 ---
 title: CHIPS Alliance Fall Workshop 2022
-date: December 15, 2022
+date: 2022-12-15
+external_url: https://events.linuxfoundation.org/chips-biannual-technology-update/
 ---
 
 **Location**: Sunnyvale, CA

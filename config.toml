@@ -2,6 +2,8 @@ baseURL = 'https://chipsalliance.org/'
 languageCode = 'en-us'
 title = 'CHIPS Alliance'
 
+buildFuture = true 
+
 [markup.goldmark.renderer]
 unsafe= true
 

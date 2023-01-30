@@ -1,6 +1,7 @@
 ---
-title: Big Event 3
-date: April 3, 2023
+title: Zephyr at embedded world
+date: 2023-01-18
+external_url: https://events.linuxfoundation.org/lfx-mentorship-showcase/
 ---
 
-Description about big event 3.
+Visit The Zephyr® Project and various members at embedded world 2023 as we showcase the best-in-class RTOS for connected resource-constrained devices.

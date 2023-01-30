@@ -1,6 +1,7 @@
 ---
 title: Big Event
-date: March 23, 2022
+date: 2022-03-23
+external_url: https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/cncf-hosted-co-located-events/argocon/
 ---
 
 Description about big event.
