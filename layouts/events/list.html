@@ -39,6 +39,8 @@
     
                 {{ range where .Pages.ByDate "Date" "ge" (now.AddDate 0 0 -1) }}
                     {{ partial "event-card.html" . }}
+                {{ else }}
+                <em>There are no upcoming events right now.</em>
                 {{ end }} 
       
                 <h2 id="past-events">Past Events</h2>

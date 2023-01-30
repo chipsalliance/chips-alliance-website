@@ -1,6 +1,6 @@
 ---
 title: RISC-V at embedded world
-date: 2023-03-03
+date: 2022-03-03
 external_url: https://events.linuxfoundation.org/riscv-at-embedded-world/
 ---
 
