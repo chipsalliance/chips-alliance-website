@@ -1,7 +1,7 @@
 ---
 title: CHIPS Alliance First 2022 Biannual Technology Update
 date: 2022-04-19
-external_url: https://events.linuxfoundation.org/chips-biannual-technology-update/
+external_url: 
 ---
 
 Check out the presentations below:
