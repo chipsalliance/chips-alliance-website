@@ -12,7 +12,8 @@ CHIPS Alliance will be adding Projects over time as the community gets started a
 The Analog workgroup was formed by the CHIPS Alliance TSC to explore collaborations in open source Analog/Mixed-Signal design and verification. It focuses on sharing best practices, ideas, tooling (analog automation), and other challenge areas in the design space. The workgroup is composed of both industry and university members.
 
 - Mailing list: analog-wg@lists.chipsalliance.org
-- Meetings: Every other Tuesday at 8:00 a.m. PT
+- Meetings: Every Tuesday at 9:00 a.m. PT as scheduled
+- [Zoom Informaton](https://zoom.us/j/93893684803?pwd=bWpzRHZZMFpCbG9lUmZBVld4VFFqUT09) passcode: analog
 
 ## Chisel Workgroup
 
