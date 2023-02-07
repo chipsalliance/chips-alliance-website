@@ -42,7 +42,7 @@ members:
   - name: Western Digital
     url: https://www.westerndigital.com/
     image: western-digital.png
-    level: platinum
+    level: silver
   - name: ISCAS
     url: https://www.iscas.ac.cn/
     image: iscas.png
@@ -51,10 +51,6 @@ members:
     url: https://https://www.futurewei.com/
     image: futurewei-tech.png
     level: gold
-  - name: Codasip
-    url: https://codasip.com/
-    image: codasip.png
-    level: silver
   - name: Efabless
     url: https://efabless.com/
     image: efabless.png
@@ -79,10 +75,6 @@ members:
     url: https://proteantecs.com/
     image: proteantecs.svg
     level: silver
-  - name: Qamcom
-    url: https://www.qamcom.se/
-    image: qamcom.png
-    level: silver
   - name: Quicklogic
     url: https://www.quicklogic.com/
     image: quicklogic.png
@@ -90,14 +82,10 @@ members:
   - name: Siemens
     url: https://eda.sw.siemens.com/en-US/
     image: siemens.png
-    level: silver
+    level: auditor
   - name: Skywater
     url: https://skywatertechnology.com/
     image: skywater-technology.svg
-    level: silver
-  - name: Zeroasic
-    url: https://www.zeroasic.com/
-    image: zero-asic.svg
     level: silver
   - name: Precision Innovations
     url: https://precisioninno.com/
