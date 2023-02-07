@@ -75,18 +75,10 @@ members:
     url: https://proteantecs.com/
     image: proteantecs.svg
     level: silver
-  - name: Quicklogic
-    url: https://www.quicklogic.com/
-    image: quicklogic.png
-    level: silver
   - name: Siemens
     url: https://eda.sw.siemens.com/en-US/
     image: siemens.png
     level: auditor
-  - name: Skywater
-    url: https://skywatertechnology.com/
-    image: skywater-technology.svg
-    level: silver
   - name: Precision Innovations
     url: https://precisioninno.com/
     image: precision-innovations.png
