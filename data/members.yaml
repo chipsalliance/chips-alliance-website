@@ -1,221 +1,177 @@
 members:
-  - member:
-    name: AMD
+  - name: AMD
     url: https://www.amd.com/en
     image: amd.svg
     level: platinum
-  - member:
-    name: Antmicro
+  - name: Antmicro
     url: https://antmicro.com/
     image: antmicro.png
     level: platinum
-  - member:
-    name: Alibaba
+  - name: Alibaba
     url: https://www.alibabagroup.com/
     image: alibaba.png
     level: platinum
-  - member:
-    name: Google
+  - name: Google
     url: https://google.com/
     image: google.png
     level: platinum
-  - member:
-    name: Infineon
+  - name: Infineon
     url: https://www.infineon.com/
     image: infineon.png
     level: platinum
-  - member:
-    name: Intel
+  - name: Intel
     url: https://intel.com/
     image: intel.png
     level: platinum
-  - member:
-    name: Microsoft
+  - name: Microsoft
     url: https://www.microsoft.com/en-us/?ql=4
     image: microsoft.svg
     level: platinum
-  - member:
-    name: Rapid Silicon
+  - name: Rapid Silicon
     url: https://rapidsilicon.com/
     image: rapidsilicon.svg
     level: platinum
-  - member:
-    name: SiFive
+  - name: SiFive
     url: https://www.sifive.com/
     image: sifive.png
     level: platinum
-  - member:
-    name: VeriSilicon
+  - name: VeriSilicon
     url: https://verisilicon.com/
     image: verisilicon.png
     level: platinum
-  - member:
-    name: Western Digital
+  - name: Western Digital
     url: https://www.westerndigital.com/
     image: western-digital.png
     level: platinum
-  - member:
-    name: ISCAS
+  - name: ISCAS
     url: https://www.iscas.ac.cn/
     image: iscas.png
     level: gold
-  - member:
-    name: Futerwei
-    url: #
+  - name: Futerwei
+    url: https://https://www.futurewei.com/
     image: futurewei-tech.png
     level: gold
-  - member:
-    name: Codasip
+  - name: Codasip
     url: https://codasip.com/
     image: codasip.png
     level: silver
-  - member:
-    name: Efabless
+  - name: Efabless
     url: https://efabless.com/
     image: efabless.png
     level: silver
-  - member:
-    name: Esperanto
+  - name: Esperanto
     url: https://www.esperanto.ai/
     image: esperanto-tech.png
     level: silver
-  - member:
-    name: Imperas
+  - name: Imperas
     url: http://imperas.com/
     image: imperas.png
     level: silver
-  - member:
-    name: Metrics
+  - name: Metrics
     url: https://metrics.ca/
     image: metrics.png
     level: silver
-  - member:
-    name: Nvidia
+  - name: Nvidia
     url: https://www.nvidia.com/en-us/
     image: nvidia.jpg
     level: silver
-  - member:
-    name: ProteanTecs
+  - name: ProteanTecs
     url: https://proteantecs.com/
     image: proteantecs.svg
     level: silver
-  - member:
-    name: Qamcom
+  - name: Qamcom
     url: https://www.qamcom.se/
     image: qamcom.png
     level: silver
-  - member:
-    name: Quicklogic
+  - name: Quicklogic
     url: https://www.quicklogic.com/
     image: quicklogic.png
     level: silver
-  - member:
-    name: Siemens
+  - name: Siemens
     url: https://eda.sw.siemens.com/en-US/
     image: siemens.png
     level: silver
-  - member:
-    name: Skywater
+  - name: Skywater
     url: https://skywatertechnology.com/
     image: skywater-technology.svg
     level: silver
-  - member:
-    name: Zeroasic
+  - name: Zeroasic
     url: https://www.zeroasic.com/
     image: zero-asic.svg
     level: silver
-  - member:
-    name: Precision Innovations
+  - name: Precision Innovations
     url: https://precisioninno.com/
     image: precision-innovations.png
     level: auditor
-  - member:
-    name: ASU
+  - name: ASU
     url: https://asu.edu/
     image: arizona-state-u.svg
     level: associate
-  - member:
-    name: Berkeley
+  - name: Berkeley
     url: https://www.berkeley.edu/admissions/
     image: ucberkeley.svg
     level: associate
-  - member:
-    name: BYU
+  - name: BYU
     url: https://www.byu.edu/
     image: byu.svg
     level: associate
-  - member:
-    name: IIT
+  - name: IIT
     url: https://www.iitm.ac.in/
     image: iit.png
     level: associate
-  - member:
-    name: Hochschule
+  - name: Hochschule
     url: https://www.hm.edu/
     image: hochschule.png
     level: associate
-  - member:
-    name: OpenRoad
-    url: #
+  - name: OpenRoad
+    url: https://theopenroadproject.org/
     image: openroad.png
     level: associate
-  - member:
-    name: Rios
+  - name: Rios
     url: https://rioslab.org/
     image: rios.png
     level: associate
-  - member:
-    name: RISC-V
+  - name: RISC-V
     url: https://riscv.org/
     image: risc-v.svg
     level: associate
-  - member:
-    name: Stanford Engineering
+  - name: Stanford Engineering
     url: https://engineering.stanford.edu/
     image: stanford-eng.png
     level: associate
-  - member:
-    name: UC Santa Cruz
+  - name: UC Santa Cruz
     url: https://www.ucsc.edu/
     image: uc-santa-cruz.png
     level: associate
-  - member:
-    name: UC San Diego
+  - name: UC San Diego
     url: https://ucsd.edu/
     image: uc-san-diego.png
     level: associate
-  - member:
-    name: UIT
+  - name: UIT
     url: https://www.uit.edu/
     image: uit-merl.png
     level: associate
-  - member:
-    name: Nebrija
+  - name: Nebrija
     url: https://nebrija.es/
     image: universidad-nebrija.png
     level: associate
-  - member:
-    name: University de Kragujevac
+  - name: University de Kragujevac
     url: https://kg.ac.rs/
     image: university-kragujevac.png
     level: associate
-  - member:
-    name: University of Manchester
+  - name: University of Manchester
     url: https://www.manchester.ac.uk/
     image: university-of-manchester.png
     level: associate
-  - member:
-    name: University of Michigan
+  - name: University of Michigan
     url: https://micl.engin.umich.edu/
     image: university-of-michigan.png
     level: associate
-  - member:
-    name: University of Minnesota
+  - name: University of Minnesota
     url: https://umn.edu/
     image: university-of-minnesota.png
     level: associate
-  - member:
-    name: Yale University
+  - name: Yale University
     url: https://yale.edu/
     image: yale-university.png
     level: associate
