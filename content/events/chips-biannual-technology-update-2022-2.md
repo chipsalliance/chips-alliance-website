@@ -1,7 +1,6 @@
 ---
 title: CHIPS Alliance Fall Workshop 2022
 date: 2022-12-15
-external_url: https://events.linuxfoundation.org/chips-biannual-technology-update/
 ---
 
 Check out the presentations below, and [watch the replay here](https://www.youtube.com/watch?v=auXZdPwYs10!)
