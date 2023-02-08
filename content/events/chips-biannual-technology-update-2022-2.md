@@ -7,7 +7,7 @@ Check out the presentations below, and [watch the replay here](https://youtube.c
 
 - Caliptra – Bryan Kelly, Microsoft 
 - SBOM and HBOM / Zephyr - Kate Stewart, Linux Foundation
-- F4PGA tools in the classroom - Mike Wirthlin, Jeff Goeders, BYU ([slides](https://https://drive.google.com/file/d/1zpINI7TaM99YFFsGjjvicwwG04jwMlvZ/view?usp=sharing))
+- F4PGA tools in the classroom - Mike Wirthlin, Jeff Goeders, BYU ([slides](https://drive.google.com/file/d/1zpINI7TaM99YFFsGjjvicwwG04jwMlvZ/view?usp=sharing))
 - Datasets for Machine Learning for Chip Design - Aman Arora, UT-Austin ([slides](https://drive.google.com/file/d/1Df-lPpZ-XhMcqfMe4hkK19ECPdtmZep5/view?usp=sharing))
 - Open source SystemVerilog / UVM support and scaling for large designs in Verilator 5.0 and beyond, Michael Gielda, Antmicro ([slides](https://drive.google.com/file/d/1YbfE5tJ7-expgfrhhGF1ep7-WsOzBDZj/view?usp=sharing))
 - Lowering barriers to chip design using OpenFASOC, AWG activities and tapeouts, Mehdi Saligane, University of Michigan ([slides](https://drive.google.com/file/d/12t_dZHL7nIFWo6OXcnw7YBujIg1fSrV-/view?usp=sharing))

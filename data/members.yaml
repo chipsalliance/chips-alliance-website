@@ -48,7 +48,7 @@ members:
     image: iscas.png
     level: gold
   - name: Futerwei
-    url: https://https://www.futurewei.com/
+    url: https://www.futurewei.com/
     image: futurewei-tech.png
     level: gold
   - name: Efabless
