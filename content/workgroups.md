@@ -13,6 +13,7 @@ The Analog workgroup was formed by the CHIPS Alliance TSC to explore collaborati
 
 - Mailing list: analog-wg@lists.chipsalliance.org
 - Meetings: Every Tuesday at 9:00 a.m. PT as scheduled
+- Please contact rmains@linuxfoundation.org for details
 - [Zoom Informaton](https://zoom.us/j/93893684803?pwd=bWpzRHZZMFpCbG9lUmZBVld4VFFqUT09) passcode: analog
 
 ## Chisel Workgroup

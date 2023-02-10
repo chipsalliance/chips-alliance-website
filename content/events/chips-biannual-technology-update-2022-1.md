@@ -3,6 +3,8 @@ title: CHIPS Alliance First 2022 Biannual Technology Update
 date: 2022-04-19
 ---
 
+[Watch the Replay](https://www.youtube.com/watch?v=L4saSRKnMF8&t=411s)
+
 Check out the presentations below:
 
 - Introduction – Rob Mains, CHIPS Alliance
