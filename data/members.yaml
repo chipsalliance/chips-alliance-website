@@ -7,6 +7,7 @@ members:
     url: https://antmicro.com/
     image: antmicro.png
     level: platinum
+    board_rep: Peter Gielda
   - name: Alibaba
     url: https://www.alibabagroup.com/
     image: alibaba.png
@@ -15,6 +16,8 @@ members:
     url: https://google.com/
     image: google.png
     level: platinum
+    board_rep: Matt Cockrell
+    role: Governing Board Chair
   - name: Infineon
     url: https://www.infineon.com/
     image: infineon.png
@@ -23,18 +26,22 @@ members:
     url: https://intel.com/
     image: intel.png
     level: platinum
+    board_rep: Dave Kehlet
   - name: Microsoft
     url: https://www.microsoft.com/en-us/?ql=4
     image: microsoft.svg
     level: platinum
+    board_rep: Stephen Walli
   - name: Rapid Silicon
     url: https://rapidsilicon.com/
     image: rapidsilicon.svg
     level: platinum
+    board_rep: Tony McDowell
   - name: SiFive
     url: https://www.sifive.com/
     image: sifive.png
     level: platinum
+    board_rep: Phil Dworsky
   - name: VeriSilicon
     url: https://verisilicon.com/
     image: verisilicon.png
@@ -59,6 +66,7 @@ members:
     url: https://www.esperanto.ai/
     image: esperanto-tech.png
     level: silver
+    board_rep: Dave Ditzel
   - name: Imperas
     url: http://imperas.com/
     image: imperas.png
@@ -91,6 +99,7 @@ members:
     url: https://www.berkeley.edu/admissions/
     image: ucberkeley.svg
     level: associate
+    board_rep: Borivoje Nikolic
   - name: BYU
     url: https://www.byu.edu/
     image: byu.svg
