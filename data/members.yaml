@@ -57,7 +57,8 @@ members:
   - name: Futerwei
     url: https://www.futurewei.com/
     image: futurewei-tech.png
-    level: gold
+    level: platinum
+    board_rep: Danny Hua
   - name: Efabless
     url: https://efabless.com/
     image: efabless.png
