@@ -73,6 +73,11 @@ The Governing Board sets overall policy through our participation agreement and 
    company="UC Berkeley"
    imagesrc="images/team/bora-nikolic.jpg"
    >}}
+   {{< teammember 
+   name="Danny Hua"
+   company="FUTUREWEI"
+   imagesrc="images/team/danny-hua.jpg"
+   >}}
 {{< /team >}}
 
 ## Technical Steering Committee (TSC)
