@@ -19,7 +19,7 @@ The General Manager works with the Governing Board, our members, and our project
 
 Rob Mains is a 38 year industry veteran, former engineering vice president of Oracle and Sun Microsystems distinguished engineer, where he lead an organization of over 200 software researchers and developers. Prior to this, Rob was a principal engineer at Magma Design Automation, and originally a senior engineer at IBM involved in numerous technical areas for the development of IBM Power and S/390 systems.
 
-Rob has in depth experience in software development, electronic design automation, IT management, semiconductor technology, microprocessor circuit design, and chip construction methodology. In his career, has had the privilege of working in multi-company collaborations, understanding the dynamics of multiple players, and working towards win-win solutions for all. He is the holder of 13 U.S. patents.
+Rob has in depth experience in software development, electronic design automation, IT management, semiconductor technology, microprocessor circuit design, and chip construction methodology. In his career, he has had the privilege of working in multi-company collaborations, understanding the dynamics of multiple players, and working towards win-win solutions for all. He is the holder of 13 U.S. patents.
 {{< /specialfeature >}}
 
 ## Governing Board
