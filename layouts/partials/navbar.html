@@ -87,9 +87,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "about" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href={{ relURL "#"}}>
+               <div class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "about" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   About
-               </a>
+               </div>
                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "about/who-we-are" }}active{{ end }}" href={{ relURL "about/who-we-are/"}} >Who We Are</a>
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "about/members" }}active{{ end }}" href={{ relURL "about/members/"}}>Members</a>
@@ -109,9 +109,9 @@
                </a>
             </li>
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "categories" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+               <div class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "categories" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   News
-               </a>
+               </div>
                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "categories/announcements" }}active{{ end }}" href={{ relURL "categories/announcements/"}}>Announcements</a>
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "categories/blog" }}active{{ end }}" href={{ relURL "categories/blog/"}}>Blog</a>
