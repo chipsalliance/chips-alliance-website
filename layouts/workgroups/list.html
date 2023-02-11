@@ -1,0 +1,71 @@
+{{ define "main" }} 
+
+<section class="feature-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="feature-hero-content">
+            <h1 class="">{{.Title}}</h1>
+            <p>{{.Description | markdownify}}</p>
+            <div class="d-block mb-6">
+              {{ with .Params.btn }}
+              <a href={{relURL .link}} class="btn btn-primary btn-sm"> {{.text}} </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="feature-hero-banner">
+            <img src={{relURL .Params.image_path}} alt="banner-image" />
+            <div class="shape">
+              <img
+                src={{relURL "images/feature/effect-2.png"}}
+                alt="shape"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="page-details">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <article class="blog-single">
+               {{ .Content }} 
+
+                {{ range .Pages }}
+                  <h2>{{ .Name }}</h2>
+                  {{ .Content }}
+
+                  <ul>
+                  {{ with .Params.website }}
+                  <li><strong>Website:</strong> {{ . | markdownify }}</li>
+                  {{ end }}
+                  {{ with .Params.leader }}
+                  <li><strong>Leader:</strong> {{ . | markdownify }}</li>
+                  {{ end }}
+                  {{ with .Params.mailing_list }}
+                  <li><strong>Mailing List:</strong> {{ . | markdownify }}</li>
+                  {{ end }}
+                  {{ with .Params.meeting_dates }}
+                  <li><strong>Meeting Dates:</strong> {{ . | markdownify }}</li>
+                  {{ end }}
+                  {{ with .Params.meeting_link }}
+                  <li><strong>Meeting Link:</strong> {{ . | markdownify }}</li>
+                  {{ end }}
+                  </ul>
+
+                {{ end }} 
+    
+            </article>
+          </div>
+       </div>
+    </div>
+ </section>
+
+
+
+{{ end }}
