@@ -1,14 +1,14 @@
 <div class="col-lg-3 col-md-6">
-    <div class="team-member">
-      <div class="team-member-thumb rounded-box">
-        <img src={{relURL .Params.imagesrc}} alt="{{.Params.name}}" loading="lazy" />
-      </div>
-      <div class="team-member-details">
-        <h3>{{.Params.name}}</h3>
-        <p>{{.Params.company}}</p>
-        {{ with .Params.role}}
-        <p><em>{{.}}</em></p>
-        {{end}}
-      </div>
+  <div class="team-member">
+    <div class="team-member-thumb rounded-box">
+      <img src={{relURL .Params.imagesrc}} alt="{{.Params.name}}" loading="lazy" />
+    </div>
+    <div class="team-member-details">
+      <h3>{{.Params.name}}</h3>
+      <p>{{.Params.company}}</p>
+      {{ with .Params.role}}
+      <p><em>{{.}}</em></p>
+      {{end}}
     </div>
   </div>
+</div>

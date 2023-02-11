@@ -1,0 +1,27 @@
+<div class="team">
+      <div class="row">
+        {{ with .Site.Data.members }}
+
+        {{ range sort ( where .members "board_rep" "!=" nil ) "board_rep" }}
+          <div class="col-lg-3 col-md-6">
+            <div class="team-member">
+              <div class="team-member-thumb rounded-box">
+                {{ $imgsrc := printf "images/team/%s.jpg" ( urlize .board_rep )  }}
+                <img src={{relURL $imgsrc }} alt="{{ .board_rep }}" loading="lazy" />
+              </div>
+              <div class="team-member-details">
+                <h3>{{ .board_rep }}</h3>
+                <p>{{.name}}</p>
+                {{ with .role}}
+                <p><em>{{.}}</em></p>
+                {{end}}
+              </div>
+            </div>
+          </div>
+
+        {{ end }}
+        {{ end }}
+
+      </div>
+</div>
+  

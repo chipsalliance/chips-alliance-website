@@ -26,59 +26,7 @@ Rob has in depth experience in software development, electronic design automatio
 
 The Governing Board sets overall policy through our participation agreement and technical charter, which describes the membership requirements and responsibilities of participants.
 
-{{< team >}}
-   {{< teammember 
-   name="Matt Cockrell"
-   company="Google"
-   role="CHIPS Alliance Chair"
-   imagesrc="images/team/matt-cockrell.jpg"
-   >}}
-   {{< teammember 
-   name="Dave Ditzel"
-   company="Esperanto"
-   imagesrc="images/team/dave-ditzel.jpg"
-   >}}
-   {{< teammember 
-   name="Peter Gielda"
-   company="Antmicro"
-   imagesrc="images/team/peter-gielda.jpg"
-   >}}
-   {{< teammember 
-   name="David Kehlet"
-   company="Intel"
-   imagesrc="images/team/david-kehlet.jpg"
-   >}}
-   {{< teammember 
-   name="Yunsup Lee"
-   company="Sifive"
-   imagesrc="images/team/yunsup-lee.jpg"
-   >}}
-   {{< teammember 
-   name="Christoph Sandner"
-   company="Infineon"
-   imagesrc="images/team/christoph-sandner.jpg"
-   >}}
-   {{< teammember 
-   name="Lide Duan"
-   company="Alibaba"
-   imagesrc="images/team/lide-duan.jpg"
-   >}}
-   {{< teammember 
-   name="Wei Wu"
-   company="Chinese Academy of Sciences"
-   imagesrc="images/team/wei-wu.jpg"
-   >}}
-   {{< teammember 
-   name="Borivoje Nikolic"
-   company="UC Berkeley"
-   imagesrc="images/team/bora-nikolic.jpg"
-   >}}
-   {{< teammember 
-   name="Danny Hua"
-   company="FUTUREWEI"
-   imagesrc="images/team/danny-hua.jpg"
-   >}}
-{{< /team >}}
+{{< gov-board >}}
 
 ## Technical Steering Committee (TSC)
 
@@ -90,7 +38,7 @@ The TSC operates openly and transparently, and consists of elected representativ
    {{< teammember 
    name="Henry Cook"
    role="Chair"
-   imagesrc="images/team/generic-avatar.svg"
+   imagesrc="images/team/generic-avatar.jpg"
    >}}
 {{< /team >}}
 
