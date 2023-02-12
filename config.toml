@@ -16,3 +16,11 @@ googleAnalytics = 'G-MEASUREMENT_ID'
 
 [social]
   twitter = 'chipsalliance'
+
+[module]
+  [[module.imports]]
+    path = "github.com/chipsalliance/tsc"
+
+  [[module.imports.mounts]]
+    source = "workgroups"
+    target = "content/workgroups"
