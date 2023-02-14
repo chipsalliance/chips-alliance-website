@@ -1,0 +1,363 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/chips-alliance-website/preview/35/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/chips-alliance-website/preview/35/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/chips-alliance-website/preview/35/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/chips-alliance-website/preview/35/scss/theme.min.df0eb872d05fa00c33e64028a7b1e9a1f4704b5dc21fcf9db3c4201a39d3c33c.css>
+<link rel=icon href=/chips-alliance-website/preview/35/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/chips-alliance-website/preview/35/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/chips-alliance-website/preview/35/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/chips-alliance-website/preview/35/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Goings-on in the FuseSoC Project and Other Open Source Silicon Related News | CHIPS Alliance</title>
+<meta name=description content="This post was originally published by Olof Kindgren
+FOSSi Fever 2020
+
+2020 was a year with a lot of bad news and so it feels slightly strange to …">
+<meta property="og:title" content="Goings-on in the FuseSoC Project and Other Open Source Silicon Related News">
+<meta property="og:description" content="This post was originally published by Olof Kindgren
+FOSSi Fever 2020 2020 was a year with a lot of bad news and so it feels slightly strange to cheerfully write about a very specific topic in the light of this. But there will always be good and bad things happening in the world. So let’s keep fighting the bad things and for now take look at what happened last year within the amazing world of open source silicon.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.github.io/chips-alliance-website/preview/35/news/goings-on-in-the-fusesoc-project-and-other-open-source-silicon-related-news/"><meta property="og:image" content="https://chipsalliance.github.io/chips-alliance-website/preview/35/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-02-23T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-02-23T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Goings-on in the FuseSoC Project and Other Open Source Silicon Related News">
+<meta itemprop=description content="This post was originally published by Olof Kindgren
+FOSSi Fever 2020 2020 was a year with a lot of bad news and so it feels slightly strange to cheerfully write about a very specific topic in the light of this. But there will always be good and bad things happening in the world. So let’s keep fighting the bad things and for now take look at what happened last year within the amazing world of open source silicon."><meta itemprop=datePublished content="2021-02-23T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-02-23T00:00:00+00:00">
+<meta itemprop=wordCount content="4665"><meta itemprop=image content="https://chipsalliance.github.io/chips-alliance-website/preview/35/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.github.io/chips-alliance-website/preview/35/images/blog-share.jpg">
+<meta name=twitter:title content="Goings-on in the FuseSoC Project and Other Open Source Silicon Related News">
+<meta name=twitter:description content="This post was originally published by Olof Kindgren
+FOSSi Fever 2020 2020 was a year with a lot of bad news and so it feels slightly strange to cheerfully write about a very specific topic in the light of this. But there will always be good and bad things happening in the world. So let’s keep fighting the bad things and for now take look at what happened last year within the amazing world of open source silicon.">
+<meta name=twitter:site content="@chipsalliance">
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/chips-alliance-website/preview/35/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/chips-alliance-website/preview/35/>
+<img src=/chips-alliance-website/preview/35/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/about/members/>Members</a>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/about/governance/>Governance</a>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/about/faq/>FAQ</a>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/chips-alliance-website/preview/35/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/chips-alliance-website/preview/35/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/categories/blog/>Blog</a>
+<a class=dropdown-item href=/chips-alliance-website/preview/35/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/chips-alliance-website/preview/35/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/chips-alliance-website/preview/35/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Goings-on in the FuseSoC Project and Other Open Source Silicon Related News</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>February 23, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>22 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>4665 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.github.io/chips-alliance-website/preview/35/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published by <a href=https://olofkindgren.blogspot.com/2021/02/fossi-fever-2020.html>Olof Kindgren</a></em></p>
+<h2 id=fossi-fever-2020>FOSSi Fever 2020</h2>
+<p><img src=fuckload.png alt></p>
+<p>2020 was a year with a lot of bad news and so it feels slightly strange to cheerfully write about a very specific topic in the light of this. But there will always be good and bad things happening in the world. So let’s keep fighting the bad things and for now take look at what happened last year within the amazing world of open source silicon. I will start by mentioning the most significant, but by no means the only, milestones for the FOSSi movement as a whole and then take a more personal look at the work where I have been directly involved.</p>
+<h2 id=openmpw>OpenMPW</h2>
+<p>The biggest story within free and open source silicon this year has undoubtly been the <a href=https://efabless.com/open_shuttle_program>openMPW project</a> involving Google, SkyWater Foundries and eFabless together with a number of other collaborators.</p>
+<p>Ever since I got involved in open source silicon ten years ago, building a fully open source ASIC has been one of those big milestones. While we have had FOSSi IP cores taped out on chips for at least 20 years and parts of the flow being managed by open source tools, it has always seemed to be too much work and requiring filling in too many gaps to have a fully open source end-to-end flow to produce ASICs. But, over the years people all over the world have filled in the gaps and done the work bit by bit. Sometimes in the context of overarching programmes to advance open source silicon, sometimes in academic settings, sometimes coming from the industry and sometimes as completely unpaid hobby projects. And this year all these efforts came together, helped by funding, to produce four shuttle runs, each loaded with 40 different completely open source designs. The first of these runs are currently being fabricated, and it will be extremely interesting to see them coming back.</p>
+<p>One of the final pieces in this puzzle was the PDK. And while SkyWater should be rightfully lauded for their decicion to open up their 130nm PDK, it begs to ask the question: Why on Earth did it take this long? What could possibly the fabs have to lose by doing this? What they gain is easy to answer, a completely new market of users who can create chips at their fab. According to people within the project, it’s estimated that 75% of the people on the first shuttle define themselves as software engineers. It’s very likely that none of these people would ever dream of making an ASIC without this possibility. So I kind of feel that making the EDA industry open up their formats is a bit like trying to get your kids to eat vegetables. It’s a lot of groaning and complaining, but was it really all that bad in the end to get some nutritions. Or in the case of ASIC fabs, was it really all that horrible to release your PDK to get some more customers? Let’s just hope this opens up the eyes of more fabs. My, and many others, dream is to eventually see the same thing happening to ASIC fabs as has been happening with cheap PCB services over the past ten years. And using that analogy, I’m quite sure it pays off to be early in the race. So, get started folks!</p>
+<h2 id=quicklogic-and-symbiflow>QuickLogic and SymbiFlow</h2>
+<p>The other big thing happening this year is that we finally have an FPGA-vendor shipping an open source toolchain for their devices. The company that will go down in the annals of history for being the first to do this is <a href=https://www.quicklogic.com/qorc/>QuickLogic</a> and their EOS S3 FPGA. This is by no means the first FPGA with an open toolchain, and the QuickLogic-flavored version of <a href=https://symbiflow.github.io/>SymbiFlow</a> developed by FOSSi veterans <a href=https://antmicro.com/>Antmicro</a> is based on all this prior work. But it is the first time we see a toolchain being created from the FPGA manufacturer’s specifications rather than being figured out from compiled FPGA binaries and it’s the first toolchain that is supported and funded by the vendor rather than being at best tolerated by them. And again I must ask, why did it take so long for this to happen? If I was running a small FPGA startup with limited resources, I can’t for my life understand why I would want to spend a lot of time and money to build and continouosly maintain a big unwieldy toolchain all by myself instead of adding the required device-specific bits to a known good open source toolchain and share the maintenance burden. If nothing else it would free up resources to build other value-add products on top of the tools. It’s like if every vendor of computer systems would first build their own operating system and compiler before shipping their products. This is what we had in the 80s and abandonded it for very good reasons. Because it made absolutely no one happy. And you know what? I think the users of FPGAs should put more effort into pushing their vendors to support open source toolchains, because it will save everyone a heap of time and money.</p>
+<p>Let me illustrate that last point with an example that actually happened when I was porting SERV to the QuickLogic devices. After synthesis I noticed that it used far more resources than expected. Looking at the synthesis logs I realized the memories in the design weren’t mapped to on-chip SRAM. So I asked the toolchain developers about this. They pointed me to the file in the toolchain that contained the rules for mapping to SRAM. I quickly found a badly tuned parameter, changed it to a more sensible value and ten minutes later it was working fine. An hour later I had submitted a patch back to the toolchain that fixed the problem for everyone else who would encounter it.</p>
+<p>let’s break this down into numbers. Finding the cause of the bug took about 15 minutes. Fixing it, another five. At that point I could use it myself, but after spending another 15 minutes or so, it was also fixed for everyone else.</p>
+<p>Now let’s do the same exercise for a proprietary closed source toolchain. Finding the cause of the bug takes… well…it depends… Let me explain.</p>
+<p>I started my professional career at a company which at that point was the world’s largest FPGA buyer. Whenever we had problems, they flew in two FAEs to sit in our lap, they could provide us with custom internal builds of their tools and generally tried to make sure the problem quickly went away so that we would continue to buy FPGAs from them. However, most companies are not the world’s largest FPGA buyer and does not get this treatment. Instead you will have to wade through layers of support people until you reach someone who is actually qualified enough to acknowledge the issue. I have been in this situation numerous times and would estimate this process usually takes around 2-3 months. Actually fixing the bug probably takes five minutes or so in this case too, but here comes the fun part. In most cases you will now have to wait, I don’t know, a year or so until the fixed bug ends up in a released product that you can download. What happens in practice is that the user tends to find a workaround instead. In the example above, the likely solution would be to instantiate a RAM macro instead of relying on inference. This however doesn’t come for free as it requires finding all the instances where this is a problem, add special handling for this case which results in a larger code base with more options to verify and maintain. This costs time and this costs money. So the moral of this story is that closed source tools are more expensive for everyone involved and users of FPGAs should get better at telling the FPGA vendors that they are done with this closed source nonsense.</p>
+<p><img src=qorc.jpg alt="The QuickFeather. First FPGA board to ship with a FOSSi toolchain">
+<em>The QuickFeather. First FPGA board to ship with a FOSSi toolchain</em></p>
+<p>There are numerous other news and projects that are well worth mentioning, but the above two are milestones that we have been waiting for a long time, so they deserved special attention. And if you want to keep up with the latest happenings in open source silicon, I highly recommend subscribing to the <a href=https://www.fossi-foundation.org/ecl>El Correo Libre newsletter</a> which does a fantastic job of providing an overview of what goes on in all corners of the world. So let’s move on to some of my more personal victories that aren’t necessarily mentioned in other people’s year in review.</p>
+<p>When I am working on and talking about open source silicon I am often wearing many hats because I’m associated with several different organizations. Luckily they are all pretty much aligned on this topic which makes things far easier. But these organizations also have different motives and goals so I would like to mention a few words about them here.</p>
+<h2 id=qamcom>Qamcom</h2>
+<p>My dayjob is working for <a href=https://www.qamcom.com/>Qamcom Research & Technology</a> and also there it has been more FOSSi work than usual, which I think is a good indication that open source silicon is becoming increasingly more common in chip design in general. The year started off by finishing up some work on <a href=https://github.com/chipsalliance/Cores-SweRVolf>SweRVolf</a> together with a couple of my Qamcom colleagues. SweRVolf is a project under <a href=https://chipsalliance.org/>CHIPS Alliance</a>, an organization that Qamcom has been part of since 2019 to help improve the state for open source and custom silicon. After that I was pulled into a project for doing <a href=https://www.qamcom.com/eiscat-climate-research/>climate research with a huge radar system</a>. My task here was to handle sub-nanosecond time synchronization between systems located hundreds of miles from each other, using the <a href=https://ohwr.org/project/white-rabbit/wikis/home>White Rabbit</a> system developed at CERN. I was pretty excited about getting to know White Rabbit. The timing section at CERN responsible for the White Rabbit project and associated technologies are household names within open source silicon and have a long history here. I know many of the people working there personally and have great respect for their work. But so far I haven’t had the chance until now to actually get down and dirty with the technology. Once my job was done there I moved on to another proprietary project that I can’t discuss here. I do get to use FuseSoC and Verilator though, so it’s fine 🙂</p>
+<h2 id=fossi-foundation>FOSSi Foundation</h2>
+<p>The hat I tend to wear most when topic revolves around open source silicon is my FOSSi Foundation director hat. And despite doing a lot less of the things we normally spend time on, it turns out we did a lot of other great things instead. I will however not go into more detail here, but instead point to the <a href=https://www.fossi-foundation.org/2020/12/31/year-recap>excellent summary</a> done by my FOSSi Foundation colleague Philipp Wagner.</p>
+<h2 id=risc-v>RISC-V</h2>
+<p>Arguably the most well-known project nowadays with ties to open source silicon is RISC-V. My RISC-V ties deepened in the beginning of the year when I was asked to become a <a href=https://riscv.org/community/ambassadors/>RISC-V ambassador</a>. Part of being an ambassador is to create awareness of RISC-V in the fields where I’m active. For well-known reasons the number and nature of events were a bit different from previous years which meant fewer opportunities to weild this new-found power, but I did participate in an ask-the-expert session during the RISC-V global forum and a couple of other events that will be described later. And I also got to be interviewed about RISC-V and open source silicon by Sweden’s largest <a href=https://etn.se/index.php/intervju/67308-olofs-oppna-hardvara-forokar-sig.html>electronics</a> and <a href=https://www.nyteknik.se/premium/risc-v-oppet-kisel-standard-i-processorer-inom-tio-ar-7002031>tech news</a> outlets as well as the <a href=https://architecnologia.es/olof-kindgren-interview>Architecnologia blog</a>.</p>
+<p><img src=gangof12.png alt="Current crop of RISC-V Ambassadors; AKA the Twantasic 12">
+<em>Current crop of RISC-V Ambassadors; AKA the Twantasic 12</em></p>
+<p>In addition to my day job and participating in different organizations I also run a bunch of open source projects, so let’s take a look at the progress of the most important ones during 2020.</p>
+<h2 id=swervolf>SweRVolf</h2>
+<p><a href=https://github.com/chipsalliance/Cores-SweRVolf>SweRVolf</a> is an extendable and portable reference SoC platform for the Western Digital / CHIPS Alliance <a href=https://www.westerndigital.com/company/innovations/risc-v>SweRV cores</a>. SweRVolf is designed for software engineers who wants a turn-key system to evaluate SweRV performance and features, for system designers who want a base platform to build upon and for learners of SoC design, computer architecture, embedded systems or open source silicon methodology. To easily achieve the goals of portability and extendability it is powered by <a href=https://github.com/olofk/fusesoc>FuseSoC</a>, which just happens to be one of my other open source silicon projects mentioned later on.</p>
+<p>During 2020 SweRVolf gained support for booting from SPI Flash but most effort was spent on usability, by making it rock-solid, improve documentation, increase compatibility with more EDA tools, keep the underlying cores up-to-date and follow along with changes in the <a href=https://zephyrproject.org/>Zephyr operating system</a>, which is the officially supported software platform for SweRVolf.</p>
+<p>But the biggest thing to happen SweRVolf this year is that SweRVolf will be used as the base of a new university course from Imagination University Programme called <a href=https://university.imgtec.com/teaching-download/#CA>RVfpga: Understanding Computer Architecture</a>. I’m very excited (and slightly scared) about soon having thousands of students getting familiar with computer architecture, RISC-V and open source silicon through a SoC that I have designed. And I would like to mention a few things about how SwerRVolf is built because I think it’s a great example of how to create chip designs. When I say that I have designed SweRVolf, most of the work has consisted of putting together various pieces and make sure it works well as a whole. Most of the underlying code has been written by other people, and from my perspective, that is really the most successful aspect of SweRVolf because it highlights the rich open source silicon ecosystem. The main CPU core is from Western Digital and governed by CHIPS Alliance. Most of the AXI infrastructure was developed through the [PULP project](PULP project) at ETH Zürich and University of Bologna. The UART and SPI controllers were developed for the <a href=https://openrisc.io/>OpenRISC project</a> during the first wave of open source silicon almost 20 years ago. The <a href=https://github.com/olofk/wb_intercon/>Wishbone infrastructure</a> was developed by me when I started out with open source silicon ten years ago and the memory controller was created by <a href=http://www.enjoy-digital.fr/>Enjoy Digital</a> and is written in Migen as part of the <a href=https://github.com/litex-hub>Litex</a> ecosystem. And to go full circle, the memory controller uses a tiny RISC-V CPU called SERV internally to aid with calibration. <a href=https://github.com/olofk/serv>SERV</a>, the world’s smallest RISC-V CPU is written by me. Small world. And of course the whole project is packaged with <a href=https://github.com/olofk/fusesoc>FuseSoC</a> and uses <a href=https://www.veripool.org/wiki/verilator>Verilator</a> by default for simulations, so it’s FOSSi all the way. As I hope you understand by now it’s not about some lone hero churning out code, but instead all this has been made possible by a huge amount of work by a ton of people over many years, and I’m proud to be one of them.</p>
+<h2 id=serv>SERV</h2>
+<p>Probably the hobby (read unpaid) project I spent most time on during 2020 was <a href=https://github.com/olofk/serv>SERV</a>, the world’s smallest RISC-V CPU, which turned from small to even smaller during the year. SERV is very much a project driven by numbers, so lets look at some of these numbers.</p>
+<p>In February I got hold of an <a href=https://www.xilinx.com/products/boards-and-kits/zcu106.html>ZCU106</a> development board with a huge Xilinx Ultrascale+ FPGA for a project I was assigned to. As this was the largest FPGA I had ever had in my home I got curious to see how many SERV cores I could squeeze into it. The year before, at the 2019 RISC-V workshop in Zürich, I had done a <a href="https://www.youtube.com/watch?v=xjIxORBRaeQ">presentation on how to fit 8 RISC-V cores in a small Lattice iCE40 FPGA</a> (spoiler: it ended up being slightly more than 8 eventually), giving each of them a single I/O to communicate with the outside world. Problem this time was that after stuffing in 360 cores I run out of I/O pins. It would also had been practically impossible to verify that all these external pins actually did what they were supposed to do, so I needed some way of using less than one I/O pin per core. Then it struck me that just a few months earlier I had created a heterogenous sensor aggregation platform based on SERV cores called <a href=https://github.com/olofk/observer>Observer</a>. The idea with Observer was to connect a lot of sensors to an FPGA, each serviced by its own SERV core and then merge the data to an output stream. I gave up on the platform when I realized that while I could fit a lot of SERV cores into the devices, I just had a few sensors so there wasn’t much data to to aggregate. But this platform was a very good starting point.</p>
+<p><img src=observer.png alt="Block diagram of the Observer platform">
+<em>Block diagram of the Observer platform</em></p>
+<p>By removing all sensor interfaces and just have each core print out an identification message instead I had a system that I could instantiate with any number of cores. Trying this on the ZCU106 I could now run over 600 cores on the FPGA. The next problem then was that I was running out of on-chip RAM way before any of the other FPGA resources. In case you don’t know, most FPGAs contain a number of fixed-size SRAM spread out over the devices, each typically being 1-8kB large. For SERV, each core used one for the RF (register file), and another one for the program/data memory. With RISC-V using 32 32-bit registers, this means that only 128 bytes of the RF RAM is used but since the fixed-size SRAM on FPGAs are typically being far larger than that most of the RAM ends up unused. That’s bad, but I had a plan. With a bit of work I managed to share RF, program and data in the same RAM so that the RF is allocated to the top 128 bytes of the RAM. This freed up half of the on-chip RAM blocks and I could eventually hit 1000 SERV cores on the ZCU106 board. Of course, at this point I was curious to see what the situation was for other boards after all these optimizations. Taking it one step further I figured I should turn this into a real thing by creating a benchmark so that people can have a quick way to see roughly how large the FPGAs are on different boards. And with that ServMark was born.</p>
+<p><img src=corescore_announce.png2.png alt></p>
+<p>ServMark lasted for about three minutes until I realized <a href=https://github.com/olofk/corescore>CoreScore</a> was a much catchier name, so that’s we have now.</p>
+<p><img src=corescore_crop-0.png alt></p>
+<p>I had originally planned to do a presentation about SERV at Latch-Up in Boston. But for well-known reasons we cancelled all FOSSi Foundation physical events. Instead I accepted an invitation to speak at the <a href="https://www.youtube.com/watch?v=_huTcpAc7sQ">First virtual RISC-V Munich meetup</a>. By this point I had attended a couple of virtual meetups and I hated it. It was in most cases awful to watch a narrated slide deck without a stage and a speaker to bring it to life at least a bit. So, I decided to take a fresh look and look at the possibilities instead of being limited by the medium. I decided to make videos instead. First of all, since people would watch on a computer screen with proper resolution instead of a washed-out image projected on canvas. This meant I could have much more detailed pictures and smaller font sizes. I could also freely mix pictures and animations, fine-tune timings, do several takes of the audio and add sound effects. And despite being done by someone who has pretty much zero experience in these sort of things, I think it turned out pretty well. So on the day of the event, I just introduced myself and let the audience indulge in my <a href=https://diode.zone/videos/watch/0230a518-e207-4cf6-b5e2-69cc09411013>fully immersive multimedia edutainment experience about SERV</a>. Not sure why the Oscars committee hasn’t got in touch yet.</p>
+<p>Is CoreScore the only attempt to put a mind-boggling number of RISC-V cores inside chips? Absolutely not, and during the summer I learned of the Manticore project from Florian Zaruba and Fabian Schuiki (jointly known as Flobian Schuba) from ETH Zürich, both well-known names in the FOSSisphere from their work in the PULP ecosystem. <a href=https://arxiv.org/abs/2008.06502>Manticore: A 4096-core RISC-V Chiplet Architecture for Ultra-efficient Floating-point Computing</a> had been accepted into the prestigious Hot chips conference. Manticore is an impressive project, but I still thought it was a bit unfair that I wasn’t invited as well. So I reached out for the biggest FPGA board I could find and then wrote my first academic paper of the year called <a href=https://github.com/olofk/serv/blob/doc/plenticore.pdf>Plenticore: A 4097-core RISC-V SoClet Architecture for Ultra-inefficient Floating-point Computing</a>. Unfortunately I did not recieve an invitation to Hot chips despite this. I assume it must have gotten lost in the mail somewhere.</p>
+<p>Oh well, let’s look at some more numbers instead.</p>
+<ul>
+<li>A number of optimizations was found over the year which, depending on the measure, further shrank the core 5-10%.</li>
+<li>The number of supported FPGA boards for the <a href=https://github.com/olofk/serv/blob/master/servant.core>servant SoC</a> grew from 4 to 17, mostly thanks to other contributors (thanks everyone, love you all!)</li>
+<li>The SERV support for the Zephyr operating system was rewritten and upgraded from the aging Zephyr 1.13 to 2.4, the latest version at the time of writing.</li>
+</ul>
+<p><img src=serv_resources_210215.png alt="SERV resource usage over time on a Lattice iCE40 FPGA">
+<em>SERV resource usage over time on a Lattice iCE40 FPGA</em></p>
+<p>Coming back to CoreScore, the results right now range from 10 cores on a smaller Lattice iCE40 device up to <a href=https://twitter.com/OlofKindgren/status/1265170129911980032>5087 cores</a> on a large Xilinx device and the high score table can even be [viewed interactively online](<a href=https://corescore.store/>https://corescore.store/</a>! If you can’t find your favorite board there, just send a PR and we’ll get it added. And if any people with access to crazy large FPGAs happen to read this, please get in touch with me. I’m very curious to see who will be first to get above 10000 cores.</p>
+<p>SERV also saw another great improvement in the form of <a href=https://serv.readthedocs.io/en/latest/>documentation</a>. While not completely there yet, the functionality of most SERV modules have been documented together with detailed schematics showing the implementation down the individual gates, muxes and flip-flops. And most changes to the source are now accompanied by a code comment to clarify what is going on. Since SERV is optimized for size rather than readability, many parts of the core are difficult to figure out by just looking at the source code. Hopefully this will make it easier for other who want to understand or work on the core, but frankly it has also been very useful for me since I tend to forget why I did things in a certain way so I have had to spend a lot of time following my own tracks.</p>
+<p><img src=serv_ctrl_int.png alt="Schematic of the SERV control unit from the SERV documentation">
+<em>Schematic of the SERV control unit from the SERV documentation</em></p>
+<h2 id=fusesoc>FuseSoC</h2>
+<p>The oldest of my open source silicon project still going strong is <a href=https://github.com/olofk/fusesoc>FuseSoC</a>. It is now about to turn ten years old and keeps growing in features and users for each year. Looking back at the changes through 2020 I can see some new trends in the development. The most important one is that for the first year ever, most of the work was not done by me. During 2020, my fellow FOSSi Foundation director and LowRISC employee Philipp Wagner has been pulling the heaviest load of FuseSoC development. And with Philipp came quality. Dr. Wagner has improved FuseSoC in pretty much every aspect. Bugs have been fixed and features has been added. The development experience has been improved by CI testing, automatic code formatting checks and improved testing coverage. And what makes me happiest is that the user experience has been improved not least by a total <a href=http://fusesoc.readthedocs.io/>rewrite of the documentation</a> into something that is actually useful and can be proudly shown to the world. All this is very much needed as FuseSoC is becoming increasingly popular. It has already been picked up by many of the flagship open source silicon projects like <a href=https://opentitan.org/>OpenTitan</a>, <a href=https://github.com/chipsalliance/Cores-SweRVolf>SweRVolf</a>, <a href=https://parallel.princeton.edu/openpiton/>OpenPiton</a> and with the <a href=https://university.imgtec.com/rvfpga/>RVFPGA</a> university programme there will soon be a whole new generation who will get familiar with it as well.</p>
+<h2 id=edalize>Edalize</h2>
+<p>In 2018, the part of FuseSoC that interacted with the EDA tools was spun off into <a href=https://github.com/olofk/edalize>Edalize</a>. The reason was that it was believed this part could be useful for others who weren’t interested in the whole FuseSoC package. This prediction seems to have been correct and Edalize has very much started a life on its own by now. In addition to FuseSoC, Edalize is now used by several other projects such as <a href=https://github.com/sylefeb/Silice>Silice</a>, <a href=https://clash-lang.org/>Clash</a> and <a href=https://github.com/SymbiFlow/fpga-tool-perf>fpga-perf-tool</a> and over the year Edalize has gained support for 7 new EDA tool flows, bringing the total number up to 25.</p>
+<p>2020 was also the year when Edalize had it’s first taste of being in the spotlight on its own merits. For the <a href=https://woset-workshop.github.io/>Workshop on Open-Source EDA Technology (WOSET) 2020</a> I decided to submit a presentation about Edalize. Being an academic conference this also prompted me to write an accompanying paper as is the common courtesy for these kind of events. <a href=https://woset-workshop.github.io/PDFs/2020/a20.pdf>The paper</a> received a lukewarm response but was accepted anyway. Once again I did not feel like reciting slides to a camera so I turned back to my new-found interest in advanced multimedia productions. And it paid off. <a href="https://www.youtube.com/watch?v=HuRtkpZqB34">The Edalize video</a> won an award for <a href=https://woset-workshop.github.io/WOSET2020.html#best-video>best video at WOSET 2020</a>. Well done Edalize!</p>
+<h2 id=led-to-believe>LED to Believe</h2>
+<p>All of the above projects use FuseSoC and Edalize because – well it’s kind of why I created FuseSoC in the first place – to easily reuse components and retarget to different devices. But I also realized there was a need for a dead simple project to help people getting started with FuseSoC – the Hello world of silicon, so to speak. And the Hello World of silicon is of course the blinking LED. So in 2018 I created project LED to Believe with the ambitious goal to create FuseSoC-powered LED blinkers for every FPGA board ever made. The project has several aspects that are useful in different ways. It serves as a very simple introduction to FuseSoC and how to make a design that targets multiple hardware. It is also an excellent pipe cleaner for when you receive a new board. If you can run the project successfully and get the LED to blink, it likely means you have managed to install all the EDA tools correctly which is no small feat, and you also have a template to take on bigger projects. And it’s also fun to see what boards are available out there. While I have submitted a bunch of the board ports myself, the vast majority have come from all the fantastic contributors out there. And during 2020 the number of supported boards grew from 16 to 44. Perhaps not all the FPGA boards ever made, but a considerable chunk of them. And already in the short amount of 2021 that has passed, there have been numerous more contributions so we’re getting closer all the time.</p>
+<p>In closing, 2020 was a busy year FOSSi-wise. And this has just touched upon the surface of all things that have been happening during the year. And just as we were about to close the books on 2020, I was informed that Lattice had incorporated one of my FOSSi projects into their shiny new award-winning Propel design suite. Which project, you might ask? Was it the similarly award-winning FuseSoC, to give Lattice users immediate access to a rich ecosystem of Open IP cores? Or was it the Rosetta stone of Edalize, with its award-winning video, that would easily provide a coherent interface for a dozen simulators and make it easy to switch between Lattice’s multitude of FPGA tools such as Diamond, icecube2 and Radiant? Or was it SERV itself, the award-winning CPU capable of offering a RISC-V experience for all but their absolutely smallest offerings? Well, actually, none of the above. It turns out that Propel now contains ipyxact, my somewhat feature-limited Python library for working with IP-XACT files. Not my first choice, but fair enough. I wonder if they have read <a href=https://olofkindgren.blogspot.com/2016/11/ip-xact-good-bad-and-outright-madness.html>my somewhat complicated relationship with IP-XACT</a>.</p>
+<p><img src=propel.png alt="Finally my work is recognized by big EDA vendors (picture by Gatecat)">
+<em>Finally my work is recognized by big EDA vendors (picture by Gatecat)</em></p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/chips-alliance-website/preview/35/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/>
+<img src=https://chipsalliance.github.io/chips-alliance-website/preview/35/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.github.io/chips-alliance-website/preview/35/categories/announcements>Announcements</a>
+</div>
+<div class=blog-post-date>
+December 13, 2022
+</div>
+<div class=blog-post-title>
+<a href=/chips-alliance-website/preview/35/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/>CHIPS Alliance Welcomes the Caliptra Open Source Root of Trust Project</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/chips-alliance-website/preview/35/news/joint-analog-workgroup-mos-ak-panel-session/>
+<img src=https://chipsalliance.github.io/chips-alliance-website/preview/35/news/joint-analog-workgroup-mos-ak-panel-session/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.github.io/chips-alliance-website/preview/35/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+December 5, 2022
+</div>
+<div class=blog-post-title>
+<a href=/chips-alliance-website/preview/35/news/joint-analog-workgroup-mos-ak-panel-session/>Joint Analog Workgroup / MOS-AK Panel Session</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/chips-alliance-website/preview/35/news/chips-alliance-fall-2022-technology-update-december-15/>
+<img src=https://chipsalliance.github.io/chips-alliance-website/preview/35/news/chips-alliance-fall-2022-technology-update-december-15/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.github.io/chips-alliance-website/preview/35/categories/announcements>Announcements</a>
+</div>
+<div class=blog-post-date>
+December 1, 2022
+</div>
+<div class=blog-post-title>
+<a href=/chips-alliance-website/preview/35/news/chips-alliance-fall-2022-technology-update-december-15/>CHIPS Alliance Fall 2022 Technology Update December 15</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/chips-alliance-website/preview/35/>
+<img src=/chips-alliance-website/preview/35/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2023</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/chips-alliance-website/preview/35/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/about/members/>Members</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/chips-alliance-website/preview/35/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/events/>Events</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/chips-alliance-website/preview/35/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/chips-alliance-website/preview/35/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/chips-alliance-website/preview/35/vendor/jQuery/jquery.min.js></script>
+<script src=/chips-alliance-website/preview/35/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/chips-alliance-website/preview/35/vendor/counter-up/countup.js></script>
+<script src=/chips-alliance-website/preview/35/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/chips-alliance-website/preview/35/js/script.js></script>
+</body>
+</html>
