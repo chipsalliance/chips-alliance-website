@@ -49,6 +49,16 @@ jobs:
         if: github.event_name == 'pull_request'
       - run: cp -a static public
 
+      - name: Download current release
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: ./current
+      - name: Preserve previews
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          mv ./current/preview/ ./public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
