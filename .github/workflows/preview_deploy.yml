@@ -43,7 +43,7 @@ jobs:
 
       - name: Unpack artifacts
         run: |
-          unzip pr_deployment.zip -d ./public/preview
+          unzip -o pr_deployment.zip -d ./public/preview
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
