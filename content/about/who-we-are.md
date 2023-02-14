@@ -1,7 +1,7 @@
 ---
 title: Who We Are
 description: >-
-   The CHIPS Alliance is an organization which develops and hosts high quality, open source hardware code (IP cores), interconnect IP (phy and logical protocols), and open source software development tools for design, verification, and more.  We seek to provide a barrier-free collaborative environment, to lower the cost of developing IP and tools for hardware development.
+   !!!! This is a test PR deployment... The CHIPS Alliance is an organization which develops and hosts high quality, open source hardware code (IP cores), interconnect IP (phy and logical protocols), and open source software development tools for design, verification, and more.  We seek to provide a barrier-free collaborative environment, to lower the cost of developing IP and tools for hardware development.
 image_path: images/feature/circuits1.jpg
 ---
 
