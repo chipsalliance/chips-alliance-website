@@ -1,4 +1,4 @@
-name: PR preview deployments
+name: Deploy PR preview
 
 on:
   workflow_run:
