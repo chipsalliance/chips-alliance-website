@@ -1,0 +1,49 @@
+on:
+  workflow_run:
+    workflows: ["Deploy Hugo site to Pages"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    name: Deploy PR preview
+    if: ${{ github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Download current deployment
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: ./public
+      - name: Download artifacts
+        uses: actions/github-script@v3.1.0
+        with:
+          script: |
+            var artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{ github.event.workflow_run.id }},
+            });
+            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "pr_deployment"
+            })[0];
+            var download = await github.actions.downloadArtifact({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               artifact_id: matchArtifact.id,
+               archive_format: 'zip',
+            });
+            console.log("::set-output name=artifact_id::" + matchArtifact.id);
+            var fs = require('fs');
+            fs.writeFileSync('${{github.workspace}}/pr_deployment.zip', Buffer.from(download.data));
+
+      - name: Unpack artifacts
+        run: |
+          unzip pr_deployment.zip -d ./public/preview
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
