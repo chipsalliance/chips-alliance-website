@@ -59,7 +59,7 @@ id="counter-up"
             <div class="counter-up-content-item">
               <div class="counter-percent">
                 
-                <span class="counter">2016</span>
+                <span class="counter">2019</span>
                 
               </div>
               <p>Established in</p>
@@ -70,12 +70,10 @@ id="counter-up"
             <div class="counter-up-content-item">
               <div class="counter-percent">
                 
-                <span class="counter">40</span>
-                
-                <span class="percent">&#43;</span>
-                
+                <span class="counter">{{ len (where .Site.RegularPages "Section" "==" "workgroups") }}</span>
+                                
               </div>
-              <p>Team Members</p>
+              <p>Workgroups</p>
             </div>
           </div>
           
@@ -83,10 +81,8 @@ id="counter-up"
             <div class="counter-up-content-item">
               <div class="counter-percent">
                 
-                <span class="counter">32</span>
-                
-                <span class="percent">&#43;</span>
-                
+                <span class="counter">{{ len ( .Site.Data.members.members ) }}</span>
+                                
               </div>
               <p>Member Companies</p>
             </div>
