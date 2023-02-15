@@ -3,6 +3,7 @@ members:
     url: https://www.amd.com/en
     image: amd.svg
     level: platinum
+    board_rep: Prabhu Jayanna
   - name: Antmicro
     url: https://antmicro.com/
     image: antmicro.png
@@ -12,6 +13,7 @@ members:
     url: https://www.alibabagroup.com/
     image: alibaba.png
     level: platinum
+    board_rep: Lide Duan
   - name: Google
     url: https://google.com/
     image: google.png
