@@ -43,7 +43,7 @@ jobs:
         id: PR
 
       - run: npm ci
-      - run: hugo --minify --baseURL https://${{ github.repository_owner }}.github.io/$( echo ${{ github.repository }} | cut -d/ -f 2)/
+      - run: hugo --minify --baseURL https://chipsalliance.org
         if: ${{ github.ref == 'refs/heads/main' }}
       - run: hugo --minify --baseURL https://${{ github.repository_owner }}.github.io/$( echo ${{ github.repository }} | cut -d/ -f 2)/preview/${{ steps.PR.outputs.number }}/
         if: github.event_name == 'pull_request'
