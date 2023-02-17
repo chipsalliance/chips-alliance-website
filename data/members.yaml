@@ -74,10 +74,6 @@ members:
     url: http://imperas.com/
     image: imperas.png
     level: silver
-  - name: Metrics
-    url: https://metrics.ca/
-    image: metrics.png
-    level: silver
   - name: Nvidia
     url: https://www.nvidia.com/en-us/
     image: nvidia.jpg
