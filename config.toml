@@ -7,7 +7,7 @@ buildFuture = true
 [markup.goldmark.renderer]
 unsafe= true
 
-googleAnalytics = 'G-MEASUREMENT_ID'
+googleAnalytics = 'G-H0KF2YZTR7'
 
 [params]
   description = 'CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.'
