@@ -55,7 +55,7 @@ For more information on the FPGA interchange and how much value it brings to the
 
 ## Building and running the setup
 
-The FPGA SATA design is available in the [symbiflow-examples](https://github.com/SymbiFlow/symbiflow-examples/tree/master/xc7/litex_sata_demo) repository and can be built with the open toolchain, and run on the hardware setup described above.
+The FPGA SATA design is available in the [symbiflow-examples](https://github.com/chipsalliance/f4pga-examples/tree/master/xc7/litex_sata_demo) repository and can be built with the open toolchain, and run on the hardware setup described above.
 
 After following the [instructions to install the toolchain](https://symbiflow-examples.readthedocs.io/en/latest/getting-symbiflow.html) and [preparing the environment](https://symbiflow-examples.readthedocs.io/en/latest/building-examples.html#building-examples--page-root), run the following to build the LiteX SATA design:
 

@@ -71,7 +71,7 @@ CHIPS Alliance hosted a number of events over the past year, pivoting to virtual
 - In April 2020, CHIPS Alliance held an online meetup on [Cache Coherent Memory Fabric](https://www.meetup.com/Bay-Area-RISC-V-Meetup/events/269617034/) with TileLink and OmniXtend. There were over 250 attendees who learned about developments from SiFive, Western Digital and Intel.
 - In May 2020, the CHIPS Alliance participated in a [Meetup](https://www.meetup.com/Bay-Area-RISC-V-Meetup/events/270389046/) hosted by the  Bay Area RISC-V Group, providing attendees with an overview of the organization and the SweRV family of cores. 
 - In September 2020, the [CHIPS Alliance Workshop](https://events.linuxfoundation.org/chips-alliance-workshop/) featured 10 talks about open source milestones, progress, updates and more. 
-- In November, CHIPS Alliance chair of Outreach Committee Michael Gielda gave a talk at [RISC-V Days Tokyo](http://riscv-association.jp/en/riscv-day-tokyo-2020-en/), discussing the ongoing activities towards enabling fully open source and CI-driven ASIC and FPGA development flows.
+- In November, CHIPS Alliance chair of Outreach Committee Michael Gielda gave a talk at RISC-V Days Tokyo, discussing the ongoing activities towards enabling fully open source and CI-driven ASIC and FPGA development flows.
 - In December 2020, at the [RISC-V Summit](https://riscv.org/proceedings/2021/02/risc-v-summit-2020/), CHIPS Alliance Chairman Dr. Zvonimir Bandić gave a talk about OmniXtend, and Antmicro gave a talk describing its efforts towards enabling SystemVerilog support in open source tools.
 
 ## Technical Highlights
@@ -136,7 +136,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 - [CHIPS SweRV cores and the Open Tools Ecosystem](https://antmicro.com/blog/2020/07/swerv-cores-tools-ecosystem/) – Antmicro July 7, 2020
 - [Antmicro, Google and SkyWater Team Up to Release First Ever Open Source PDK](https://antmicro.com/blog/2020/06/skywater-open-source-pdk/) – Antmicro, June 29, 2020
 - [Antmicro and QuickLogic Announce Open Reconfigurable Computing Initiative](https://antmicro.com/blog/2020/06/quicklogic-open-reconfigurable-computing-press-release/) – Antmicro, June 16, 2020
-- [Codasip Extends SweRV Support Package to Include Western Digital SweRV EH2 & EL2 RISC-V Cores](https://codasip.com/2020/06/02/codasip-extends-swerv-support-package-to-include-western-digital-swerv-eh2-el2-risc-v-cores/) – Codasip, June 2, 2020
+- Codasip Extends SweRV Support Package to Include Western Digital SweRV EH2 & EL2 RISC-V Cores – Codasip, June 2, 2020
 - [Codasip Releases Support Package For Western Digital’s First RISC-V Swerv Core](https://codasip.com/2020/04/23/codasip-releases-support-package-for-western-digitals-first-risc-v-swerv-core/) – Codasip, April 23, 2020
 - [Imperas Leading RISC-V CPU Reference Model for Hardware Design Verification Selected by Mellanox](https://www.imperas.com/Mellanox_selects_Imperas_for_RISC-V_CPU_Reference_Model_for_Hardware_Design_Verification) – Imperas, April 21, 2020
 - [SystemVerilog Linting and Formatting with FuseSoC – Verible Integration](https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/) – Antmicro, April 11, 2020
@@ -147,7 +147,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 
 - [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.design-reuse.com/news/49493/chips-alliance-antmicro-verisilicon-platinum-membership-level.html) – Feb. 16, 2021
 - [CHIPS Alliance Adds Antmicro and VeriSilicon](https://insidehpc.com/2021/02/chips-alliance-adds-antmicro-and-verisilicon/) – Feb. 12, 2021
-- [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.enterprise.ai/news/2021/02/12/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 12, 2021
+- CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level – Feb. 12, 2021
 - [CHIPS Alliance Brings on Rob Mains as New Executive Director](https://www.hpcwire.com/off-the-wire/chips-alliance-brings-on-rob-mains-as-new-executive-director/) – Feb. 11, 2021
 - [Week In Review: Design, Low Power](https://semiengineering.com/week-in-review-design-low-power-133/) – Feb. 12, 2021
 - CHIPS Alliance Hires New Director to Push Open-Source Chips Ecosystem into Next Gear – Feb. 8, 2021

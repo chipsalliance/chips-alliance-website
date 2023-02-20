@@ -9,11 +9,11 @@ images: ['images/announcement-share.jpg']
 
 New Linux Foundation Project to Foster Flexible, Next-Generation Chip Design for Diverse Data-Centric Applications and Workloads
 
-**SAN FRANCISCO –  March 11, 2019** – [The Linux Foundation](http://linuxfoundation.org/), the nonprofit organization enabling mass innovation through open source, today announced its intent to form the CHIPS Alliance project to host and curate high-quality open source code relevant to the design of silicon devices. CHIPS Alliance will foster a collaborative environment that will enable accelerated creation and deployment of more efficient and flexible chip designs for use in mobile, computing, consumer electronics, and Internet of Things (IoT) applications.
+**SAN FRANCISCO –  March 11, 2019** – [The Linux Foundation](https://www.linuxfoundation.org/), the nonprofit organization enabling mass innovation through open source, today announced its intent to form the CHIPS Alliance project to host and curate high-quality open source code relevant to the design of silicon devices. CHIPS Alliance will foster a collaborative environment that will enable accelerated creation and deployment of more efficient and flexible chip designs for use in mobile, computing, consumer electronics, and Internet of Things (IoT) applications.
 
 Early CHIPS Alliance backers include Esperanto Technologies, Google, SiFive and Western Digital, all committed to both open source hardware and continued momentum behind the free and open RISC-V architecture.
 
-“The RISC-V community is working to foster open source foundation technologies that will help unlock market innovation to move [artificial intelligence/machine learning and infrastructure composability] forward,” said Eric Burgener, research vice president of IDC’s Infrastructure Systems, Platforms, and Technologies Group, via [a recent IDC report](https://www.idc.com/getdoc.jsp?containerId=US44763919).
+“The RISC-V community is working to foster open source foundation technologies that will help unlock market innovation to move [artificial intelligence/machine learning and infrastructure composability] forward,” said Eric Burgener, research vice president of IDC’s Infrastructure Systems, Platforms, and Technologies Group, via a recent IDC report.
 
 The project will create an independent entity so companies and individuals can collaborate and contribute resources to make open source CPU chip and system-on-a-chip (SoC) design more accessible to the market.
 
