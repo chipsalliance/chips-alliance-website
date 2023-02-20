@@ -29,7 +29,7 @@ We recommend you join our mailing lists, as they are our primary means of commun
 
 #### Workgroup mailing lists
 
-Go to the [Workgroups page] for details, with mailing lists and meeting times.
+Go to the [Workgroups page](https://www.chipsalliance.org/workgroups/) for details, with mailing lists and meeting times.
 
 #### Member mailing lists
 
