@@ -34,7 +34,7 @@ The program is a great opportunity for any developer wanting to develop open sou
 - An Amateur Satellite Radio Transceiver
 - Analog/RF IPs
 - Four eFPGAs
-- [Antmicro’s AES-128 core integration](https://efabless.com/projects/32)
+- Antmicro’s AES-128 core integration
 
 We have been assisting customers expressing the desire to participate in the SkyWater shuttle in assessing the feasibility of their designs, creating the necessary workflows and adapting the tools involved to their particular needs.
 
@@ -96,6 +96,6 @@ Further SkyWater PDK development plans include extending the PDK portfolio with 
 
 ## Participate in shuttle runs
 
-Three shuttle runs have already happened, and thanks to Google’s commitment as well as the overwhelming interest from business, research and government institutions, the project will continue through 2022 and most likely beyond. The [4th shuttle run is currently open](https://efabless.com/projects/shuttle_name/MPW-4) and will be accepting submissions by December 31, 2021.
+Three shuttle runs have already happened, and thanks to Google’s commitment as well as the overwhelming interest from business, research and government institutions, the project will continue through 2022 and most likely beyond. The 4th shuttle run is currently open and will be accepting submissions by December 31, 2021.
 
 For projects that, for any reason, cannot be open sourced or submitted within the timeline of the open shuttle, a private shuttle called [ChipIgnite](https://efabless.com/chipignite/2110C) has been created.

@@ -53,7 +53,7 @@ Additionally, RapidWright is able to read and write the physical netlists to gen
 
 ## Example flow
 
-The default open source flow for Xilinx devices uses Yosys to synthesize the design and VPR or nextpnr for place and route. The last step – bitstream generation uses the FPGA Assembly [FASM](https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html) format to generate the file used for programming the FPGA. FASM is a textual format specifying which FPGA feature should be enabled or disabled. Its textual nature makes it easy to analyze and experiment with. VPR supported this format natively, and nextpnr has been extended to support it as a part of the interchange format support work.
+The default open source flow for Xilinx devices uses Yosys to synthesize the design and VPR or nextpnr for place and route. The last step – bitstream generation uses the FPGA Assembly FASM format to generate the file used for programming the FPGA. FASM is a textual format specifying which FPGA feature should be enabled or disabled. Its textual nature makes it easy to analyze and experiment with. VPR supported this format natively, and nextpnr has been extended to support it as a part of the interchange format support work.
 
 ![Supported SymfbiFlow interchange tooling](Interchange_flow.svg)
 

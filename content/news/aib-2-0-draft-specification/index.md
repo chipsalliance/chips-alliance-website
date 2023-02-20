@@ -21,7 +21,7 @@ To further reduce the design effort of producing block variants and porting cust
 
 “Reducing barriers to entry in developing custom silicon will be critical for the growth, adoption, and success of the chiplet movement,” said Dr. Krishna Settaluri, CEO, Blue Cheetah Analog Design. “By producing custom blocks at push-button speed, Blue Cheetah’s generators drastically reduce time-to-market and engineering effort required to produce tape-out ready IP. We are excited to offer this capability and look forward to enabling companies to thrive in the chiplet ecosystem.”
 
-Dr. Settaluri of Blue Cheetah and David Kehlet of Intel® Corporation will be discussing the AIB PHY generator and AIB 2.0 draft specification at DAC 2020, which is being held virtually this year. The session, called “Tutorial 10 Part 1: Chiplet Integration: Tools, Methodology, Requirement, Infrastructure,” will take place on Monday, July 20 at 1:30 p.m. PT. To learn more about the talk, please visit [here](http://www2.dac.com/events/eventdetails.aspx?id=295-229). 
+Dr. Settaluri of Blue Cheetah and David Kehlet of Intel® Corporation will be discussing the AIB PHY generator and AIB 2.0 draft specification at DAC 2020, which is being held virtually this year. The session, called “Tutorial 10 Part 1: Chiplet Integration: Tools, Methodology, Requirement, Infrastructure,” will take place on Monday, July 20 at 1:30 p.m. PT.  
 
 To read the AIB specification, please visit: https://github.com/chipsalliance/AIB-specification.
 

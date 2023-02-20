@@ -37,7 +37,7 @@ In addition to the lists which are open to everyone, we have some special-purpos
 
 * [members@lists.chipsalliance.org](https://lists.chipsalliance.org/g/members)  - This is the main list for member information.
 * [marketing@lists.chipsalliance.org](https://lists.chipsalliance.org/g/marketing)  - This is the list for the CHIPS Alliance marketing committee, which is open to all members.
-* We also maintain a legal mailing list for members' counsel to plan meeting times.  Contact [operations@chipsalliance.org](mailto:operations@chipsalliance.org) with the name of your in-house legal counsel so we can add them to the Legal Committee list and invite.
+* We also maintain a legal mailing list for members' counsel to plan meeting times.  Contact operations@chipsalliance.org with the name of your in-house legal counsel so we can add them to the Legal Committee list and invite.
 
 ### Follow us on social
 
