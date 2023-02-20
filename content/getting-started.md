@@ -29,11 +29,7 @@ We recommend you join our mailing lists, as they are our primary means of commun
 
 #### Workgroup mailing lists
 
-* [chisel-wg@lists.chipsalliance.org](https://lists.chipsalliance.org/g/chisel-wg)  - Chisel workgroup mailing list
-* [cores-wg@lists.chipsalliance.org](https://lists.chipsalliance.org/g/cores-wg)  - Cores workgroup mailing list
-* [interconnects-wg@lists.chipsalliance.org](https://lists.chipsalliance.org/g/interconnects-wg)  - Interconnects workgroup mailing list
-* [rocket-wg@lists.chipsalliance.org](https://lists.chipsalliance.org/g/rocket-wg)  - Rocket workgroup mailing list
-* [tools-wg@lists.chipsalliance.org](https://lists.chipsalliance.org/g/tools-wg)  - Tools workgroup mailing list
+Go to the [Workgroups page] for details, with mailing lists and meeting times.
 
 #### Member mailing lists
 
@@ -71,26 +67,6 @@ The TSC is comprised of technical representatives from CHIPS Alliance projects a
 
 * Join the [technical-discuss mailing list]()
 * Join the [TSC Slack channel](https://chipsalliance.slack.com/archives/CN2GPL6TC) ([get a Slack invite](https://slack-invite.chipsalliance.org))
-
-### Chisel Workgroup
-
-* Join the [Chisel Workgroup mailing list](https://lists.chipsalliance.org/g/chisel-wg/topics) 
-
-### Cores Workgroup
-
-* Join the [Cores Workgroup mailing list](https://lists.chipsalliance.org/g/cores-wg) 
-
-### Interconnects Workgroup
-
-* Join the [Interconnects Workgroup mailing list](https://lists.chipsalliance.org/g/interconnects-wg) 
-
-### Rocket Workgroup
-
-* Join the [Rocket Workgroup mailing list](https://lists.chipsalliance.org/g/rocket-wg) 
-
-### Tools Workgroup
-
-* Join the [Tools Workgroup mailing list](https://lists.chipsalliance.org/g/tools-wg) 
 
 ## How to participate as a Member
 
