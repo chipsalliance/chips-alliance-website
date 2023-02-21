@@ -20,7 +20,7 @@ The CHIPS Alliance works in the open and welcomes all participants in our open s
 
 ### Join our mailing lists
 
-We recommend you join our mailing lists, as they are our primary means of communication.  The CHIPS Alliance uses groups.io for our mailing lists.  If you aren't familiar with the process of joining groups, [we have a tutorial on how to find and join our lists](tutorials/GROUPS.IO.md).
+We recommend you join our mailing lists, as they are our primary means of communication.  The CHIPS Alliance uses groups.io for our mailing lists.  If you aren't familiar with the process of joining groups, [we have a tutorial on how to find and join our lists](/groups-tutorial/).
 
 #### General mailing lists
 
