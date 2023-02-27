@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/08/04/open-source-systemverilog-tools-in-asic-design/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/07/open-source-systemverilog-tools-in-asic-design/).*

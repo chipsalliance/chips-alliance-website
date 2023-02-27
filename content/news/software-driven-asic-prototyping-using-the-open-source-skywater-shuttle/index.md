@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['news/software-driven-asic-prototyping-using-the-open-source-skywater-shuttle/share.jpg']
+aliases: ['/blog/2021/12/17/software-driven-asic-prototyping-using-the-open-source-skywater-shuttle/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/sw-driven-asics-with-skywater-shuttle/).*

@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/announcement/2020/09/15/efabless-joins-chips-alliance-to-accelerate-the-growth-of-the-open-source-chip-ecosystem/']
 ---
 
 *Efabless to give a talk on the OpenROAD project at the CHIPS Alliance Workshop on Sept. 17*

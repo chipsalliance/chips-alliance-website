@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/02/23/goings-on-in-the-fusesoc-project-and-other-open-source-silicon-related-news/']
 ---
 
 *This post was originally published by [Olof Kindgren](https://olofkindgren.blogspot.com/2021/02/fossi-fever-2020.html)*

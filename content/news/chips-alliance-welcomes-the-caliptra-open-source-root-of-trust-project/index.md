@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/share.png']
+aliases: ['/announcement/2022/12/13/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/']
 ---
 
 **SAN FRANCISCO, December 13, 2022** – CHIPS Alliance, a Linux Foundation project and leading consortium advancing common and open hardware for interfaces, processors and systems, announced that [Caliptra](https://www.opencompute.org/blog/cloud-security-integrating-trust-into-every-chip), the open source root of trust project founded by technology leaders AMD, Google, Microsoft and NVIDIA, has joined CHIPS Alliance to enable an open, collaborative community-driven approach to hardware security.

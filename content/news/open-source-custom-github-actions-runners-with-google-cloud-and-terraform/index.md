@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/09/02/open-source-custom-github-actions-runners-with-google-cloud-and-terraform/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/08/open-source-github-actions-runners-with-gcp-and-terraform/).*

@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['news/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/share.png']
+aliases: ['/announcement/2021/02/11/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/']
 ---
 
 *CHIPS Alliance continues to grow with more than 25 companies collaborating on open source hardware and software technologies*

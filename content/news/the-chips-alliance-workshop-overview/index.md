@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2020/09/15/the-chips-alliance-workshop-overview/']
 ---
 
 Mark your calendars! The [CHIPS Alliance Workshop](https://events.linuxfoundation.org/chips-alliance-workshop/) is coming up on Thursday, Sept. 17 from 11 a.m. to 2 p.m. PT. This free, virtual event will feature talks from industry leaders including Antmicro, Efabless, Google, Intel, Mentor, Metrics, OpenROAD, QuickLogic, SiFive, UC Berkeley and Western Digital.  

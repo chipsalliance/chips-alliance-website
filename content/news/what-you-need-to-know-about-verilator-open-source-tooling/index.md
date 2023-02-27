@@ -5,6 +5,7 @@ categories:
   - Blog
 author: Rob Mains, General Manager of CHIPS Alliance
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/07/19/what-you-need-to-know-about-verilator-open-source-tooling/']
 ---
 
 Verilator is a high performance, open source functional simulator that has gained tremendous popularity in its usage and adoption in the verification of chip design. The ASIC development community has widely embraced Verilator as an effective, often even superior alternative to proprietary solutions, and it is now the standard approach in RISC-V CPU design as the community has worked to provide Verilator simulation capabilities out of the box. CHIPS Alliance and RISC-V leaders Antmicro and Western Digital have been collaborating to make Verilator even more useful for ASIC design purposes, working towards supporting industry-standard verification methods in a completely open source flow.

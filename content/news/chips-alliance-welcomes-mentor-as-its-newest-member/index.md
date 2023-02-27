@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/uncategorized/2020/08/17/chips-alliance-welcomes-mentor-as-its-newest-member/']
 ---
 
 *Mentor to present at the virtual CHIPS Alliance Workshop on Sept. 17* 
