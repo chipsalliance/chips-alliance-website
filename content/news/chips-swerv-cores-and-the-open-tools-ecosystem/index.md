@@ -13,7 +13,7 @@ Antmicro’s open source work spans all parts of the computing stack, from softw
 
 ## What is SweRV?
 
-[SweRV](https://github.com/chipsalliance/Cores-SweRV) is a family of production-grade RISC-V implementations originally developed by Western Digital, who have announced they are going to transition 2 billion cores in their products to RISC-V, showing they are fully committed to this open processor architecture. SweRV comes in three variants: the original EH1 and the recently released [EH2 and EL2](https://chipsalliance.org/announcement/2020/05/14/newly-enhanced-swerv-cores/).
+[SweRV](https://github.com/chipsalliance/Cores-SweRV) is a family of production-grade RISC-V implementations originally developed by Western Digital, who have announced they are going to transition 2 billion cores in their products to RISC-V, showing they are fully committed to this open processor architecture. SweRV comes in three variants: the original EH1 and the recently released [EH2 and EL2](https://chipsalliance.org/news/newly-enhanced-swerv-cores/).
 
 EH2 is the world’s first dual-threaded commercial, embedded RISC-V core designed for IoT and AI systems, boasting as much as 6.3 CoreMark/MHz in dual-threaded mode, at 1.2 GHz in 16nm. EL2, on the other hand, is a tiny, low-power but high-performance RISC-V core (with just 0.023 mm2 in 16nm, it runs at up to 600 MHz and 3.6 CoreMark/MHz) targeting applications such as state-machine sequencers and waveform generators. The best thing about them is that anybody can use and extend them for free, with more high performance cores being planned in the future.
 
