@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/10/27/improving-the-openlane-asic-build-flow-with-open-source-systemverilog-support/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/10/openlane-asic-build-flow-with-systemverliog-support/).*

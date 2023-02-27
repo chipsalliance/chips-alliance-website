@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/announcement/2020/12/08/omnixtend/']
 ---
 
 *CHIPS Alliance to highlight OmniXtend advances at RISC-V Summit*

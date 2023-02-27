@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['news/risc-v-international-omnixtend-working-group/share.png']
+aliases: ['/announcement/2021/03/24/risc-v-international-omnixtend-working-group/']
 ---
 
 *New joint working group will enhance the OmniXtend Cache Coherency architecture*

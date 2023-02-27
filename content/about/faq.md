@@ -3,6 +3,7 @@ title: Frequently Asked Questions
 description: >-
    Learn more about CHIPS Alliance!
 image_path: images/feature/niek-doup-Xf071ws2Icg-unsplash.jpg
+aliases: ['/faq/']
 ---
 
 {{< accordionlist >}}

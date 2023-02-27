@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['news/open-source-debayerization-blocks-in-fpga/share.jpg']
+aliases: ['/blog/2021/11/30/open-source-debayerization-blocks-in-fpga/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/10/debayerization-blocks-in-fpga/).*

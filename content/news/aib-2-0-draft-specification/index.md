@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/announcement/2020/07/16/aib-2-0-draft-specification/']
 ---
 
 *AIB reduces design barriers, costs, and leverages generators to ease development of  chiplet-based designs*
