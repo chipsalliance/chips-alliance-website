@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['news/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling/share.png']
+aliases: ['/announcement/2022/02/18/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling']
 ---
 
 *New workgroup draws support from industry leaders as the open FPGA toolchain matures*

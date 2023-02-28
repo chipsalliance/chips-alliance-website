@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/03/16/github-actions-self-hosted-runners-build-event-server-and-google-cloud/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/03/github-actions-self-hosted-runners/).*

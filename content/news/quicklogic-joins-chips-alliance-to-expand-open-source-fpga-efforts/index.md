@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/announcement/2020/08/11/quicklogic-joins-chips-alliance-to-expand-open-source-fpga-efforts/']
 ---
 
 *QuickLogic to present at the virtual CHIPS Alliance Workshop on Sept. 17* 

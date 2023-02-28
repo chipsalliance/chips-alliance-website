@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/announcement/2019/05/07/chips-alliance-to-reveal-project-details-strategy-and-roadmap-at-inaugural-workshop-hosted-at-google/']
 ---
 
 **SAN FRANCISCO –  May 7, 2019** – CHIPS Alliance, the leading consortium advancing common, open hardware for interfaces, processors and systems, today announced it is holding its inaugural workshop on June 19, 2019 at Google at 111 W. Java Drive, Sunnyvale, Calif.

@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['news/xilinx-new-member/share.png']
+aliases: ['/announcement/2022/02/03/xilinx-new-member/']
 ---
 
 *Xilinx to continue to drive forward open source FPGA innovation*

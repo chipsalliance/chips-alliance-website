@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2020/05/07/systemverilog-linting-and-formatting-with-fusesoc-verible-integration/']
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/).*

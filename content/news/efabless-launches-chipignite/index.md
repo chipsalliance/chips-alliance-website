@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+aliases: ['/blog/2021/05/20/efabless-launches-chipignite/']
 ---
 
 - Program includes a pre-designed carrier chip and automated open source design flow from Efabless

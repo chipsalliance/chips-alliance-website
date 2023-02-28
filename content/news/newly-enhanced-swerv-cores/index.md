@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/blog/2020/05/14/newly-enhanced-swerv-cores/', '/announcement/2020/05/14/newly-enhanced-swerv-cores']
 ---
 
 *CHIPS Alliance to host online event to help community innovating with SweRV Core EH2 and EL2 Solutions*

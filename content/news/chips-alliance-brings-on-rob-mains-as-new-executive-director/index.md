@@ -5,6 +5,7 @@ categories:
   - Announcements
 author: 
 images: ['images/announcement-share.jpg']
+aliases: ['/announcement/2021/02/08/chips-alliance-brings-on-rob-mains-as-new-executive-director/']
 ---
 
 *Industry veteran to lead open hardware consortium democratizing silicon innovation*
