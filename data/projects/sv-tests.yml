@@ -1,0 +1,28 @@
+name: SV tests
+status: graduated
+repositories: https://github.com/SymbiFlow/sv-tests
+brief_summary: SystemVerilog test framework for checking SV spec support coverage in various open source tools - parsers, linters, formatters etc.
+license: ISC
+issue_tracker_link: https://github.com/SymbiFlow/sv-tests/issues
+website_link: https://symbiflow.github.io/sv-tests-results/
+social_media_links: N/A
+project_usage_and_scale: Google, Antmicro, WDC, numerous users in open source community
+why_join_chips: To help drive SystemVerilog support in open source ASIC/FPGA tooling
+primary_contact:
+  name: Tom Gorochowik
+  email: tgorochowik@antmicro.com
+  github_handle: tgorochowik
+  project_role: Maintainer
+### Sandbox data ends here
+active_committers: https://github.com/SymbiFlow/sv-tests/graphs/contributors
+release_methodology: No regular release policy has been adopted as of yet; a policy is going to be developed in collaboration within CHIPS.
+mission_statement_link: https://github.com/SymbiFlow/sv-tests/blob/master/README.md
+svg_logo_link: None
+accepted_lf_code_of_conduct: True
+### See https://lfprojects.org/policies/code-of-conduct/
+adopted_chips_alliance_ip_policy: True
+### See https://technical-charter.chipsalliance.org
+chips_header_footer_text_on_website: True
+trademarks_and_domains_transferred_to_lf: True
+security_vulnerabilities_reporting_process: The project will use [CHIPS Alliance's default security policy](https://github.com/chipsalliance/tsc#reporting-security-vulnerabilities)
+spec_public_reference_implementation: N/A
