@@ -1,8 +1,13 @@
-<article class="blog-post">
-    <div class="blog-post-content">
-        <h3>
-            {{.name}}
-        </h3>
-        {{.brief_summary}}
-    </div>
-</article>
+<h3>
+    {{.name}}
+</h3>
+{{.brief_summary}}
+
+<ul class="mt-3">
+  <li><a href="{{.repositories}}" target="_blank">Repo</a></li>
+  <li><a href="{{.issue_tracker_link}}" target="_blank">Issue Tracker</a></li>
+  <li><a href="{{.website_link}}" target="_blank">Website</a></li>
+  {{ with .primary_contact }}
+  <li>Contact: <a href="mailto:{{.email}}" target="_blank">{{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
+  {{ end }}
+</ul>
