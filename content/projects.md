@@ -5,3 +5,4 @@ description: >-
 image_path: images/feature/balloons.jpg
 ---
 
+{{< projects status="graduated" >}}

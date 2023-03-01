@@ -1,0 +1,11 @@
+{{ if (eq .Params.status "graduated") }}
+  <h2>Graduated Projects</h2>
+  {{ range sort .Site.Data.projects "name" }}
+    {{ if eq .status "graduated" }}
+      {{ partial "projects-card.html" . }}
+    {{ end }}
+  {{ end }}
+
+{{ else if (eq .Params.status "incubating") }}
+
+{{ end }}
