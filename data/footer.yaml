@@ -26,6 +26,8 @@ sections:
   -
     title: "Community"
     links:
+      - link: "projects/"
+        text: "Projects"
       - link: "getting-started/"
         text: "Getting Started"
       - link: "events/"

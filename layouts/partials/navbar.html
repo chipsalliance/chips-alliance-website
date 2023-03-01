@@ -99,6 +99,11 @@
                </div>
             </li>
             <li class="nav-item">
+               <a class="nav-link {{ if strings.Contains $current.RelPermalink "projects" }}active{{ end }}" href={{ relURL "projects/"}}>
+                  Projects
+               </a>
+            </li>
+            <li class="nav-item">
                <a class="nav-link {{ if strings.Contains $current.RelPermalink "events" }}active{{ end }}" href={{ relURL "events/"}}>
                   Events
                </a>
