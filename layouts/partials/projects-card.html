@@ -1,13 +1,24 @@
-<h3>
-    {{.name}}
-</h3>
-{{.brief_summary}}
 
-<ul class="mt-3">
-  <li><a href="{{.repositories}}" target="_blank">Repo</a></li>
-  <li><a href="{{.issue_tracker_link}}" target="_blank">Issue Tracker</a></li>
-  <li><a href="{{.website_link}}" target="_blank">Website</a></li>
-  {{ with .primary_contact }}
-  <li>Contact: <a href="mailto:{{.email}}" target="_blank">{{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
-  {{ end }}
-</ul>
+<div class="projects-box mb-5">
+
+<div class="projects-box-col1">
+  <a href="{{.website_link}}" target="_blank">
+  {{ $image_url := printf "images/projects/%s.svg" (urlize .name) }}
+  <img src="{{relURL $image_url }}" loading="lazy" title="{{ .name }}">
+  </a>
+</div>
+
+<div class="projects-box-col2">
+  <h3 class="mt-0">{{.name}}</h3>
+  {{.brief_summary}}
+
+  <ul class="list-unstyled mt-3">
+    <li><a href="{{.repositories}}" target="_blank"><i class="ph-git-branch"></i> Repository</a></li>
+    <li><a href="{{.issue_tracker_link}}" target="_blank"><i class="ph-clipboard-text"></i> Issue Tracker</a></li>
+    <li><a href="{{.website_link}}" target="_blank"><i class="ph-link"></i> Website</a></li>
+    {{ with .primary_contact }}
+    <li><a href="mailto:{{.email}}" target="_blank"><i class="ph-user-square"></i> Contact: {{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
+    {{ end }}
+  </ul>
+</div>
+</div>
