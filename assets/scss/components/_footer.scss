@@ -79,6 +79,7 @@
               transform: translateY(0px);
             }
             &:hover {
+              text-decoration: none;
               i {
                 color: $color-anchor;
                 transform: translateY(-10px);
@@ -123,6 +124,7 @@
           transition: all 0.3s ease-in-out;
           &:hover {
             color: $color-anchor;
+            text-decoration: none;
           }
         }
       }

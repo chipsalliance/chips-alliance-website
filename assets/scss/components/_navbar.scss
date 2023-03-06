@@ -81,6 +81,7 @@
     }
     &:hover {
       color: $color-primary;
+      text-decoration: none;
     }
     @include media-breakpoint-only-lg {
       padding-right: 0.75rem !important;
@@ -113,16 +114,18 @@
     &-item {
       margin-bottom: 10px;
       color: $color-text-light;
-      font-weight: 600;
+      font-weight: 400;
       text-align: left;
       font-size: $base-font-size * 1.1;
       padding: 0;
       background: none;
       &.active {
         color: $color-primary;
+        font-weight: 600;
       }  
       &:hover {
         color: $color-primary;
+        text-decoration: none;
       }
     }
     .nav-arrow {
@@ -152,6 +155,7 @@
       }
 
       &:hover {
+        text-decoration: none;
         .dropdown-menu {
           opacity: 1;
           visibility: visible;
