@@ -69,8 +69,9 @@ a {
   font-weight: 600;
   text-decoration: none;
   transition: $base-transition;
-  a:hover {
+  &:hover {
     color: $color-primary;
+    text-decoration: underline;
   }
 }
 // Learn-more links
@@ -343,6 +344,7 @@ a {
     }
     &:hover {
       transform: translateY(-5px);
+      text-decoration: none;
       i {
         margin-left: 15px;
       }

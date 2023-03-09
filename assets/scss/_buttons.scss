@@ -6,6 +6,7 @@
 
   &:hover {
     color: $color-white;
+    text-decoration: none;
   }
 
   .btn-check:focus + &,
@@ -195,6 +196,7 @@
     background: $color-primary;
     color: $color-white !important;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    text-decoration: none;
   }
 }
 .btn-social {
@@ -211,5 +213,6 @@
   &:hover {
     background: transparent;
     color: $color-white !important;
+    text-decoration: none;
   }
 }
