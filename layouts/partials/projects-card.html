@@ -13,11 +13,11 @@
   {{.brief_summary}}
 
   <ul class="list-unstyled mt-3">
-    <li><a href="{{.repositories}}" target="_blank"><i class="ph-git-branch"></i> Repository</a></li>
-    <li><a href="{{.issue_tracker_link}}" target="_blank"><i class="ph-clipboard-text"></i> Issue Tracker</a></li>
-    <li><a href="{{.website_link}}" target="_blank"><i class="ph-link"></i> Website</a></li>
+    <li><i class="ph-git-branch"></i> <a href="{{.repositories}}" target="_blank">Repository</a></li>
+    <li><i class="ph-clipboard-text"></i> <a href="{{.issue_tracker_link}}" target="_blank">Issue Tracker</a></li>
+    <li><i class="ph-link"></i> <a href="{{.website_link}}" target="_blank">Website</a></li>
     {{ with .primary_contact }}
-    <li><a href="mailto:{{.email}}" target="_blank"><i class="ph-user-square"></i> Contact: {{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
+    <li><i class="ph-user-square"></i> <a href="mailto:{{.email}}" target="_blank">Contact: {{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
     {{ end }}
   </ul>
 </div>
