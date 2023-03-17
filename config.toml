@@ -24,3 +24,12 @@ googleAnalytics = 'G-H0KF2YZTR7'
   [[module.imports.mounts]]
     source = "workgroups"
     target = "content/workgroups"
+
+  [[module.imports.mounts]]
+    source = "projects"
+    target = "data"
+    includeFiles = '*.yml'
+
+  [[module.imports.mounts]]
+    source = "projects/logos"
+    target = "static/images/projects"
