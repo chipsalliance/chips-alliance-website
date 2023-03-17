@@ -3,7 +3,7 @@
   <article class="blog-post">
   <div class="blog-post-content">
 
-  {{ range sort .Site.Data "name" }}
+  {{ range sort .Site.Data "name" "asc" }}
     {{ if eq .status "graduated" }}
       {{ partial "projects-card.html" . }}
     {{ end }}
@@ -16,7 +16,7 @@
   <article class="blog-post">
   <div class="blog-post-content">
 
-  {{ range sort .Site.Data "name" }}
+  {{ range sort .Site.Data "name" "asc" }}
     {{ if eq .status "sandbox" }}
       {{ partial "projects-card.html" . }}
     {{ end }}
@@ -29,7 +29,7 @@
   <article class="blog-post">
   <div class="blog-post-content">
 
-  {{ range sort .Site.Data "name" }}
+  {{ range sort .Site.Data "name" "asc" }}
     {{ if eq .status "archived" }}
       {{ partial "projects-card.html" . }}
     {{ end }}
