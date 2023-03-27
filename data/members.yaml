@@ -38,7 +38,7 @@ members:
     url: https://rapidsilicon.com/
     image: rapidsilicon.svg
     level: platinum
-    board_rep: Tony McDowell
+    board_rep: Pierre-Emmanuel Gaillardon
   - name: SiFive
     url: https://www.sifive.com/
     image: sifive.png
@@ -65,11 +65,10 @@ members:
     url: https://efabless.com/
     image: efabless.png
     level: silver
-  - name: Esperanto
-    url: https://www.esperanto.ai/
-    image: esperanto-tech.png
-    level: silver
-    board_rep: Dave Ditzel
+  - name: Marvell
+    url: https://www.marvell.com/
+    image: marvell.png
+    level: gold
   - name: Imperas
     url: http://imperas.com/
     image: imperas.png
