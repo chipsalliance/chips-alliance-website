@@ -6,3 +6,4 @@ image_path: images/feature/balloons.jpg
 ---
 
 {{< projects status="graduated" >}}
+{{< projects status="sandbox" >}}
