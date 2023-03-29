@@ -16,3 +16,5 @@ hugo.linux
 /node_modules
 .DS_Store
 _vendor
+
+/themes

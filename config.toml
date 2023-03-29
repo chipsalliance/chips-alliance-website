@@ -19,7 +19,7 @@ googleAnalytics = 'G-H0KF2YZTR7'
 
 [module]
   [[module.imports]]
-    path = "github.com/chipsalliance/tsc"
+    path = "tsc"
 
   [[module.imports.mounts]]
     source = "workgroups"

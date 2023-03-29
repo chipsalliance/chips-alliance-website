@@ -44,6 +44,7 @@ jobs:
         id: PR
 
       - run: npm ci
+      - run: git clone https://github.com/chipsalliance/tsc themes/tsc
       - run: hugo --minify --baseURL https://chipsalliance.org
         if: ${{ github.ref == 'refs/heads/main' }}
       - run: hugo --minify --baseURL https://chipsalliance.org/preview/${{ steps.PR.outputs.number }}/
