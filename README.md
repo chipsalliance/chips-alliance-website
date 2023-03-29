@@ -13,4 +13,4 @@ This theme was built with [Hugo](https://gohugo.io/) version `v0.108.0+extended`
 Start site: `hugo server`. The site will be at: [http://localhost:1313/](http://localhost:1313/)
 
 ### Update Modules
-The Workgroups page is created from [files in the TSC repo](https://github.com/chipsalliance/tsc/tree/main/workgroups) and pulled in to the site via [Hugo Modules](https://gohugo.io/hugo-modules/). Once a change is made to that repo, the module will need updating using `hugo mod get -u`.
+The Workgroups and Projects pages are created from [files in the TSC repo](https://github.com/chipsalliance/tsc/) and pulled in to the site via [Hugo Modules](https://gohugo.io/hugo-modules/). Once a change is made to that repo, the modules will need updating using `hugo mod get -u`.
