@@ -1,0 +1,24 @@
+
+<div class="projects-box mb-5">
+
+<div class="projects-box-col1">
+  <a href="{{.website_link}}" target="_blank">
+  {{ $image_url := printf "images/projects/%s.svg" (urlize .name) }}
+  <img src="{{relURL $image_url }}" loading="lazy" title="{{ .name }}">
+  </a>
+</div>
+
+<div class="projects-box-col2">
+  <h3 class="mt-0">{{.name}}</h3>
+  {{.brief_summary}}
+
+  <ul class="list-unstyled mt-3">
+    <li><i class="ph-git-branch"></i> <a href="{{.repositories}}" target="_blank">Repository</a></li>
+    <li><i class="ph-clipboard-text"></i> <a href="{{.issue_tracker_link}}" target="_blank">Issue Tracker</a></li>
+    <li><i class="ph-link"></i> <a href="{{.website_link}}" target="_blank">Website</a></li>
+    {{ with .primary_contact }}
+    <li><i class="ph-user-square"></i> <a href="mailto:{{.email}}" target="_blank">Contact: {{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
+    {{ end }}
+  </ul>
+</div>
+</div>

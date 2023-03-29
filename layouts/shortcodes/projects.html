@@ -1,0 +1,40 @@
+{{ if (eq .Params.status "graduated") }}
+  <h2 class="mt-3">Graduated Projects</h2>
+  <article class="blog-post">
+  <div class="blog-post-content">
+
+  {{ range sort .Site.Data "name" "asc" }}
+    {{ if eq .status "graduated" }}
+      {{ partial "projects-card.html" . }}
+    {{ end }}
+  {{ end }}
+  </div>
+  </article>
+
+{{ else if (eq .Params.status "sandbox") }}
+  <h2 class="mt-3">Sandbox Projects</h2>
+  <article class="blog-post">
+  <div class="blog-post-content">
+
+  {{ range sort .Site.Data "name" "asc" }}
+    {{ if eq .status "sandbox" }}
+      {{ partial "projects-card.html" . }}
+    {{ end }}
+  {{ end }}
+  </div>
+  </article>
+
+{{ else if (eq .Params.status "archived") }}
+  <h2 class="mt-3">Archived Projects</h2>
+  <article class="blog-post">
+  <div class="blog-post-content">
+
+  {{ range sort .Site.Data "name" "asc" }}
+    {{ if eq .status "archived" }}
+      {{ partial "projects-card.html" . }}
+    {{ end }}
+  {{ end }}
+  </div>
+  </article>
+
+{{ end }}

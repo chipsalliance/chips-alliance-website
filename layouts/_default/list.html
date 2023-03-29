@@ -48,7 +48,14 @@ id="counter-up"
             <div class="counter-up-content-item">
               <div class="counter-percent">
                 
-                <span class="counter">10</span>
+              {{ $.Scratch.Set "counter" 0 }}
+              {{ range .Site.Data }}
+                {{ if or ( eq .status "graduated" ) ( eq .status "sandbox" ) }}
+                {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+                {{ end }}
+              {{ end }}
+
+                <span class="counter">{{$.Scratch.Get "counter"}}</span>
                 
               </div>
               <p>Hosted Projects</p>
