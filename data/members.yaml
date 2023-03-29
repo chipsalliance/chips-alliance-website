@@ -67,7 +67,7 @@ members:
     level: silver
   - name: Marvell
     url: https://www.marvell.com/
-    image: marvell.png
+    image: marvell.svg
     level: gold
   - name: Imperas
     url: http://imperas.com/
