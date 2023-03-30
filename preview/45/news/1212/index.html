@@ -1,0 +1,310 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/45/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/45/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/45/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/45/scss/theme.min.42d40c343fbab3f1b299ef8d3494aec298e5026a50564beeb9a689e2c993293a.css>
+<link rel=icon href=/preview/45/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/45/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/45/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/45/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Antmicro DDR5 Rowhammer Testing Framework | CHIPS Alliance</title>
+<meta name=description content="CHIPS Alliance is excited by the Antmicro announcement of the extensible, open, Rowhammer testing framework for DDR5. Read a detailed description of …">
+<meta property="og:title" content="Antmicro DDR5 Rowhammer Testing Framework">
+<meta property="og:description" content="CHIPS Alliance is excited by the Antmicro announcement of the extensible, open, Rowhammer testing framework for DDR5. Read a detailed description of their work here: https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/
+Here are some graphics of the work:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/45/news/1212/"><meta property="og:image" content="https://chipsalliance.org/preview/45/news/1212/share.png"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2022-08-05T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-08-05T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Antmicro DDR5 Rowhammer Testing Framework">
+<meta itemprop=description content="CHIPS Alliance is excited by the Antmicro announcement of the extensible, open, Rowhammer testing framework for DDR5. Read a detailed description of their work here: https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/
+Here are some graphics of the work:"><meta itemprop=datePublished content="2022-08-05T00:00:00+00:00">
+<meta itemprop=dateModified content="2022-08-05T00:00:00+00:00">
+<meta itemprop=wordCount content="33"><meta itemprop=image content="https://chipsalliance.org/preview/45/news/1212/share.png">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/45/news/1212/share.png">
+<meta name=twitter:title content="Antmicro DDR5 Rowhammer Testing Framework">
+<meta name=twitter:description content="CHIPS Alliance is excited by the Antmicro announcement of the extensible, open, Rowhammer testing framework for DDR5. Read a detailed description of their work here: https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/
+Here are some graphics of the work:">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/45/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/45/>
+<img src=/preview/45/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/45/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/45/about/members/>Members</a>
+<a class=dropdown-item href=/preview/45/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/45/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/45/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/45/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/45/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/45/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/45/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/45/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/45/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/45/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/45/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Antmicro DDR5 Rowhammer Testing Framework</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>August 5, 2022</p>
+</li>
+<li class=list-inline-item>
+<p>1 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>33 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/45/news/1212/share.png class=w-100 alt=featured-image>
+</div>
+<div><p>CHIPS Alliance is excited by the Antmicro announcement of the extensible, open, Rowhammer testing framework for DDR5. Read a detailed description of their work here: <a href=https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/>https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/</a></p>
+<p>Here are some graphics of the work:</p>
+<p><img src=DDR5-diagram.svg alt="DDR5 diagram"></p>
+<p><img src=DDR5-photo.png alt="DDR5 device"></p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/45/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/>
+<img src=https://chipsalliance.org/preview/45/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/45/categories/announcements>Announcements</a>
+</div>
+<div class=blog-post-date>
+December 13, 2022
+</div>
+<div class=blog-post-title>
+<a href=/preview/45/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/>CHIPS Alliance Welcomes the Caliptra Open Source Root of Trust Project</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/45/news/joint-analog-workgroup-mos-ak-panel-session/>
+<img src=https://chipsalliance.org/preview/45/news/joint-analog-workgroup-mos-ak-panel-session/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/45/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+December 5, 2022
+</div>
+<div class=blog-post-title>
+<a href=/preview/45/news/joint-analog-workgroup-mos-ak-panel-session/>Joint Analog Workgroup / MOS-AK Panel Session</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/45/news/chips-alliance-fall-2022-technology-update-december-15/>
+<img src=https://chipsalliance.org/preview/45/news/chips-alliance-fall-2022-technology-update-december-15/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/45/categories/announcements>Announcements</a>
+</div>
+<div class=blog-post-date>
+December 1, 2022
+</div>
+<div class=blog-post-title>
+<a href=/preview/45/news/chips-alliance-fall-2022-technology-update-december-15/>CHIPS Alliance Fall 2022 Technology Update December 15</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/45/>
+<img src=/preview/45/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2023</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/45/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/45/about/members/>Members</a>
+</li>
+<li>
+<a href=/preview/45/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/45/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/45/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/45/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/45/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/45/events/>Events</a>
+</li>
+<li>
+<a href=/preview/45/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/45/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/45/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/45/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/45/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/45/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/45/vendor/counter-up/countup.js></script>
+<script src=/preview/45/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/45/js/script.js></script>
+</body>
+</html>
