@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-22.04
     concurrency:
       group: gh-pages
-    permissions:
-      pull-requests: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -83,9 +81,3 @@ jobs:
         with:
           name: pr_deployment
           path: ./preview/
-      - name: Add comment with preview Link
-        uses: mshick/add-pr-comment@v2
-        if: github.event_name == 'pull_request'
-        with:
-          message: |
-            Deploying preview to https://chipsalliance.org/preview/${{ steps.PR.outputs.number }}/
