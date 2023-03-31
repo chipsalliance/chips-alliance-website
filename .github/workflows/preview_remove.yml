@@ -26,5 +26,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          commit_message: Remove the preview of \#${{ github.event.number }}
+          commit_message: "Remove the preview of #${{ github.event.number }}"
           cname: www.chipsalliance.org
