@@ -162,7 +162,7 @@ members:
     url: https://yale.edu/
     image: yale-university.png
     level: associate
-- name: Electronic and Telecommunications Research Institute
+  - name: Electronic and Telecommunications Research Institute
     url: https://www.etri.re.kr/eng/main/main.etri
     image: ETRI.png
     level: silver
