@@ -7,7 +7,12 @@
             <div class="team-member">
               <div class="team-member-thumb rounded-box">
                 {{ $imgsrc := printf "images/team/%s.jpg" ( urlize .board_rep )  }}
-                <img src={{relURL $imgsrc }} alt="{{ .board_rep }}" loading="lazy" />
+                {{ $imagefile := printf "static/%s" $imgsrc }}
+                {{ if fileExists $imagefile }}
+                  <img src={{relURL $imgsrc }} alt="{{ .board_rep }}" loading="lazy" />
+                {{ else }}
+                  <img src={{relURL "images/team/generic-avatar.jpg" }} alt="Placeholder profile photo" loading="lazy" />
+                {{ end }}
               </div>
               <div class="team-member-details">
                 <h3>{{ .board_rep }}</h3>
