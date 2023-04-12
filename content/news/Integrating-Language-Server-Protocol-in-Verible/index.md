@@ -55,7 +55,7 @@ VS Code typically adds new features and tools via extensions, in this case the [
 A demo of the AUTO-expansion feature in VS Code is shown below:
 
 <video class="postimgcenter" width="1024" height="502" controls="">
-    <source src="/blog/video/autoarg.mp4" type="video/mp4">
+    <source src="autoarg.mp4" type="video/mp4">
 </video>
 
 You can get the extension by downloading the `verible.vsix` archive from the [release files](https://github.com/chipsalliance/verible/releases). Then, run VS Code with the following flag to install the extension:
