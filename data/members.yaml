@@ -24,6 +24,7 @@ members:
     url: https://www.infineon.com/
     image: infineon.png
     level: platinum
+    board_rep: Christoph Sandner
   - name: Intel
     url: https://intel.com/
     image: intel.png
@@ -48,6 +49,7 @@ members:
     url: https://verisilicon.com/
     image: verisilicon.png
     level: platinum
+    board_rep: Chris Wang
   - name: Western Digital
     url: https://www.westerndigital.com/
     image: western-digital.png
@@ -56,6 +58,7 @@ members:
     url: https://www.iscas.ac.cn/
     image: iscas.png
     level: gold
+    board_rep: Wei Wu
   - name: Futerwei
     url: https://www.futurewei.com/
     image: futurewei-tech.png
