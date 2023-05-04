@@ -1,4 +1,4 @@
-name: Deploy PR preview
+name: Push PR preview to gh-pages branch
 
 on:
   workflow_run:
