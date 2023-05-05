@@ -15,11 +15,11 @@
 
 <div class="projects-box-col2">
   <h3 class="mt-0">{{.name}}</h3>
-  {{.brief_summary}}
+  <p> {{.brief_summary}} </p>
 
   <ul class="list-unstyled">
-    <li>Repositories</li>
-    <ul class="list-unstyled pl-3">
+    <li>Repositories:</li>
+    <ul class="list-unstyled mb-0 ms-5">
       <!-- since .repositories can be a single string we need to convert it to slice to iverate over it-->
       {{ $repos := slice }}
       {{ $repos = $repos | append .repositories }}
