@@ -2,7 +2,7 @@ name: Push PR preview to gh-pages branch
 
 on:
   workflow_run:
-    workflows: ["Deploy Hugo site to Pages"]
+    workflows: ["Build and push site to gh-pages branch"]
     types:
       - completed
 
