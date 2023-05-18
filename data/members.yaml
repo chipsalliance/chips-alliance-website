@@ -35,11 +35,6 @@ members:
     image: microsoft.svg
     level: platinum
     board_rep: Stephen Walli
-  - name: Rapid Silicon
-    url: https://rapidsilicon.com/
-    image: rapidsilicon.svg
-    level: platinum
-    board_rep: Pierre-Emmanuel Gaillardon
   - name: SiFive
     url: https://www.sifive.com/
     image: sifive.png
