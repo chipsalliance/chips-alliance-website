@@ -87,6 +87,10 @@ members:
     url: https://precisioninno.com/
     image: precision-innovations.png
     level: auditor
+  - name: Axiado
+    url: https://axiado.com/
+    image: axiado.svg
+    level: auditor
   - name: ASU
     url: https://asu.edu/
     image: arizona-state-u.svg
