@@ -163,3 +163,7 @@ members:
     url: https://www.etri.re.kr/eng/main/main.etri
     image: ETRI.png
     level: silver
+  - name: Meta
+    url: https://meta.com/
+    image: meta.svg
+    level: silver
