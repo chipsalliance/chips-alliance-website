@@ -1,0 +1,328 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/74/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/74/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/74/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/74/scss/theme.min.42d40c343fbab3f1b299ef8d3494aec298e5026a50564beeb9a689e2c993293a.css>
+<link rel=icon href=/preview/74/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/74/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/74/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/74/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Open Source Custom GitHub Actions Runners with Google Cloud and Terraform | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+In order to fulfill our internal and our customers’ needs, we have developed and successfully deployed …">
+<meta property="og:title" content="Open Source Custom GitHub Actions Runners with Google Cloud and Terraform">
+<meta property="og:description" content="This post was originally published at Antmicro.
+In order to fulfill our internal and our customers’ needs, we have developed and successfully deployed an open source custom GitHub Actions runner that allows us to mix the GitHub default and your custom hardware and software. The runner software itself operates within a Google Cloud Platform project, spawns Compute Engine instances and orchestrates the build, providing a number of interesting advantages that were needed in our ASIC and FPGA-related work.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/74/news/open-source-custom-github-actions-runners-with-google-cloud-and-terraform/"><meta property="og:image" content="https://chipsalliance.org/preview/74/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-09-02T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-09-02T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Open Source Custom GitHub Actions Runners with Google Cloud and Terraform">
+<meta itemprop=description content="This post was originally published at Antmicro.
+In order to fulfill our internal and our customers’ needs, we have developed and successfully deployed an open source custom GitHub Actions runner that allows us to mix the GitHub default and your custom hardware and software. The runner software itself operates within a Google Cloud Platform project, spawns Compute Engine instances and orchestrates the build, providing a number of interesting advantages that were needed in our ASIC and FPGA-related work."><meta itemprop=datePublished content="2021-09-02T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-09-02T00:00:00+00:00">
+<meta itemprop=wordCount content="886"><meta itemprop=image content="https://chipsalliance.org/preview/74/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/74/images/blog-share.jpg">
+<meta name=twitter:title content="Open Source Custom GitHub Actions Runners with Google Cloud and Terraform">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+In order to fulfill our internal and our customers’ needs, we have developed and successfully deployed an open source custom GitHub Actions runner that allows us to mix the GitHub default and your custom hardware and software. The runner software itself operates within a Google Cloud Platform project, spawns Compute Engine instances and orchestrates the build, providing a number of interesting advantages that were needed in our ASIC and FPGA-related work.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/74/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/74/>
+<img src=/preview/74/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/74/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/74/about/members/>Members</a>
+<a class=dropdown-item href=/preview/74/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/74/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/74/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/74/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/74/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/74/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/74/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/74/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/74/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/74/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/74/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Open Source Custom GitHub Actions Runners with Google Cloud and Terraform</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>September 2, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>5 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>886 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/74/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2021/08/open-source-github-actions-runners-with-gcp-and-terraform/>Antmicro</a>.</em></p>
+<p>In order to fulfill our internal and our customers’ needs, we have developed and successfully deployed an <a href=https://github.com/antmicro/runner>open source custom GitHub Actions runner</a> that allows us to mix the GitHub default and your custom hardware and software. The runner software itself operates within a Google Cloud Platform project, spawns <a href=https://cloud.google.com/compute/docs/instances>Compute Engine instances</a> and orchestrates the build, providing a number of interesting advantages that were needed in our ASIC and FPGA-related work. As is typical for us, we have released all the necessary components as open source – read on to learn how the solution works, the benefits it offers and how to build and deploy this software in your organization (which we can also help with as part of our commercial support and engineering services).</p>
+<p>As we continue our push for more software-driven hardware development as part of our work within CHIPS Alliance and RISC-V, we see an increasing need for scalable and flexible CI solutions that can be used with a mix of open source and proprietary components. By building on top of existing infrastructure such as GCP, GH Actions and Terraform, it’s possible to achieve noticeable performance gains, better traceability and runtime isolation for some of the advanced use cases we are helping our customers tackle (we have highlighted some of those aspects previously <a href=https://antmicro.com/blog/2021/03/github-actions-self-hosted-runners/>in a blog note earlier this year</a>).</p>
+<h2 id=architecture-and-scalability>Architecture and scalability</h2>
+<p>By default, the software leverages virtual infrastructure created within a GCP project in order to perform builds, consisting of a coordinator instance (which receives jobs from GitHub backend and reports back progress), a virtual subnetwork and dynamically spawned worker instances.</p>
+<p><img src=gcp-custom-runners.svg alt="custom runners in GPC architecture diagrams"></p>
+<p>In order to reduce the cognitive strain and encapsulate complexity, we’ve prepared a <a href=https://github.com/antmicro/github-actions-runner-terraform>Terraform module</a> that can be used to provision these necessary components easily and make it possible to store the configuration of individual coordinators according to the principles of Infrastructure as Code.</p>
+<p>Once provisioned and configured, the coordinator is able to spawn instances of any type available within <a href=https://cloud.google.com/compute/docs/machine-types>Google Compute Engine</a>. In projects where cost optimizations are a necessity, it is possible to configure the coordinator to spawn <a href=https://cloud.google.com/compute/docs/instances/preemptible>preemptible instances</a>.</p>
+<p>The setup is flexible enough that you can self-host it in your internal infrastructure and connect custom hardware such as FPGA platforms to the coordinator machine, which will then spawn per-job virtual machines with hardware attached using a pass-through mechanism. This capability makes it possible to build automated hardware in the loop testing platforms – something we see as an increasingly useful feature especially given the growing portfolio of our server-oriented platforms like <a href=https://opensource.antmicro.com/projects/scalenode>Scalenode</a> and the <a href=https://opensource.antmicro.com/projects/artix-dc-scm>FPGA-based DC-SCM</a>.</p>
+<p><img src=scalenode-fpga.png alt="Antmicro Scalenode platform with Artix-7 boards connected"></p>
+<h2 id=additional-insights-into-the-build-capabilities>Additional insights into the build capabilities</h2>
+<p>When creating increasingly complex CI pipelines, we also need a better overview of the builds we are performing. In order to address this requirement, our runner introduces a couple of changes that at the first glance might seem minor, but contribute to a significant improvement in readability.</p>
+<p>Firstly, in the build logs, each line of output is prefixed with a green or red-colored timestamp, depending on whether the output is coming from standard output or standard error. As a measure to augment the output of Bash scripts, lines that come out as a result of the “set -x” option are highlighted as well, providing a yet another visual cue for the reader.</p>
+<p>Another important improvement is related to performance analysis and resource usage. To get more insight into our complex and often resource-heavy builds (related to the fact that activities such as place and route or physical layout may take many hours if not days to complete), each worker collects a performance graph using <a href=https://github.com/antmicro/sargraph>sargraph</a> that can be later retrieved using the <a href=https://github.com/actions/upload-artifact>upload-artifact action</a>.</p>
+<p>This kind of rich context for our CI infrastructure is a necessity for our work related to e.g. to the <a href=https://github.com/SymbiFlow/fpga-interchange-schema>FPGA interchange format</a> or <a href=https://antmicro.com/blog/2021/05/dynamic-scheduling-in-verilator/>dynamic scheduling in Verilator</a> whose goals are to enable radical improvements in FPGA and ASIC design. We are doing this by visiting previously unexplored avenues and encouraging a broad collaboration with the research community, customers and partners to achieve a step function progress in areas which are only now starting to experience the explosion of creativity related to new open source and software-driven approaches.</p>
+<p><img src=custom-runners-gcp-terraform-screenshot1.png alt="custom runners in GPC screenshot"></p>
+<p>Apart from supercharging the logs with visual metadata, we’ve addressed the issue of log storage. Google’s BES and ResultStore APIs lend themselves to this use case, allowing the upload of rich metadata associated with the builds and providing a pretty front-end for viewing the logs. Thanks to that, we have an alternative place where logs, artifacts and the aforementioned performance graphs can be stored and viewed independently of GitHub. An example of how this works can be seen in the <a href=https://github.com/SymbiFlow/symbiflow-examples>SymbiFlow examples repository</a> by clicking on any tick associated with a commit and scrolling down to the bottom. This functionality was implemented using our open source <a href=https://github.com/antmicro/distant-bes>distant-bes</a> and <a href=https://github.com/antmicro/distant-rs>distant-rs</a> libraries.</p>
+<p><img src=custom-runners-gcp-terraform-screenshot2.png alt="custom runners in GPC screenshot"></p>
+<h2 id=cloud-assisted-asic-design>Cloud-assisted ASIC design</h2>
+<p>The ongoing effort to enable cloud-assisted ASIC design as well as new development methodologies for FPGAs is bound to accelerate going forward, given the high interest among our customers and groups such as <a href=https://chipsalliance.org/>CHIPS Alliance</a>.</p>
+<p>We always look forward to projects with partners who want to make full use of modern (and open) tooling and environments which, with knowledge and experience, we’re confident to modify for better, scalable and vendor-neutral system development.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/74/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>
+<img src=https://chipsalliance.org/preview/74/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/CI-driven-testing-for-VeeR_blog_chips.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/74/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 4, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/74/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>Open source and CI-driven RTL testing and verification for Caliptra’s RISC-V VeeR core</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/74/news/integrating-language-server-protocol-in-verible/>
+<img src=https://chipsalliance.org/preview/74/news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/74/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+April 12, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/74/news/integrating-language-server-protocol-in-verible/>Integrating the Language Server Protocol in Verible</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/74/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/>
+<img src=https://chipsalliance.org/preview/74/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/share.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/74/categories/announcements>Announcements</a>
+</div>
+<div class=blog-post-date>
+December 13, 2022
+</div>
+<div class=blog-post-title>
+<a href=/preview/74/news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/>CHIPS Alliance Welcomes the Caliptra Open Source Root of Trust Project</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/74/>
+<img src=/preview/74/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2023</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/74/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/74/about/members/>Members</a>
+</li>
+<li>
+<a href=/preview/74/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/74/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/74/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/74/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/74/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/74/events/>Events</a>
+</li>
+<li>
+<a href=/preview/74/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/74/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/74/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/74/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/74/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/74/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/74/vendor/counter-up/countup.js></script>
+<script src=/preview/74/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/74/js/script.js></script>
+</body>
+</html>
