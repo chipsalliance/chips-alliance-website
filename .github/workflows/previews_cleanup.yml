@@ -1,0 +1,32 @@
+name: PR previews cleanup
+
+on:
+  schedule:
+  - cron: '0 1 * * *' # run daily at 01:00 am (UTC)
+  workflow_dispatch:
+
+jobs:
+  previews-cleanup:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: gh-pages
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: pages
+      - name: Remove outdated PR previews
+        run: |
+          ./.github/previews_cleanup.sh
+      - name: Redeploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.base_ref == 'main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pages
+          commit_message: "Remove the preview of #${{ github.event.number }}"
+          cname: www.chipsalliance.org
