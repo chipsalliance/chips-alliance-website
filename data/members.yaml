@@ -42,7 +42,7 @@ members:
     board_rep: Chris Wang
   - name: Western Digital
     url: https://www.westerndigital.com/
-    image: western-digital.png
+    image: western-digital.svg
     level: silver
   - name: ISCAS
     url: https://www.iscas.ac.cn/
