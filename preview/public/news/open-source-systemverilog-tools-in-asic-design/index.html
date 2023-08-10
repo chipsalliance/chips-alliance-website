@@ -1,0 +1,392 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=https://chipsalliance.org/preview/scss/theme.min.42d40c343fbab3f1b299ef8d3494aec298e5026a50564beeb9a689e2c993293a.css>
+<link rel=icon href=/preview/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Open Source SystemVerilog Tools in ASIC Design | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+Open source hardware is undeniably undergoing a renaissance whose origin can be traced to the …">
+<meta property="og:title" content="Open Source SystemVerilog Tools in ASIC Design">
+<meta property="og:description" content="This post was originally published at Antmicro.
+Open source hardware is undeniably undergoing a renaissance whose origin can be traced to the establishment of RISC-V Foundation (later redubbed RISC-V International). The open ISA and ecosystem, in which Antmicro participated since the beginning as a Founding member, has sparked many open source CPU implementations but also new tooling, methodologies and trends which allow for more collaborative and software driven design.
+Many of those broader open hardware activities have been finding a home in CHIPS Alliance, an open source organization we participate in as a Platinum member alongside Google, Intel, Western Digital, SiFive and others, whose goals explicitly encompass:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview//news/open-source-systemverilog-tools-in-asic-design/"><meta property="og:image" content="https://chipsalliance.org/preview/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-08-04T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-08-04T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Open Source SystemVerilog Tools in ASIC Design">
+<meta itemprop=description content="This post was originally published at Antmicro.
+Open source hardware is undeniably undergoing a renaissance whose origin can be traced to the establishment of RISC-V Foundation (later redubbed RISC-V International). The open ISA and ecosystem, in which Antmicro participated since the beginning as a Founding member, has sparked many open source CPU implementations but also new tooling, methodologies and trends which allow for more collaborative and software driven design.
+Many of those broader open hardware activities have been finding a home in CHIPS Alliance, an open source organization we participate in as a Platinum member alongside Google, Intel, Western Digital, SiFive and others, whose goals explicitly encompass:"><meta itemprop=datePublished content="2021-08-04T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-08-04T00:00:00+00:00">
+<meta itemprop=wordCount content="2226"><meta itemprop=image content="https://chipsalliance.org/preview/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/images/blog-share.jpg">
+<meta name=twitter:title content="Open Source SystemVerilog Tools in ASIC Design">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+Open source hardware is undeniably undergoing a renaissance whose origin can be traced to the establishment of RISC-V Foundation (later redubbed RISC-V International). The open ISA and ecosystem, in which Antmicro participated since the beginning as a Founding member, has sparked many open source CPU implementations but also new tooling, methodologies and trends which allow for more collaborative and software driven design.
+Many of those broader open hardware activities have been finding a home in CHIPS Alliance, an open source organization we participate in as a Platinum member alongside Google, Intel, Western Digital, SiFive and others, whose goals explicitly encompass:">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/>
+<img src=/preview/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/about/members/>Members</a>
+<a class=dropdown-item href=/preview/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Open Source SystemVerilog Tools in ASIC Design</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>August 4, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>11 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>2226 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2021/07/open-source-systemverilog-tools-in-asic-design/>Antmicro</a>.</em></p>
+<p>Open source hardware is undeniably undergoing a renaissance whose origin can be traced to the establishment of RISC-V Foundation (later redubbed RISC-V International). The open ISA and ecosystem, in which Antmicro participated since the beginning as a Founding member, has sparked many open source CPU implementations but also new tooling, methodologies and trends which allow for more collaborative and software driven design.</p>
+<p>Many of those broader open hardware activities have been finding a home in <a href=https://chipsalliance.org/>CHIPS Alliance</a>, an open source organization we participate in as a Platinum member alongside Google, Intel, Western Digital, SiFive and others, whose goals explicitly encompass:</p>
+<ul>
+<li>creating and maintaining open source ASIC and FPGA design tools (digital and analog)</li>
+<li>open source core and uncore IP</li>
+<li>interconnects, interoperability specs and more</li>
+</ul>
+<p>This is in perfect alignment with Antmicro’s mission, as we’ve been heavily involved with many of the projects inside of and related to CHIPS, providing commercial support and engineering services – and assistance in practical adoption for enterprise deployments.</p>
+<p>As of this time, a range of everyday design, development, testing and verification tasks are already possible using open source tools and components and are part of our and our customer’s everyday workflow. Other developments are within reach given a reasonable amount of development, which we can provide based on specific scenarios. Others still are much further away, but with dedicated efforts inside CHIPS in which we are involved together with partners like Google and Western Digital there is a pathway towards a completely open hardware design and verification ecosystem. This will eventually unlock incredible potential in new design methodologies, vertical integration capabilities, education and business opportunities – but until then, practical value can already be extracted today for many scenarios such as simulation, linting, formatting, synthesis, continuous integration and more, and Antmicro can help you do that.</p>
+<h2 id=building-a-systemverilog-ecosystem-in-chips>Building a SystemVerilog ecosystem in CHIPS</h2>
+<p>Some of the challenges towards practical adoption of open source in ASIC design have been related to the fact that a significant proportion of advanced ASIC design is done in SystemVerilog, a fairly complex and powerful language in its own right, which used to be poorly supported in the open source tooling ecosystem. Partial solutions like SystemVerilog to Verilog converters or paid plugins existed, but direct support lagged behind, making open source tools for SystemVerilog a difficult sell previously.</p>
+<p>This has been fortunately changing rapidly with a dedicated development effort spearheaded by Google and Antmicro. Projects in this space include Verible, Surelog, UHDM and <a href=https://github.com/chipsalliance/sv-tests>sv-tests</a> which we have been developing as well as integrating with existing tools like Yosys, Verilator under the umbrella of the SymbiFlow open source FPGA project, and which are now officially being transferred into the CHIPS Alliance to increase awareness and build a broader SystemVerilog ecosystem around them. In this note, we will walk you through the state of the art in new SystemVerilog capabilities in open source projects, and invite you to reach out to see how CHIPS Alliance’s SystemVerilog projects can be useful to you today or in the near future.</p>
+<p><img src=svtoolsdiagram.svg alt="Diagram depicting SystemVerilog tools"></p>
+<h2 id=verible>Verible</h2>
+<p>The <a href=https://github.com/chipsalliance/verible>Verible</a> project originated at Google, and its main mission is to make SystemVerilog easily and quickly parsable for a wide variety of applications mostly focusing on developer tools.</p>
+<p>Verible is a set of tools based on a common SystemVerilog parsing engine, providing a command line interface which makes integration with other tools for daily usage or CI systems for automatic testing and deployment a breeze.</p>
+<p>Antmicro has been involved in the development of Verible since its initial open source release and we now provide a significant portion of current development efforts, helping adapt it for use in various open source projects or commercial environments that use SystemVerilog. One notable user is the security-focused <a href=https://opentitan.org/>OpenTitan</a> project, which has driven many interesting developments and provides a good showcase of the capabilities, being completely open source, well documented, fairly complex and used in real applications.</p>
+<h2 id=linter>Linter</h2>
+<p>One of the most common use cases for Verible is linting. The linter analyzes code for patterns and constructs that are deemed undesirable according to the implemented lint rules. The rules follow authoritative style guides that can be enforced on a project or company level in various SystemVerilog projects.</p>
+<p>The rules range from simple ones like making sure the module name matches the file name to more sophisticated like checking variable naming conventions (all caps, snake case, specific prefix or suffix etc.) or making sure the labels after the begin and end statements match.</p>
+<p>A full list of rules can be found in the <a href=https://chipsalliance.github.io/verible/verilog_lint.html>Verible lint documentation</a> and is constantly growing. Usage is very simple:</p>
+<pre tabindex=0><code>$ verible-verilog-lint --ruleset all core.sv 
+core.sv:3:11: Interface names must use lower_snake_case naming convention and end with _if. [Style: interface-conventions] [interface-name-style]
+</code></pre><p>The output of the linter is easy to understand, as the way issues are reported to the user is modeled after popular programming language compilers.</p>
+<p>The linter is highly configurable. It is possible to select the rules for which the compliance will be checked, some rules allow for detailed configuration (e.g. max line length).</p>
+<p>Rules can also be selectively waived in specific files or at specific lines or even by regex matching. In addition, some rules can be automatically fixed by the linter itself.</p>
+<h2 id=formatter>Formatter</h2>
+<p>The Verible formatter is a complementary tool for the linter. It is used to automatically detect various formatting issues like improper indentation or alignment. As opposed to the linter, it only detects and fixes issues that have no lexical impact on the source code.</p>
+<p>The formatter also comes with useful helper scripts for selective and interactive reformatting (e.g. only format files that changed according to git, ask before applying changes to each chunk).</p>
+<p>A toolset that consists of both the linter and the formatter can effectively remove all the discussions about styling, preferences and conventions from all pull requests. Developers can then focus solely on the technical aspects of the proposed changes.</p>
+<pre tabindex=0><code>$ cat sample.sv
+typedef struct {
+bit first;
+        bit second;
+bit
+   third
+        ;
+  bit fourth;
+bit fifth; bit sixth;
+}
+ foo_t;
+
+
+$ verible-verilog-format sample.sv
+typedef struct {
+  bit first;
+  bit second;
+  bit third;
+  bit fourth;
+  bit fifth;
+  bit sixth;
+} foo_t;
+</code></pre><h2 id=indexer>Indexer</h2>
+<p>The Verible parser itself can be relatively easily used to perform many other tasks. One of the interesting use cases is generating a <a href=https://kythe.io/>Kythe</a> compatible indexing database.</p>
+<p>Indexing a SystemVerilog project makes it very easy to collaborate on a project remotely.
+It is possible to navigate through the source code using nothing else than just a web browser.</p>
+<p>The Kythe integration can be served on an arbitrary server, can be deployed after every commit in a project, etc. A showcase of the indexing mechanism can be found in our <a href=https://github.com/antmicro/verible-ibex-indexer>GitHub repository</a>. The demo downloads the latest version of the Ibex core, indexes it, and deploys it to be viewed on a remote machine.
+The results can be viewed on the <a href=https://antmicro.github.io/verible-ibex-indexer/>example index webpage</a>.</p>
+<p><img src=indexing-systemverilog-demo.png alt="Demo of SystemVerilog indexing"></p>
+<p>Indexing is widely adopted for many larger open source software projects.</p>
+<p>Thanks to Verible it is now possible to do the same in the world of open source HDL designs, and of course private, company-wide deployments like this are also possible.</p>
+<h2 id=surelog-and-uhdm>Surelog and UHDM</h2>
+<p>SystemVerilog is a powerful language, but it is also complex. That is why so far no open source tools have been able to support it in full. Implementing it separately for each project such as the Yosys synthesis tool or the Verilator simulator would take a colossal amount of time, and that’s where Surelog and UHDM come in.</p>
+<p>Surelog, originally created and led by Alain Dargelas, aims to be a fully-featured SystemVerilog 2017 preprocessor, parser, and elaborator. It’s a modern tool and thus follows the current version of the SV standard without unnecessary deviations or legacy baggage.</p>
+<p>What’s interesting is that Surelog is only a language frontend designed to integrate well with other tools – it outputs an elaborated design in an intermediate format called UHDM.</p>
+<p>UHDM stands for Universal Hardware Data Model, and it’s both a file format for storing hardware designs and a library able to manipulate this format. A client application can access the data using VPI, which is a standard programming interface for SystemVerilog.</p>
+<p>What this means is that the work required to create a SystemVerilog parser only needs to be done once, and other tools can use that parser via UHDM. This is much easier than implementing a full SystemVerilog parser within each tool. What’s more, any improvements in the unified parser will provide benefits for all client applications. Finally, any other parser is free to emit UHDM as well, so in the future we might see e.g. a UHDM backend for Verible.</p>
+<p>Just like in Verible’s case, both Surelog and UHDM have recently been contributed into CHIPS Alliance to drive a broader adoption. We are actively contributing to both projects, especially around the integrations with tooling such as Yosys and Verilator and practical use in open source and customer projects.</p>
+<p>Recent Antmicro contributions adding UHDM frontends for Yosys and Verilator enabled <a href=https://github.com/lowRISC/ibex>Ibex</a> synthesis and simulation. The complete OpenTitan project is the next milestone.</p>
+<p>The Surelog/UHDM/Yosys flow enabling SystemVerilog synthesis without the necessity of converting the HDL code to Verilog is a great improvement for open source ASIC build flows such as OpenROAD’s <a href=https://github.com/The-OpenROAD-Project/OpenLane>OpenLane</a> flow (which we also support commercially). Removing the code conversion step enables the developers to perform e.g. circuit equivalence validation to check the correctness of the design.</p>
+<p>More information about Surelog/UHDM and Verible can be found in a dedicated <a href="https://www.youtube.com/watch?v=xLxNHBzmGiI">CHIPS Alliance presentation</a> that was recently given by Henner Zeller, Google’s Verible lead.</p>
+<h2 id=uvm-is-in-the-picture>UVM is in the picture</h2>
+<p>No open source ASIC design toolkit can be complete without support for Universal Verification Methodology, or UVM, which is one of the most widespread verification methodologies for large-scale ASIC design. This has also been an underrepresented area in open source tooling and changing that is an enormous undertaking, but working together with our customers, most notably Western Digital, we have been making progress on that front as well.</p>
+<p>Across the ASIC development landscape, UVM verification is currently performed with proprietary simulators, but a more easily distributable, collaborative and open ecosystem is needed to close the feedback loop between (emerging) open source design approaches and verification. Verilator is an extremely popular choice for other system development use cases but it has historically not focused on UVM-style verification. Other styles of verification, such as the very interesting and popular Python-based <a href=https://github.com/cocotb/cocotb>cocotb framework</a> maintained by <a href=https://antmicro.com/blog/2021/07/open-source-systemverilog-tools-in-asic-design/fossi-foundation.org>FOSSi Foundation</a> have been enabled in Verilator – we write about our own work around that in a <a href=https://antmicro.com/blog/2019/06/verilog-with-cocotb-and-verilator/>dedicated blog note</a>. But support for UVM, partly due to the size and complexity of the methodology, has been a notably absent.</p>
+<p>One of the features missing from Verilator but needed for UVM is SystemVerilog stratified scheduling, which is a set of rules specified in the standard that govern the way time progresses in a simulation, as well as the order of operations. In short, a SystemVerilog simulation is divided into smaller steps called time slots, and each time slot is further divided into multiple regions. Specific events can only happen in certain regions, and some regions can reoccur in a single time slot.</p>
+<p>Until recently, Verilator had implemented only a small subset of these rules, as all scheduling was being done at compilation time. Spearheading a long-standing development effort within CHIPS Alliance, in collaboration with the maintainer of Verilator, Wilson Snyder, we have built is a proof-of-concept version of Verilator with a dynamic scheduler, which manages the occurrence of certain events at runtime, extending the stratified scheduling support. More details can be found in <a href="https://www.youtube.com/watch?v=s7ivKvXGS74">Antmicro’s presentation for the inaugural CHIPS Alliance Deep Dive Cafe Talk</a>.</p>
+<p>Another feature required for UVM is constrained randomization, which allows generating random inputs to feed to a design in order to thoroughly test it. Unlike unconstrained randomization, which is already provided by Verilator, it allows the user to specify some rules for input generation, thus limiting the possible value space and making sure that the input makes sense. Work on adding this to Verilator has already started, although the feature is still in its infancy. There are many other features on the roadmap which will eventually enable practical UVM support – stay tuned with our CHIPS Alliance events to follow that development.</p>
+<h2 id=what-next>What next?</h2>
+<p>Support for SystemVerilog parsers, for the intermediate format, and for their respective backends and integrations with various tooling as well as for UVM is now under heavy development. If you would like to see more effort put into a specific area, reach out to us at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a>. Antmicro offers commercial support services to extend the flows we’ve briefly presented here to various practical applications and designs, and to effectively integrate this approach into people’s workflows.</p>
+<p>Adding to this our cloud expertise, Antmicro customers can benefit from a complete and industry-proven methodology scalable between teams and across on-premise and cloud installations, transforming chip design workflows to be more software-driven and collaborative. To take advantage of open source solutions with tools like Verilator, Yosys, OpenROAD and others – tell us about your use case and we will see what can be done today.</p>
+<p>If you are interested in collaborating on the development SystemVerilog-focused and other open hardware tooling, <a href=https://chipsalliance.org/join/>join CHIPS Alliance</a> and participate in our <a href=https://chipsalliance.org/workgroups/>workgroups</a> and help us push innovation in ASIC design forward.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/>
+<img src=https://chipsalliance.org/preview/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/scaling-verilator--chips-alliance.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 21, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/>Progress in open source SystemVerilog / UVM support in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>
+<img src=https://chipsalliance.org/preview/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/CI-driven-testing-for-VeeR_blog_chips.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 4, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>Open source and CI-driven RTL testing and verification for Caliptra’s RISC-V VeeR core</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/news/integrating-language-server-protocol-in-verible/>
+<img src=https://chipsalliance.org/preview/news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+April 12, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/news/integrating-language-server-protocol-in-verible/>Integrating the Language Server Protocol in Verible</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/>
+<img src=/preview/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2023</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/about/members/>Members</a>
+</li>
+<li>
+<a href=/preview/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/events/>Events</a>
+</li>
+<li>
+<a href=/preview/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/vendor/counter-up/countup.js></script>
+<script src=/preview/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/js/script.js></script>
+</body>
+</html>
