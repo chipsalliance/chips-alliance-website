@@ -164,6 +164,6 @@ members:
     image: ETRI.png
     level: silver
   - name: Meta
-    url: https://meta.com/
+    url: https://meta.com
     image: meta.svg
     level: silver
