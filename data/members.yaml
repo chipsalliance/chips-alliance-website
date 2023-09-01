@@ -175,4 +175,13 @@ members:
     url: https://www.utoronto.ca/
     image: university-of-toronto.png
     level: associate
+  - name: University of Hawaii 
+    url: https://www.hawaii.edu/
+    image: university-of-hawaii-system.svg
+    level: associate
+  - name: AMI US Holdings Inc
+    url: https://www.ami.com/
+    image: american-megatrendsinternational-llc.svg
+    level: silver
+
 
