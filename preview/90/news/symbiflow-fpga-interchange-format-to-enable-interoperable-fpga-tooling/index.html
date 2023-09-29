@@ -1,0 +1,365 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/90/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/90/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/90/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/90/scss/theme.min.42d40c343fbab3f1b299ef8d3494aec298e5026a50564beeb9a689e2c993293a.css>
+<link rel=icon href=/preview/90/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/90/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/90/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/90/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>SymbiFlow FPGA Interchange Format to Enable Interoperable FPGA Tooling | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+Field Programmable Gate Arrays (FPGAs) have been around for several decades, but historically …">
+<meta property="og:title" content="SymbiFlow FPGA Interchange Format to Enable Interoperable FPGA Tooling">
+<meta property="og:description" content="This post was originally published at Antmicro.
+Field Programmable Gate Arrays (FPGAs) have been around for several decades, but historically development of toolchains targeting specific platforms was done in separate ecosystems and driven by the vendors themselves. Only in recent years, the development of vendor-neutral open source toolchains has revealed the need of having an abstraction layer to describe and define an FPGA architecture through a standard format.
+FPGA toolchains are not trivial as they comprise several elements which themselves can be quite complex: roughly speaking, you can divide the process of “compiling” FPGA-targeted code in a Hardware Description Language (HDL) into three stages: synthesis, place and route, bitstream generation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/90/news/symbiflow-fpga-interchange-format-to-enable-interoperable-fpga-tooling/"><meta property="og:image" content="https://chipsalliance.org/preview/90/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-09-09T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-09-09T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="SymbiFlow FPGA Interchange Format to Enable Interoperable FPGA Tooling">
+<meta itemprop=description content="This post was originally published at Antmicro.
+Field Programmable Gate Arrays (FPGAs) have been around for several decades, but historically development of toolchains targeting specific platforms was done in separate ecosystems and driven by the vendors themselves. Only in recent years, the development of vendor-neutral open source toolchains has revealed the need of having an abstraction layer to describe and define an FPGA architecture through a standard format.
+FPGA toolchains are not trivial as they comprise several elements which themselves can be quite complex: roughly speaking, you can divide the process of “compiling” FPGA-targeted code in a Hardware Description Language (HDL) into three stages: synthesis, place and route, bitstream generation."><meta itemprop=datePublished content="2021-09-09T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-09-09T00:00:00+00:00">
+<meta itemprop=wordCount content="1612"><meta itemprop=image content="https://chipsalliance.org/preview/90/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/90/images/blog-share.jpg">
+<meta name=twitter:title content="SymbiFlow FPGA Interchange Format to Enable Interoperable FPGA Tooling">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+Field Programmable Gate Arrays (FPGAs) have been around for several decades, but historically development of toolchains targeting specific platforms was done in separate ecosystems and driven by the vendors themselves. Only in recent years, the development of vendor-neutral open source toolchains has revealed the need of having an abstraction layer to describe and define an FPGA architecture through a standard format.
+FPGA toolchains are not trivial as they comprise several elements which themselves can be quite complex: roughly speaking, you can divide the process of “compiling” FPGA-targeted code in a Hardware Description Language (HDL) into three stages: synthesis, place and route, bitstream generation.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/90/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/90/>
+<img src=/preview/90/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/90/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/90/about/members/>Members</a>
+<a class=dropdown-item href=/preview/90/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/90/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/90/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/90/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/90/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/90/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/90/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/90/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/90/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/90/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/90/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>SymbiFlow FPGA Interchange Format to Enable Interoperable FPGA Tooling</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>September 9, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>8 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1612 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/90/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2021/09/symbiflow-fpga-interchange-format/>Antmicro</a>.</em></p>
+<p><a href=https://antmicro.com/technologies/fpga/>Field Programmable Gate Arrays (FPGAs)</a> have been around for several decades, but historically development of toolchains targeting specific platforms was done in separate ecosystems and driven by the vendors themselves. Only in recent years, the development of vendor-neutral open source toolchains has revealed the need of having an abstraction layer to describe and define an FPGA architecture through a standard format.</p>
+<p>FPGA toolchains are not trivial as they comprise several elements which themselves can be quite complex: roughly speaking, you can divide the process of “compiling” FPGA-targeted code in a Hardware Description Language (HDL) into three stages: synthesis, place and route, bitstream generation. A standard format could provide a common description of the various architectures and serve as a bridge between the multitude of open source and closed proprietary tools that deal with the entire process or parts thereof, including the open source Yosys for synthesis and VtR and nextpnr for place and route, to relevant vendor tooling from Xilinx, Intel, Lattice, QuickLogic, etc.</p>
+<p>The introduction of a common format enables a shared methodology where specific building blocks are simply interchangeable. With that in mind, together with Google we started the <a href=https://fpga-interchange-schema.readthedocs.io/>FPGA Interchange Format</a> project within the SymbiFlow initiative, bringing forth a unified framework that, by lowering the entry barriers, lets developers swiftly move from one tool to another with virtually no effort. As part of our collaboration with Google, Antmicro is now developing the Interchange format definition and related tools which aim to become a development standard the FPGA industry has been in need of.</p>
+<h2 id=interchange-format-components>Interchange format: components</h2>
+<p>The Interchange format provides three key descriptions to describe an FPGA and interact with the various tools involved:</p>
+<ul>
+<li>Device resources: defines the FPGA internal structure as well as the technological cell libraries describing FPGA logic blocks (basic blocks like flip-flops and complex like DSP cells),</li>
+<li>Logical netlist: post-synthesized netlist compatible with the Interchange,</li>
+<li>Physical netlist: collection of all placement locations and physical routing of the nets and resources produced by the place and route tool.</li>
+</ul>
+<p>One of the main challenges behind the creation of a standard format, specifically for the device resources, lies in the definition of the line between generalization and specificity of an FPGA architecture, as each device architecture variant may have some individual features that can be difficult to generalize in the context of other variants.</p>
+<p>For this practical reason, the FPGA Interchange format in its current form focuses on the only architecture type in mainstream use on the market today, namely island-based (also called tile-based) FPGAs: two-dimensional arrays of reconfigurable logic blocks, hard blocks, switch blocks and input-output blocks.</p>
+<p>This allows the standard to reach a level of universality and conciseness which makes it easy to work with, adopt and implement.</p>
+<h2 id=interchange-format-implementation>Interchange format: implementation</h2>
+<p>After determining what the Interchange format should describe, the next step was to define how to best implement the format itself. The choice fell on a well-supported, open source and fast serialization protocol – <a href=https://capnproto.org/>Cap’n Proto</a>.</p>
+<p>Cap’n Proto allows a great efficiency in terms of run-time and on-disk memory occupation, given also the huge amount of elements that are present in an FPGA device, such as wires and connections, that need to be stored in the device database. The protocol enables a concise, well-defined and, if used correctly, a backward compatible <a href=https://github.com/SymbiFlow/fpga-interchange-schema>architecture and netlist format description</a>.</p>
+<p>The framework uses the <a href=https://capnproto.org/language.html>Cap’n Proto schema language</a> whose implementations exist in many of the most common programming languages such as C++, Python, Java and Rust. This gives a good chance of future interoperability with other tooling that will inevitably emerge if the standard is successful.</p>
+<p>On top of the FPGA Interchange schema definitions, a <a href=https://github.com/SymbiFlow/python-fpga-interchange>Python-based library</a> was created to interface with the schema itself, and provides functionalities to read and write device databases, logical netlists and physical netlists, as well as utilities to convert from one representation to another. It is often the case where a physical netlist needs to be inspected and analyzed, and a Cap’n Proto serialized netlist can be easily converted to its YAML or JSON human-readable equivalents.</p>
+<h2 id=interchange-format-how-it-works>Interchange format: how it works</h2>
+<p>As previously mentioned, the FPGA Interchange format aims at lowering the barriers and building bridges between different place and route tools that can read and write using the same convention.</p>
+<p>In this sense, the major milestone of the Interchange format was to have the production and exchange of the physical netlist between one place and route tool and another.</p>
+<p>To reach this milestone, <a href=https://github.com/YosysHQ/nextpnr>nextpnr</a> was chosen as the first place and route tool to adopt the Interchange format. In the past few months, we extended nextpnr with FPGA Interchange format capabilities and currently the tool is able to place and route basic designs for the Xilinx 7-series and Lattice Nexus FPGA families using the format.</p>
+<p>To achieve initial support for Xilinx devices, the vendor’s own extremely interesting <a href=https://github.com/Xilinx/RapidWright>RapidWright</a> framework has also been introduced to the flow, and it is specifically used to write the device database in the Interchange format, consisting of all the device information.</p>
+<p>Additionally, RapidWright is able to read and write the physical netlists to generate design checkpoint files that can be opened in Xilinx’s Vivado tool.</p>
+<h2 id=example-flow>Example flow</h2>
+<p>The default open source flow for Xilinx devices uses Yosys to synthesize the design and VPR or nextpnr for place and route. The last step – bitstream generation uses the FPGA Assembly <a href=https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html>FASM</a> format to generate the file used for programming the FPGA. FASM is a textual format specifying which FPGA feature should be enabled or disabled. Its textual nature makes it easy to analyze and experiment with. VPR supported this format natively, and nextpnr has been extended to support it as a part of the interchange format support work.</p>
+<p><img src=Interchange_flow.svg alt="Supported SymfbiFlow interchange tooling"></p>
+<p>Now, by using the interchange format, you can create your flow from building blocks, with the possibility to use a different tool (either open source or proprietary) for each step.
+A sample, somewhat involved flow which illustrates this mix-and-match nature of interchange-capable tooling may look as described below.</p>
+<p>For processing any design, you need the FPGA device description files. These are generated in the following matter:</p>
+<ul>
+<li>RapidWright generates the device description in the Interchange format,</li>
+<li>The device description is translated by a dedicated script into the data-format suitable for nextpnr. The script will be eventually integrated into nextpnr enabling it to read the interchange format device description natively,</li>
+</ul>
+<p>The device description has to be generated only once, and will normally be distributed with the toolchain installation package so that the user will not have to bother with this part.</p>
+<p>With the device architecture in place, a digital design can be processed with the toolchain:</p>
+<ul>
+<li>Yosys reads design’s Verilog code, synthesizes it and writes a synthesized netlist</li>
+<li>The synthesized netlist is translated into a logical netlist by another script. The script will eventually be integrated into Yosys as the interchange backend,</li>
+<li>Nextpnr places and routes the design and outputs a physical netlist,</li>
+<li>RapidWright reads the physical and logical netlists and produces a Design Checkpoint (DCP) for Vivado,</li>
+<li>Vivado can be used to read the DCP.</li>
+</ul>
+<p>Keep in mind this is just one of many possible flows. It is used to test the interchange format interoperability between different tools.</p>
+<p>This flow example shows how the Interchange creates a bridge between an open source flow with Yosys and nextpnr, and a closed source one using Vivado – demonstrating the possibility of interchanging tools thanks to a shared format.</p>
+<p>To ensure the Interchange format works as intended using all the various currently supported tools, we have developed an <a href=https://github.com/SymbiFlow/fpga-interchange-tests>FPGA Interchange tests suite</a>, which provides tests that expose device features and functionalities.</p>
+<p>To push forward the adoption of the format, the effort is being currently transferred from the SymbiFlow project into the <a href=https://chipsalliance.org/>CHIPS Alliance</a>, whose goal is to build an open source ASIC/FPGA ecosystem – including cores, I/O IPs, interconnect standards as well as digital and analog tooling – to radically transform the ASIC/FPGA design landscape.</p>
+<p>Apart from allowing various existing tools to interoperate and share development efforts today, the Interchange format is a natural addition to the CHIPS Alliance in that it opens up smart ways to rapidly design and prototype new FPGA architectures, reduce the iteration times to implement, or add support to a place and route tool for a new architecture.</p>
+<h2 id=plans-for-the-coming-months>Plans for the coming months</h2>
+<p>Besides nextpnr, there are other open source place and route tools slated to adopt the Interchange format as well, such as the Versatile Place and Route (VPR) from the <a href=https://github.com/verilog-to-routing/vtr-verilog-to-routing>Verilog-to-Routing project (VtR)</a>.</p>
+<p>Originally intended to perform architectural design exploration to support research in the FPGA field, VtR – and specifically VPR – can be used to place and route designs on real devices as well, such as the Xilinx 7-series and QuickLogic architectures, but only using the VPR data model and device description, as it does not yet support the Interchange format.</p>
+<p>One of the next milestones in the development of the Interchange format is the full native support of the format within VPR, therefore enabling something that was previously impossible: performing place and route using different tools interchangeably; jumping, for instance, from VPR placement output to nextpnr routing, allowing for faster improvements in algorithms.</p>
+<p>Those benefits will extend to not only VPR and nextpnr, but to any other closed source tools, or new open source ones that adopt and implement the Interchange format.</p>
+<p>In fact, having a standard Interchange format at the tooling developers’ disposal lowers the barriers to developing new open source tools in this area and, as example use cases, enable new approaches to partial dynamic reconfiguration, or the exploration of different place and route algorithms.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/90/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/>
+<img src=https://chipsalliance.org/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/Accelerating-model-generation-in-Verilator--blog-CHIPS.svg alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/90/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+September 29, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/90/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/>Verilator Model Generation Performance Improvements and Initial Multithreaded Verilation Support</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/90/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/>
+<img src=https://chipsalliance.org/preview/90/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/scaling-verilator--chips-alliance.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/90/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 21, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/90/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/>Progress in open source SystemVerilog / UVM support in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/90/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>
+<img src=https://chipsalliance.org/preview/90/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/CI-driven-testing-for-VeeR_blog_chips.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/90/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 4, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/90/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>Open source and CI-driven RTL testing and verification for Caliptra’s RISC-V VeeR core</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/90/>
+<img src=/preview/90/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2023</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/90/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/90/about/members/>Members</a>
+</li>
+<li>
+<a href=/preview/90/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/90/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/90/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/90/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/90/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/90/events/>Events</a>
+</li>
+<li>
+<a href=/preview/90/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/90/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/90/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/90/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/90/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/90/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/90/vendor/counter-up/countup.js></script>
+<script src=/preview/90/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/90/js/script.js></script>
+</body>
+</html>
