@@ -4,7 +4,7 @@ title: Verilator Model Generation Performance Improvements and Initial Multithre
 categories:
   - Blog
 author:  
-images: ['/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/Accelerating-model-generation-in-Verilator--blog-CHIPS.svg']
+images: ['news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/Accelerating-model-generation-in-Verilator--blog-CHIPS.svg']
 aliases: ['/blog/2023/09/29/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/']
 ---
 
