@@ -1,0 +1,335 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/93/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/93/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/93/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/93/scss/theme.min.42d40c343fbab3f1b299ef8d3494aec298e5026a50564beeb9a689e2c993293a.css>
+<link rel=icon href=/preview/93/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/93/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/93/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/93/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Open Source DDR Controller Framework for Mitigating Rowhammer | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+Rowhammer is a hardware vulnerability that affects DRAM memory chips and can be exploited to modify …">
+<meta property="og:title" content="Open Source DDR Controller Framework for Mitigating Rowhammer">
+<meta property="og:description" content="This post was originally published at Antmicro.
+Rowhammer is a hardware vulnerability that affects DRAM memory chips and can be exploited to modify memory contents, potentially providing root access to the system. It occurs because Dynamic RAM consists of multiple memory cells packed tightly together and specific access patterns can cause unwanted effects that propagate to nearby memory cells and cause bit-flips in cells which have not been accessed by the attacker.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/93/news/open-source-ddr-controller-framework-for-mitigating-rowhammer/"><meta property="og:image" content="https://chipsalliance.org/preview/93/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-09-28T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-09-28T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Open Source DDR Controller Framework for Mitigating Rowhammer">
+<meta itemprop=description content="This post was originally published at Antmicro.
+Rowhammer is a hardware vulnerability that affects DRAM memory chips and can be exploited to modify memory contents, potentially providing root access to the system. It occurs because Dynamic RAM consists of multiple memory cells packed tightly together and specific access patterns can cause unwanted effects that propagate to nearby memory cells and cause bit-flips in cells which have not been accessed by the attacker."><meta itemprop=datePublished content="2021-09-28T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-09-28T00:00:00+00:00">
+<meta itemprop=wordCount content="1553"><meta itemprop=image content="https://chipsalliance.org/preview/93/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/93/images/blog-share.jpg">
+<meta name=twitter:title content="Open Source DDR Controller Framework for Mitigating Rowhammer">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+Rowhammer is a hardware vulnerability that affects DRAM memory chips and can be exploited to modify memory contents, potentially providing root access to the system. It occurs because Dynamic RAM consists of multiple memory cells packed tightly together and specific access patterns can cause unwanted effects that propagate to nearby memory cells and cause bit-flips in cells which have not been accessed by the attacker.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/93/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/93/>
+<img src=/preview/93/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/93/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/93/about/members/>Members</a>
+<a class=dropdown-item href=/preview/93/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/93/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/93/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/93/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/93/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/93/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/93/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/93/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/93/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/93/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/93/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Open Source DDR Controller Framework for Mitigating Rowhammer</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>September 28, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>8 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1553 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/93/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2021/08/open-source-ddr-test-framework-for-rowhammer/>Antmicro</a>.</em></p>
+<p><a href=https://en.wikipedia.org/wiki/Row_hammer>Rowhammer</a> is a hardware vulnerability that affects DRAM memory chips and can be exploited to modify memory contents, potentially providing root access to the system. It occurs because Dynamic RAM consists of multiple memory cells packed tightly together and specific access patterns can cause unwanted effects that propagate to nearby memory cells and cause bit-flips in cells which have not been accessed by the attacker.</p>
+<p>The problem has been known for several years, but as <a href=https://security.googleblog.com/2021/05/introducing-half-double-new-hammering.html>shown by most recent research from Google</a> performed with the open source platform Antmicro developed that we’ll describe in this note, it has yet to be completely solved. The tendency in DRAM manufacturing is to make the chips denser to pack more memory in the same size which inevitably results in increased interdependency between memory cells, making Rowhammer an ongoing problem.</p>
+<p><img src=rowhammer-attack-diagram.jpg alt="Rowhammer attack diagram"></p>
+<p>Solutions like TRR (Target Row Refresh) introduced in newer memory chips help mitigate the issue, although usually only in part – and new attack methods like Half-Double or <a href=https://www.vusec.net/projects/trrespass/>TRRespass</a> keep emerging. To go beyond the all-too-often used “security through obscurity” approach, Antmicro has been helping build open source platforms which give security researchers full control over the entire technology stack, and enables them to find new solutions to emerging threats.</p>
+<h2 id=the-rowhammer-tester-platform>The Rowhammer Tester platform</h2>
+<p>The <a href=https://litex-rowhammer-tester.readthedocs.io/en/latest/>Rowhammer Tester</a> platform was developed for and with Google, who just like Antmicro believe that open source, well documented technical infrastructure is critical in speeding up research and increasing collaboration with the industry. In this case, we wanted to enable the memory security researchers as well manufacturers to have access to a flexible platform for experimenting with new types of attacks and finding better Rowhammer mitigation techniques.</p>
+<p>Current Rowhammer test methods involve using the chip-specific MBIST (Memory Built-in Self-Test) or costly ATE (Automated Test Equipment), which means that the existing approaches are either costly, inflexible or both. MBIST are specialized IP cores that test memory chips for errors. Although effective, they lack flexibility in terms of changing testing algorithms hardcoded into the IP core. ATEs devices are usually used at foundries to run various tests on wafers. Access to these devices is quite limited and expensive therefore chip vendors have to rely on DFT (Design for Test) software to produce compressed test patterns which require less access time to ATE while ensuring high test coverage.</p>
+<p>The main goal of the project was to address those limitations, providing an FPGA-based Rowhammer testing platform that enables full control over the commands sent to the DRAM chip. This is important because DRAM memory requires specialized hardware controllers and any software-based testing approaches have to communicate with the DRAM indirectly via the controller, which pulls the researchers away from the main research subject when studying the DRAM chip behaviour itself.</p>
+<h2 id=platform-architecture>Platform architecture</h2>
+<p><img src=row-hammer-tester-platform.png alt="Rowhammer test platform architecture diagram"></p>
+<p>The Rowhammer Tester consists of two parts: the FPGA gateware that is loaded to the hardware platform and a set of Python scripts used to communicate with the FPGA system from the user’s PC. Internally all the important modules of the FPGA system are connected to a shared WishBone bus. We use an EtherBone bridge to be able to interface with the FPGA WishBone bus from the host PC. [EtherBone]
+(<a href=https://ohwr.org/project/etherbone-core/wikis/home>https://ohwr.org/project/etherbone-core/wikis/home</a>) is a protocol that allows to perform regular WishBone transactions over Ethernet. This way we can perform all of the communication between the user PC and the FPGA efficiently through an Ethernet cable.</p>
+<p>The FPGA gateware has 3 main parts: a Bulk transfer module, a Payload Executor and the LiteDRAM controller along with a VexRiscv CPU. The Bulk transfer module provides an efficient way of filling and testing the whole memory contents. It supports user-configurable access and data patterns, using high-performance DMA to make use of full bandwidth offered by the LiteDRAM controller. When using the Bulk transfer module, LiteDRAM handles all the required DRAM logic, including row activation, refreshing, etc. and ensuring that all DRAM timings are met.</p>
+<p>In case when more fine-grained control is required, our Rowhammer Tester provides the Payload Executor module. Payload Executor can be thought of as a simple processor that can execute our custom instruction set. Most of the instructions map directly to DRAM commands, with minimal control flow provided by the LOOP instruction. A user can compile a “program” and load it to Rowhammer Tester’s instruction SRAM, which will be then executed. To execute a program, Payload Executor will disconnect the LiteDRAM controller and send the requested command sequences directly to the DRAM chip via the PHY’s DFI interface. After execution the LiteDRAM controller gets reconnected and the contents of the memory can be inspected to search for potential bit-flips.</p>
+<p>In our platform we use <a href=https://github.com/enjoy-digital/litedram>LiteDRAM</a> which is an open-source controller that we have been using in multiple different projects. It is part of the wider <a href=https://github.com/enjoy-digital/litex>LiteX</a> ecosystem, which is also a very popular choice for many of our FPGA projects. The controller supports different memory types (SDR, DDR, DDR2, DDR3, DDR4, …), as well as many FPGA platforms (Lattice ECP5, Xilinx Series 6, 7, UltraScale, UltraScale+, …). Because it is an open source FPGA IP core, we have complete control over its internals. That means two things: firstly, we were able to easily integrate it with the rest of our system and contribute back to improve LiteDRAM itself. Secondly and perhaps even more importantly, the controller can be modified by groups focused on researching new memory attacking methods in order to expose existing vulnerabilities. The results of such experiments should essentially motivate vendors to work on mitigating the uncovered flaws rather than rely on the “security by obscurity” based approach.</p>
+<p>Our <a href=https://github.com/antmicro/litex-rowhammer-tester/>Rowhammer Tester is fully open source</a>. We provide an extensive set of Python scripts for controlling the board, performing rowhammer attacks and harvesting the results. For more complex testing you can use the so-called <a href=https://litex-rowhammer-tester.readthedocs.io/en/latest/playbook.html>Playbook</a>, which is a framework that allows to describe complex testing scenarios using JSON files, providing some predefined attack configurations.</p>
+<p>Antmicro is actively collaborating with Google and memory makers to help study the Rowhammer vulnerability, contributing to standardization efforts under the <a href=https://www.jedec.org/category/technology-focus-area/main-memory-ddr3-ddr4-sdram>JEDEC initiative</a>. The platform has already been used to a lot of success in state-of-the-art Rowhammer research (like the case of finding a new type of Rowhammer attack called Half-Double, as mentioned in the opening paragraph).</p>
+<h2 id=new-dram-phys>New DRAM PHYs</h2>
+<p>Initially our Rowhammer Tester targeted two easily available and price-optimized boards: Digilent Arty (DDR3, Xilinx Series7 FPGA) and Xilinx ZCU104 (DDR4, Xilinx UltraScale+ FPGA). They were a good starting point, as DDR3 and DDR4 PHYs for these boards were already supported by LiteDRAM. After the initial version of the Rowhammer Tester was ready and tested on these boards, proving the validity of the concept, the next step was to cover more memory types, some of which find their way into many devices that we interact with on a daily basis.</p>
+<p>A natural target was the LPDDR4 DRAM – a relatively new type of memory designed for low-power operation with throughputs up to 3200 MT/s. For this end, we designed our dedicated <a href=https://opensource.antmicro.com/projects/lpddr4-test-board>LPDDR4 Test Board</a>, which has already been covered in a <a href=https://antmicro.com/blog/2021/04/lpddr4-test-platform/>previous blog note</a>.</p>
+<p><img src=LPDDR4_test_board_whitebackground.jpg alt="LPDDR4 test platform"></p>
+<p>The design is quite interesting because we decided to put the <a href=https://opensource.antmicro.com/projects/lpddr4-testbed>LPDDR4 memory chips on a module</a>, which is against the usual practice of putting LPDDR4 directly on the PCB, as close as possible to the CPU/FPGA to minimize traces impedance. The reason was trivial – we needed the platform to be able to test many memory types interchangeably without having to desolder and resolder parts, using complicated interposers or other niche techniques – the platform is supposed to be open and approachable to all.</p>
+<p>Alongside the hardware platform we had to develop a new LPDDR4 PHY IP as LiteDRAM didn’t have support for LPDDR4 at that time, resolving challenges related to the differences between LPDDR4 and previously supported DRAM types, such as new training modes. After a phase of verification and testing on our hardware, the newly implemented PHY has been contributed back to <a href=https://github.com/enjoy-digital/litedram/tree/master/litedram/phy/lpddr4>LiteDRAM</a>.</p>
+<h2 id=whats-next>What’s next?</h2>
+<p>The project does not stop there; we are already working on an LPDDR5 PHY for next-gen low power memory support. This <a href=https://www.jedec.org/news/pressreleases/jedec-publishes-new-ddr5-standard-advancing-next-generation-high-performance>latest low-power memory standard published by JEDEC</a> poses some new and interesting challenges including a new clocking architecture and operation on an even lower voltage. As of today LPDDR5 chips are still hardly available on the market as a bleeding-edge technology, but we are continuing our work to prepare LPDDR5 support for our future hardware platform in simulation using custom and vendor provided simulation models.</p>
+<p>The fact that our platform has already been successfully used to demonstrate new types of Rowhammer attacks proves that open source test platforms can make a difference, and we are happy to see a growing collaborative ecosystem around the project in a joint effort to ensure that we find robust and transparent mitigation techniques for all variants of Rowhammer for the foreseeable future.</p>
+<p>Ultimately, our work with the Rowhammer Tester platform shows that by using open source, vendor-neutral IP, tools and hardware, we can create better platforms for more effective research and product development. In the future, building on the success of the FPGA version, our work as part of the CHIPS Alliance will most likely lead to demonstrating the LiteDRAM controller in ASIC form, unlocking even more performance based on the same robust platform.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/93/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/>
+<img src=https://chipsalliance.org/preview/93/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/Accelerating-model-generation-in-Verilator--blog-CHIPS.svg alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/93/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+September 29, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/93/news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/>Verilator Model Generation Performance Improvements and Initial Multithreaded Verilation Support</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/93/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/>
+<img src=https://chipsalliance.org/preview/93/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/scaling-verilator--chips-alliance.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/93/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 21, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/93/news/progress-in-open-source-systemverilog-uvm-support-in-verilator/>Progress in open source SystemVerilog / UVM support in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/93/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>
+<img src=https://chipsalliance.org/preview/93/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/CI-driven-testing-for-VeeR_blog_chips.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/93/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+July 4, 2023
+</div>
+<div class=blog-post-title>
+<a href=/preview/93/news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/>Open source and CI-driven RTL testing and verification for Caliptra’s RISC-V VeeR core</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/93/>
+<img src=/preview/93/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2023</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/93/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/93/about/members/>Members</a>
+</li>
+<li>
+<a href=/preview/93/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/93/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/93/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/93/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/93/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/93/events/>Events</a>
+</li>
+<li>
+<a href=/preview/93/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/93/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/93/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/93/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/93/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/93/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/93/vendor/counter-up/countup.js></script>
+<script src=/preview/93/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/93/js/script.js></script>
+</body>
+</html>
