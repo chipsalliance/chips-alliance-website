@@ -1,5 +1,5 @@
 ---
-title: CHIPS Alliance Fall Workshop 2023
+title: CHIPS Technology Update November 9 2023
 date: 2023-11-09
 ---
 
