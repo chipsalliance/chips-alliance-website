@@ -1,5 +1,5 @@
 ---
-title: CHIPS Alliance at the Open Compute Projecct Global Summit
+title: CHIPS Alliance at the Open Compute Project Global Summit
 date: 2023-10-17
 ---
 
