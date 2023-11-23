@@ -2,7 +2,15 @@
 <div class="projects-box mb-5">
 
 <div class="projects-box-col1">
-  <a href="{{.website_link}}" target="_blank">
+  
+  <!-- .website_link can be either a single link or list of links
+       we don't want to add a link to the logo if project has
+       more than one webpage -->
+  {{ $websites := slice }}
+  {{ $websites = $websites | append .website_link }}
+  {{ if (eq ($websites | len) 1 )}}
+    <a href="{{ .website_link }}" target="_blank">
+  {{ end }}
   {{ $image_url := printf "images/projects/%s.svg" (urlize .name) }}
   {{ $imagefile := printf "themes/tsc/projects/logos/%s.svg" (urlize .name) }}
   {{ if fileExists $imagefile }}  
@@ -10,7 +18,9 @@
   {{ else }}
     <img src="{{relURL "images/muted-logo.svg" }}" loading="lazy" alt="Placeholder project logo">
   {{ end }}
-  </a>
+  {{ if (eq ($websites | len) 1 )}}
+    </a>
+  {{ end }}
 </div>
 
 <div class="projects-box-col2">
@@ -30,7 +40,19 @@
       {{ end }}
     </ul>
     <li><i class="ph-clipboard-text"></i> <a href="{{.issue_tracker_link}}" target="_blank">Issue Tracker</a></li>
-    <li><i class="ph-link"></i> <a href="{{.website_link}}" target="_blank">Website</a></li>
+    <!-- .website_link can be either a single link or list of links -->
+      {{ $websites := slice }}
+      {{ $websites = $websites | append .website_link }}
+      {{ if (gt ($websites | len) 1 )}}
+        <li>Websites:</li>
+        <ul class="list-unstyled mb-0 ms-5">
+        {{ range $website := $websites }}
+          <li><i class="ph-link"></i> <a href="{{$website}}" target="_blank">{{ $website }}</a></li>
+        {{end}}
+        </ul>
+      {{ else }}
+        <i class="ph-link"></i> <a href="{{.website_link}}" target="_blank">Website</a>
+      {{ end }}
     {{ with .primary_contact }}
     <li><i class="ph-user-square"></i> <a href="mailto:{{.email}}" target="_blank">Contact: {{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
     {{ end }}
