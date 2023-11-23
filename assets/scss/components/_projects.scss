@@ -16,17 +16,16 @@
         @include media-breakpoint-up-lg {
             grid-column: span 4;
         }
-        a {
-            align-content: center;
-            align-items: center;
-            display: flex;
-            height: 100%;
-            justify-content: center;
-            img {
-                max-height: 225px;
-                max-width: 225px;
-                padding: 20px;
-            }
+        align-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+
+        img {
+            max-height: 225px;
+            max-width: 225px;
+            padding: 20px;
         }
     }
 
