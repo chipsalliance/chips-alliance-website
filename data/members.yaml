@@ -62,10 +62,6 @@ members:
     url: https://www.marvell.com/
     image: marvell.svg
     level: gold
-  - name: Imperas
-    url: http://imperas.com/
-    image: imperas.png
-    level: silver
   - name: Nvidia
     url: https://www.nvidia.com/en-us/
     image: nvidia.jpg
@@ -184,3 +180,7 @@ members:
     image: american-megatrendsinternational-llc.svg
     level: silver
     board_rep: Stefano Righi 
+  - name: IHP 
+    url: https://www.ihp-microelectronics.com/
+    image: ihp.svg
+    level: associate
