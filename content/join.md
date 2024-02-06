@@ -17,8 +17,8 @@ To join the CHIPS Alliance as a corporate member, please complete the participat
 
 You may preview these documents before signing:
 
-- [CHIPS Alliance participation agreement (preview)](https://participation-agreement.chipsalliance.org/)
-- [The Linux Foundation membership agreement (preview)](https://cdn.platform.linuxfoundation.org/agreements/chips.pdf)
+- [CHIPS Alliance participation agreement (preview)](https://cdn.platform.linuxfoundation.org/agreements/chips.pdf)
+- [The Linux Foundation membership agreement (preview)](https://cdn.platform.linuxfoundation.org/agreements/tlf.pdf)
 
 If you have any questions, please email membership@chipsalliance.org!
 
