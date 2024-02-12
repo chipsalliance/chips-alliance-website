@@ -24,7 +24,7 @@ members:
     url: https://intel.com/
     image: intel.png
     level: platinum
-    board_rep: Dave Kehlet
+    board_rep: Stephano Cetola
   - name: Microsoft
     url: https://www.microsoft.com/en-us/?ql=4
     image: microsoft.svg
