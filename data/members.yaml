@@ -34,7 +34,7 @@ members:
     url: https://www.sifive.com/
     image: sifive.png
     level: platinum
-    board_rep: Phil Dworsky
+    board_rep: 
   - name: VeriSilicon
     url: https://verisilicon.com/
     image: verisilicon.png
@@ -70,10 +70,6 @@ members:
     url: https://proteantecs.com/
     image: proteantecs.svg
     level: silver
-  - name: Siemens
-    url: https://eda.sw.siemens.com/en-US/
-    image: siemens.png
-    level: auditor
   - name: Precision Innovations
     url: https://precisioninno.com/
     image: precision-innovations.png
