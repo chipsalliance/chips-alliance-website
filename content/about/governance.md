@@ -28,17 +28,18 @@ The Governing Board sets overall policy through our participation agreement and 
 
 {{< gov-board >}}
 
-## Technical Steering Committee (TSC)
+## Technical Advisory Council (TAC)
 
-The Technical Steering Committee, or TSC, is responsible for the technical oversight of the CHIPS Alliance.  The TSC is responsible for implementing technical policy and procedures within the scope and direction of the policies set by the Governing Board, such as defining and maintaining neutral consensus on the technical vision for CHIPS Alliance projects, shepherding projects through their technical lifecycle, and identifying, recruiting, and engaging prospective projects.
+The role of the Technical Advisory Council, or TAC, is to facilitate communication and collaboration among the CHIPS Alliance Technical Projects. The TAC is responsible for implementing technical policy and procedures within the scope and direction of the policies set by the Governing Board, such as defining and maintaining neutral consensus on the technical vision for CHIPS Alliance projects, shepherding projects through their technical lifecycle, and identifying, recruiting, and engaging prospective projects.
 
-The TSC operates openly and transparently, and consists of elected representatives from each CHIPS Alliance workgroup. TSC meetings are open to all, and both members and non-members may earn the right to participate in all TSC governance processes.
+The TAC operates openly and transparently, the voting members of the TAC consist of one representative appointed by each Platinum Member and one representative appointed by the technical oversight body (e.g., a technical steering committee) of each TAC Project. TAC meetings are open to all, and both members and non-members may participate.
+
 
 {{< team >}}
    {{< teammember 
-   name="Henry Cook"
+   name="Stephano Cetola"
    role="Chair"
-   imagesrc="images/team/generic-avatar.jpg"
+   imagesrc="images/team/stephano-cetola.jpg"
    >}}
 {{< /team >}}
 
