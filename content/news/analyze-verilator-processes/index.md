@@ -38,7 +38,7 @@ While being able to access raw JSON output from each verilation stage is useful,
 To get more insight into the internals of Verilator in their work, Antmicro developed [the astsee suite](https://github.com/antmicro/astsee), which provides a comprehensive toolkit for pretty-printing, diffing, and exploring ASTs from a wide range of sources (including, but not limited to, Verilator). Astsee can generate an interactive HTML document from JSON output with a diff view, which provides a way to easily compare the original AST dump with the JSON representation. It is also possible to view two generated JSON dumps and compare them. One particularly useful feature of astsee is the ability to highlight a given part of the output in one pane when comparing AST to JSON, which will automatically highlight the same output on the other pane. 
 
 
-![Interactive HTML diff view with JSON output](analyze-verilator-processes-and-asts--blog.gif)
+![Interactive HTML diff view with JSON output](analyze-verilator-processes-and-asts--blog4.png)
 
 Astsee also works as a plugin within [GDB](https://www.sourceware.org/gdb/), which allows users to invoke it for more granular dumps during the process of debugging in Verilator. Users can choose to execute astsee at any point during the verilation process, not only at the end of an individual stage, providing the possibility to identify and eradicate bugs that emerge during each stage of verilation. Currently, astsee only supports generic JSON trees, but support can be easily extended to other ASTs that have been exported into different formats as the suite operates functionally independently of other software. 
 
