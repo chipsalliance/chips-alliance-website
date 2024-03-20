@@ -1,6 +1,6 @@
 ---
 title: Google Summer of Code 2024
-date: 2024-03-20
+date: 2024-04-02
 ---
 
 As in previous years, CHIPS Alliance returns as a mentor organization for Google Summer of Code 2024. 
