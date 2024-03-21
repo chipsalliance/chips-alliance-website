@@ -45,7 +45,7 @@ Astsee also works as a plugin within [GDB](https://www.sourceware.org/gdb/), whi
 Support for Verilator is specifically provided through [astsee_verilator](https://github.com/antmicro/astsee/blob/main/astsee/verilator_cli.py), a tool which harnesses the power of astsee and Verilator using the JSON dumps obtained from the aforementioned --dump-tree-json tool. This tool also helps analyze individual nodes within the generated AST, as they can contain multiple different and important values such as pointers and data types. With this specific knowledge of how the node is composed, it is possible to compare fields separately. Astsee therefore provides tangible benefits in terms of reducing development time, as it provides the Verilator AST output in a clean and structured order which can then be modified as required without requiring difficult and time consuming comparisons. 
 
 
-![Analyze Verilator process and ASTs with the ASTEE suite](Analyze-Verilator-processes-and-ASTs-with-the-astsee-suite--screenshot.png)
+![Analyze Verilator process and ASTs with the ASTEE suite](astsee-gdb.gif)
 
 ## Future plans
 
