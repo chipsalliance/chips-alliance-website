@@ -12,7 +12,7 @@ aliases: ['/blog/2021/12/17/software-driven-asic-prototyping-using-the-open-sour
 
 The growing cost and complexity of advanced nodes, supply chain issues and demand for silicon independence mean that the ASIC design process is in need of innovation. Antmicro believes the answer to those challenges is bound to come from the software-driven, open source approach which has shaped the Internet and gave rise to modern cloud computing. Applying the methodologies of software design to ASICs is however notoriously viewed as difficult, given the closed nature of many components needed to build chips – tools, IP and process design kits, or PDKs for short, as well as the slow turnaround of manufacturing.
 
-The open source, collaborative SkyWater PDK project, combined with the free ASIC manufacturing shuttles running every quarter from Google and efabless, has been filling one of those gaps. Add to it open source licensed ASIC design tools we are [helping develop as part of CHIPS Alliance](https://chipsalliance.org/blog/2021/10/27/improving-the-openlane-asic-build-flow-with-open-source-systemverilog-support/) as well as [massive parallelization capabilities offered by the cloud](https://antmicro.com/blog/2021/08/open-source-github-actions-runners-with-gcp-and-terraform/) and what you get is an ASIC design ecosystem at the verge of a breakthrough. To effect this change, together with Google, efabless, SkyWater and others we are working on more developments, including letting the shuttle designs benefit from software-driven hardware productivity tools such as LiteX and [Renode](https://renode.io/) (which we are currently helping the SkyWater shuttle effort to adopt), as well as new and exciting developments in the process technology itself.
+The open source, collaborative SkyWater PDK project, combined with the free ASIC manufacturing shuttles running every quarter from Google and efabless, has been filling one of those gaps. Add to it open source licensed ASIC design tools we are [helping develop as part of CHIPS Alliance](https://chipsalliance.org/news/improving-the-openlane-asic-build-flow-with-open-source-systemverilog-support/) as well as [massive parallelization capabilities offered by the cloud](https://antmicro.com/blog/2021/08/open-source-github-actions-runners-with-gcp-and-terraform/) and what you get is an ASIC design ecosystem at the verge of a breakthrough. To effect this change, together with Google, efabless, SkyWater and others we are working on more developments, including letting the shuttle designs benefit from software-driven hardware productivity tools such as LiteX and [Renode](https://renode.io/) (which we are currently helping the SkyWater shuttle effort to adopt), as well as new and exciting developments in the process technology itself.
 
 If you want to participate in making ASIC design history, let us show you why and how the shuttle program is the way to do that. And by the end of this article, hopefully you will want to participate in the next, [fourth shuttle with the submission deadline at the end of this year](https://efabless.com/open_shuttle_program/4).
 
@@ -35,7 +35,7 @@ The program is a great opportunity for any developer wanting to develop open sou
 - An Amateur Satellite Radio Transceiver
 - Analog/RF IPs
 - Four eFPGAs
-- [Antmicro’s AES-128 core integration](https://efabless.com/projects/32)
+- Antmicro’s AES-128 core integration
 
 We have been assisting customers expressing the desire to participate in the SkyWater shuttle in assessing the feasibility of their designs, creating the necessary workflows and adapting the tools involved to their particular needs.
 
@@ -97,6 +97,6 @@ Further SkyWater PDK development plans include extending the PDK portfolio with 
 
 ## Participate in shuttle runs
 
-Three shuttle runs have already happened, and thanks to Google’s commitment as well as the overwhelming interest from business, research and government institutions, the project will continue through 2022 and most likely beyond. The [4th shuttle run is currently open](https://efabless.com/projects/shuttle_name/MPW-4) and will be accepting submissions by December 31, 2021.
+Three shuttle runs have already happened, and thanks to Google’s commitment as well as the overwhelming interest from business, research and government institutions, the project will continue through 2022 and most likely beyond. The 4th shuttle run is currently open and will be accepting submissions by December 31, 2021.
 
 For projects that, for any reason, cannot be open sourced or submitted within the timeline of the open shuttle, a private shuttle called [ChipIgnite](https://efabless.com/chipignite/2110C) has been created.
