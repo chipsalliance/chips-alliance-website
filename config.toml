@@ -26,7 +26,7 @@ googleAnalytics = 'G-H0KF2YZTR7'
     target = "content/workgroups"
 
   [[module.imports.mounts]]
-    source = "projects"
+    source = "projects/project-data-files/"
     target = "data"
     includeFiles = '*.yml'
 
