@@ -175,3 +175,13 @@ members:
     url: https://www.ihp-microelectronics.com/
     image: ihp.svg
     level: associate
+  - name: Københavns Universitet 
+    url: https://www.ku.dk/
+    image: kobenhavns.svg
+    level: associate
+  - name: Technical University of Denmark
+    url: https://www.dtu.dk/
+    image: techincal-u-of-denmark.svg
+    level: associate
+            
+        
