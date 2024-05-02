@@ -17,6 +17,8 @@ sections:
         text: "Who We Are"
       - link: "about/members/"
         text: "Members"
+      - link: "https://members.chipsalliance.org/"
+        text: "Member Support"        
       - link: "about/governance/"
         text: "Governance"
       - link: "about/faq/"
