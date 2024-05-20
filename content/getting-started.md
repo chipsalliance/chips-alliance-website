@@ -20,7 +20,7 @@ The CHIPS Alliance works in the open and welcomes all participants in our open s
 
 ### Join our mailing lists
 
-We recommend you join our mailing lists, as they are our primary means of communication.  The CHIPS Alliance uses groups.io for our mailing lists.  If you aren't familiar with the process of joining groups, [we have a tutorial on how to find and join our lists](tutorials/GROUPS.IO.md).
+We recommend you join our mailing lists, as they are our primary means of communication.  The CHIPS Alliance uses groups.io for our mailing lists. 
 
 #### General mailing lists
 
@@ -53,20 +53,20 @@ We publish our [workgroup and meeting calendar](https://calendar.google.com/cale
 
 ## How to participate in the Technical Community
 
-The CHIPS Alliance is home to multiple open source projects, which operate under the leadership of the Technical Steering Committee (TSC).  These projects develop high quality open source hardware code (IP cores), interconnect IP (phy and logical protocols), and open source software development tools for design, verification, and more.
+The CHIPS Alliance is home to multiple open source projects, which operate under the leadership of the Technical Advisory Council (TAC).  These projects develop high quality open source hardware code (IP cores), interconnect IP (phy and logical protocols), and open source software development tools for design, verification, and more.
 
-Our projects represent a diverse range of technologies and implementations, and are organized into workgroups.  Each of these workgroups are represented through membership in the TSC, our primary technical governing body.
+Our projects represent a diverse range of technologies and implementations, and are organized into workgroups.  Each of these workgroups are represented through membership in the TAC, our primary technical governing body.
 
 Participation in the development and decision-making process is open to anybody in the technical community.  We strongly encourage developers to engage with our projects directly on a technical level.
 
 ### About the Technical Steering Committee
 
-The TSC is governed by the [CHIPS Alliance Technical Charter](https://technical-charter.chipsalliance.org).  The Charter provides the TSC a great deal of latitude to organize itself and its processes in such a way that benefits our technical communities.
+The TAC is governed by the [CHIPS Alliance Charter](https://participation-agreement.chipsalliance.org/).  The Charter provides the TAC a great deal of latitude to organize itself and its processes in such a way that benefits our technical communities.
 
-The TSC is comprised of technical representatives from CHIPS Alliance projects and workgroups, and led by a chairperson.  All members of the technical community are welcome to subscribe to the TSC mailing list, and can participate in TSC meetings.
+The TAC is comprised of technical representatives from CHIPS Alliance projects and workgroups, and led by a chairperson.  All members of the technical community are welcome to subscribe to the TAC mailing list, and can participate in TAC meetings.
 
-* Join the [technical-discuss mailing list]()
-* Join the [TSC Slack channel](https://chipsalliance.slack.com/archives/CN2GPL6TC) ([get a Slack invite](https://slack-invite.chipsalliance.org))
+* Join the [technical-discuss mailing list](https://lists.chipsalliance.org/g/technical-discuss)
+* Join the [TAC Slack channel](https://chipsalliance.slack.com/archives/CN2GPL6TC) ([get a Slack invite](https://slack-invite.chipsalliance.org))
 
 ## How to participate as a Member
 
@@ -83,9 +83,9 @@ Please contact [operations@chipsalliance.org](mailto:operations@chipsalliance.or
 
 ### The Governing Board
 
-The CHIPS Alliance is managed by a Governing Board, comprised of member representatives, the TSC chair, and the Marketing Committee chair.
+The CHIPS Alliance is managed by a Governing Board, comprised of member representatives, the TAC chair, and the Marketing Committee chair.
 
-Although the Governing Board delegates day-to-day technical governance to the TSC, it is responsible for setting the high-level policies which govern our projects.  For example, the Governing Board works in close coordination with the Legal Committee to manage the [Participation Agreement](https://chipsalliance.org/join) and the [Technical Charter](https://technical-charter.chipsalliance.org) (including the [IP Policy](https://technical-charter.chipsalliance.org/#7.-intellectual-property-policy)).
+Although the Governing Board delegates day-to-day technical governance to the TAC, it is responsible for setting the high-level policies which govern our projects.  For example, the Governing Board works in close coordination with the Legal Committee to manage the [Participation Agreement](https://chipsalliance.org/join) and the [Charter](https://participation-agreement.chipsalliance.org/).
 
 In addition, the Governing Board is responsible for managing the organization's budget.
 

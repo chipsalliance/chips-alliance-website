@@ -12,7 +12,7 @@
     <a href="{{ .website_link }}" target="_blank">
   {{ end }}
   {{ $image_url := printf "images/projects/%s.svg" (urlize .name) }}
-  {{ $imagefile := printf "themes/tsc/projects/logos/%s.svg" (urlize .name) }}
+  {{ $imagefile := printf "themes/tac/projects/logos/%s.svg" (urlize .name) }}
   {{ if fileExists $imagefile }}  
     <img src="{{relURL $image_url }}" loading="lazy" alt="{{ .name }}">
   {{ else }}

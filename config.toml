@@ -19,7 +19,7 @@ googleAnalytics = 'G-H0KF2YZTR7'
 
 [module]
   [[module.imports]]
-    path = "tsc"
+    path = "tac"
 
   [[module.imports.mounts]]
     source = "workgroups"
