@@ -183,5 +183,9 @@ members:
     url: https://www.dtu.dk/
     image: techincal-u-of-denmark.svg
     level: associate
+  - name: OpenPOWER Foundation
+    url: https://openpowerfoundation.org/
+    image: OpenPower.jpg
+    level: associate    
             
         
