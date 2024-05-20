@@ -8,7 +8,7 @@ btn:
 image_path: images/feature/niek-doup-Xf071ws2Icg-unsplash.jpg
 ---
 
-In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community.  While the Technical Steering Community (TSC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations.
+In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community.  While the Technical Advisory Council (TAC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations.
 
 ## Rob Mains - General Manager
 {{< specialfeature 

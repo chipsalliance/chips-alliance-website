@@ -39,7 +39,7 @@ The CHIPS Alliance hosts multiple open source projects. Similar projects are org
 index="5"
 title="How are CHIPS Alliance projects licensed?"
 >}}
-Typically, CHIPS Alliance projects are covered by the Apache License 2.0 for code, and OWFa 0.9 for specs. The Technical Steering Committee can allow non-Apache/OWFa licensed code into CHIPS Alliance if it meets certain conditions. See Chapter 7: “Intellectual Property Policy” of our [Technical Charter](https://github.com/chipsalliance/tsc/blob/master/CHIPS_Alliance-Technical_Charter.pdf).
+Typically, CHIPS Alliance projects are covered by the Apache License 2.0 for code, and OWFa 0.9 for specs. The Technical Advisory Council can allow non-Apache/OWFa licensed code into CHIPS Alliance if it meets certain conditions.
 {{< /accordion >}}
 
 {{< accordion
@@ -50,7 +50,7 @@ Members are never obligated to contribute to code or specification projects in C
 
 Our specification projects leverage the OWFa 0.9 (Necessary Claims) license, as described in the CHIPS directed fund charter which is included in the project’s membership agreement. Prospective members will want to review the IP policy set forth in the charter with their own legal counsel, in order to understand how the implementation of OWFa may relate to their specific situation. Please note also that CHIPS utilizes a notice and voting period in connection with specification releases, and provides a mechanism for members to opt out of further commitments under OWFa at any time by following the procedures outlined in the IP policy.
 
-Our CLAs can be found [in the TSC repository](https://github.com/chipsalliance/tsc/tree/main/cla).
+Our CLAs can be found [in the TAC repository](https://github.com/chipsalliance/tac/tree/main/cla).
 
 {{< /accordion >}}
 
@@ -65,7 +65,7 @@ Yes, among other things. CHIPS Alliance wants to promote, develop and enhance op
 index="8"
 title="What if my project does not fulfil the criteria of CHIPS Alliance? For example, if it’s on the wrong license or I can’t join for other reasons."
 >}}
-We do have a concept of “Commons,” which are related projects that are not directly members but collaborate with us closely. See [here](https://github.com/chipsalliance/tsc#the-chips-alliance-commons-related-projects-and-initiatives) for details.
+We do have a concept of “Commons,” which are related projects that are not directly members but collaborate with us closely. See [here](https://github.com/chipsalliance/tac#the-chips-alliance-commons-related-projects-and-initiatives) for details.
 {{< /accordion >}}
 
 {{< accordion
@@ -79,7 +79,7 @@ No, joining is separate from any code / spec contributions. You can join CHIPS A
 index="10"
 title="Do I have to be a member / represent a member company to get involved?"
 >}}
-No. Our Working Group and TSC meetings, as well as mailing lists, are all open. You are welcome to join the conversation around open source hardware/silicon and work with us even before you decide to join. See [here](/workgroups/) for our meeting times and additional information.
+No. Our Working Group and TAC meetings, as well as mailing lists, are all open. You are welcome to join the conversation around open source hardware/silicon and work with us even before you decide to join. See [here](/workgroups/) for our meeting times and additional information.
 {{< /accordion >}}
 
 {{< accordion

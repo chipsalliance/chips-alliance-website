@@ -1,7 +1,7 @@
 ---
 title: Workgroups
 description: >-
-   The CHIPS Alliance hosts multiple open source Projects. Similar Projects are organized into Workgroups. Each Project elects a representative to participate on the TSC.
+   The CHIPS Alliance hosts multiple open source Projects. Similar Projects are organized into Workgroups. Each Project elects a representative to participate on the TAC.
 image_path: images/feature/48302011232_72f8ed17c8_o.jpg
 ---
 
