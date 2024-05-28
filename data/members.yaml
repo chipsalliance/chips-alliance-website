@@ -187,5 +187,9 @@ members:
     url: https://openpowerfoundation.org/
     image: OpenPower.jpg
     level: associate    
+  - name: Micron Technology
+    url: https://www.micron.com/
+    image: micron-technology.svg
+    level: silver        
             
         
