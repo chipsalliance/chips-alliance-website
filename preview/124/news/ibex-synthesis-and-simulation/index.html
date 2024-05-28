@@ -1,0 +1,324 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/124/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/124/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/124/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/124/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/124/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/124/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/124/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/124/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Enabling Open Source Ibex Synthesis and Simulation in Verilator/Yosys via UHDM/Surelog | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+Throughout 2020 we were hard at work developing proper, portable SystemVerilog support for multiple …">
+<meta property="og:title" content="Enabling Open Source Ibex Synthesis and Simulation in Verilator/Yosys via UHDM/Surelog">
+<meta property="og:description" content="This post was originally published at Antmicro.
+Throughout 2020 we were hard at work developing proper, portable SystemVerilog support for multiple open-source FPGA and ASIC design tools used by us and our customers, most notably Yosys and Verilator. We strongly believe that the support is a necessary step in building a collaborative ecosystem and scalable and reproducible CIs, especially publicly accessible ones that are common in multi-organization projects such as OpenTitan and CHIPS Alliance.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/124/news/ibex-synthesis-and-simulation/"><meta property="og:image" content="https://chipsalliance.org/preview/124/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Enabling Open Source Ibex Synthesis and Simulation in Verilator/Yosys via UHDM/Surelog">
+<meta itemprop=description content="This post was originally published at Antmicro.
+Throughout 2020 we were hard at work developing proper, portable SystemVerilog support for multiple open-source FPGA and ASIC design tools used by us and our customers, most notably Yosys and Verilator. We strongly believe that the support is a necessary step in building a collaborative ecosystem and scalable and reproducible CIs, especially publicly accessible ones that are common in multi-organization projects such as OpenTitan and CHIPS Alliance."><meta itemprop=datePublished content="2021-01-07T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-01-07T00:00:00+00:00">
+<meta itemprop=wordCount content="586"><meta itemprop=image content="https://chipsalliance.org/preview/124/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/124/images/blog-share.jpg">
+<meta name=twitter:title content="Enabling Open Source Ibex Synthesis and Simulation in Verilator/Yosys via UHDM/Surelog">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+Throughout 2020 we were hard at work developing proper, portable SystemVerilog support for multiple open-source FPGA and ASIC design tools used by us and our customers, most notably Yosys and Verilator. We strongly believe that the support is a necessary step in building a collaborative ecosystem and scalable and reproducible CIs, especially publicly accessible ones that are common in multi-organization projects such as OpenTitan and CHIPS Alliance.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/124/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/124/>
+<img src=/preview/124/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/124/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/124/about/members/>Members</a>
+<a class=dropdown-item href=/preview/124/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/124/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/124/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/124/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/124/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/124/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/124/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/124/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/124/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/124/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/124/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Enabling Open Source Ibex Synthesis and Simulation in Verilator/Yosys via UHDM/Surelog</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>January 7, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>3 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>586 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/124/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2020/12/ibex-support-in-verilator-yosys-via-uhdm-surelog/>Antmicro</a>.</em></p>
+<p>Throughout 2020 we were hard at work developing proper, portable SystemVerilog support for multiple open-source FPGA and ASIC design tools used by us and our customers, most notably <a href=https://github.com/YosysHQ/yosys>Yosys</a> and <a href=https://github.com/verilator/verilator>Verilator</a>. We strongly believe that the support is a necessary step in building a collaborative ecosystem and scalable and reproducible CIs, especially publicly accessible ones that are common in multi-organization projects such as <a href=https://opentitan.org/>OpenTitan</a> and <a href=https://chipsalliance.org/>CHIPS Alliance</a>. Leading the efforts towards achieving this goal, we’ve been developing a fully open source SystemVerilog parsing flow for Yosys and Verilator using UHDM and Surelog, achieving an important milestone: being able to fully parse, synthesize and simulate OpenTitan’s Ibex core directly from the SystemVerilog source.</p>
+<h2 id=getting-closer-to-open-source-synthesis-and-simulation>Getting closer to open-source synthesis and simulation</h2>
+<p>In this effort, Antmicro has been gradually covering various SystemVerilog functionalities and real-world implementations, developing support for different open source RISC-V cores and moving closer to a complete open-source synthesis and simulation tools support for <a href=https://github.com/lowRISC/ibex>Ibex</a> – a small and efficient, 32-bit, RISC-V core used in the OpenTitan project. Originally developed at ETH Zürich as RI5CY, it is now maintained and developed further by <a href=https://www.lowrisc.org/>lowRISC</a> – a not-for-profit organization promoting collaborative engineering that targets open source silicon designs and tools.</p>
+<p><img src=Logos.svg alt></p>
+<h2 id=open-source-systemverilog-test-suite>Open source SystemVerilog test suite</h2>
+<p>What has proved very helpful in this process is the <a href=https://github.com/SymbiFlow/sv-tests>SystemVerilog test suite</a> that we developed last year and continue to maintain together with a broad open source community in order to keep track of the supported and missing SystemVerilog features in a number of Verilog tools. It runs tests dedicated to various tools classes, covering a range of features, from single SV functionalities up to complex designs.</p>
+<p>Earlier this year, while closely tracking our progress using sv-tests, we have completed a number of milestones such as parsing Ibex in the Yosys synthesis tool directly or enabling SystemVerilog linting in formatting with Google’s <a href=https://github.com/google/verible>Verible</a> SystemVerilog parser and <a href=https://github.com/olofk/fusesoc>FuseSoC</a> an open source tooling and IP package manager that is easy to integrate with existing workflows. The results of this ongoing work are now being used in several open source silicon projects, most notably OpenTitan. You can find a demo integration on our GitHub <a href=https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/>as described in dedicated blog note earlier this year</a>.</p>
+<h2 id=parsing-cpu-cores-with-a-higher-order-tool>Parsing CPU cores with a higher order tool</h2>
+<p>However, our overarching goal in this space was to enable parsing various complex SystemVerilog designs (with Ibex being the tip of the proverbial iceberg) with higher order tools which could be used as a front-end to multiple other tools, without the necessity to redo the work every time and to maintain SystemVerilog support in multiple tools.</p>
+<p><img src=Universal-hardware-data-model-outlines.svg alt></p>
+<p>This can be achieved with UHDM and Surelog – two open source tools originally developed by Alain Marcel. <a href=https://github.com/alainmarcel/UHDM>UHDM</a> (Universal Hardware Data Model) is a multi-purpose intermediate library that enables plugging a parser into many different tools, while <a href=https://antmicro.com/blog/2020/12/ibex-support-in-verilator-yosys-via-uhdm-surelog/github.com/alainmarcel/Surelog>Surelog</a> is a versatile, comprehensive SystemVerilog parser, pre-processor, elaborator and UHDM compiler.</p>
+<p>Adding enough coverage of SystemVerilog in UHDM/Surelog to support the Ibex core in two critical open source hardware development tools is an important milestone in Antmicro’s long-running collaboration with Google and Western Digital, both of which are driving the OpenTitan project as well as the FOSSi community, interested in open source simulation, synthesis, place & route and verification of designs of similar or bigger complexity than Ibex. A guide on using the Surelog/UHDM flow to synthesize the Ibex design is <a href=https://github.com/antmicro/surelog-uhdm-ibex-guide>available on our GitHub</a>.</p>
+<p>Open source technologies are bringing a new dimension to FPGA/ASIC development flows. Learn more at antmicro.com.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/124/news/speeding-up-openroad-for-fast-design-feedback/>
+<img src=https://chipsalliance.org/preview/124/news/speeding-up-openroad-for-fast-design-feedback/Speeding-up-OpenROAD-optimizations-blog-1.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/124/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+May 24, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/124/news/speeding-up-openroad-for-fast-design-feedback/>Speeding Up OpenROAD For Fast Design Feedback</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/124/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/>
+<img src=https://chipsalliance.org/preview/124/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/124/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+March 25, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/124/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/>Adding Physical Memory Protection to the VeeR EL2 RISC-V Core</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/124/news/analyze-verilator-processes/>
+<img src=https://chipsalliance.org/preview/124/news/analyze-verilator-processes/Verilator-helper-tools--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/124/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+March 18, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/124/news/analyze-verilator-processes/>Analyze Verilator processes and ASTs with the astsee suite</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/124/>
+<img src=/preview/124/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2024</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/124/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/124/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/124/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/124/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/124/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/124/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/124/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/124/events/>Events</a>
+</li>
+<li>
+<a href=/preview/124/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/124/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/124/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/124/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/124/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/124/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/124/vendor/counter-up/countup.js></script>
+<script src=/preview/124/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/124/js/script.js></script>
+</body>
+</html>
