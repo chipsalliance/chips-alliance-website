@@ -30,7 +30,7 @@ However, our overarching goal in this space was to enable parsing various comple
 
 ![](Universal-hardware-data-model-outlines.svg)
 
-This can be achieved with UHDM and Surelog – two open source tools originally developed by Alain Marcel. [UHDM](https://github.com/alainmarcel/UHDM) (Universal Hardware Data Model) is a multi-purpose intermediate library that enables plugging a parser into many different tools, while [Surelog](https://antmicro.com/blog/2020/12/ibex-support-in-verilator-yosys-via-uhdm-surelog/github.com/alainmarcel/Surelog) is a versatile, comprehensive SystemVerilog parser, pre-processor, elaborator and UHDM compiler.
+This can be achieved with UHDM and Surelog – two open source tools originally developed by Alain Marcel. [UHDM](https://github.com/alainmarcel/UHDM) (Universal Hardware Data Model) is a multi-purpose intermediate library that enables plugging a parser into many different tools, while Surelog is a versatile, comprehensive SystemVerilog parser, pre-processor, elaborator and UHDM compiler.
 
 Adding enough coverage of SystemVerilog in UHDM/Surelog to support the Ibex core in two critical open source hardware development tools is an important milestone in Antmicro’s long-running collaboration with Google and Western Digital, both of which are driving the OpenTitan project as well as the FOSSi community, interested in open source simulation, synthesis, place & route and verification of designs of similar or bigger complexity than Ibex. A guide on using the Surelog/UHDM flow to synthesize the Ibex design is [available on our GitHub](https://github.com/antmicro/surelog-uhdm-ibex-guide).
 

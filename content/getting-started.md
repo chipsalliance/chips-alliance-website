@@ -20,7 +20,7 @@ The CHIPS Alliance works in the open and welcomes all participants in our open s
 
 ### Join our mailing lists
 
-We recommend you join our mailing lists, as they are our primary means of communication.  The CHIPS Alliance uses groups.io for our mailing lists.  If you aren't familiar with the process of joining groups, [we have a tutorial on how to find and join our lists](tutorials/GROUPS.IO.md).
+We recommend you join our mailing lists, as they are our primary means of communication.  The CHIPS Alliance uses groups.io for our mailing lists.  If you aren't familiar with the process of joining groups, [we have a tutorial on how to find and join our lists](../groups-tutorial/).
 
 #### General mailing lists
 
@@ -37,7 +37,7 @@ In addition to the lists which are open to everyone, we have some special-purpos
 
 * [members@lists.chipsalliance.org](https://lists.chipsalliance.org/g/members)  - This is the main list for member information.
 * [marketing@lists.chipsalliance.org](https://lists.chipsalliance.org/g/marketing)  - This is the list for the CHIPS Alliance marketing committee, which is open to all members.
-* We also maintain a legal mailing list for members' counsel to plan meeting times.  Contact [operations@chipsalliance.org](mailto:operations@chipsalliance.org) with the name of your in-house legal counsel so we can add them to the Legal Committee list and invite.
+* We also maintain a legal mailing list for members' counsel to plan meeting times.  Contact operations@chipsalliance.org with the name of your in-house legal counsel so we can add them to the Legal Committee list and invite.
 
 ### Follow us on social
 

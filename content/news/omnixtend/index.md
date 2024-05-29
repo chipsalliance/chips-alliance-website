@@ -24,8 +24,6 @@ The RISC-V Summit will also feature a keynote about the open ecosystem of modern
 
 To learn more about the RISC-V Summit, please visit: https://tmt.knect365.com/risc-v-summit/. 
 
-To register for the RISC-V Summit, please visit: https://riscv.informatech.com/2020/registrations/Attendee. 
-
 ## About the CHIPS Alliance
 
 The CHIPS Alliance is an organization which develops and hosts high-quality, open source hardware code (IP cores), interconnect IP (physical and logical protocols), and open source software development tools for design, verification, and more. The main aim is to provide a barrier-free collaborative environment, to lower the cost of developing IP and tools for hardware development. The CHIPS Alliance is hosted by the Linux Foundation. For more information, visit chipsalliance.org.

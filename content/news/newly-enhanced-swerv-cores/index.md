@@ -14,11 +14,9 @@ aliases: ['/blog/2020/05/14/newly-enhanced-swerv-cores/', '/announcement/2020/05
 
 The [SweRV Core EH2](https://github.com/chipsalliance/Cores-SweRV-EH2), the world’s first dual-threaded, commercial, embedded RISC-V core, is designed for embedded devices supporting data-intensive edge, artificial intelligence (AI) and Internet of Things (IoT) applications. [SweRV Core EL2](https://github.com/chipsalliance/Cores-SweRV-EL2) is an ultra-small, ultra-low-power RISC-V core optimized for applications such as state-machine sequencers and waveform generators. The newly updated cores are now available to everyone for free.
 
-CHIPS Alliance will host an [online event](https://zoom.us/webinar/register/WN_fbjiN5uvSuGbGdWUGlI65g) to discuss the SweRV Core EH2 and EL2, along with the available software support and solutions for programmers on May 20, 2020 at 5:30 p.m. PT. The event will feature talks from representatives of Antmicro, CHIPS Alliance, Codasip, Metrics and Western Digital.
+CHIPS Alliance will host an online event to discuss the SweRV Core EH2 and EL2, along with the available software support and solutions for programmers on May 20, 2020 at 5:30 p.m. PT. The event will feature talks from representatives of Antmicro, CHIPS Alliance, Codasip, Metrics and Western Digital.
 
 “Our work to help bring the newly enhanced SweRV Core EL2 and EH2 to the open hardware community demonstrates key progress towards our goal of accelerating RISC-V innovation. We’ve already seen significant industry interest in the SweRV Core EH1 and are pleased to offer two compelling additional options to engineers designing IoT, consumer, mobile and other embedded applications,” said Dr. Zvonimir Bandić, Chairman, CHIPS Alliance.
-
-To register for the CHIPS Alliance virtual event on May 20, please visit: https://zoom.us/webinar/register/WN_fbjiN5uvSuGbGdWUGlI65g.
 
 To learn more about the SweRV Cores, please visit: https://github.com/chipsalliance/Cores-SweRV.
 

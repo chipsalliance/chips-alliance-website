@@ -71,15 +71,15 @@ CHIPS Alliance hosted a number of events over the past year, pivoting to virtual
 - In April 2020, CHIPS Alliance held an online meetup on [Cache Coherent Memory Fabric](https://www.meetup.com/Bay-Area-RISC-V-Meetup/events/269617034/) with TileLink and OmniXtend. There were over 250 attendees who learned about developments from SiFive, Western Digital and Intel.
 - In May 2020, the CHIPS Alliance participated in a [Meetup](https://www.meetup.com/Bay-Area-RISC-V-Meetup/events/270389046/) hosted by the  Bay Area RISC-V Group, providing attendees with an overview of the organization and the SweRV family of cores. 
 - In September 2020, the [CHIPS Alliance Workshop](https://events.linuxfoundation.org/chips-alliance-workshop/) featured 10 talks about open source milestones, progress, updates and more. 
-- In November, CHIPS Alliance chair of Outreach Committee Michael Gielda gave a talk at [RISC-V Days Tokyo](http://riscv-association.jp/en/riscv-day-tokyo-2020-en/), discussing the ongoing activities towards enabling fully open source and CI-driven ASIC and FPGA development flows.
+- In November, CHIPS Alliance chair of Outreach Committee Michael Gielda gave a talk at RISC-V Days Tokyo, discussing the ongoing activities towards enabling fully open source and CI-driven ASIC and FPGA development flows.
 - In December 2020, at the [RISC-V Summit](https://riscv.org/proceedings/2021/02/risc-v-summit-2020/), CHIPS Alliance Chairman Dr. Zvonimir Bandić gave a talk about OmniXtend, and Antmicro gave a talk describing its efforts towards enabling SystemVerilog support in open source tools.
 
 ## Technical Highlights
 
-- CHIPS Alliance [announced](https://chipsalliance.org/announcement/2020/12/08/omnixtend/) a collaboration with RISC-V International to standardize an open unified memory coherency bus leveraging OmniXtend to foster innovation for data-centric applications.
-- CHIPS Alliance [released](https://chipsalliance.org/announcement/2020/07/16/aib-2-0-draft-specification/) the Advanced Interface Bus (AIB) version 2.0 draft specification on GitHub. The AIB standard is an open-source, royalty-free PHY-level standard for connecting multiple semiconductor die within the same package.
+- CHIPS Alliance [announced](https://chipsalliance.org/news/omnixtend/) a collaboration with RISC-V International to standardize an open unified memory coherency bus leveraging OmniXtend to foster innovation for data-centric applications.
+- CHIPS Alliance [released](https://chipsalliance.org/news/aib-2-0-draft-specification/) the Advanced Interface Bus (AIB) version 2.0 draft specification on GitHub. The AIB standard is an open-source, royalty-free PHY-level standard for connecting multiple semiconductor die within the same package.
 - Antmicro and Western Digital have been making significant progress in enabling dynamic scheduling in [Verilator](https://github.com/verilator/verilator), which paves the way for open source UVM verification.
-- The CHIPS Alliance [announced](https://chipsalliance.org/blog/2020/05/14/newly-enhanced-swerv-cores/) the enhanced updates of the SweRV Core EH2 and EL2 solutions which were initially developed by Western Digital. The SweRV Core family also includes the EH1. Learn more at [GitHub](https://github.com/chipsalliance/Cores-SweRV).
+- The CHIPS Alliance [announced](https://chipsalliance.org/news/newly-enhanced-swerv-cores/) the enhanced updates of the SweRV Core EH2 and EL2 solutions which were initially developed by Western Digital. The SweRV Core family also includes the EH1. Learn more at [GitHub](https://github.com/chipsalliance/Cores-SweRV).
 - Antmicro, Google and the CHIPS Alliance have been [working together](https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/) with the [lowRISC project](https://www.lowrisc.org/) to develop [Verible](https://github.com/google/verible) linting and formatting support (including FuseSoC integration) for some SystemVerilog features required for working with practical use cases, such as lowRISC’s ibex. Ibex can also now be synthesized and simulated in a [completely open source flow using Surelog, Yosys and Verilator](https://antmicro.com/blog/2020/12/ibex-support-in-verilator-yosys-via-uhdm-surelog/).
 - Google, SkyWater, eFabless, Antmicro, the OpenROAD project and other partners collaborated to release the first ever open source process design kit, [SkyWater’s PDK](https://github.com/google/skywater-pdk) for the 130 nm MOSFET fabrication process, along with related sources. This development lowers the cost of entry into chip manufacturing and paves the way for even more exciting collaborations to happen in the open source silicon domain.
 - Antmicro and Google have been further developing the open source SystemVerilog test suite. It is available on [GitHub](https://github.com/SymbiFlow/sv-tests). The suite runs a number of open source EDA tools against a series of SystemVerilog compliance tests and presents the [results online](https://symbiflow.github.io/sv-tests/).
@@ -98,14 +98,14 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 
 ## CHIPS Alliance News
 
-- [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://chipsalliance.org/announcement/2021/02/11/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 11, 2021
-- [CHIPS Alliance Brings on Rob Mains as New Executive Director](https://chipsalliance.org/announcement/2021/02/08/chips-alliance-brings-on-rob-mains-as-new-executive-director/) – Feb. 8, 2021
-- [CHIPS Alliance to Collaborate with RISC-V to Standardize an Open Unified Memory Leveraging OmniXtend](https://chipsalliance.org/announcement/2020/12/08/omnixtend/) – Dec. 8, 2020
-- [Efabless Joins CHIPS Alliance to Accelerate the Growth of the Open Source Chip Ecosystem](https://chipsalliance.org/announcement/2020/09/15/efabless-joins-chips-alliance-to-accelerate-the-growth-of-the-open-source-chip-ecosystem/) – Sept. 15, 2020
-- [CHIPS Alliance Welcomes Mentor as its Newest Member](https://chipsalliance.org/announcement/2020/08/17/chips-alliance-welcomes-mentor-as-its-newest-member/) – Aug. 18, 2020
-- [QuickLogic Joins CHIPS Alliance to Expand Open Source FPGA Efforts](https://chipsalliance.org/announcement/2020/08/11/quicklogic-joins-chips-alliance-to-expand-open-source-fpga-efforts/) – Aug. 11, 2020
-- [CHIPS Alliance Announces AIB 2.0 Draft Specification to Accelerate Design of Open Source Chiplets](https://chipsalliance.org/announcement/2020/07/16/aib-2-0-draft-specification/) – July 16, 2020
-- [CHIPS Alliance’s Newly Enhanced SweRV Cores Available to All for Free](https://chipsalliance.org/announcement/2020/05/14/newly-enhanced-swerv-cores/) – May 14, 2020
+- [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://chipsalliance.org/news/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 11, 2021
+- [CHIPS Alliance Brings on Rob Mains as New Executive Director](https://chipsalliance.org/news/chips-alliance-brings-on-rob-mains-as-new-executive-director/) – Feb. 8, 2021
+- [CHIPS Alliance to Collaborate with RISC-V to Standardize an Open Unified Memory Leveraging OmniXtend](https://chipsalliance.org/news/omnixtend/) – Dec. 8, 2020
+- [Efabless Joins CHIPS Alliance to Accelerate the Growth of the Open Source Chip Ecosystem](https://chipsalliance.org/news/efabless-joins-chips-alliance-to-accelerate-the-growth-of-the-open-source-chip-ecosystem/) – Sept. 15, 2020
+- [CHIPS Alliance Welcomes Mentor as its Newest Member](https://chipsalliance.org/news/chips-alliance-welcomes-mentor-as-its-newest-member/) – Aug. 18, 2020
+- [QuickLogic Joins CHIPS Alliance to Expand Open Source FPGA Efforts](https://chipsalliance.org/news/quicklogic-joins-chips-alliance-to-expand-open-source-fpga-efforts/) – Aug. 11, 2020
+- [CHIPS Alliance Announces AIB 2.0 Draft Specification to Accelerate Design of Open Source Chiplets](https://chipsalliance.org/news/aib-2-0-draft-specification/) – July 16, 2020
+- [CHIPS Alliance’s Newly Enhanced SweRV Cores Available to All for Free](https://chipsalliance.org/news/newly-enhanced-swerv-cores/) – May 14, 2020
 
 ## Member News
 
@@ -136,7 +136,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 - [CHIPS SweRV cores and the Open Tools Ecosystem](https://antmicro.com/blog/2020/07/swerv-cores-tools-ecosystem/) – Antmicro July 7, 2020
 - [Antmicro, Google and SkyWater Team Up to Release First Ever Open Source PDK](https://antmicro.com/blog/2020/06/skywater-open-source-pdk/) – Antmicro, June 29, 2020
 - [Antmicro and QuickLogic Announce Open Reconfigurable Computing Initiative](https://antmicro.com/blog/2020/06/quicklogic-open-reconfigurable-computing-press-release/) – Antmicro, June 16, 2020
-- [Codasip Extends SweRV Support Package to Include Western Digital SweRV EH2 & EL2 RISC-V Cores](https://codasip.com/2020/06/02/codasip-extends-swerv-support-package-to-include-western-digital-swerv-eh2-el2-risc-v-cores/) – Codasip, June 2, 2020
+- Codasip Extends SweRV Support Package to Include Western Digital SweRV EH2 & EL2 RISC-V Cores – Codasip, June 2, 2020
 - [Codasip Releases Support Package For Western Digital’s First RISC-V Swerv Core](https://codasip.com/2020/04/23/codasip-releases-support-package-for-western-digitals-first-risc-v-swerv-core/) – Codasip, April 23, 2020
 - [Imperas Leading RISC-V CPU Reference Model for Hardware Design Verification Selected by Mellanox](https://www.imperas.com/Mellanox_selects_Imperas_for_RISC-V_CPU_Reference_Model_for_Hardware_Design_Verification) – Imperas, April 21, 2020
 - [SystemVerilog Linting and Formatting with FuseSoC – Verible Integration](https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/) – Antmicro, April 11, 2020
@@ -147,7 +147,7 @@ Another reason companies join CHIPS Alliance is to accelerate adoption of IP or 
 
 - [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.design-reuse.com/news/49493/chips-alliance-antmicro-verisilicon-platinum-membership-level.html) – Feb. 16, 2021
 - [CHIPS Alliance Adds Antmicro and VeriSilicon](https://insidehpc.com/2021/02/chips-alliance-adds-antmicro-and-verisilicon/) – Feb. 12, 2021
-- [CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level](https://www.enterprise.ai/news/2021/02/12/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/) – Feb. 12, 2021
+- CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level – Feb. 12, 2021
 - [CHIPS Alliance Brings on Rob Mains as New Executive Director](https://www.hpcwire.com/off-the-wire/chips-alliance-brings-on-rob-mains-as-new-executive-director/) – Feb. 11, 2021
 - [Week In Review: Design, Low Power](https://semiengineering.com/week-in-review-design-low-power-133/) – Feb. 12, 2021
 - CHIPS Alliance Hires New Director to Push Open-Source Chips Ecosystem into Next Gear – Feb. 8, 2021

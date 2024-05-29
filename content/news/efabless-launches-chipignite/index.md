@@ -19,5 +19,3 @@ The first shuttle in the chipIgnite program will support fabrication of student 
 The new program also has industry support from organizations including QuickLogic and the CHIPS Alliance.
 
 “CHIPS Alliance is a major champion of open source hardware design and associated design automation tools. I am excited to see the chipIgnite program offered by Efabless to include many different collaborative IP developers to prove new ideas. The platform alleviates the barriers to entry into chip design and allows for ready exploration of many concepts,” said Rob Mains, general manager of CHIPS Alliance.
-
-Read the full announcement at Efabless: https://info.efabless.com/press-release-efabless-launches-chipignite-with-skywater-to-bring-chip-creation-to-the-masses/

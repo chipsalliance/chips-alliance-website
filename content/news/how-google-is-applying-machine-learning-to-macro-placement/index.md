@@ -18,6 +18,6 @@ In this talk, Young-Joon shared how Google devised a hybrid approach to the plac
 
 Finally, next steps in the project were discussed as well as how Google is exploring more machine learning techniques to use for other parts of electronic design automation. 
 
-Watch the [presentation](https://www.youtube.com/watch?v=EKjlr2k_wBM&) below and check out the slides here: [Learning To Play the Game of Macro Placement with Deep Reinforcement Learning](https://chipsalliance.org/wp-content/uploads/sites/83/2021/11/CHIPS-Alliance-Deep-Dive-Cafe-Talks-Nov-2021-Young-Joon-Lee.pdf)
+Watch the [presentation](https://www.youtube.com/watch?v=EKjlr2k_wBM&) below and check out the slides here: [Learning To Play the Game of Macro Placement with Deep Reinforcement Learning](/other/CHIPS-Alliance-Deep-Dive-Cafe-Talks-Nov-2021-Young-Joon-Lee.pdf)
 
 {{< youtube EKjlr2k_wBM >}}
