@@ -1,0 +1,327 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/126/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/126/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/126/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/126/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/126/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/126/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/126/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/126/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Versatile SO-DIMM (LP)DDR5 Rowhammer testing platform | CHIPS Alliance</title>
+<meta name=description content="Ten years after the first disclosure of the initial Rowhammer security exploit, new DRAM vulnerabilities continue to be discovered, and developing new …">
+<meta property="og:title" content="Versatile SO-DIMM (LP)DDR5 Rowhammer testing platform">
+<meta property="og:description" content="Ten years after the first disclosure of the initial Rowhammer security exploit, new DRAM vulnerabilities continue to be discovered, and developing new and efficient mitigation techniques requires a deep understanding of the problem considering the complexity of modern DRAM. To safeguard its Data Center and edge device use cases, Google has been using Antmicro’s advanced R&D capabilities to develop an open source FPGA-based memory testing suite and family of open hardware platforms, expanding beyond the capabilities of pure-software vulnerability testing and mitigation approaches.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/126/news/versatile-rowhammer-testing-platform/"><meta property="og:image" content="https://chipsalliance.org/preview/126/news/versatile-rowhammer-testing-platform/Versatile-module-based-DDR5-memory-testing-platform--chips-blog-thumbnail.png"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2024-03-11T00:00:00+00:00">
+<meta property="article:modified_time" content="2024-03-11T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Versatile SO-DIMM (LP)DDR5 Rowhammer testing platform">
+<meta itemprop=description content="Ten years after the first disclosure of the initial Rowhammer security exploit, new DRAM vulnerabilities continue to be discovered, and developing new and efficient mitigation techniques requires a deep understanding of the problem considering the complexity of modern DRAM. To safeguard its Data Center and edge device use cases, Google has been using Antmicro’s advanced R&D capabilities to develop an open source FPGA-based memory testing suite and family of open hardware platforms, expanding beyond the capabilities of pure-software vulnerability testing and mitigation approaches."><meta itemprop=datePublished content="2024-03-11T00:00:00+00:00">
+<meta itemprop=dateModified content="2024-03-11T00:00:00+00:00">
+<meta itemprop=wordCount content="927"><meta itemprop=image content="https://chipsalliance.org/preview/126/news/versatile-rowhammer-testing-platform/Versatile-module-based-DDR5-memory-testing-platform--chips-blog-thumbnail.png">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/126/news/versatile-rowhammer-testing-platform/Versatile-module-based-DDR5-memory-testing-platform--chips-blog-thumbnail.png">
+<meta name=twitter:title content="Versatile SO-DIMM (LP)DDR5 Rowhammer testing platform">
+<meta name=twitter:description content="Ten years after the first disclosure of the initial Rowhammer security exploit, new DRAM vulnerabilities continue to be discovered, and developing new and efficient mitigation techniques requires a deep understanding of the problem considering the complexity of modern DRAM. To safeguard its Data Center and edge device use cases, Google has been using Antmicro’s advanced R&D capabilities to develop an open source FPGA-based memory testing suite and family of open hardware platforms, expanding beyond the capabilities of pure-software vulnerability testing and mitigation approaches.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/126/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/126/>
+<img src=/preview/126/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/126/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/126/about/members/>Members</a>
+<a class=dropdown-item href=/preview/126/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/126/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/126/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/126/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/126/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/126/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/126/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/126/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/126/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/126/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/126/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Versatile SO-DIMM (LP)DDR5 Rowhammer testing platform</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>March 11, 2024</p>
+</li>
+<li class=list-inline-item>
+<p>5 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>927 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/126/news/versatile-rowhammer-testing-platform/Versatile-module-based-DDR5-memory-testing-platform--chips-blog-thumbnail.png class=w-100 alt=featured-image>
+</div>
+<div><p>Ten years after the <a href=https://users.ece.cmu.edu/~yoonguk/papers/kim-isca14.pdf>first disclosure of the initial Rowhammer security exploit</a>, new DRAM vulnerabilities continue to be discovered, and developing new and efficient mitigation techniques requires a deep understanding of the problem considering the complexity of modern DRAM. To safeguard its Data Center and edge device use cases, Google has been using Antmicro’s advanced R&D capabilities to develop an <a href=https://github.com/antmicro/rowhammer-tester>open source FPGA-based memory testing suite</a> and family of open hardware platforms, expanding beyond the capabilities of pure-software vulnerability testing and mitigation approaches. The targeted DDR variants have so far included <a href=https://antmicro.com/blog/2021/04/lpddr4-test-platform/>LPDDR4</a>, <a href=https://antmicro.com/blog/2021/12/open-source-data-center-rowhammer-tester/>DDR4</a> and <a href=https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/>DDR5 RDIMM</a>.</p>
+<p>In this blog article, Antmicro describes a new addition to the family, the latest <a href=https://github.com/antmicro/sodimm-ddr5-tester>DDR5 Tester Board</a> that is compatible with both standard DDR5 SO-DIMMs and a new <a href=https://github.com/antmicro/lpddr5-testbed>LPDDR5 testbed</a>, also developed in this iteration of their project with Google. In principle, the SO-DIMM DDR5 Tester was developed to enable LPDDR5 Rowhammer testing, but the SO-DIMM capability is a nice addition that lets Antmicro use and test the Tester board without the need for a custom testbed.</p>
+<p><img src=Versatile-DDR5-memory-testing-platform--blog.png alt="Antmicro’s SO-DIMM (LP)DDR5 Rowhammer testing platform"></p>
+<h3 id=rowhammer-continues-to-be-a-serious-threat>Rowhammer continues to be a serious threat</h3>
+<p>Although thanks to the collaborative work between universities such as ETHZ, companies like Google and Antmicro as well as memory vendors, there are now both software and hardware testing platforms targeting DDR4 and DDR5 and an array of manufacturer-led mitigation techniques, <a href=https://people.inf.ethz.ch/omutlu/pub/onur-RowHammer-UBC-Sep-20-2022-withbackup.pdf>Rowhammer continues to be a threat in all recent DRAM technologies, including DDR5</a>.</p>
+<p>Additional research has shown that Rowhammer mitigations cannot rely solely on standard solutions like ECC, but that they <a href=https://memlab.ece.gatech.edu/papers/DSN_2023_1.pdf>need to be implemented in both hardware and software</a>, also at the memory controller level. In fact, as part of Antmicro’s participation in the EU TRISTAN project, they are currently working on an open source and fully customizable, ASIC-ready LPDDR4 controller module, which can be equipped with custom Rowhammer and other security vulnerability mitigations.</p>
+<h3 id=versatile-memory-testing-platform-for-the-ddr5-era>Versatile memory testing platform for the DDR5 era</h3>
+<p>The Rowhammer testing suite has already supported RDIMM DDR5 used in data centers for some time, <a href=https://antmicro.com/blog/2023/07/open-source-data-center-rdimm-ddr5-tester-for-memory-vulnerability-research/>thanks to the previously developed DDR5 board</a>.</p>
+<p>However, to enable testing of LPDDR5, a <a href=https://github.com/antmicro/sodimm-ddr5-tester>new platform had to be developed</a>, and Antmicro used that opportunity to incorporate several new features that were not available on the previous baseboards into the design.</p>
+<p>While the previous LPDDR-focused platform in the series, the <a href="https://openhardware.antmicro.com/boards/lpddr4-test-board/?tab=features">LPDDR Tester</a> featured a custom SO-DIMM pinout that made it compatible only with special testing modules designed specifically with that board in mind, the new LPDDR5 version follows the regular SO-DIMM pinout and thus is also possible to use with regular DDR5 SO-DIMM memory sticks used in desktop and some laptop platforms.</p>
+<p>The SO-DIMM DDR5 Tester Board has been designed to function as both a standalone platform (running e.g. Linux or Zephyr, without the need for connecting it to a separate host machine) as well as an expansion board thanks to the PCIe interface described below. Besides PCIe and the (now standard) DDR5 SO-DIMM slot, as usual the board comes with both HDMI and USB-C connectors, 16Mb of flash memory, a 1Gb Ethernet RJ45 port and a microSD slot.</p>
+<p><img src=Versatile-DDR5-memory-testing-platform--blog-2.png alt="The SO-DIMM DDR5 Tester Board"></p>
+<p>As mentioned before, this is also the first DDR tester board from Antmicro that features a PCIe interface, meaning that it is possible for the SO-DIMM DDR5 Tester Board to function as a PCIe expansion card, enabling use in clusters or a real datacenter context. The addition of PCIe on top of the slower Ethernet link that was previously the main way to connect the board to an external host opens up the door to new testing possibilities, such as injecting faults over the PCIe link or dumping the contents of memory on demand. The platform also enables investigation of <a href=https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-934.pdf>the PCIe link itself for potential vulnerabilities</a>, which is an area of increasing interest for researchers, and a potential area where Antmicro might develop dedicated tester boards in the future.</p>
+<p>The other board which Antmicro have released is a newer <a href=https://github.com/antmicro/lpddr5-testbed>LPDDR5 testbed</a> that is compatible with the SO-DIMM DDR5 Tester Board, specifically targeted at Micron MT60B2G8HB-48B:A 16Gb DRAM modules, commonly used in large scale commercial applications such as data centers. <a href=https://github.com/antmicro/litedram/tree/rowhammer-tester/litedram>The code for the open source controller</a> has been previously developed and published on GitHub as part of our Rowhammer Tester framework.</p>
+<p><img src=Versatile-DDR5-memory-testing-platform--blog-3.png alt="The LPDDR5 Testbed"></p>
+<h3 id=future-plans>Future Plans</h3>
+<p>One of the potential developments that Antmicro is looking at for the future is adapting the board to accommodate emerging standards such as <a href=https://www.jedec.org/news/pressreleases/jedec-publishes-new-camm2-memory-module-standard>CAMM2</a>, approved by JEDEC in December 2023. Another potential idea is developing a new testbed integrating an interposer to enable easier swapping of memory chips and testing memory chips with an oscilloscope within a larger testing environment.</p>
+<p>Both the <a href=https://openhardware.antmicro.com/boards/sodimm-ddr5-tester>SO-DIMM DDR5 Tester Board</a> and the <a href=https://openhardware.antmicro.com/boards/lpddr5-testbed>LPDDR5 testboard</a> are available on our <a href=https://openhardware.antmicro.com/>Open Hardware Portal</a> which <a href=https://antmicro.com/blog/2023/04/open-hardware-portal/>showcases our open hardware designs</a> and provides a deeper dive into the board stackup, schematics, block diagram and a <a href=https://antmicro.com/blog/2023/10/antmicro-hardware-component-database/>full list of components</a> used in the design.</p>
+<h3 id=custom-hardware-testing-platforms-with-antmicro>Custom hardware testing platforms with Antmicro</h3>
+<p>Antmicro is at the forefront of creating and expanding new open source and automated hardware and software tester solutions for its commercial customers, helping ensure the security and reliability of high-throughput interfaces like DDR or PCIe. With mitigations against Rowhammer being slow to market, comprehensive and systematic testing remains the only viable method of ascertaining whether a specific memory chip is vulnerable or not to attack due to manufacturing variances.</p>
+<p>If you wish to discuss the possibility of creating specialist hardware and software testing platforms for your specific needs, or if you need open source tooling for comprehensive testing of hardware for new and existing vulnerabilities, get in touch with Antmicro at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/126/news/speeding-up-openroad-for-fast-design-feedback/>
+<img src=https://chipsalliance.org/preview/126/news/speeding-up-openroad-for-fast-design-feedback/Speeding-up-OpenROAD-optimizations-blog-1.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/126/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+May 24, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/126/news/speeding-up-openroad-for-fast-design-feedback/>Speeding Up OpenROAD For Fast Design Feedback</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/126/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/>
+<img src=https://chipsalliance.org/preview/126/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/126/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+March 25, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/126/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/>Adding Physical Memory Protection to the VeeR EL2 RISC-V Core</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/126/news/analyze-verilator-processes/>
+<img src=https://chipsalliance.org/preview/126/news/analyze-verilator-processes/Verilator-helper-tools--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/126/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+March 18, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/126/news/analyze-verilator-processes/>Analyze Verilator processes and ASTs with the astsee suite</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/126/>
+<img src=/preview/126/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2024</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/126/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/126/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/126/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/126/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/126/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/126/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/126/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/126/events/>Events</a>
+</li>
+<li>
+<a href=/preview/126/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/126/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/126/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/126/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/126/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/126/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/126/vendor/counter-up/countup.js></script>
+<script src=/preview/126/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/126/js/script.js></script>
+</body>
+</html>
