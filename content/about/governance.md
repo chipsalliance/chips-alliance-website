@@ -1,14 +1,14 @@
 ---
 title: Governance
 description: >-
-   The CHIPS Alliance is a directed fund of [The Linux Foundation](https://linuxfoundation.org/), a 501(c)(6) non-profit organization.  Following best practices in the industry, we maintain a clear and consistent separation of responsibilities between technical and non-technical governance decisions. The CHIPS Alliance operates under its Charter.
+   The CHIPS Alliance is a directed fund of [The Linux Foundation](https://linuxfoundation.org/), a 501(c)(6) non-profit organization. Following best practices in the industry, we maintain a clear and consistent separation of responsibilities between technical and non-technical governance decisions. The CHIPS Alliance operates under its Charter.
 btn:
    link: https://participation-agreement.chipsalliance.org/
    text: Read Charter
 image_path: images/feature/niek-doup-Xf071ws2Icg-unsplash.jpg
 ---
 
-In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community.  While the Technical Advisory Council (TAC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations.
+In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community. While the Technical Advisory Council (TAC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations, and would typically each adopt their own [technical charter based on a common template](https://docs.google.com/document/d/1_NeUOrl8IG7ih-Ji31LehKqv0KGT3VJcotvv4SwBmIg/edit).
 
 ## Rob Mains - General Manager
 {{< specialfeature 
