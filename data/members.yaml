@@ -190,6 +190,14 @@ members:
   - name: Micron Technology
     url: https://www.micron.com/
     image: micron-technology.svg
-    level: silver        
+    level: silver    
+  - name: NYDesign
+    url: https://www.nydesign.org/
+    image: NYDesign.png
+    level: associate 
+  - name: OpenSUSI 
+    url: https://www.opensusi.org/
+    image: opensusi.svg
+    level: associate             
             
         
