@@ -10,7 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     permissions:
-      contents: write    
+      contents: write   
+      repository-projects: write      
     concurrency:
       group: gh-pages
     name: Deploy PR preview

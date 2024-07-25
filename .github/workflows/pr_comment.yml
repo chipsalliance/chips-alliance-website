@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       pull-requests: write
-      repository-projects: write
     steps:
       - name: Get PR metadata
         uses: 8BitJonny/gh-get-current-pr@2.2.0
