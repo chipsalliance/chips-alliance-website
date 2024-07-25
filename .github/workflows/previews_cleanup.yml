@@ -8,6 +8,9 @@ on:
 jobs:
   previews-cleanup:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   
+      repository-projects: write       
     concurrency:
       group: gh-pages
     env:
