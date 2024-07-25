@@ -5,13 +5,14 @@ on:
     workflows: ["Build and push site to gh-pages branch"]
     types:
       - completed
+      
+permissions:
+  contents: write   
+  repository-projects: write      
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-    permissions:
-      contents: write   
-      repository-projects: write      
     concurrency:
       group: gh-pages
     name: Deploy PR preview
