@@ -11,6 +11,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write   
+      repository-projects: write        
     concurrency:
       group: gh-pages
     steps:
