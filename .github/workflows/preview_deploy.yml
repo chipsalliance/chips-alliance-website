@@ -23,7 +23,7 @@ jobs:
           ref: gh-pages
           path: ./public
       - name: Download artifacts
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@7.0.1
         with:
           script: |
             var artifacts = await github.actions.listWorkflowRunArtifacts({
