@@ -77,7 +77,6 @@ members:
     url: https://www.berkeley.edu/admissions/
     image: ucberkeley.svg
     level: associate
-    board_rep: Borivoje Nikolic
   - name: BYU
     url: https://www.byu.edu/
     image: byu.svg
@@ -114,6 +113,7 @@ members:
     url: https://ucsd.edu/
     image: uc-san-diego.png
     level: associate
+    board_rep: Andrew Kahng 
   - name: UIT
     url: https://www.uit.edu/
     image: uit-merl.png
