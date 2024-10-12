@@ -1,0 +1,332 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/144/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/144/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/144/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/144/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/144/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/144/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/144/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/144/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Modular, Open-source FPGA-based LPDDR4 Test Platform | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+The flexibility of FPGAs makes them an excellent choice not only for parallel processing applications …">
+<meta property="og:title" content="Modular, Open-source FPGA-based LPDDR4 Test Platform">
+<meta property="og:description" content="This post was originally published at Antmicro.
+The flexibility of FPGAs makes them an excellent choice not only for parallel processing applications but also for research and experimentation in a range of technological areas.
+We often provide our customers with flexible R&D platforms that can be easily adapted to changing requirements and new use cases as a result of our practice of using open source hardware, software, FPGA IP and tooling.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/144/news/modular-open-source-fpga-based-lpddr4-test-platform/"><meta property="og:image" content="https://chipsalliance.org/preview/144/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-04-09T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-04-09T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Modular, Open-source FPGA-based LPDDR4 Test Platform">
+<meta itemprop=description content="This post was originally published at Antmicro.
+The flexibility of FPGAs makes them an excellent choice not only for parallel processing applications but also for research and experimentation in a range of technological areas.
+We often provide our customers with flexible R&D platforms that can be easily adapted to changing requirements and new use cases as a result of our practice of using open source hardware, software, FPGA IP and tooling."><meta itemprop=datePublished content="2021-04-09T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-04-09T00:00:00+00:00">
+<meta itemprop=wordCount content="484"><meta itemprop=image content="https://chipsalliance.org/preview/144/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/144/images/blog-share.jpg">
+<meta name=twitter:title content="Modular, Open-source FPGA-based LPDDR4 Test Platform">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+The flexibility of FPGAs makes them an excellent choice not only for parallel processing applications but also for research and experimentation in a range of technological areas.
+We often provide our customers with flexible R&D platforms that can be easily adapted to changing requirements and new use cases as a result of our practice of using open source hardware, software, FPGA IP and tooling.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/144/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/144/>
+<img src=/preview/144/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/144/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/144/about/members/>Members</a>
+<a class=dropdown-item href=/preview/144/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/144/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/144/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/144/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/144/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/144/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/144/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/144/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/144/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/144/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/144/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Modular, Open-source FPGA-based LPDDR4 Test Platform</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>April 9, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>3 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>484 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/144/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2021/04/lpddr4-test-platform/>Antmicro</a>.</em></p>
+<p>The flexibility of FPGAs makes them an excellent choice not only for parallel processing applications but also for research and experimentation in a range of technological areas.</p>
+<p>We often provide our customers with flexible R&D platforms that can be easily adapted to changing requirements and new use cases as a result of our practice of using open source hardware, software, FPGA IP and tooling.</p>
+<p>As an example of such activity, we have recently been contracted to develop a <a href=https://github.com/antmicro/lpddr4-test-board>hardware test platform</a> for experimenting with memory controllers and measuring vulnerability of various LPDDR4 memory chips to the <a href=https://en.wikipedia.org/wiki/Row_hammer>Row hammer</a> attack and similar exploits.</p>
+<p><img src=LPDDR4_test_board_front.jpg alt="LPDDR4 test platform"></p>
+<h2 id=modular-and-cost-optimized>Modular and cost-optimized</h2>
+<p>Targeting high-volume customer-facing devices where size, power use and unit cost are a priority, LPDDR4 does not come in the form of modules, while the hardware tools and software frameworks for testing it can be prohibitively expensive.
+Despite efforts to mitigate the Row hammer exploit, a number number of memories available on the market remain vulnerable to the problem, which calls for a test platform that would allow experimenting with memory chips and memory controllers to devise new mitigation techniques.</p>
+<p>Another issue is that preexisting work mostly relies on proprietary memory controllers which cannot be adapted to specific memory access patterns that trigger Row hammer.</p>
+<p>To address this need, we have created a fully open source flow including Enjoy Digital’s open source memory controller <a href=https://github.com/enjoy-digital/litedram>LiteDRAM</a> for which we implemented <a href=https://github.com/enjoy-digital/litedram/tree/master/litedram/phy/lpddr4>LPDDR4 support</a>, to enable testing LPDDR4 memory chips.</p>
+<p>What our customer needed was a flexible platform for developing security measures that would be cost-optimized for high volume production.</p>
+<p>To accomplish that we’ve built a modular device that consists of the <a href=https://github.com/antmicro/lpddr4-test-board>main test board</a> and a series of easily swappable testbeds for different memory types, the <a href=https://github.com/antmicro/lpddr4-testbed>first of which is already available on our GitHub</a>.</p>
+<p>What is more, thanks to being open source, the platform enables various research teams to combine efforts and work collaboratively on coming up with new attacks and mitigations, as well as fully reproduce the results of the work.</p>
+<p><img src=LPDDR4_module_front.jpg alt="LPDDR4 test module"></p>
+<h2 id=experimenting-reliably-on-a-robust-platform>Experimenting reliably on a robust platform</h2>
+<p>The platform is based on Xilinx Kintex-7 FPGA and it features several I/O options: HDMI, which can be used for processing video data and experimenting with streaming and HDMI preview applications featuring RAM, USB for uploading your bitstream or debugging, as well as an SD card slot and GbE.</p>
+<p>There is also additional 64MB of on-board HyperRAM that enables safe experimentation with interchangeable RAM chips under extreme conditions.</p>
+<p>With Antmicro’s commercial development services the platform can be customized to meet your specific requirements, while the open source character of the solutions we use gives you full control over the product and vendor independence.</p>
+<p>We help our customers <a href=https://antmicro.com/blog/2021/02/high-throughput-open-source-pcie-on-xilinx-vu19/>build complicated FPGA solutions</a>, <a href=https://antmicro.com/blog/2020/06/quicklogic-open-reconfigurable-computing-press-release/>embrace the dynamically growing open source tooling ecosystem</a> <a href=https://antmicro.com/blog/2021/03/github-actions-self-hosted-runners/>and develop various technologies that allow developers to work more efficiently</a> across the whole FPGA spectrum.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/144/news/initial-assertion-control-support-in-verilator/>
+<img src=https://chipsalliance.org/preview/144/news/initial-assertion-control-support-in-verilator/verilator-assertcontrol-chipsalliance-blog.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/144/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+June 21, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/144/news/initial-assertion-control-support-in-verilator/>Initial assertion control support in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/144/news/speeding-up-openroad-for-fast-design-feedback/>
+<img src=https://chipsalliance.org/preview/144/news/speeding-up-openroad-for-fast-design-feedback/Speeding-up-OpenROAD-optimizations-blog-1.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/144/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+May 24, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/144/news/speeding-up-openroad-for-fast-design-feedback/>Speeding Up OpenROAD For Fast Design Feedback</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/144/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/>
+<img src=https://chipsalliance.org/preview/144/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/144/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+March 25, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/144/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/>Adding Physical Memory Protection to the VeeR EL2 RISC-V Core</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/144/>
+<img src=/preview/144/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2024</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/144/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/144/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/144/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/144/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/144/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/144/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/144/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/144/events/>Events</a>
+</li>
+<li>
+<a href=/preview/144/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/144/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/144/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/144/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/144/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/144/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/144/vendor/counter-up/countup.js></script>
+<script src=/preview/144/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/144/js/script.js></script>
+</body>
+</html>
