@@ -195,4 +195,7 @@ members:
     url: https://www.opensusi.org/
     image: opensusi.svg
     level: associate             
-            
+  - name: Columbia University 
+    url: https://www.columbia.edu/
+    image: columbia.svg
+    level: associate              
