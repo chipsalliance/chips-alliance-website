@@ -48,7 +48,7 @@ members:
     image: iscas.png
     level: gold
     board_rep: Wei Wu
-  - name: Futerwei
+  - name: Futurewei
     url: https://www.futurewei.com/
     image: futurewei-tech.png
     level: platinum
