@@ -1,0 +1,381 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=https://chipsalliance.org/preview/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Initial Open Source Support for UVM Testbenches in Verilator | CHIPS Alliance</title>
+<meta name=description content="Leading the efforts of the Tools Workgroup in CHIPS Alliance, across a variety of customer projects, as well as its own R&D, Antmicro is actively …">
+<meta property="og:title" content="Initial Open Source Support for UVM Testbenches in Verilator">
+<meta property="og:description" content="Leading the efforts of the Tools Workgroup in CHIPS Alliance, across a variety of customer projects, as well as its own R&D, Antmicro is actively looking for and capturing the productivity enhancements that can be achieved in ASIC design using open source. Developing and using open source-enhanced workflows is one thing, but in order for the general shift towards open source to happen, open source support for tooling and methodologies that are already prevalent across the chipmaking industry is necessary.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview//news/initial-open-source-support-for-uvm-testbenches-in-verilator/"><meta property="og:image" content="https://chipsalliance.org/preview/news/initial-open-source-support-for-uvm-testbenches-in-verilator/UVM-Testbenches-in-Verilator-thumbnail.svg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2023-11-08T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-11-08T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Initial Open Source Support for UVM Testbenches in Verilator">
+<meta itemprop=description content="Leading the efforts of the Tools Workgroup in CHIPS Alliance, across a variety of customer projects, as well as its own R&D, Antmicro is actively looking for and capturing the productivity enhancements that can be achieved in ASIC design using open source. Developing and using open source-enhanced workflows is one thing, but in order for the general shift towards open source to happen, open source support for tooling and methodologies that are already prevalent across the chipmaking industry is necessary."><meta itemprop=datePublished content="2023-11-08T00:00:00+00:00">
+<meta itemprop=dateModified content="2023-11-08T00:00:00+00:00">
+<meta itemprop=wordCount content="1599"><meta itemprop=image content="https://chipsalliance.org/preview/news/initial-open-source-support-for-uvm-testbenches-in-verilator/UVM-Testbenches-in-Verilator-thumbnail.svg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/news/initial-open-source-support-for-uvm-testbenches-in-verilator/UVM-Testbenches-in-Verilator-thumbnail.svg">
+<meta name=twitter:title content="Initial Open Source Support for UVM Testbenches in Verilator">
+<meta name=twitter:description content="Leading the efforts of the Tools Workgroup in CHIPS Alliance, across a variety of customer projects, as well as its own R&D, Antmicro is actively looking for and capturing the productivity enhancements that can be achieved in ASIC design using open source. Developing and using open source-enhanced workflows is one thing, but in order for the general shift towards open source to happen, open source support for tooling and methodologies that are already prevalent across the chipmaking industry is necessary.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/>
+<img src=/preview/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/about/members/>Members</a>
+<a class=dropdown-item href=/preview/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Initial Open Source Support for UVM Testbenches in Verilator</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>November 8, 2023</p>
+</li>
+<li class=list-inline-item>
+<p>8 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1599 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/news/initial-open-source-support-for-uvm-testbenches-in-verilator/UVM-Testbenches-in-Verilator-thumbnail.svg class=w-100 alt=featured-image>
+</div>
+<div><p>Leading the efforts of the Tools Workgroup in CHIPS Alliance, across a variety of customer projects, as well as its own R&D, Antmicro is actively looking for and capturing the productivity enhancements that can be achieved in ASIC design using open source. Developing and using open source-enhanced workflows is one thing, but in order for the general shift towards open source to happen, open source support for tooling and methodologies that are already prevalent across the chipmaking industry is necessary.</p>
+<p>Bringing support for UVM (Universal Verification Methodology) in Verilator is a prime example of an effort to do just that. While Verilator has been integrated with other excellent open source verification tools like <a href=https://github.com/cocotb/cocotb>cocotb</a> that Antmicro often uses for new projects, UVM remains the world’s most popular digital design verification methodology, already integrated with a variety of pre-existing workflows, tools and IP. The aim of the many-year effort to bring UVM capabilities into Verilator hopes to allow developers who, for various reasons, can’t be expected to migrate away from UVM to be able to run their testbenches in Verilator - quite a difficult endeavor, especially because of the size and intricacy of the methodology.</p>
+<p>With this note, Antmicro is happy to present an important milestone on this long journey: a proof-of-concept UVM testbench running in Verilator! This note will use this example to discuss some of the integration’s technicalities and describe the road towards this goal Antmicro has travelled so far, along with Google, Western Digital, and other CHIPS Alliance members, as well as future plans for comprehensive support.</p>
+<p><img src=UVM-Testbenches-in-Verilator.png alt="Running simple UVM testbenches in Verilator"></p>
+<h3 id=the-previous-milestones-dynamic-scheduling-coroutines-unit-tests>The previous milestones: dynamic scheduling, coroutines, unit tests</h3>
+<p>Since 2021, Antmicro has been gradually enabling capabilities necessary for specific parts of UVM to work with Verilator. As one of the first milestones on the way towards this goal, <a href=https://antmicro.com/blog/2021/05/dynamic-scheduling-in-verilator/>enabling dynamic scheduling</a> (known in Verilator as “timing support”), allowed us to properly handle language constructs specifically designed for use in simulation by extending Verilator’s original, sequential evaluation loop with the ability to handle processes that dynamically react to simulation events. This change makes it possible to suspend execution of one SystemVerilog block while continuing execution of another, partially moving the scheduling from compilation to runtime.</p>
+<p>By the end of 2021, Antmicro has been able to expand on this development by <a href=https://antmicro.com/blog/2021/12/coroutines-for-dynamic-scheduling-in-verilator/>using coroutines for the dynamic scheduler</a>. A coroutine is a generalization of the concept of a function, but with the difference that its execution can be paused at any point and resumed from any other point in the program (even from a different thread), making it possible to handle delays and events in SystemVerilog processes. Using coroutines enabled the implementation of dynamic scheduling without impact on simulation speed.</p>
+<p>But this was just the foundation block for the real work, i.e. enabling actual UVM testbenches which would need the timing capabilities. In order to check whether particular UVM-related methods in Verilator are called as intended, we prepared a select set of <a href=https://antmicro.github.io/verilator-verification-features-tests/log.html#s1-s15>feature tests</a> and used it as a burndown list to track the progress.</p>
+<p><img src=UVM-Testbenches-in-Verilator-log.png alt="UVM feature tests"></p>
+<h3 id=uvm-related-contributions-to-verilator>UVM-related contributions to Verilator</h3>
+<p>The work towards the current milestone has been multi-faceted, and as a result of the work on enabling initial UVM testbench support, Antmicro has contributed numerous developments to Verilator over the many months it took to get there.</p>
+<p>To start with, Antmicro added a <code>disable fork</code> statement that lets you terminate all child processes of a current process spawned using <code>fork</code>, as well as a <code>wait fork</code> statement that lets you wait for child processes of a current process to finish.</p>
+<p>Antmicro implemented support for using nonblocking assignments (NBA) in any function or task. Verilator used to disallow NBAs anywhere but directly in “always processes” or functions that get inlined in those processes. Using NBAs in class methods (or functions called from class methods) used to be impossible, but UVM indeed has an NBA in such a location, so they had to implement it. They did it by reusing timing constructs that are a part of the coroutines contribution mentioned earlier.</p>
+<p>In order to allow for manipulating processes, Antmicro added support for <code>std::process</code>, a built-in SystemVerilog class. Processes are SystemVerilog’s threads of execution – each process is run concurrently. <code>std::process</code> lets you stop such a process, wait for it to finish, or check its status. This also builds on the timing support mentioned in the previous section.</p>
+<p>As another area that required new contributions, the team needed to add support for a short-circuit evaluation mechanism. This mechanism ensures that the 2nd operand of a logical expression is evaluated only if required which lets us avoid wrong runtime behavior. Since logical expressions in Verilator are converted into bitwise expressions and short-circuit evaluation does not check such expressions, Antmicro added support by disabling the conversion only for expressions that have side effects as well as for when it may throw a segmentation fault due to uninitialized object handles.</p>
+<p>Assigning event variables and event names was yet another new addition. This is significant because the behavior of event variables is akin to that of reference types, meaning that should you want to assign event A to event B and then trigger event A, the processes waiting on event B should wake up.</p>
+<p>Modifying parent process variables in forks is now enabled as well. A process containing a local variable accessed by its child process can lead to accessing variables that no longer exist, e.g. when the parent process ends before its child accesses the variable. The original <code>fork</code> implementation only allowed such access in <code>fork..join</code>, and limited read access in other flavors of <code>fork</code> (in this case, the variable was copied to the child). These changes lift this limitation.</p>
+<h3 id=first-uvm-testbench-in-verilator>First UVM testbench in Verilator</h3>
+<p>All the developments described in the sections above have enabled us to achieve the milestone of successfully running a <a href=https://github.com/antmicro/verilator-verification-features-tests/pull/421>UVM memory testbench</a>. The PR also extends the CI with a job running the testbench and adding the results to the <a href=https://antmicro.github.io/verilator-verification-features-tests/log.html#s1-s14>verification features tests dashboard</a> thanks to the fact Antmicro can now run it in the completely open source Verilator! The device under test here is a fairly simple memory block, but the testbench is using quite a few UVM features:</p>
+<ul>
+<li>uvm_agent</li>
+<li>uvm_test</li>
+<li>uvm_driver</li>
+<li>uvm_monitor</li>
+<li>uvm_scoreboard</li>
+<li>uvm_sequence and sequencer</li>
+</ul>
+<p>Below, you can see a log from Verilator printed after a successful run.</p>
+<pre tabindex=0><code>VM_INFO ../src/base/uvm_root.svh(517) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test mem_wr_rd_test...
+---------------------------------------
+Name          Type          Size  Value
+---------------------------------------
+mem_seq_item  mem_seq_item  -     @212
+  addr        integral      2     'h2
+  wr_en       integral      1     'h1
+  rd_en       integral      1     'h0
+  wdata       integral      8     'h76
+---------------------------------------
+UVM_INFO hdl/mem_scoreboard.sv(59) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] ------ :: WRITE DATA       :: ------
+UVM_INFO hdl/mem_scoreboard.sv(60) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Addr: 2
+UVM_INFO hdl/mem_scoreboard.sv(61) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] Data: 76
+UVM_INFO hdl/mem_scoreboard.sv(62) @ 25000: uvm_test_top.env.mem_scb [mem_scoreboard] ------------------------------------
+UVM_INFO hdl/mem_base_test.sv(54) @ 25000: uvm_test_top [mem_wr_rd_test] ---------------------------------------
+UVM_INFO hdl/mem_base_test.sv(55) @ 25000: uvm_test_top [mem_wr_rd_test] ----           TEST PASS           ----
+UVM_INFO hdl/mem_base_test.sv(56) @ 25000: uvm_test_top [mem_wr_rd_test] ---------------------------------------
+UVM_INFO ../src/base/uvm_report_server.svh(864) @ 25000: reporter [UVM/REPORT/SERVER]
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   11
+UVM_WARNING :   24
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RNTST]     1
+[UVM/COMP/NAME]    24
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[mem_scoreboard]     4
+[mem_wr_rd_test]     3
+</code></pre><p>As you can see, all good! Antmicro is working on enabling a broader set of testbenches over time, which will of course require extensive effort, perhaps more so than what has been done so far, but with this end-to-end workflow in our arsenal, the endeavor becomes much easier to reason about and break up into smaller pieces. The ability to run UVM testbenches with open source tools will contribute to open sourcing of more testbenches as such. This, in turn, should allow Antmicro to incrementally build out the UVM support as needed.</p>
+<p>If you’d like to run the test locally, you can simply build and install the latest mainline Verilator, download the test code and run the simulation. Please refer to <a href=https://verilator.org/guide/latest/install.html#detailed-build-instructions>Verilator’s documentation</a> for a detailed guide on how to build and install the tool. To run the example run:</p>
+<pre tabindex=0><code>git clone https://github.com/antmicro/verilator-verification-features-tests.git
+cd verilator-verification-features-tests
+git submodule update --init --recursive uvm
+cd tests/uvm-testbenches/mem-tb
+make 
+</code></pre><p>The last command will Verilate all the required SystemVerilog code - the tested memory block, testbench and UVM library, compile the generated C++ code and run the resulting binary. You should see output similar to the one listed above.</p>
+<p>Goes without saying, all this would not have been possible without collaboration with Wilson Snyder, Geza Lore and other people contributing to Verilator, as well as the considerable involvement of Western Digital.</p>
+<h3 id=uvm-testbenches-in-fully-open-source-development>UVM testbenches in fully open source development</h3>
+<p>While successfully running this proof-of-concept UVM testbench in Verilator is a significant milestone, Antmicro’s goal in this area is now to expand on it and enable comprehensive UVM testbench support in the framework. One of the next heavy lifts is to enable full support for constraint randomization. Currently, Verilator supports only simple constraining and implementing support for complex scenarios requires integration of a solver capable of parsing, processing and resolving SystemVerilog constraints to ensure random functions only return legal values.</p>
+<p>To learn more about enabling UVM testbenches in Verilator, join Antmicro at the next [CHIPS Alliance Technology Update] (<a href=https://events.linuxfoundation.org/chips-biannual-technology-update/>https://events.linuxfoundation.org/chips-biannual-technology-update/</a>) on November 9, either virtually or on-site at Google MAT1 Building, Sunnyvale.</p>
+<p>If you would like Antmicro to develop bespoke UVM testbenches for your use case, include them in your HDL simulation in Verilator, and even shift your projects to a fully comprehensive open source workflow via integrations with <a href=https://renode.io>Renode</a> and a plethora of other open source tools in Antmicro’s portfolio, feel free to reach out at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/news/caliptra-ocp-global-summit-2024/>
+<img src=https://chipsalliance.org/preview/news/caliptra-ocp-global-summit-2024/caliptra-logo-2.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+October 13, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/news/caliptra-ocp-global-summit-2024/>Caliptra @ OCP Global Summit 2024</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/news/initial-assertion-control-support-in-verilator/>
+<img src=https://chipsalliance.org/preview/news/initial-assertion-control-support-in-verilator/verilator-assertcontrol-chipsalliance-blog.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+June 21, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/news/initial-assertion-control-support-in-verilator/>Initial assertion control support in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/news/speeding-up-openroad-for-fast-design-feedback/>
+<img src=https://chipsalliance.org/preview/news/speeding-up-openroad-for-fast-design-feedback/Speeding-up-OpenROAD-optimizations-blog-1.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+May 24, 2024
+</div>
+<div class=blog-post-title>
+<a href=/preview/news/speeding-up-openroad-for-fast-design-feedback/>Speeding Up OpenROAD For Fast Design Feedback</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/>
+<img src=/preview/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2024</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/events/>Events</a>
+</li>
+<li>
+<a href=/preview/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/vendor/counter-up/countup.js></script>
+<script src=/preview/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/js/script.js></script>
+</body>
+</html>
