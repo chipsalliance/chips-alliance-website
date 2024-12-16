@@ -61,6 +61,10 @@ members:
     url: https://www.marvell.com/
     image: marvell.svg
     level: gold
+  - name: Microchip
+    url: https://www.microchip.com/
+    image: microchip.svg
+    level: silver
   - name: Nvidia
     url: https://www.nvidia.com/en-us/
     image: nvidia.jpg
