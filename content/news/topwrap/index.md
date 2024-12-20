@@ -2,10 +2,10 @@
 date: 2024-12-20T00:00:00Z
 title: Topwrap – open source toolkit for modular, parameterizable digital logic design
 categories:
-  - Announcements
+  - Blog
 author: 
 images: ['news/topwrap/topwrap--blog-sm-CHIPS.png']
-aliases: ['/announcement/2024/12/20/topwrap/']
+aliases: ['/blog/2024/12/20/topwrap/']
 ---
 
 ASIC and FPGA designs consist of distinct blocks of logic bound together by a top-level design. Taking advantage of this modularity and enabling automation and reuse of blocks across designs requires tools for automated processing and generation of top level files, letting you easily parametrize and aggregate the blocks in various configurations.
