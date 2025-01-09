@@ -12,8 +12,6 @@ The [Caliptra](https://chipsalliance.github.io/Caliptra/) Root of Trust project,
 
 In this article we’ll describe implementation details, including Antmicro’s contributions to Tock, [libtock-c](https://github.com/tock/libtock-c) and [tockloader](https://github.com/tock/tockloader). We’ll also show an [example](https://github.com/chipsalliance/VeeR-EL2-tock-example) in which a Tock application running on a VeeR EL2 core simulated in [Verilator](https://www.veripool.org/verilator/) performs forbidden memory accesses, demonstrating that PMP enforces proper User mode constraints.
 
-![Support for VeeR EL2 in Tock OS illustration](VeeR-EL2-Tock--blog-sm.png)
-
 ### Adding new platforms to Tock OS
 
 [Tock](https://tockos.org/) is an embedded operating system written in Rust, designed for running multiple concurrent, mutually distrustful applications on Cortex-M and RISC-V based platforms. As it provides isolation between components to ensure safety and security, it’s a popular choice for Root of Trust projects, such as [OpenTitan](https://antmicro.com/blog/2023/03/adapting-opentitan-for-fpga-prototyping-and-tooling-development/) used e.g. in Google’s [Open Se Cura](https://antmicro.com/blog/2023/11/secure-open-source-ml-with-open-se-cura/) project that Antmicro has also been involved with.
