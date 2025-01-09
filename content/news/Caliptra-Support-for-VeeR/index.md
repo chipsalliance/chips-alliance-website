@@ -4,7 +4,7 @@ title: Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protec
 categories:
   - Blog
 author: 
-images: ['news/Caliptra-Support-for-VeeR/VeeR-EL2-Tock--blog-sm.png']
+images: ['news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png']
 aliases: ['/blog/2025/01/10/caliptra-support-for-veer/']
 ---
 
