@@ -4,15 +4,13 @@ title: Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protec
 categories:
   - Blog
 author: 
-images: ['news/caliptra-support-for-veer/veer-el2-tock--blog-sm.png']
+images: ['news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png']
 aliases: ['/blog/2025/01/10/caliptra-support-for-veer/']
 ---
 
 The [Caliptra](https://chipsalliance.github.io/Caliptra/) Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the [CHIPS Alliance](https://www.chipsalliance.org/), is steadily heading towards its [2.0 release](https://www.chipsalliance.org/news/caliptra-ocp-global-summit-2024/) – an effort Antmicro is [actively contributing to](https://www.youtube.com/watch?v=hXjUoCGlXyM). They’ve recently described their [implementation of User mode](https://antmicro.com/blog/2024/09/user-mode-in-veer-el2-core-for-caliptra-2-0/) in the RISC-V VeeR EL2 core along with extended Physical Memory Protection, and related to this work, they’ve introduced support for VeeR EL2 with User Mode and PMP to the [Tock](https://github.com/tock/tock) embedded OS. The main goal of this implementation was to test the mode switching feature of the VeeR EL2 core with PMP enabled.
 
 In this article we’ll describe implementation details, including Antmicro’s contributions to Tock, [libtock-c](https://github.com/tock/libtock-c) and [tockloader](https://github.com/tock/tockloader). We’ll also show an [example](https://github.com/chipsalliance/VeeR-EL2-tock-example) in which a Tock application running on a VeeR EL2 core simulated in [Verilator](https://www.veripool.org/verilator/) performs forbidden memory accesses, demonstrating that PMP enforces proper User mode constraints.
-
-![Support for VeeR EL2 in Tock OS illustration](VeeR-EL2-Tock--blog-sm.png)
 
 ### Adding new platforms to Tock OS
 
