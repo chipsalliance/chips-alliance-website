@@ -1,5 +1,5 @@
 ---
-date: 2024-12-20T00:00:00Z
+date: 2025-01-09T00:00:00Z
 title: Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS
 categories:
   - Blog
