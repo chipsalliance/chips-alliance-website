@@ -4,7 +4,7 @@ title: New revision of Data Center RDIMM DDR5 Tester
 categories:
   - Blog
 author: 
-images: ['news/new-revision-of-data-center-RDIMM-DDR5-tester/ddr5-tester--blog-sm.png']
+images: ['news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png']
 aliases: ['/blog/2025/01/30/RDIMM-DDR5-tester/']
 ---
 
