@@ -39,7 +39,7 @@ The TAC operates openly and transparently, the voting members of the TAC consist
    {{< teammember 
    name="Aaron Cunningham"
    role="Chair"
-   imagesrc="images/team/aaron cunningham.jpg"
+   imagesrc="images/team/aaron cunningham.jpeg"
    >}}
 {{< /team >}}
 
