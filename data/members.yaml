@@ -14,7 +14,6 @@ members:
     image: google.png
     level: platinum
     board_rep: Matt Cockrell
-    role: Governing Board Chair
   - name: Infineon
     url: https://www.infineon.com/
     image: infineon.png
