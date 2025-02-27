@@ -1,0 +1,337 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/165/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/165/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/165/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/165/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/165/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/165/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/165/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/165/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>CHIPS SweRV Cores and the Open Tools Ecosystem | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+Antmicro’s open source work spans all parts of the computing stack, from software and AI, to PCBs, …">
+<meta property="og:title" content="CHIPS SweRV Cores and the Open Tools Ecosystem">
+<meta property="og:description" content="This post was originally published at Antmicro.
+Antmicro’s open source work spans all parts of the computing stack, from software and AI, to PCBs, FPGAs and, most recently, custom silicon. We connect those areas with an overarching vision of open source tooling and methodology, and a software-driven approach that allows us to move fast and build future-centric solutions. Our partners and customers, many of whom work with us also in the context of organizations such as CHIPS Alliance and RISC-V, share our approach to developing open systems.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/165/news/chips-swerv-cores-and-the-open-tools-ecosystem/"><meta property="og:image" content="https://chipsalliance.org/preview/165/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2020-07-10T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-07-10T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="CHIPS SweRV Cores and the Open Tools Ecosystem">
+<meta itemprop=description content="This post was originally published at Antmicro.
+Antmicro’s open source work spans all parts of the computing stack, from software and AI, to PCBs, FPGAs and, most recently, custom silicon. We connect those areas with an overarching vision of open source tooling and methodology, and a software-driven approach that allows us to move fast and build future-centric solutions. Our partners and customers, many of whom work with us also in the context of organizations such as CHIPS Alliance and RISC-V, share our approach to developing open systems."><meta itemprop=datePublished content="2020-07-10T00:00:00+00:00">
+<meta itemprop=dateModified content="2020-07-10T00:00:00+00:00">
+<meta itemprop=wordCount content="1684"><meta itemprop=image content="https://chipsalliance.org/preview/165/images/blog-share.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/165/images/blog-share.jpg">
+<meta name=twitter:title content="CHIPS SweRV Cores and the Open Tools Ecosystem">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+Antmicro’s open source work spans all parts of the computing stack, from software and AI, to PCBs, FPGAs and, most recently, custom silicon. We connect those areas with an overarching vision of open source tooling and methodology, and a software-driven approach that allows us to move fast and build future-centric solutions. Our partners and customers, many of whom work with us also in the context of organizations such as CHIPS Alliance and RISC-V, share our approach to developing open systems.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/165/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/165/>
+<img src=/preview/165/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/165/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/165/about/members/>Members</a>
+<a class=dropdown-item href=/preview/165/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/165/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/165/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/165/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/165/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/165/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/165/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/165/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/165/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/165/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/165/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>CHIPS SweRV Cores and the Open Tools Ecosystem</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>July 10, 2020</p>
+</li>
+<li class=list-inline-item>
+<p>8 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1684 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/165/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2020/07/swerv-cores-tools-ecosystem/>Antmicro</a>.</em></p>
+<p>Antmicro’s open source work spans all parts of the computing stack, from software and AI, to PCBs, FPGAs and, most recently, custom silicon. We connect those areas with an overarching vision of open source tooling and methodology, and a software-driven approach that allows us to move fast and build future-centric solutions. Our partners and customers, many of whom work with us also in the context of organizations such as <a href=https://chipsalliance.org/>CHIPS Alliance</a> and <a href=https://riscv.org/>RISC-V</a>, share our approach to developing open systems. We were recently very happy to be invited to give a talk at the <a href="https://www.youtube.com/watch?v=ODU1b9amCG8&feature=emb_title">“Production grade, open RISC-V SweRV Core Solutions in CHIPS Alliance”</a> meetup organized by Western Digital where we presented our systems approach on the example of the open source tools ecosystem that targets their SweRV cores and which we are helping to develop.</p>
+<h2 id=what-is-swerv>What is SweRV?</h2>
+<p><a href=https://github.com/chipsalliance/Cores-SweRV>SweRV</a> is a family of production-grade RISC-V implementations originally developed by Western Digital, who have announced they are going to transition 2 billion cores in their products to RISC-V, showing they are fully committed to this open processor architecture. SweRV comes in three variants: the original EH1 and the recently released <a href=https://chipsalliance.org/announcement/2020/05/14/newly-enhanced-swerv-cores/>EH2 and EL2</a>.</p>
+<p>EH2 is the world’s first dual-threaded commercial, embedded RISC-V core designed for IoT and AI systems, boasting as much as 6.3 CoreMark/MHz in dual-threaded mode, at 1.2 GHz in 16nm. EL2, on the other hand, is a tiny, low-power but high-performance RISC-V core (with just 0.023 mm2 in 16nm, it runs at up to 600 MHz and 3.6 CoreMark/MHz) targeting applications such as state-machine sequencers and waveform generators. The best thing about them is that anybody can use and extend them for free, with more high performance cores being planned in the future.</p>
+<p>But a CPU is as good as the tooling around it and Western Digital knows it. That is why the entire SweRV family was handed over to CHIPS Alliance, which now aims to facilitate using the cores in practical scenarios by maintaining the dynamic ecosystem of relevant tools. Many of the necessary building blocks are already in place, while others are still being developed with active participation of Antmicro, the <a href=https://fossi-foundation.org/>FOSSi</a> community and others. In this article you will see examples of how you can work with SweRV in simulation, on an FPGA and in an ASIC context.</p>
+<h2 id=getting-started>Getting started</h2>
+<p>To get started very quickly with no hardware whatsoever, you can simulate any of the SweRV cores in <a href=https://github.com/verilator/verilator>Verilator</a> – one of the most successful and widely used open source projects in the EDA space, which we use extensively. Simply, go to the relevant core’s GitHub space in the CHIPS Alliance organization (e.g. <a href=https://github.com/chipsalliance/Cores-SweRV>https://github.com/chipsalliance/Cores-SweRV</a> for EH1) and simulate the RTL (which is written in SystemVerilog).</p>
+<p>Verilator simulates the RTL with high performance by compiling to an optimized model and running it, outperforming many proprietary alternatives. What is more, it is developing very fast thanks to the work of its maintainer – Wilson Snyder, the FOSSI community and CHIPS Alliance. Antmicro specifically has been working together with Western Digital and Google on adding support for SystemVerilog / Universal Verification Methodology to enable Verilator’s design verification for real-world use cases (see Looking into the future below).</p>
+<h2 id=putting-swerv-into-an-fpga>Putting SweRV into an FPGA</h2>
+<p>If you want to get working on something more tangible, you might want to run SweRV on an FPGA – in a portable, vendor-neutral manner, of course.</p>
+<p>To simplify interfacing with various toolchains, simulators and other tools you might need depending on the platform you want to target, you can use <a href=https://github.com/olofk/edalize>Edalize</a> – a Python utility that allows you to seamlessly work with different kinds of EDA tools, both for FPGA and ASIC design. It helps you to maintain consistent workflows and pinpoint whether a specific bug is tool-related or pertains to your code. We’ve been adding quite a lot of new functionalities into Edalize recently, while using it heavily as a default way to interface with various tools out there in our work e.g. sv-tests (again, see Looking into the future for more on that topic).</p>
+<p>Edalize will help you use your SweRV-based design on the FPGA/board of your choice without having to care about remembering and maintaining specific configurations and runtime flags.</p>
+<p>Another great tool from the same author is <a href=https://github.com/olofk/fusesoc>FuseSoC</a>, a Python-based package manager and a set of build tools for HDL code. It enables you to reuse your FPGA IP across many designs and, of course, it supports SweRV cores well. Apart from making it simple to reuse existing cores, it allows you to easily create compile-time or run-time configurations, port designs to new targets, set up configurable Continuous Integration as well as let other projects use your code. FuseSoC is also used by the <a href=https://github.com/chipsalliance/Cores-SweRVolf>SweRVolf SoC</a>.</p>
+<p>Thanks to integrations with other open source tools like Google’s <a href=https://github.com/google/verible>Verible linter/formatter</a>, that we’re also helping to develop, FuseSoC can be used to lint and format System Verilog – we have recently written <a href=https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/>an article</a> about this.</p>
+<h2 id=incorporating-swerv-into-an-soc>Incorporating SweRV into an SoC</h2>
+<p>A core alone, however, is not enough to get any practical work done. If you want to build a System-on-Chip, you should definitely look at <a href=https://github.com/enjoy-digital/litex>LiteX</a> – a SoC generator that allows you to put SweRV in an actual use case. LiteX is an IP library and a SoC builder that is portable between various FPGAs and can turn SweRV into a full blown system. It has a number of IPs and other building blocks such as Ethernet, RAM, UART, SATA, etc. which you can configure to work with different kinds of CPUs. It has initial SweRV support which enables the user to quickly build plug & play SoC systems with SweRV. Antmicro is heavily involved in work to build a <a href=https://github.com/litex-hub>robust ecosystem around it</a>. LiteX can run the <a href=https://www.zephyrproject.org/>Zephyr RTOS</a> – which is also supported on SweRV – and, with a suitable CPU, it can run Linux as well. The LiteX SoC ecosystem can also be used together with another tooling project we heavily contribute to, <a href=https://symbiflow.github.io/>SymbiFlow</a> – the open source FPGA flow.</p>
+<h2 id=simulating-experimenting-testing>Simulating, experimenting, testing</h2>
+<p>If you want to use SweRV to build a full production system and leverage the flexibility to customize that comes with the RISC-V and open tooling, you will most likely need to experiment with the architecture and co-develop hardware and software. This is where <a href=https://renode.io/>Renode</a> can be of immense use thanks to its <a href=https://www.allaboutcircuits.com/industry-articles/decreasing-the-length-of-design-cycle-in-co-designed-socs-with-renode/>architectural exploration</a>, simulation, testing and debug capabilities for complex systems: entire SoCs, boards and systems of boards. All you need to do is download Renode and put together a few configuration files – it even comes with many <a href=https://renode.readthedocs.io/en/latest/introduction/supported-boards.html>demos and pre-compiled examples for various platforms</a>. Renode provides <a href=https://github.com/antmicro/renode_swerv_eh1>initial support for SweRV EH1</a> (with more to come) as well as extensive support of LiteX, which will let you quickly build and simulate entire open source SoCs. On top of that, Renode enables <a href=https://antmicro.com/blog/2019/09/renode-verilator-hdl-co-simulation/>hardware/software co-simulation with Verilator</a> for building your custom IP and testing its HDL as-is, while keeping the rest of the system simulated in Renode to save development time.</p>
+<h2 id=building-and-verifying-a-production-grade-asic>Building and verifying a production-grade ASIC</h2>
+<p>Assuming SweRV fits your use case, you may eventually want to build and verify a production-grade ASIC which includes one of those CPUs. As part of the CHIPS working groups focused on cores and tools, the developers of SweRV in collaboration with Google, Antmicro and others are building an entirely open source design verification ecosystem around the cores family, including projects such as <a href=https://github.com/google/riscv-dv>riscv-dv</a> and <a href=https://github.com/westerndigitalcorporation/swerv-ISS>Whisper ISS</a>. The former is an entire SV/UVM flow based on an instruction generator for RISC-V processor verification, which allows you to perform various tests on SweRV-based designs. It features a number of test suites dedicated to different functionalities. It runs ISS and RTL simulators in tandem and compares the results. Whisper ISS is a tool used for verification of SweRV implementations, which can be run in an interactive mode, allowing the user to single step RISC-V code and inspect/modify the RISC-V registers or system memory, or it can be run in lock-step, e.g. with Verilator.</p>
+<h2 id=looking-into-the-future>Looking into the future</h2>
+<p>There is ongoing work from CHIPS Alliance and the broader open source community to rapidly transform the ASIC-development workflows to fully embrace open source. One such effort is <a href=https://github.com/SymbiFlow/sv-tests>sv-tests</a>, a System Verilog test suite designed to stress-test different kinds of designs in SystemVerilog against various open source tools, showing a <a href=https://symbiflow.github.io/sv-tests/>results table</a> indicating detailed coverage. SweRV, being written in SystemVerilog, is of course one of the suite’s test targets.</p>
+<p>The SV test suite informs some of our ongoing open source work for ASIC tooling, one of the goals of which is to enable open source development and verification of System Verilog designs. An interesting tool to look at in this space is <a href=https://github.com/alainmarcel/Surelog>Surelog</a> – a full-blown SystemVerilog parser developed in collaboration between Google and Antmicro oriented at simulation and UVM. We are working to plug it as the System Verilog front-end into various open source tools using a framework called <a href=https://github.com/alainmarcel/UHDM>UHDM (Universal Hardware Data Model)</a>, which will enable code reuse between various tools with similar needs.</p>
+<p>With the recent release of <a href=https://antmicro.com/blog/2020/06/skywater-open-source-pdk/>the world’s first open PDK</a>, that we are proud to have been participating in, and the <a href=https://youtu.be/1rfBK5KKzR0>progress being made in the OpenROAD project</a>, which aims at a fully open flow for chip design and other areas, it looks like the future in which a SweRV based SoC can be designed, verified and manufactured using open tools is not that far off.</p>
+<h2 id=summary>Summary</h2>
+<p>Apart from being an expanding, production-grade family of cores, SweRV taps into a very good and dynamic ecosystem of tools that we are helping to build. CHIPS Alliance is aiming to revolutionize the way developers work with ASICs and FPGAs by enabling a software-driven approach to silicon, which perfectly aligns with Antmicro’s strategy and long-term objectives. With extensive experience in RISC-V-powered open source work, we offer high-quality services that our customers can use to build on top of SweRV using these new collaborative methodologies and tools. Reach out to Antmicro at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a> to find out how the company can assist you with your next RISC-V-centered project.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/165/news/new-revision-of-data-center-rdimm-ddr5-tester/>
+<img src=https://chipsalliance.org/preview/165/news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/165/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 30, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/165/news/new-revision-of-data-center-rdimm-ddr5-tester/>New revision of Data Center RDIMM DDR5 Tester</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/165/news/constrained-randomization-verilator/>
+<img src=https://chipsalliance.org/preview/165/news/constrained-randomization-verilator/Constrained-randomization-in-Verilator--blog-sm--CHIPS.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/165/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 21, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/165/news/constrained-randomization-verilator/>Constrained randomization in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/165/news/caliptra-support-for-veer/>
+<img src=https://chipsalliance.org/preview/165/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/165/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 9, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/165/news/caliptra-support-for-veer/>Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/165/>
+<img src=/preview/165/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2025</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/165/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/165/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/165/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/165/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/165/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/165/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/165/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/165/events/>Events</a>
+</li>
+<li>
+<a href=/preview/165/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/165/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/165/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/165/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/165/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/165/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/165/vendor/counter-up/countup.js></script>
+<script src=/preview/165/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/165/js/script.js></script>
+</body>
+</html>
