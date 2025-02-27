@@ -37,9 +37,9 @@ The TAC operates openly and transparently, the voting members of the TAC consist
 
 {{< team >}}
    {{< teammember 
-   name="Stephano Cetola"
+   name="Aaron Cunningham"
    role="Chair"
-   imagesrc="images/team/stephano-cetola.jpg"
+   imagesrc="images/team/aaron cunningham.jpeg"
    >}}
 {{< /team >}}
 
