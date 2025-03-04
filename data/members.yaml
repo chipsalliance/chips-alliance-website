@@ -199,5 +199,5 @@ members:
     level: associate    
   - name: SanDisk Corporation
     url: https://www.sandisk.com/
-    image: sandiskcorporation.svg
+    image: sandisk.svg
     level: silver
