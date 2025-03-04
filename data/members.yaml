@@ -14,11 +14,6 @@ members:
     image: google.png
     level: platinum
     board_rep: Matt Cockrell
-  - name: Infineon
-    url: https://www.infineon.com/
-    image: infineon.png
-    level: platinum
-    board_rep: Christoph Sandner
   - name: Intel
     url: https://intel.com/
     image: intel.png
@@ -201,4 +196,8 @@ members:
   - name: Columbia University 
     url: https://www.columbia.edu/
     image: columbia.svg
-    level: associate              
+    level: associate    
+  - name: SanDisk Corporation
+    url: https://www.sandisk.com/
+    image: sandisk.jpg
+    level: silver
