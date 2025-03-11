@@ -1,0 +1,347 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/167/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/167/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/167/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/167/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/167/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/167/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/167/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/167/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Adding Physical Memory Protection to the VeeR EL2 RISC-V Core | CHIPS Alliance</title>
+<meta name=description content="Antmicro’s work with CHIPS Alliance’s Caliptra Root of Trust project, led by Google, AMD, NVIDIA, and Microsoft focuses around providing automated …">
+<meta property="og:title" content="Adding Physical Memory Protection to the VeeR EL2 RISC-V Core">
+<meta property="og:description" content="Antmicro’s work with CHIPS Alliance’s Caliptra Root of Trust project, led by Google, AMD, NVIDIA, and Microsoft focuses around providing automated testing and verification infrastructure including code quality checks, code indexing, coverage and functional testing pipelines, as well as maintaining and enhancing the RISC-V VeeR EL2 core which sits in the middle of the Caliptra design. As providers of commercial engineering services around open source tools and silicon blocks, working on Caliptra gives Antmicro both a solid starting point for assisting customers with practical RoT implementations as well as a template for CI-driven ASIC development.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/167/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/"><meta property="og:image" content="https://chipsalliance.org/preview/167/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2024-03-25T00:00:00+00:00">
+<meta property="article:modified_time" content="2024-03-25T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Adding Physical Memory Protection to the VeeR EL2 RISC-V Core">
+<meta itemprop=description content="Antmicro’s work with CHIPS Alliance’s Caliptra Root of Trust project, led by Google, AMD, NVIDIA, and Microsoft focuses around providing automated testing and verification infrastructure including code quality checks, code indexing, coverage and functional testing pipelines, as well as maintaining and enhancing the RISC-V VeeR EL2 core which sits in the middle of the Caliptra design. As providers of commercial engineering services around open source tools and silicon blocks, working on Caliptra gives Antmicro both a solid starting point for assisting customers with practical RoT implementations as well as a template for CI-driven ASIC development."><meta itemprop=datePublished content="2024-03-25T00:00:00+00:00">
+<meta itemprop=dateModified content="2024-03-25T00:00:00+00:00">
+<meta itemprop=wordCount content="1707"><meta itemprop=image content="https://chipsalliance.org/preview/167/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/167/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png">
+<meta name=twitter:title content="Adding Physical Memory Protection to the VeeR EL2 RISC-V Core">
+<meta name=twitter:description content="Antmicro’s work with CHIPS Alliance’s Caliptra Root of Trust project, led by Google, AMD, NVIDIA, and Microsoft focuses around providing automated testing and verification infrastructure including code quality checks, code indexing, coverage and functional testing pipelines, as well as maintaining and enhancing the RISC-V VeeR EL2 core which sits in the middle of the Caliptra design. As providers of commercial engineering services around open source tools and silicon blocks, working on Caliptra gives Antmicro both a solid starting point for assisting customers with practical RoT implementations as well as a template for CI-driven ASIC development.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/167/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/167/>
+<img src=/preview/167/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/167/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/167/about/members/>Members</a>
+<a class=dropdown-item href=/preview/167/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/167/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/167/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/167/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/167/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/167/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/167/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/167/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/167/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/167/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/167/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Adding Physical Memory Protection to the VeeR EL2 RISC-V Core</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>March 25, 2024</p>
+</li>
+<li class=list-inline-item>
+<p>9 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1707 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/167/news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png class=w-100 alt=featured-image>
+</div>
+<div><p>Antmicro’s work with CHIPS Alliance’s <a href=https://github.com/chipsalliance/Caliptra>Caliptra Root of Trust</a> project, led by Google, AMD, NVIDIA, and Microsoft focuses around providing <a href=https://opensource.googleblog.com/2023/11/open-source-and-ci-driven-rtl-testing-and-verification-caliptra-risc-v-veer-core.html>automated testing and verification infrastructure</a> including code quality checks, code indexing, coverage and functional testing pipelines, as well as maintaining and enhancing the RISC-V VeeR EL2 core which sits in the middle of the Caliptra design. As providers of commercial engineering services around open source tools and silicon blocks, working on Caliptra gives Antmicro both a solid starting point for assisting customers with practical RoT implementations as well as a template for CI-driven ASIC development.</p>
+<p>The most recent feature requested by the Caliptra working group was the addition of Physical Memory Protection (PMP) to the VeeR EL2 Core according to the <a href=https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-1239329-2023-05-23/riscv-privileged.pdf>specification</a> ratified by <a href=https://riscv.org/>RISC-V International</a>. This article outlines how the principles of the PMP specification were mapped to the VeeR implementation and tested with both pyUVM and system software, as an example of how RISC-V enables collaborative and transparent development of core IP.</p>
+<h2 id=principles-of-risc-v-pmp>Principles of RISC-V PMP</h2>
+<p>Physical Memory Protection is a mechanism that divides the system address map into regions with configurable permissions. In the case of RISC-V cores, the PMP configuration for each region is held in additional Control and Status Registers: <code>pmpcfgX</code> and <code>pmpaddrX</code>, with the maximum allowance of 64 regions. The <code>pmpaddrX</code> register holds an address which represents the region’s boundary, whilst the <code>pmpcfgX</code> configuration register is used to encode a locked bit, address matching and permissions.</p>
+<p>The lock bit mechanism is an interesting feature of the RISC-V PMP spec – it can be set to prevent overwriting the contents of the configuration registers until the next hardware reset of the CPU. This is a crucial feature to prevent software from applying unwanted modifications to the state of the PMP configuration.</p>
+<p>Address matching refers to the way boundaries of memory regions are calculated, with three available modes in case of PMP:</p>
+<ul>
+<li>Naturally aligned power-of-2 (NAPOT)</li>
+<li>Naturally aligned four-byte (NA4)</li>
+<li>Top boundary of an arbitrary range (TOR)</li>
+</ul>
+<p>As an example, consider Region 0 in the image below. Address matching in <code>pmpcfg0</code> is set to <code>2’b00</code> (TOR) and <code>pmpaddr0</code> is set to <code>0x4000</code> (16kB). The lower boundary of the first region is always <code>0</code>, and the upper boundary, in case of TOR, is calculated directly from the pmpaddr0, and is equal to <code>pmpaddr0 &lt;&lt; 2 =0x10000 (64kB)</code>. This is because the address stored in the address register represents bits [33:2] of the physical address space.
+Regions form a continuous space, so one region’s upper boundary is always the lower boundary for the next region. In case of Region 1, which uses the NAPOT encoding (A=2’b11), the number of the least significant, set bits is relevant, e.g. if <code>pmpaddr1 = 0x0800_0FFF</code>, then 12 least significant bits are set and the upper boundary is calculated as 2^(12+3)=32kB. The smallest encodable region is a 4-byte range, where the extra <code>3</code> accounts for 4-byte and 8-byte regions.</p>
+<p>For each region, an execute, write and read permission may be set. Attempting to perform a prohibited action with data under any of the protected addresses results in a precisely trapped exception.</p>
+<p><img src=pmp-diagram-1.png alt="System address map regions"></p>
+<h2 id=pmp-veer-el2-implementation-details>PMP VeeR EL2 implementation details</h2>
+<p>To look at how PMP generally operates, suppose that a program is being executed by a RISC-V core and the next instruction in line is an addition instruction – ADD. For simplicity’s sake, we can also assume that all relevant instructions and addresses are present in the <code>instruction cache</code>. In a conventional implementation, the core increments the <code>program counter</code> and fetches the instruction in a process of reading the content of a memory cell at the PC address. Typically the instruction is passed to the decoder logic, which is capable of discerning between different types of instructions, e.g. addition, subtraction, multiplication, etc. PMP however, when enabled, makes a check before decoding the instruction, to ensure that its execution is allowed.</p>
+<p><img src=pmp-diagram-2.png alt="CSR config"></p>
+<p>The following steps of the check procedure are straight-forward. First, the address matching configuration (bits 4,3) is read from the PMP CSRs, followed by a search for address PC in the defined <code>regions</code> – each pair of entries in the configuration registers represents boundaries of a <code>region</code>, e.g. if <code>address matching</code> is set to TOR and address registers store values 0x0000 and 0x1000, respectively, then the defined <code>region</code> covers all addresses between these 2 values (left-closed).</p>
+<p><img src=pmp-diagram-3.png alt="CSR regions"></p>
+<p>Once a matching <code>region</code> is found, the 3 least significant bits of the corresponding PMP configuration register are read to decode permission type:</p>
+<ul>
+<li>Bit 2 (X) - if set, then execution is permissible</li>
+<li>Bit 1 (W) - if set, then write (store instruction) is permissible</li>
+<li>Bit 0 (R) - if set, then read (load instruction) is permissible.</li>
+</ul>
+<p>The configuration is intuitive, as it resembles <code>chmod</code>’s XWR permissions used in operating systems for file management.</p>
+<h2 id=testing-pmp-for-the-veer-el2-core-with-pyuvm>Testing PMP for the VeeR EL2 core with pyUVM</h2>
+<p>Universal Verification Methodology (UVM) is an industry-wide standard of writing testbenches of hardware modules implemented in Verilog, also used within the Caliptra project. While Antmicro is actively developing UVM integrations with open source tools <a href=https://antmicro.com/blog/2023/10/running-simple-uvm-testbenches-in-verilator/>such as Verilator, with very promising results</a>, there is still work involved to enable all of UVM running open source directly in SystemVerilog. For the time being, much of the testing for this project was performed using <a href=https://github.com/pyuvm/pyuvm>pyUVM</a>, a Pythonic fork of UVM, which both enables completely open source verification and lets you use modern features of Python to simplify implementation and remove boiler-plate code from tests.</p>
+<p>Concurrently with the RTL implementation of the PMP module, we developed pyUVM tests to verify its correctness. The basic testing scenario was to first configure the mode and address regions, and then perform an arbitrary number of memory accesses of different types.</p>
+<p>To validate PMP behavior thoroughly, several angles have to be considered; most obviously, we can set up the configuration or memory accesses so as to violate the rules and observe the raised exceptions; or conversely, set up for and expect a success. Some features of the configuration space can be tested independently: a directed test can be constructed to test the lock mechanism. Furthermore, the execute permission is only relevant during instruction fetches, while read and write permissions are only checked during loads and stores, which means that the features can be tested separately in unit tests as well as together in integration tests.</p>
+<p>As an example of a VeeR EL2 PMP UVM test, let us take a look at <a href=https://github.com/chipsalliance/Cores-VeeR-EL2/tree/main/verification/block/pmp>test_xwr_access</a>. One of the first tasks in testbench design is to define stimulus patterns, which will match a use case of the device as closely as possible. To put it simply, using PMP boils down to setting boundaries of address Regions by writing to <code>pmpaddrX</code> CSRs, configuring the PMP behavior by writing to <code>pmpcfgX</code> CSRs, and running memory access checks. In UVM, a discernible stimulus pattern is called a <code>sequence</code>, and in the most basic scenario in the <code>xwr_access</code> test, three <code>sequences</code> are created to configure and test the PMP. The first <code>sequence</code>, <code>Region Boundaries Sequence</code>, is responsible for setup of the <code>pmpaddrX</code> registers and is followed by a <code>Configuration Sequence</code>, which sets up the <code>pmpcfgX</code> registers. The third and final <code>sequence</code> is a stream of randomized accesses, which represent the fetches, loads and stores that the CPU would normally perform. In general, any number of <code>sequences</code> can be fed into the <code>sequencer</code> to create meaningful tests for more advanced use cases.</p>
+<p><img src=pmp-diagram-4.png alt="Test XWR Access"></p>
+<p>The architecture of the test is relatively straightforward for developers familiar with UVM testbenches. While the <code>sequencer</code> is used to store a <code>sequence</code> of test items in correct order, it is the <code>driver</code>, which is responsible for applying the stimulus to the Device Under Test (DUT), in this case the developed PMP module. <code>Monitor</code> and <code>scoreboard</code> are the UVM Objects which provide the analysis and verification capabilities to the testbench – the former monitors both the input and output ports and pushes the collected data to the latter. In the <code>scoreboard</code> object, a reference prediction model is implemented to compare the received data with expectations.</p>
+<h2 id=software-execution-tests>Software execution tests</h2>
+<p>The modified, PMP-capable implementation of VeeR EL2 still passes the original tests Antmicro had developed for the testing of the Caliptra/VeeR implementation, including the <a href=https://github.com/riscv-software-src/riscof>RISCOF</a> and <a href=https://github.com/chipsalliance/riscv-dv>riscv-dv</a> tests described in <a href=https://opensource.googleblog.com/2023/11/open-source-and-ci-driven-rtl-testing-and-verification-caliptra-risc-v-veer-core.html>the previous article</a>, which proves that the new implementation does not have side effects.</p>
+<p>In order to exercise the PMP implementation further, Antmicro wrote a simple <a href=https://github.com/chipsalliance/Cores-VeeR-EL2/blob/main/testbench/tests/pmp/main.c>software execution test</a>, which configures the PMP’s control and status registers and runs simple code to test fetches, loads and stores. A custom trap handler was developed to catch raised exceptions and validate both allowed and prohibited accesses.</p>
+<p>The team also ran tests for the VeeR EL2 core and the PMP implementation using <a href=https://comsec.ethz.ch/research/hardware-design-security/cascade-cpu-fuzzing-via-intricate-program-generation/>Cascade</a>, a RISC-V CPU fuzzer recently released by COMSEC, the computer security group of the Department of Information Technology and Electrical Engineering (D-ITET) at ETH Zürich. Cascade is designed to overcome pitfalls of other existing solutions by testing intricate control flows and much longer programs – you can find detailed information about it in <a href=https://comsec.ethz.ch/wp-content/files/cascade_sec24.pdf>a recent publication</a>. With the help of this tool, ETHZ managed to uncover an interesting corner case where a <code>FENCE</code> or <code>FENCE.I</code> instruction with non-zero arguments could cause the VeeR EL2 core to hang, as these instructions were flagged as illegal. Antmicro was able to quickly remedy the issue, and now these instructions are ignored by the core as permissible by the RISC-V specification.</p>
+<h2 id=design-and-adapt-secure-fpga-and-asic-based-solutions-with-antmicro>Design and adapt secure FPGA and ASIC based solutions with Antmicro</h2>
+<p>As demonstrated by the use of the VeeR project in the <a href=https://github.com/chipsalliance/Caliptra>Caliptra Root of Trust</a>, the adaptability of open source cores, combined with testing capabilities offered by open source tools, provides the transparency, scalability and vertical integration necessary for emerging use cases such as <a href=https://antmicro.com/blog/2023/11/secure-open-source-ml-with-open-se-cura/>dedicated secure ML silicon</a> as well as collaborative environments with multiple actors involved, such as the data center.</p>
+<p>Whether you are looking to adapt open source RISC-V cores to your security-focused use case, or to harness the possibilities of using open source tooling for chip design, you can take advantage of Antmicro’s proven expertise and a portfolio of adaptable, extendible open source components and frameworks. For wider context, make sure to watch a <a href="https://www.youtube.com/watch?v=DFCWthwXzbk">presentation from ORConf 2023</a>, and to discuss your particular needs, feel free to contact them at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/167/news/new-revision-of-data-center-rdimm-ddr5-tester/>
+<img src=https://chipsalliance.org/preview/167/news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/167/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 30, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/167/news/new-revision-of-data-center-rdimm-ddr5-tester/>New revision of Data Center RDIMM DDR5 Tester</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/167/news/constrained-randomization-verilator/>
+<img src=https://chipsalliance.org/preview/167/news/constrained-randomization-verilator/Constrained-randomization-in-Verilator--blog-sm--CHIPS.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/167/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 21, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/167/news/constrained-randomization-verilator/>Constrained randomization in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/167/news/caliptra-support-for-veer/>
+<img src=https://chipsalliance.org/preview/167/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/167/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 9, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/167/news/caliptra-support-for-veer/>Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/167/>
+<img src=/preview/167/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2025</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/167/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/167/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/167/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/167/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/167/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/167/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/167/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/167/events/>Events</a>
+</li>
+<li>
+<a href=/preview/167/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/167/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/167/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/167/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/167/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/167/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/167/vendor/counter-up/countup.js></script>
+<script src=/preview/167/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/167/js/script.js></script>
+</body>
+</html>
