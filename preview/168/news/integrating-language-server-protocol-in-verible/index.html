@@ -1,0 +1,349 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/168/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/168/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/168/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/168/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/168/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/168/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/168/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/168/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Integrating the Language Server Protocol in Verible | CHIPS Alliance</title>
+<meta name=description content="A more collaborative, open and software driven ASIC design methodology pioneered by the CHIPS Alliance requires an open source tooling stack to enable …">
+<meta property="og:title" content="Integrating the Language Server Protocol in Verible">
+<meta property="og:description" content="A more collaborative, open and software driven ASIC design methodology pioneered by the CHIPS Alliance requires an open source tooling stack to enable sharing of workflows, artifacts and fostering a free exchange of insights and improvements.
+While internally often using new design methodologies and languages such as Migen, Chisel or XLS, Antmicro is conscious of the fact that a lot of the world’s ASIC development involves SystemVerilog and UVM, and so we are working on bridging traditional and new ASIC development methodologies as described in a recent blog note.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/168/news/integrating-language-server-protocol-in-verible/"><meta property="og:image" content="https://chipsalliance.org/preview/168/news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2023-04-12T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-04-12T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Integrating the Language Server Protocol in Verible">
+<meta itemprop=description content="A more collaborative, open and software driven ASIC design methodology pioneered by the CHIPS Alliance requires an open source tooling stack to enable sharing of workflows, artifacts and fostering a free exchange of insights and improvements.
+While internally often using new design methodologies and languages such as Migen, Chisel or XLS, Antmicro is conscious of the fact that a lot of the world’s ASIC development involves SystemVerilog and UVM, and so we are working on bridging traditional and new ASIC development methodologies as described in a recent blog note."><meta itemprop=datePublished content="2023-04-12T00:00:00+00:00">
+<meta itemprop=dateModified content="2023-04-12T00:00:00+00:00">
+<meta itemprop=wordCount content="1003"><meta itemprop=image content="https://chipsalliance.org/preview/168/news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/168/news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png">
+<meta name=twitter:title content="Integrating the Language Server Protocol in Verible">
+<meta name=twitter:description content="A more collaborative, open and software driven ASIC design methodology pioneered by the CHIPS Alliance requires an open source tooling stack to enable sharing of workflows, artifacts and fostering a free exchange of insights and improvements.
+While internally often using new design methodologies and languages such as Migen, Chisel or XLS, Antmicro is conscious of the fact that a lot of the world’s ASIC development involves SystemVerilog and UVM, and so we are working on bridging traditional and new ASIC development methodologies as described in a recent blog note.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/168/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/168/>
+<img src=/preview/168/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/168/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/168/about/members/>Members</a>
+<a class=dropdown-item href=/preview/168/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/168/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/168/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/168/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/168/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/168/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/168/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/168/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/168/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/168/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/168/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Integrating the Language Server Protocol in Verible</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>April 12, 2023</p>
+</li>
+<li class=list-inline-item>
+<p>5 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1003 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/168/news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png class=w-100 alt=featured-image>
+</div>
+<div><p>A more collaborative, open and software driven ASIC design methodology pioneered by the <a href=https://chipsalliance.org>CHIPS Alliance</a> requires an open source tooling stack to enable sharing of workflows, artifacts and fostering a free exchange of insights and improvements.</p>
+<p>While internally often using new design methodologies and languages such as Migen, Chisel or XLS, Antmicro is conscious of the fact that a lot of the world’s ASIC development involves SystemVerilog and UVM, and so we are working on bridging traditional and new ASIC development methodologies as described in a <a href=https://antmicro.com/blog/2023/01/open-source-systemverilog-uvm-support-in-verilator/>recent blog note</a>.</p>
+<p>Another notable example of an effort to provide open source tools for a key part of the ASIC flow, the RTL creation itself, is <a href=https://github.com/chipsalliance/verible>Verible</a>, an open source SystemVerilog toolkit developed by Google in collaboration with Antmicro within the CHIPS Alliance.</p>
+<p>The Verible project offers a variety of SystemVerilog development tools, including a parser, a linter and a formatter, that together make finding and fixing syntactic and stylistic errors and bugs in SystemVerilog code simpler and faster. Being completely open source, it enables implementation of open CI and massively scalable infrastructure, and since some time it also features a <a href=https://github.com/chipsalliance/verible#language-server>Language Server</a>, which is currently under active development. The capabilities and new features will be described in this note.</p>
+<h3 id=language-servers-overview>Language servers overview</h3>
+<p>Modern code editors (both GUI- and command line-driven) offer many useful features: syntax highlighting, autocompletion, inline errors and warnings reporting, quick fixes, code refactoring and formatting, and more. In the past enabling these features required a separate implementation for each editor, usually resulting in multiple plugins with varying levels of coverage. As a result, support for language-related operations in different editors varied greatly, and making it consistently good was a tedious task.</p>
+<p>The <a href=https://microsoft.github.io/language-server-protocol/>Language Server Protocol (LSP)</a> brought some much-needed standardization to the space, enabling a unified communication method between code editors (or IDEs) and language servers that provide the necessary language features. Since 2016 when the LSP became public and open, many language servers targeting a variety of languages have been created or adapted to follow the standard. Most of the popular editors support LSP, including VS Code (via specific extensions), Vim (via <code>vim-lsp</code>), Emacs (via <code>lsp-mode</code>), Neovim (built-in), Kakoune (via <code>kak-lsp</code>) and Helix (built-in). There are even LSP plugins for IDEs like IntelliJ.</p>
+<p>We can distinguish three main parts in an LSP setup:</p>
+<ul>
+<li>a workspace, which is the directory containing the files you work with,</li>
+<li>an editor, which is able to read and write the files within the workspace,</li>
+<li>a language server, usually with only read access to the data.</li>
+</ul>
+<p><img src=lsp-diagram.png alt="Diagram depicting communication between an editor and a language server via LSP"></p>
+<p>The editor and the language server are connected via the Language Server Protocol - with a language client on the editor side and a transport & router block on the language server side. Any changes in a file are stored in the text buffer. The editor can ask for diagnostics, symbols, location of definitions, the language server receives updates in the buffer delivered by the editor and analyzes the edited code, as well as the code present in the workspace, and then creates an indexer. This indexer holds all data about the code: available symbols, references, origin of variables etc. but also provides information about other kinds of relationships, e.g. inheritance between classes. This indexer, along with syntax trees coming from parsing the files, provide various services in the language server, such as completion, diagnostics or code action that help with code refactoring.</p>
+<h3 id=implementing-the-lsp-in-verible>Implementing the LSP in Verible</h3>
+<p>The Verible project offers an impressive list of features, is regularly tested against an ever-growing suite of <a href=https://chipsalliance.github.io/sv-tests-results/>language compliance tests</a> provided by the <a href=https://github.com/chipsalliance/sv-tests>SystemVerilog Tester</a> and is in active use by a variety of projects, including the security-oriented <a href=https://opentitan.org/>OpenTitan</a> initiative. Antmicro has been involved in Verible’s development since its initial open source release and we are now leading the efforts focused on extending the LSP implementation, which has already yielded promising results.</p>
+<p>Although several SystemVerilog language server implementations existed before, they weren’t as comprehensive as Verible’s. <code>verible-verilog-ls</code> provides the functionalities that come with the Verible command line tools directly in the code editor. These include:</p>
+<ul>
+<li>checking the code against a number of <a href=https://chipsalliance.github.io/verible/lint.html>lint rules</a>,</li>
+<li>format selection according to the Verible formatting style,</li>
+<li>showing high-level structure of modules and functions in the outline tree,</li>
+<li>highlighting related symbols on hover,</li>
+<li>jumping to definition of the indicated symbol,</li>
+<li>AUTO-expansion capabilities.</li>
+</ul>
+<p>For more details about Verible’s tools and their capabilities, refer to the project’s <a href=https://chipsalliance.github.io/verible/>documentation</a>.</p>
+<h3 id=integration-with-various-code-editors>Integration with various code editors</h3>
+<p><code>verible-verilog-ls</code> implements the standardized Language Server Protocol, which as mentioned before, enables support for editors and IDEs such as VS Code, Vim, Neovim, Emacs, Sublime, Kakoune and Kate. It helps highlight syntax errors or lint violations and, if available, suggests fixes. The specific way of hooking up the language server depends on the editor; as VS Code is one of the most popular code editors and also the original target for the LSP, the example shown below focuses on this editor.</p>
+<p>VS Code typically adds new features and tools via extensions, in this case the <a href=https://github.com/chipsalliance/verible/tree/master/verilog/tools/ls/vscode>Verible Language Server Extension</a>.</p>
+<p>A demo of the AUTO-expansion feature in VS Code is shown below:</p>
+<video class=postimgcenter width=1024 height=502 controls>
+<source src=autoarg.mp4 type=video/mp4>
+</video>
+<p>You can get the extension by downloading the <code>verible.vsix</code> archive from the <a href=https://github.com/chipsalliance/verible/releases>release files</a>. Then, run VS Code with the following flag to install the extension:</p>
+<pre tabindex=0><code>code --install-extension verible.vsix
+</code></pre><p>For examples how to hook Verible’s LSP into other applications please refer to the <a href=https://github.com/chipsalliance/verible/blob/master/verilog/tools/ls/README.md><code>verible-verilog-ls</code> README</a>.</p>
+<h3 id=supporting-asic-development-with-open-source-tools>Supporting ASIC development with open source tools</h3>
+<p>The Verible language server, as well as the VS Code extension, are being actively developed by Antmicro, Google and the CHIPS Alliance community. Future updates will include, among others, expanding the information available on hover and finding symbol definitions across different files.</p>
+<p>Verible&rsquo;s open and comprehensive nature, combined with <a href=https://www.chipsalliance.org/news/automatic-systemverilog-linting-in-github-actions-with-verible/>dedicated GitHub actions</a> and <a href=https://www.chipsalliance.org/news/github-actions-self-hosted-runners-build-event-server-and-google-cloud/>custom, scalable GCP-based GitHub runners</a>, provides a software-driven, scalable solution for working with SystemVerilog codebases. If you&rsquo;re interested in benefiting from this approach or would like to adapt other open source tools to speed up your ASIC development process, join the <a href=https://lists.chipsalliance.org/g/tools-wg>CHIPS Alliance Tools working group</a> or reach out at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/168/news/new-revision-of-data-center-rdimm-ddr5-tester/>
+<img src=https://chipsalliance.org/preview/168/news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/168/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 30, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/168/news/new-revision-of-data-center-rdimm-ddr5-tester/>New revision of Data Center RDIMM DDR5 Tester</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/168/news/constrained-randomization-verilator/>
+<img src=https://chipsalliance.org/preview/168/news/constrained-randomization-verilator/Constrained-randomization-in-Verilator--blog-sm--CHIPS.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/168/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 21, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/168/news/constrained-randomization-verilator/>Constrained randomization in Verilator</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/168/news/caliptra-support-for-veer/>
+<img src=https://chipsalliance.org/preview/168/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/168/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 9, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/168/news/caliptra-support-for-veer/>Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/168/>
+<img src=/preview/168/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2025</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/168/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/168/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/168/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/168/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/168/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/168/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/168/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/168/events/>Events</a>
+</li>
+<li>
+<a href=/preview/168/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/168/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/168/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/168/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/168/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/168/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/168/vendor/counter-up/countup.js></script>
+<script src=/preview/168/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/168/js/script.js></script>
+</body>
+</html>
