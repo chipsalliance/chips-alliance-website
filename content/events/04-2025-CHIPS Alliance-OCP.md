@@ -11,7 +11,7 @@ We're looking forward to insightful discussions, sharing successes and challenge
 
 Don’t miss the **Caliptra** session on **April 30 at 09:50 (Level 1 – Liffey Hall 2).**
 
-Join **Raghu Krishnamurthy, Bryan Kelly, Bharat Pillili, and Christopher Swenson** for a technical overview of the *Caliptra subsystem firmware stack*, an open source Root of Trust solution for data center-class SoCs. The session will highlight integration efforts, subsystem components, and the roadmap for Caliptra 2.0.
+Join **Raghu Krishnamurthy, Bryan Kelly, Bharat Pillili, and Christopher Swenson** for a technical overview of the **Caliptra subsystem firmware stack**, an open source Root of Trust solution for data center-class SoCs. The session will highlight integration efforts, subsystem components, and the roadmap for Caliptra 2.0.
 
 CHIPS Alliance welcomes participation and collaboration amongst companies, universities, and individuals.
 
