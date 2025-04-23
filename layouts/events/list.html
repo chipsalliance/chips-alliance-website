@@ -37,7 +37,7 @@
 
                 <h2 id="upcoming-events">Upcoming Events</h2>
     
-                {{ range where .Pages.ByDate.Reverse "Date" "ge" (now.AddDate 0 0 -1) }}
+                {{ range where .Pages.ByDate. "Date" "ge" (now.AddDate 0 0 -1) }}
                     {{ partial "event-card.html" . }}
                 {{ else }}
                 <em>There are no upcoming events right now.</em>
