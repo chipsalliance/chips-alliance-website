@@ -38,7 +38,7 @@ This white paper offers a clear, actionable roadmap for building a more open, co
 
 Whether you are a developer, researcher, or executive, this is essential reading if you care about the future of transparent, collaborative, and scalable open source hardware.
 
-**![Download the PDF now](chips-alliance-whitepaper.pdf)**! and see how CHIPS Alliance is shaping the next generation of open innovation.
+** [Download the PDF now](chips-alliance-whitepaper.pdf)**! and see how CHIPS Alliance is shaping the next generation of open innovation.
 
 #OpenSourceSilicon #CHIPSAlliance #RISCV #EDA #ASIC #SoCDesign #OpenHardware
 
