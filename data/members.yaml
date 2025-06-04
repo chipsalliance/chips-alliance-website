@@ -193,3 +193,7 @@ members:
     url: https://www.sandisk.com/
     image: sandiskcorporation.svg
     level: silver
+  - name: Innogrit Corporation
+    url: https://innogritcorp.com/
+    image: innogrit-corporation.svg
+    level: auditor
