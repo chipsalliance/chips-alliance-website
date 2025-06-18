@@ -197,3 +197,7 @@ members:
     url: https://innogritcorp.com/
     image: innogrit-corporation.svg
     level: auditor
+  - name: Cisco Systems
+    url: https://www.cisco.com/
+    image: cisco-systems-inc.svg
+    level: silver
