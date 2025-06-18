@@ -1,0 +1,326 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/174/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/174/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/174/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/174/scss/theme.min.a5381c44cba9afddcecb1f5a7770e438e042e9a03f795caa7ee5af578c5025b5.css>
+<link rel=icon href=/preview/174/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/174/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/174/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/174/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS | CHIPS Alliance</title>
+<meta name=description content="The Caliptra Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the CHIPS Alliance, is steadily heading towards …">
+<meta property="og:title" content="Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS">
+<meta property="og:description" content="The Caliptra Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the CHIPS Alliance, is steadily heading towards its 2.0 release – an effort Antmicro is actively contributing to. They’ve recently described their implementation of User mode in the RISC-V VeeR EL2 core along with extended Physical Memory Protection, and related to this work, they’ve introduced support for VeeR EL2 with User Mode and PMP to the Tock embedded OS.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/174/news/caliptra-support-for-veer/"><meta property="og:image" content="https://chipsalliance.org/preview/174/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2025-01-09T00:00:00+00:00">
+<meta property="article:modified_time" content="2025-01-09T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS">
+<meta itemprop=description content="The Caliptra Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the CHIPS Alliance, is steadily heading towards its 2.0 release – an effort Antmicro is actively contributing to. They’ve recently described their implementation of User mode in the RISC-V VeeR EL2 core along with extended Physical Memory Protection, and related to this work, they’ve introduced support for VeeR EL2 with User Mode and PMP to the Tock embedded OS."><meta itemprop=datePublished content="2025-01-09T00:00:00+00:00">
+<meta itemprop=dateModified content="2025-01-09T00:00:00+00:00">
+<meta itemprop=wordCount content="943"><meta itemprop=image content="https://chipsalliance.org/preview/174/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/174/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png">
+<meta name=twitter:title content="Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS">
+<meta name=twitter:description content="The Caliptra Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the CHIPS Alliance, is steadily heading towards its 2.0 release – an effort Antmicro is actively contributing to. They’ve recently described their implementation of User mode in the RISC-V VeeR EL2 core along with extended Physical Memory Protection, and related to this work, they’ve introduced support for VeeR EL2 with User Mode and PMP to the Tock embedded OS.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/174/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/174/>
+<img src=/preview/174/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/174/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/174/about/members/>Members</a>
+<a class=dropdown-item href=/preview/174/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/174/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/174/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/174/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/174/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/174/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/174/categories/announcements/>Announcements</a>
+<a class=dropdown-item href=/preview/174/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/174/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/174/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/174/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Caliptra - Support for VeeR EL2 with User Mode and Physical Memory Protection in Tock embedded OS</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>January 9, 2025</p>
+</li>
+<li class=list-inline-item>
+<p>5 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>943 <span>words</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/174/news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png class=w-100 alt=featured-image>
+</div>
+<div><p>The <a href=https://chipsalliance.github.io/Caliptra/>Caliptra</a> Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the <a href=https://www.chipsalliance.org/>CHIPS Alliance</a>, is steadily heading towards its <a href=https://www.chipsalliance.org/news/caliptra-ocp-global-summit-2024/>2.0 release</a> – an effort Antmicro is <a href="https://www.youtube.com/watch?v=hXjUoCGlXyM">actively contributing to</a>. They’ve recently described their <a href=https://antmicro.com/blog/2024/09/user-mode-in-veer-el2-core-for-caliptra-2-0/>implementation of User mode</a> in the RISC-V VeeR EL2 core along with extended Physical Memory Protection, and related to this work, they’ve introduced support for VeeR EL2 with User Mode and PMP to the <a href=https://github.com/tock/tock>Tock</a> embedded OS. The main goal of this implementation was to test the mode switching feature of the VeeR EL2 core with PMP enabled.</p>
+<p>In this article we’ll describe implementation details, including Antmicro’s contributions to Tock, <a href=https://github.com/tock/libtock-c>libtock-c</a> and <a href=https://github.com/tock/tockloader>tockloader</a>. We’ll also show an <a href=https://github.com/chipsalliance/VeeR-EL2-tock-example>example</a> in which a Tock application running on a VeeR EL2 core simulated in <a href=https://www.veripool.org/verilator/>Verilator</a> performs forbidden memory accesses, demonstrating that PMP enforces proper User mode constraints.</p>
+<h3 id=adding-new-platforms-to-tock-os>Adding new platforms to Tock OS</h3>
+<p><a href=https://tockos.org/>Tock</a> is an embedded operating system written in Rust, designed for running multiple concurrent, mutually distrustful applications on Cortex-M and RISC-V based platforms. As it provides isolation between components to ensure safety and security, it’s a popular choice for Root of Trust projects, such as <a href=https://antmicro.com/blog/2023/03/adapting-opentitan-for-fpga-prototyping-and-tooling-development/>OpenTitan</a> used e.g. in Google’s <a href=https://antmicro.com/blog/2023/11/secure-open-source-ml-with-open-se-cura/>Open Se Cura</a> project that Antmicro has also been involved with.</p>
+<p>When adding support for a new platform in Tock, we need to consider <a href=https://book.tockos.org/development/porting.html#crate-details>three layers of support</a>: architecture, chip and board. Tock already supports several RISC-V platforms as well as the RISC-V privilege spec with Machine, Supervisor and User modes. When introducing support for VeeR in Tock, we were able to reuse the implementation of RISC-V-specific components, i.e. the general architecture support, machine timer and interrupt controller.</p>
+<p>In the chip <a href=https://doc.rust-lang.org/book/ch07-01-packages-and-crates.html#packages-and-crates>crate</a> (<a href=https://github.com/tock/tock/tree/master/chips/veer_el2><code>veer_el2</code></a>), it&rsquo;s necessary to define the components of the chip, and implement the <code>InterruptService</code> trait (a trait is equivalent to an interface in the Rust language). This is also where we define the PMP configuration as well as a UART driver for a virtual UART (i.e. not an actual UART core but a dedicated address in the simulation environment, which can be used for printing output from the kernel and applications).</p>
+<p>At the time of writing, Tock does not support any “hard” RISC-V implementations, but offers several FPGA and simulation targets, which are also represented by “board” crates. Since this project also focused on simulation testing, the developed VeeR board crate (appropriately called <a href=https://github.com/tock/tock/tree/master/boards/veer_el2_sim><code>veer_el2_sim</code></a>) is responsible for initializing all the components available in the chip and the simulation environment. It calls the proper kernel functions to set up the scheduler, timer, console and panic handler, which means that we define what component is supposed to print the error data when an uncorrectable error happens, and loads any applications that are available in the designated memory. This is also where the kernel loop is started.</p>
+<h3 id=implementing-support-for-veer-el2>Implementing support for VeeR EL2</h3>
+<p>The goal of this project was to run an application which would test the U and M mode switching feature in the VeeR EL2 core. In the main PR, we added <a href=https://github.com/tock/tock/pull/4118>support for a VeeR EL2 simulation target</a>, but enabling Tock applications on VeeR EL2 required further changes in the Tock ecosystem itself.</p>
+<p>Tock is designed to have applications delivered separately from the kernel, requiring you to compile the kernel, then the applications, and eventually combine them. For the VeeR EL2 target, <a href=https://github.com/tock/tockloader/pull/117>we used tockloader</a> to first create a binary file representing FLASH memory with the kernel, and then install an application in that file to be able to use it later as input for simulation in Verilator.</p>
+<p>Additionally, at the time of writing Tock doesn’t support position-independent code in applications for RISC-V out of the box. As a consequence, when building an application we need to provide the address to which the application will be loaded, which is done via libtock-c (the library for building Tock applications in the C language) by providing predefined addresses for various RISC-V platforms. The PR adding the address map for <code>veer-el2-sim</code> <a href=https://github.com/tock/libtock-c/pull/464/files>is relatively simple</a> and can serve as an example of how this is done.</p>
+<p>With all components ready (Tock, libtock-c, tockloader), we’re able to build the kernel and an application and run it in simulation. The process is explained in detail in the <a href=https://github.com/tock/tock/tree/master/boards/veer_el2_sim>README</a> for the <code>veer_el2_sim</code> target in Tock. For more information about building and running Tock applications on VeeR EL2, refer to the <a href=https://chipsalliance.github.io/Cores-VeeR-EL2/html/main/docs_rendered/html/tock.html>documentation</a>.</p>
+<h3 id=demo-veer-el2-tock-example>Demo: <code>VeeR-EL2-tock-example</code></h3>
+<p>To showcase a Tock application running in User mode with PMP configured on a VeeR EL2 core simulated in Verilator, we prepared the <a href=https://github.com/chipsalliance/VeeR-EL2-tock-example><code>VeeR-EL2-tock-example</code> repository</a>. The repository bundles the VeeR EL2 core and Tock, and provides instructions and scripts, allowing users to easily reproduce this setup locally.</p>
+<p>The following recording shows how the application tries to overwrite a part of memory that is protected and how the incident is reported in the terminal running the simulation:</p>
+<p><img src=veer_el2_example.gif alt="VeeR-EL2-tock-example demo"></p>
+<h3 id=develop-open-source-security-ip-with-antmicro>Develop open source security IP with Antmicro</h3>
+<p>Through projects like Caliptra, the “security through obscurity” paradigm is slowly replaced by “security through transparency and collaboration”. Open source OSs and tools like Tock and <a href=https://offering.antmicro.com/#/af-verilator>Verilator</a> provide the full control and transparency that are necessary in modern security-focused projects, including the Caliptra RoT described in this article. With our <a href=https://offering.antmicro.com/#/home>engineering services</a>, building upon our broad portfolio of open source tools and workflows, Antmicro aims to enable more efficient industry collaboration around silicon.</p>
+<p>You can delve deeper into Caliptra in Antmicro’s <a href=https://designer.antmicro.com/projects/caliptra_open_source_root_of_trust_soc/overview>System Designer</a>, an interactive portal aggregating our open source methodologies, workflows and tools, where you can explore Caliptra SoC’s structure, RTL and verification artifacts from a block diagram perspective.</p>
+<p>If you want to learn more about Antmicro’s services to help you build your next RISC-V based security solution, don’t hesitate to contact them at <a href=mailto:contact@antmicro.com>contact@antmicro.com</a>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/174/news/coverage-dashboards-for-veer-and-caliptra/>
+<img src=https://chipsalliance.org/preview/174/news/coverage-dashboards-for-veer-and-caliptra/Coverview--chips--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/174/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+May 22, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/174/news/coverage-dashboards-for-veer-and-caliptra/>Generating interactive coverage dashboards for VeeR and Caliptra with Coverview</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/174/news/tac-whitepaper/>
+<img src=https://chipsalliance.org/preview/174/news/tac-whitepaper/chips-alliance-whitepaper.jpg alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/174/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+April 28, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/174/news/tac-whitepaper/>The Next Chapter in Open Source Silicon- Download the CHIPS Alliance White Paper</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/174/news/new-revision-of-data-center-rdimm-ddr5-tester/>
+<img src=https://chipsalliance.org/preview/174/news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/174/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 30, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/174/news/new-revision-of-data-center-rdimm-ddr5-tester/>New revision of Data Center RDIMM DDR5 Tester</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/174/>
+<img src=/preview/174/images/chips-logo-white.svg alt=logo>
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2025</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/174/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/174/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/174/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/174/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/174/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/174/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/174/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/174/events/>Events</a>
+</li>
+<li>
+<a href=/preview/174/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/174/categories/announcements/>Announcements</a>
+</li>
+<li>
+<a href=/preview/174/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/174/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/174/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/174/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/174/vendor/counter-up/countup.js></script>
+<script src=/preview/174/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/174/js/script.js></script>
+</body>
+</html>
