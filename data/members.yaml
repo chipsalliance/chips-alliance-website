@@ -139,7 +139,7 @@ members:
   - name: Electronic and Telecommunications Research Institute
     url: https://www.etri.re.kr/eng/main/main.etri
     image: ETRI.png
-    level: silver
+    level: associate
   - name: University of New Brunswick
     url: https://www.unb.ca/
     image: unb.png
@@ -173,10 +173,6 @@ members:
     url: https://openpowerfoundation.org/
     image: OpenPower.jpg
     level: associate    
-  - name: Micron Technology
-    url: https://www.micron.com/
-    image: micron-technology.svg
-    level: silver    
   - name: NYDesign
     url: https://www.nydesign.org/
     image: NYDesign.png
