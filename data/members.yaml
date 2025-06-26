@@ -197,3 +197,7 @@ members:
     url: https://www.cisco.com/
     image: cisco-systems-inc.svg
     level: silver
+  - name: Synopsys
+    url: https://www.synopsys.com/
+    image: synopsys.svg
+    level: silver    
