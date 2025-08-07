@@ -39,7 +39,7 @@ The TAC operates openly and transparently, the voting members of the TAC consist
    {{< teammember 
    name="Aaron Cunningham"
    role="Chair"
-   imagesrc="images/team/aaron cunningham.jpeg"
+   imagesrc="images/team/aaron-cunningham.jpg"
    >}}
 {{< /team >}}
 
@@ -52,5 +52,17 @@ The Outreach Committee is responsible for organizing the external presence of th
    name="Michael Gielda"
    role="Chair"
    imagesrc="images/team/michael-gielda.jpg"
+   >}}
+{{< /team >}}
+
+## Emeritus Members
+
+The Governing Board wishes to recognize the following people for their contributions to CHIPS Alliance.
+
+{{< team >}}
+   {{< teammember 
+   name="Zvonimir Bandic"
+   role="Founder & Governing Board Chair"
+   imagesrc="images/team/zvonimir-bandic.jpg"
    >}}
 {{< /team >}}
