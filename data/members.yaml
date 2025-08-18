@@ -18,7 +18,7 @@ members:
     url: https://intel.com/
     image: intel.png
     level: platinum
-    board_rep: Stephano Cetola
+    board_rep: Max Korbel
   - name: Microsoft
     url: https://www.microsoft.com/en-us/?ql=4
     image: microsoft.svg
