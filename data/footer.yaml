@@ -1,7 +1,9 @@
 ---
-logo 1: "images/chips_alliance.svg" 
-logo_url: ""
-logo 2: "images/linux_foundation.svg"
+logos:
+  - logo: "images/chips_alliance.svg" 
+  logo_url: ""
+  - logo: "images/linux_foundation.svg"
+  logo_url: ""
 copyright: "CHIPS Alliance"
 social:
   - link: "https://twitter.com/chipsalliance"
