@@ -20,9 +20,7 @@
       max-width: 600px;
     }
     .footer-logo {
-
-      display: flex;
-      gap: 20px;
+      display: flex; gap: 20px;
   
       @include media-breakpoint-down-lg {
           text-align: center;
@@ -97,7 +95,7 @@
         font-size: $base-font-size * 1.25;
       }
     }
-  }
+
   &-widget {
     margin-left: 80px;
     @include media-breakpoint-down-xxxl {
