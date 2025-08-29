@@ -2,7 +2,9 @@
 date: 2022-04-21T00:00:00Z
 title: Alibaba Cloud Announced Progress in Porting Android Functions onto RISC-V
 categories:
-  - Announcements
+  - Blog
+tags:
+  - announcement
 author: 
 images: ['news/alibaba-cloud-announced-progress-in-porting-android-functions-onto-risc-v/share.png']
 ---

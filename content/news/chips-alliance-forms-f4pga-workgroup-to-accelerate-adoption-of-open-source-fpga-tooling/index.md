@@ -2,7 +2,10 @@
 date: 2022-02-18T00:00:00Z
 title: CHIPS Alliance Forms F4PGA Workgroup to Accelerate Adoption of Open Source FPGA Tooling
 categories:
-  - Announcements
+  - Blog
+tags:
+  - announcement
+  - f4pga
 author: 
 images: ['news/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling/share.png']
 aliases: ['/announcement/2022/02/18/chips-alliance-forms-f4pga-workgroup-to-accelerate-adoption-of-open-source-fpga-tooling']

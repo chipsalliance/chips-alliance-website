@@ -2,7 +2,8 @@
 date: 2019-05-07T00:00:00Z
 title: CHIPS Alliance to Reveal Project Details, Strategy and Roadmap at Inaugural Workshop Hosted at Google
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, roadmap, risc-v, verilator, chisel]
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/announcement/2019/05/07/chips-alliance-to-reveal-project-details-strategy-and-roadmap-at-inaugural-workshop-hosted-at-google/']

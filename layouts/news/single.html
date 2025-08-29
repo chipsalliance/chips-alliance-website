@@ -24,6 +24,14 @@
                            <p>{{ .WordCount }} <span>words</span></p>
                         </li>
                      </ul>
+                     {{ with .Params.tags }}
+                     <div class="mt-2">
+                        {{ range . }}
+                        {{ $href := print (absURL "tags/") (urlize .) }}
+                        <a href="{{ $href }}" class="badge bg-light text-dark me-1">#{{ . }}</a>
+                        {{ end }}
+                     </div>
+                     {{ end }}
                   </div>
                </div>
 

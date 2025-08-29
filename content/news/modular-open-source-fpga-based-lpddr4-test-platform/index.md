@@ -6,6 +6,7 @@ categories:
 author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/04/09/modular-open-source-fpga-based-lpddr4-test-platform/']
+tags: [project-update, fpga, lpddr4, litedram, rowhammer]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/04/lpddr4-test-platform/).*

@@ -6,6 +6,7 @@ categories:
 author:  
 images: ['news/versatile-rowhammer-testing-platform/Versatile-module-based-DDR5-memory-testing-platform--chips-blog-thumbnail.png']
 aliases: ['/blog/2024/03/11/versatile-rowhammer-testing-platform']
+tags: [project-update, rowhammer, fpga]
 ---
 
 
@@ -55,5 +56,4 @@ Both the [SO-DIMM DDR5 Tester Board](https://openhardware.antmicro.com/boards/so
 Antmicro is at the forefront of creating and expanding new open source and automated hardware and software tester solutions for its commercial customers, helping ensure the security and reliability of high-throughput interfaces like DDR or PCIe. With mitigations against Rowhammer being slow to market, comprehensive and systematic testing remains the only viable method of ascertaining whether a specific memory chip is vulnerable or not to attack due to manufacturing variances. 
 
 If you wish to discuss the possibility of creating specialist hardware and software testing platforms for your specific needs, or if you need open source tooling for comprehensive testing of hardware for new and existing vulnerabilities, get in touch with Antmicro at [contact@antmicro.com](mailto:contact@antmicro.com).
-
 

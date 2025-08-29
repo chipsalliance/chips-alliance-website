@@ -6,6 +6,7 @@ categories:
 author:  
 images: ['news/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/Accelerating-model-generation-in-Verilator--blog-CHIPS.svg']
 aliases: ['/blog/2023/09/29/verilator-model-generation-performance-improvements-and-initial-multithreaded-verilation-support/']
+tags: [project-update, verilator]
 ---
 
 Verilator can boast the status of one of the most widely used free and open source digital design tools for ASIC and FPGA development. To stay on top of the ever-increasing complexity of ASIC and FPGA devices, as users and contributors, Antmicro, a CHIPS Alliance member and part of the [Tools Workgroup](https://lists.chipsalliance.org/g/tools-wg), has been actively working on improving the tool and its ecosystem, [including adding co-simulation capabilities with Renode](https://antmicro.com/blog/2023/01/cpu-rtl-co-simulation-in-renode/), [adding support for SystemVerilog UVM testbenches to Verilator](https://antmicro.com/blog/2023/01/open-source-systemverilog-uvm-support-in-verilator/), or [improving scalability for very large designs](https://antmicro.com/blog/2022/11/scaling-verilator-for-very-large-designs/).
@@ -53,4 +54,3 @@ While the efforts within the CHIPS Alliance to enable multithreading across Veri
 To learn more about the Tools Workgroup’s contributions to Verilator, you can watch a talk by Antmicro from [ORConf 2023](https://orconf.org/) in which they discuss the current status of non-synthesizable SystemVerilog support in the Verilator open source simulator and progress toward full UVM support.  
 
 With years of experience in commercial and R&D FPGA and ASIC-based projects, as well as leading theCHIPS Alliance’s Tools Workgroup, Antmicro offers comprehensive engineering support that can help you make the most of the flexibility and approachability of open source solutions. Do not hesitate to reach out at [contact@antmicro.com](mailto:contact@antmicro.com).
-

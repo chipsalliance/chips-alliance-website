@@ -6,6 +6,7 @@ categories:
 author: 
 images: ['news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png']
 aliases: ['/blog/2025/01/30/RDIMM-DDR5-tester/']
+tags: [project-update, fpga, rowhammer]
 ---
 
 A few years back, Antmicro introduced the first DDR5 capable platform to the open source [FPGA-based Rowhammer research framework](https://github.com/antmicro/rowhammer-tester) developed in cooperation with Google - the [Data Center RDIMM DDR5 Tester](https://antmicro.com/blog/2022/08/extending-the-open-source-rowhammer-testing-framework-to-ddr5/). The follow-on [SO-DIMM (LP)DDR5 Tester](https://antmicro.com/blog/2024/02/versatile-so-dimm-lpddr5-rowhammer-testing-platform/) later extended the framework’s coverage to both SO-DIMM DDR5 modules and LPDDR5.

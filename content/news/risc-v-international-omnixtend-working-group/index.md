@@ -2,7 +2,8 @@
 date: 2021-03-24T00:00:00Z
 title: CHIPS Alliance and RISC-V International Invite the RISC-V Community to Participate in Updating a New Unified Memory Architecture Standard
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, omnixtend]
 author: 
 images: ['news/risc-v-international-omnixtend-working-group/share.png']
 aliases: ['/announcement/2021/03/24/risc-v-international-omnixtend-working-group/']

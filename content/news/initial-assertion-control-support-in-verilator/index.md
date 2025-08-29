@@ -6,6 +6,7 @@ categories:
 author:  
 images: ['news/initial-assertion-control-support-in-verilator/verilator-assertcontrol-chipsalliance-blog.png']
 aliases: ['/blog/2024/06/21/initial-assertion-control-support-in-verilator']
+tags: [project-update, verilator, uvm, systemverilog, opemtitan]
 ---
 
 Antmicro is continuously working on improving productivity of ASIC design and verification workflows using open source tools as leaders of the [CHIPS Alliance](https://www.chipsalliance.org/) Tools Workgroup, as well as for customer and R&D projects. Extending [Verilator](https://github.com/verilator) with new verification features is a prominent example of such efforts, with the latest notable improvements including [initial support for UVM testbenches](https://antmicro.com/blog/2023/10/running-simple-uvm-testbenches-in-verilator/), the [astsee tool for Verilator process and AST analysis](https://antmicro.com/blog/2024/01/analyze-verilator-processes-and-asts/) and [constrained randomization](https://antmicro.com/blog/2024/03/introducing-constrained-randomization-in-verilator/).

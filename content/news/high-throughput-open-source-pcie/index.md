@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+tags: [project-update, pcie, litex, riscv]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/02/high-throughput-open-source-pcie-on-xilinx-vu19/).*

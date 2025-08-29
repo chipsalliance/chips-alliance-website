@@ -6,6 +6,7 @@ categories:
 author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/05/13/dynamic-scheduling-in-verilator/']
+tags: [project-update, verilator, risc-v]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/05/dynamic-scheduling-in-verilator/).*

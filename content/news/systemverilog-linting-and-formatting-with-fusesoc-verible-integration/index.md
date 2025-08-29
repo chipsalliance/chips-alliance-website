@@ -3,9 +3,11 @@ date: 2020-05-07T00:00:00Z
 title: SystemVerilog Linting and Formatting with FuseSoC – Verible Integration
 categories:
   - Blog
-author:
+author: 
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2020/05/07/systemverilog-linting-and-formatting-with-fusesoc-verible-integration/']
+tags:
+  - tutorial
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/04/systemverilog-linter-and-formatter-in-fusesoc/).*

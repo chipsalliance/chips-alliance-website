@@ -2,7 +2,8 @@
 date: 2020-05-14T00:00:00Z
 title: CHIPS Alliance’s Newly Enhanced SweRV Cores Available to All for Free
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, swerv, risc-v]
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/blog/2020/05/14/newly-enhanced-swerv-cores/', '/announcement/2020/05/14/newly-enhanced-swerv-cores']

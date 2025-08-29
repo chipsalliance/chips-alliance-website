@@ -3,8 +3,11 @@ date: 2024-03-18T00:00:00Z
 title: Analyze Verilator processes and ASTs with the astsee suite
 categories:
   - Blog
-author:  
+author: 
 images: ['news/analyze-verilator-processes/Verilator-helper-tools--blog-sm.png']
+tags:
+  - tutorial
+  - verilator
 aliases: ['/blog/2024/03/18/analyze-verilator-processes/']
 ---
 

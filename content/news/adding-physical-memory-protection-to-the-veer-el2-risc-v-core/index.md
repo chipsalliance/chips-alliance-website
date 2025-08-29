@@ -6,6 +6,9 @@ categories:
 author:  
 images: ['news/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/pmp-thumbnail.png'] 
 aliases: ['/blog/2024/03/25/adding-physical-memory-protection-to-the-veer-el2-risc-v-core/']
+tags:
+  - project-update
+  - caliptra
 ---
 
 Antmicro’s work with CHIPS Alliance’s [Caliptra Root of Trust](https://github.com/chipsalliance/Caliptra) project, led by Google, AMD, NVIDIA, and Microsoft focuses around providing [automated testing and verification infrastructure](https://opensource.googleblog.com/2023/11/open-source-and-ci-driven-rtl-testing-and-verification-caliptra-risc-v-veer-core.html) including code quality checks, code indexing, coverage and functional testing pipelines, as well as maintaining and enhancing the RISC-V VeeR EL2 core which sits in the middle of the Caliptra design. As providers of commercial engineering services around open source tools and silicon blocks, working on Caliptra gives Antmicro both a solid starting point for assisting customers with practical RoT implementations as well as a template for CI-driven ASIC development. 
@@ -83,4 +86,3 @@ The team also ran tests for the VeeR EL2 core and the PMP implementation using [
 As demonstrated by the use of the VeeR project in the [Caliptra Root of Trust](https://github.com/chipsalliance/Caliptra), the adaptability of open source cores, combined with testing capabilities offered by open source tools, provides the transparency, scalability and vertical integration necessary for emerging use cases such as [dedicated secure ML silicon](https://antmicro.com/blog/2023/11/secure-open-source-ml-with-open-se-cura/) as well as collaborative environments with multiple actors involved, such as the data center. 
 
 Whether you are looking to adapt open source RISC-V cores to your security-focused use case, or to harness the possibilities of using open source tooling for chip design, you can take advantage of Antmicro’s proven expertise and a portfolio of adaptable, extendible open source components and frameworks. For wider context, make sure to watch a [presentation from ORConf 2023](https://www.youtube.com/watch?v=DFCWthwXzbk), and to discuss your particular needs, feel free to contact them at [contact@antmicro.com](mailto:contact@antmicro.com).
-

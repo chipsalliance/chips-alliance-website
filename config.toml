@@ -9,6 +9,10 @@ unsafe= true
 
 googleAnalytics = 'G-H0KF2YZTR7'
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 [params]
   description = 'CHIPS (Common Hardware for Interfaces, Processors and Systems) Alliance harnesses the energy of open source collaboration to accelerate hardware development.'
   images = ['images/chips-alliance-share.jpg']

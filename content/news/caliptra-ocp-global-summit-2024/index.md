@@ -6,6 +6,7 @@ categories:
 author:  
 images: ['news/caliptra-ocp-global-summit-2024/caliptra-logo-2.png']
 aliases: ['/blog/2024/10/13/caliptra-ocp-global-summit-2024']
+tags: [roadmap, caliptra, risc-v]
 ---
 
 ## Introduction

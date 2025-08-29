@@ -6,6 +6,9 @@ categories:
 author:  
 images: ['news/speeding-up-openroad-for-fast-design-feedback/Speeding-up-OpenROAD-optimizations-blog-1.png']
 aliases: ['/blog/2024/05/24/speeding-up-openroad-for-fast-design-feedback/']
+tags:
+  - project-update
+  - openroad
 ---
 
 The [OpenROAD](https://theopenroadproject.org/) project provides an open source ASIC toolchain that reduces the entry barriers to the field of hardware development and allows fast-turnaround feedback about designs, helping to increase the productivity of silicon teams. As such, it’s a great supporting tool, increasingly used in state-of-the-art industrial projects alongside other open source tools like Verilator. 

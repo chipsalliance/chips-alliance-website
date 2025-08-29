@@ -2,7 +2,8 @@
 date: 2022-12-01T00:00:00Z
 title: CHIPS Alliance Fall 2022 Technology Update December 15
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, event-recap]
 author: 
 images: ['news/chips-alliance-fall-2022-technology-update-december-15/share.png']
 ---

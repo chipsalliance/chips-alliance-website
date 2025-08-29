@@ -6,6 +6,7 @@ categories:
 author: 
 images: ['news/open-source-fpga-platform-for-rowhammer-security-testing-in-the-data-center/share.png']
 aliases: ['/blog/2022/01/03/open-source-fpga-platform-for-rowhammer-security-testing-in-the-data-center/']
+tags: [project-update, rowhammer]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/open-source-data-center-rowhammer-tester/).*

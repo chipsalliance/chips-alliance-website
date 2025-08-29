@@ -2,7 +2,10 @@
 date: 2020-08-11T00:00:00Z
 title: QuickLogic Joins CHIPS Alliance to Expand Open Source FPGA Efforts
 categories:
-  - Announcements
+  - Blog
+tags:
+  - announcement
+  - f4pga
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/announcement/2020/08/11/quicklogic-joins-chips-alliance-to-expand-open-source-fpga-efforts/']

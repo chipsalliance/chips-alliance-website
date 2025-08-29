@@ -2,7 +2,8 @@
 date: 2020-12-15T00:00:00Z
 title: Efabless Joins CHIPS Alliance to Accelerate the Growth of the Open Source Chip Ecosystem
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, openroad, yosys, f4pga]
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/announcement/2020/09/15/efabless-joins-chips-alliance-to-accelerate-the-growth-of-the-open-source-chip-ecosystem/']
