@@ -6,6 +6,7 @@ categories:
 author: 
 images: ['news/caliptra-support-for-veer/VeeR-EL2-Tock--blog-sm.png']
 aliases: ['/blog/2025/01/10/caliptra-support-for-veer/']
+tags: [roadmap, caliptra, risc-v]
 ---
 
 The [Caliptra](https://chipsalliance.github.io/Caliptra/) Root of Trust project, a collaboration between AMD, Google, Microsoft and NVIDIA within the [CHIPS Alliance](https://www.chipsalliance.org/), is steadily heading towards its [2.0 release](https://www.chipsalliance.org/news/caliptra-ocp-global-summit-2024/) – an effort Antmicro is [actively contributing to](https://www.youtube.com/watch?v=hXjUoCGlXyM). They’ve recently described their [implementation of User mode](https://antmicro.com/blog/2024/09/user-mode-in-veer-el2-core-for-caliptra-2-0/) in the RISC-V VeeR EL2 core along with extended Physical Memory Protection, and related to this work, they’ve introduced support for VeeR EL2 with User Mode and PMP to the [Tock](https://github.com/tock/tock) embedded OS. The main goal of this implementation was to test the mode switching feature of the VeeR EL2 core with PMP enabled.
@@ -47,6 +48,5 @@ Through projects like Caliptra, the “security through obscurity” paradigm is
 You can delve deeper into Caliptra in Antmicro’s [System Designer](https://designer.antmicro.com/projects/caliptra_open_source_root_of_trust_soc/overview), an interactive portal aggregating our open source methodologies, workflows and tools, where you can explore Caliptra SoC’s structure, RTL and verification artifacts from a block diagram perspective.
 
 If you want to learn more about Antmicro’s services to help you build your next RISC-V based security solution, don’t hesitate to contact them at [contact@antmicro.com](mailto:contact@antmicro.com).
-
 
 

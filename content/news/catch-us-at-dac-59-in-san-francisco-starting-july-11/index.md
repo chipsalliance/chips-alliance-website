@@ -2,7 +2,8 @@
 date: 2022-07-08T00:00:00Z
 title: Catch us at DAC 59 in San Francisco starting July 11
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, event-recap, risc-v]
 author: 
 images: ['news/catch-us-at-dac-59-in-san-francisco-starting-july-11/share.png']
 ---

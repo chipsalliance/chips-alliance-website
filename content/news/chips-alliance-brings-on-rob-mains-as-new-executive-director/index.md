@@ -2,7 +2,9 @@
 date: 2021-02-08T00:00:00Z
 title: CHIPS Alliance Brings on Rob Mains as New Executive Director
 categories:
-  - Announcements
+  - Blog
+tags:
+  - announcement
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/announcement/2021/02/08/chips-alliance-brings-on-rob-mains-as-new-executive-director/']

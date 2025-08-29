@@ -2,7 +2,8 @@
 date: 2021-02-11T00:00:00Z
 title: CHIPS Alliance Welcomes Antmicro and VeriSilicon to the Platinum Membership Level
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, risc-v]
 author: 
 images: ['news/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/share.png']
 aliases: ['/announcement/2021/02/11/chips-alliance-welcomes-antmicro-and-verisilicon-to-the-platinum-membership-level/']

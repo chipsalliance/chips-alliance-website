@@ -2,7 +2,8 @@
 date: 2019-11-07T00:00:00Z
 title: CHIPS Alliance announces technical milestones, three new workgroups including Chisel and the 3rd Chisel Community Conference
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, chisel, verilator, risc-v]
 author: 
 images: ['images/announcement-share.jpg']
 ---

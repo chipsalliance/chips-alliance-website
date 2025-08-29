@@ -18,3 +18,4 @@ hugo.linux
 _vendor
 
 /themes
+.vscode/

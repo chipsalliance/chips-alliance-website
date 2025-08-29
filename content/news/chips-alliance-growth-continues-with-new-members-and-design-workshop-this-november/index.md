@@ -2,7 +2,8 @@
 date: 2019-10-15T00:00:00Z
 title: CHIPS Alliance growth continues with new members and design workshop this November
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, risc-v]
 author: 
 images: ['images/announcement-share.jpg']
 ---

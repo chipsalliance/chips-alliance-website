@@ -6,6 +6,7 @@ categories:
 author: 
 images: ['news/topwrap/topwrap--blog-sm-CHIPS.png']
 aliases: ['/blog/2024/12/20/topwrap/']
+tags: [project-update, topwrap, fpga]
 ---
 
 ASIC and FPGA designs consist of distinct blocks of logic bound together by a top-level design. Taking advantage of this modularity and enabling automation and reuse of blocks across designs requires tools for automated processing and generation of top level files, letting you easily parametrize and aggregate the blocks in various configurations.
@@ -176,4 +177,3 @@ Near-term goals for Topwrap include integrating it with other tools to enable ca
 From general purpose RISC-V-based processors through AI accelerators to computationally demanding edge AI processing solutions, Antmicro’s open source-driven tools and workflows, combined with [their engineering services](https://offering.antmicro.com/), helps their customers design, develop and finally bring new products to market faster and more reliably. With services including both RTL development and enhancing and implementing tools such as Topwrap, Renode, Verilator or cocotb for your organization’s needs, they offer support at any stage of the chip design process in demanding industries including automotive, space, AR/VR, and more.
 
 If you’re interested in creating a digital design with Antmicro and would like to discuss your options, or if you would like them to expand Topwrap’s capabilities to best fit your use case, don’t hesitate to contact them at [contact@antmicro.com](mailto:contact@antmicro.com).
-

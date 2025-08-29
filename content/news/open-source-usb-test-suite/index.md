@@ -6,6 +6,8 @@ categories:
 author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2019/12/06/open-source-usb-test-suite/']
+tags:
+  - project-update
 ---
 
 **Note**: the open source test suite will be demonstrated at the CHIPS Alliance booth at the [RISC-V Summit 2019](https://tmt.knect365.com/risc-v-summit/) – join us Dec 10-12 in the San Jose Convention Center!

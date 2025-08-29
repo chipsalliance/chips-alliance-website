@@ -2,7 +2,8 @@
 date: 2019-03-11T00:00:00Z
 title: Linux Foundation to Host CHIPS Alliance Project to Propel Industry Innovation Through Open Source CPU Chip and SoC Design
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, risc-v, chisel, swerv]
 author: 
 images: ['images/announcement-share.jpg']
 ---

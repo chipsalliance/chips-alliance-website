@@ -2,7 +2,9 @@
 date: 2019-04-18T00:00:00Z
 title: Open Hardware Group – CHIPS Alliance – Building Momentum and Community with Newest Member Antmicro
 categories:
-  - Announcements
+  - Blog
+tags:
+  - announcement
 author: 
 images: ['images/announcement-share.jpg']
 ---

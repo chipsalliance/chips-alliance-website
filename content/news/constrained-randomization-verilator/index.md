@@ -7,6 +7,7 @@ categories:
 author: 
 images: ['news/constrained-randomization-verilator/Constrained-randomization-in-Verilator--blog-sm--CHIPS.png']
 aliases: ['/blog/2025/01/21/constrained-randomization-verilator/']
+tags: [project-update, verilator, risc-v, caliptra]
 ---
 
 Digital design verification often utilizes the so-called constrained randomization functionality offered by SystemVerilog, where in order to efficiently test designs with random but still correct data, a digital logic designer can put constraints in place. This allows verification tests to run shorter by focusing the validation of the design’s behavior on input that the designer considers useful and interesting.

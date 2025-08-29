@@ -2,7 +2,8 @@
 date: 2020-12-08T00:00:00Z
 title: CHIPS Alliance to Collaborate with RISC-V to Standardize an Open Unified Memory Leveraging OmniXtend
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, omnixtend]
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/announcement/2020/12/08/omnixtend/']

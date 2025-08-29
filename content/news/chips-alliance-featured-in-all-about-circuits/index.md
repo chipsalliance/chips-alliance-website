@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['images/blog-share.jpg']
+tags: [announcement, interview, risc-v]
 ---
 
 All About Circuits recently featured an interview with Ted Marena, Yunsup Lee, Amir Salek, and Zvonimir Bandic, discussing the formation of the CHIPS Alliance, its relationship to the RISC-V Foundation, the CHIPS Alliance’s open development model, and initial open source contributions.

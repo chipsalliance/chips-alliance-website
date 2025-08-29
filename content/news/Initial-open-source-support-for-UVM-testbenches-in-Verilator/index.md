@@ -6,6 +6,7 @@ categories:
 author:  
 images: ['news/initial-open-source-support-for-uvm-testbenches-in-verilator/UVM-Testbenches-in-Verilator-thumbnail.svg']
 aliases: ['/blog/2023/11/08/initial-open-source-support-for-uvm-testbenches-in-verilator/']
+tags: [project-update, verilator, uvm, systemverilog]
 ---
 
 
@@ -118,4 +119,3 @@ While successfully running this proof-of-concept UVM testbench in Verilator is a
 To learn more about enabling UVM testbenches in Verilator, join Antmicro at the next [CHIPS Alliance Technology Update] (https://events.linuxfoundation.org/chips-biannual-technology-update/) on November 9, either virtually or on-site at Google MAT1 Building, Sunnyvale.   
 
 If you would like Antmicro to develop bespoke UVM testbenches for your use case, include them in your HDL simulation in Verilator, and even shift your projects to a fully comprehensive open source workflow via integrations with [Renode](https://renode.io) and a plethora of other open source tools in Antmicro’s portfolio, feel free to reach out at [contact@antmicro.com](mailto:contact@antmicro.com).
-

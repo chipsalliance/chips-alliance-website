@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['images/blog-share.jpg']
+tags: [project-update, verilator]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/06/advanced-co-simulation-with-renode-and-verilator/).*

@@ -6,6 +6,7 @@ categories:
 author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2020/06/29/open-source-process-design-kit-from-google-skywater-technologies-and-partners-released']
+tags: [project-update, pdk, skywater]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/06/skywater-open-source-pdk/).*

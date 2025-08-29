@@ -2,7 +2,8 @@
 date: 2020-01-22T00:00:00Z
 title: Intel joins CHIPS Alliance to promote Advanced Interface Bus (AIB) as an open standard
 categories:
-  - Announcements
+  - Blog
+tags: [project-update, systemverilog, verible, language-server-protocol, lsp, asic-design]
 author: 
 images: ['images/announcement-share.jpg']
 ---

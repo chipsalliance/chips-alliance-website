@@ -5,6 +5,8 @@ categories:
   - Blog
 author: 
 images: ['images/blog-share.jpg']
+tags:
+  - event-recap
 ---
 
 We recently held our fall 2021 CHIPS Alliance workshop with nearly 160 attendees present for informative seminars covering a range of topics including porting Android to RISC-V, open source ASIC design and FPGA tooling, and OmniXtend. In case you missed the talks, a replay is available [on the CHIPS Alliance YouTube channel](https://www.youtube.com/watch?v=auXZdPwYs10).

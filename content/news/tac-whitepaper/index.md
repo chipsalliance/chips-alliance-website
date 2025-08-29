@@ -6,6 +6,8 @@ categories:
 author: 
 images: ['news/tac-whitepaper/chips-alliance-whitepaper.jpg']
 aliases: ['/blog/2025/04/28/tac-whitepaper/']
+tags:
+  - report
 ---
 
 CHIPS Alliance has just released a new white paper, CHIPS Alliance and the Open Hardware Landscape, designed to demystify the current state of open hardware, outline the challenges ahead, and chart a path forward for everyone from startups to silicon giants.
@@ -47,4 +49,3 @@ Whether you are a developer, researcher, or executive, this is essential reading
 **[Download the PDF now](chips-alliance-whitepaper.pdf)**! and see how CHIPS Alliance is shaping the next generation of open innovation.
 
 #OpenSourceSilicon #CHIPSAlliance #RISCV #EDA #ASIC #SoCDesign #OpenHardware
-

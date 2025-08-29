@@ -2,7 +2,8 @@
 date: 2020-08-17T00:00:00Z
 title: CHIPS Alliance Welcomes Mentor as its Newest Member
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, risc-v]
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/uncategorized/2020/08/17/chips-alliance-welcomes-mentor-as-its-newest-member/']

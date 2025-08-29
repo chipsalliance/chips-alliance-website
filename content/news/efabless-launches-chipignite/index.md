@@ -3,9 +3,10 @@ date: 2021-05-20T00:00:00Z
 title: Efabless Launches chipIgnite with SkyWater to Bring Chip Creation to the Masses
 categories:
   - Blog
-author:
+author: 
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/05/20/efabless-launches-chipignite/']
+tags: [announcement, openroad, yosys, f4pga]
 ---
 
 - Program includes a pre-designed carrier chip and automated open source design flow from Efabless

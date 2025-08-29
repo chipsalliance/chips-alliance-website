@@ -6,6 +6,7 @@ categories:
 author: 
 images: ['news/towards-uvm-using-coroutines/share.png']
 aliases: ['/blog/2022/02/01/towards-uvm-using-coroutines/']
+tags: [project-update, verilator, uvm]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/12/coroutines-for-dynamic-scheduling-in-verilator/).*

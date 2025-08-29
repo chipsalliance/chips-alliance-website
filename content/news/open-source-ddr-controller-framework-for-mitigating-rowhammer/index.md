@@ -6,6 +6,7 @@ categories:
 author: 
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/09/28/open-source-ddr-controller-framework-for-mitigating-rowhammer/']
+tags: [project-update, rowhammer]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/08/open-source-ddr-test-framework-for-rowhammer/).*

@@ -2,7 +2,8 @@
 date: 2022-12-13T00:00:00Z
 title: CHIPS Alliance Welcomes the Caliptra Open Source Root of Trust Project
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, caliptra]
 author: 
 images: ['news/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/share.png']
 aliases: ['/announcement/2022/12/13/chips-alliance-welcomes-the-caliptra-open-source-root-of-trust-project/']

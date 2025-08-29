@@ -6,6 +6,7 @@ categories:
 author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2020/07/10/chips-swerv-cores-and-the-open-tools-ecosystem']
+tags: [project-update, risc-v, verilator, swerv]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/07/swerv-cores-tools-ecosystem/).*

@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['news/open-source-rtl-ci-testing-and-verification-for-caliptra-veer/CI-driven-testing-for-VeeR_blog_chips.png']
+tags: [project-update, caliptra, veer]
 ---
 
 As part of [CHIPS Alliance’s](https://www.chipsalliance.org/) mission to enable a software-driven approach to silicon, working with Google and other CHIPS members, Antmicro has been developing and improving a growing number of open source tools to enable effective, CI-driven silicon development.

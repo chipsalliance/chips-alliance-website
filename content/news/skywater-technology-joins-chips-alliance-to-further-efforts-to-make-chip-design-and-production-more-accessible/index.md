@@ -2,7 +2,8 @@
 date: 2021-09-16T00:00:00Z
 title: SkyWater Technology Joins CHIPS Alliance to Further Efforts to Make Chip Design and Production More Accessible
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, skywater]
 author: 
 images: ['news/skywater-technology-joins-chips-alliance-to-further-efforts-to-make-chip-design-and-production-more-accessible/share.png']
 aliases: ['/announcement/2021/09/16/skywater-technology-joins-chips-alliance-to-further-efforts-to-make-chip-design-and-production-more-accessible/']

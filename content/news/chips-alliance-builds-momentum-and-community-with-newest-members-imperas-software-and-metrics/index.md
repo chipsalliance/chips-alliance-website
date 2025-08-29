@@ -2,7 +2,8 @@
 date: 2019-06-18T00:00:00Z
 title: CHIPS Alliance Builds Momentum and Community with Newest Members Imperas Software and Metrics
 categories:
-  - Announcements
+  - Blog
+tags: [announcement, risc-v]
 author: 
 images: ['images/announcement-share.jpg']
 ---

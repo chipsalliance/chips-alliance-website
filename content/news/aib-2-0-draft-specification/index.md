@@ -2,7 +2,10 @@
 date: 2020-07-16T00:00:00Z
 title: CHIPS Alliance Announces AIB 2.0 Draft Specification to Accelerate Design of Open Source Chiplets
 categories:
-  - Announcements
+  - Blog
+tags:
+  - release-notes
+  - announcement
 author: 
 images: ['images/announcement-share.jpg']
 aliases: ['/announcement/2020/07/16/aib-2-0-draft-specification/']

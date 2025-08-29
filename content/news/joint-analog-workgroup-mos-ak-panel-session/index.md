@@ -5,6 +5,7 @@ categories:
   - Blog
 author: 
 images: ['news/joint-analog-workgroup-mos-ak-panel-session/share.png']
+tags: [announcement, analog, ngspice, xyce, skywater, systemverilog]
 ---
 
 Please join us for a special joint panel webinar session for the CHIPS Alliance Analog Workgroup and MOS-AK Foundation.

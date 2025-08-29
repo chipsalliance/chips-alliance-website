@@ -2,7 +2,9 @@
 date: 2022-02-03T00:00:00Z
 title: CHIPS Alliance Announces Xilinx as its Newest Member 
 categories:
-  - Announcements
+  - Blog
+tags:
+  - announcement
 author: 
 images: ['news/xilinx-new-member/share.png']
 aliases: ['/announcement/2022/02/03/xilinx-new-member/']

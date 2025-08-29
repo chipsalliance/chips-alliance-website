@@ -40,8 +40,6 @@ sections:
   -
     title: "News"
     links:
-      - link: "categories/announcements/"
-        text: "Announcements"
       - link: "categories/blog/"
         text: "Blog"
       - link: "categories/reports/"

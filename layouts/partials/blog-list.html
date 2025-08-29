@@ -10,6 +10,39 @@
       </div>
    </div>
 </section>
+{{ $current := . }}
+{{ $isBlogList := strings.Contains $current.RelPermalink "categories/blog/" }}
+{{ $isTagTerm := and (eq .Kind "term") (eq .Data.Singular "tag") }}
+{{ $selectedTagUrl := "" }}
+{{ if $isTagTerm }}{{ $selectedTagUrl = (urlize .Data.Term) }}{{ end }}
+{{ if or $isBlogList $isTagTerm }}
+<section class="tag-filter py-3">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center">
+      <span class="me-3 fw-semibold">Filter by tag:</span>
+      {{ $allHref := cond $isTagTerm (relURL "categories/blog/") $current.RelPermalink }}
+      {{ $allClass := cond $isBlogList "badge bg-primary me-2 mb-2" "badge bg-light text-dark border me-2 mb-2" }}
+      <a href="{{ $allHref }}" class="{{ $allClass }}">All</a>
+      {{ $allBlogTags := slice }}
+      {{ $blogPages := where (where site.RegularPages "Section" "news") "Params.categories" "intersect" (slice "Blog") }}
+      {{ range $blogPages }}
+        {{ with .Params.tags }}
+          {{ range . }}
+             {{ $allBlogTags = $allBlogTags | append . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ range ($allBlogTags | uniq | sort) }}
+        {{ $tagUrl := (urlize .) }}
+        {{ $href := print (absURL "tags/") $tagUrl }}
+        {{ $isActive := and $isTagTerm (eq $tagUrl $selectedTagUrl) }}
+        {{ $cls := cond $isActive "badge bg-primary me-2 mb-2" "badge bg-light text-dark border me-2 mb-2" }}
+        <a href="{{ $href }}" class="{{ $cls }}">#{{ . }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 <section class="blog @@padding @@blog-two">
    <div class="container">
       <div class="row">
@@ -24,12 +57,14 @@
                   </a>
                </div>
                <div class="blog-post-content">
-                  <div class="blog-post-tag @@category">
-                     {{ range .Params.categories }} {{ $href := print (absURL "categories/") (urlize
-                     .) }}
-                     <a href="{{ $href }}">{{ . | humanize }}</a>
+                  {{ with .Params.tags }}
+                  <div class="blog-post-tag mt-1">
+                     {{ range . }}
+                     {{ $href := print (absURL "tags/") (urlize .) }}
+                     <a href="{{ $href }}" class="badge bg-light text-dark me-1">#{{ . }}</a>
                      {{ end }}
                   </div>
+                  {{ end }}
                   <div class="blog-post-date">
                      {{.Date | time.Format ":date_long"}}
                   </div>

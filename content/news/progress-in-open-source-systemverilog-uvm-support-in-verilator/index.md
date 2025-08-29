@@ -5,6 +5,7 @@ categories:
   - Blog
 author:
 images: ['news/progress-in-open-source-systemverilog-uvm-support-in-verilator/scaling-verilator--chips-alliance.png']
+tags: [project-update, systemverilog, uvm, verilator]
 ---
 
 
