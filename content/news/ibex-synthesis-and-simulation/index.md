@@ -6,7 +6,7 @@ categories:
 author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/01/07/ibex-synthesis-and-simulation/']
-tags: [project-update, yosys, verilator, uhdm, surelog, ibex, riscv, opemtitan]
+tags: [project-update, yosys, verilator, uhdm, surelog, ibex, risc-v, opentitan]
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2020/12/ibex-support-in-verilator-yosys-via-uhdm-surelog/).*

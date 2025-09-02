@@ -5,8 +5,7 @@ categories:
   - Blog
 author: 
 images: ['news/integrating-language-server-protocol-in-verible/lsp-illustration_chips.png']
-tags:
-  - project-update
+tags: [project-update, verible]
 ---
 
 A more collaborative, open and software driven ASIC design methodology pioneered by the [CHIPS Alliance](https://chipsalliance.org) requires an open source tooling stack to enable sharing of workflows, artifacts and fostering a free exchange of insights and improvements.

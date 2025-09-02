@@ -5,9 +5,7 @@ categories:
   - Blog
 author: 
 images: ['news/coverage-dashboards-for-veer-and-caliptra/Coverview--chips--blog-sm.png']
-tags:
-  - project-update
-  - caliptra
+tags: [project-update, caliptra, veer]
 aliases: ['/blog/2025/05/22/coverview/']
 ---
 
