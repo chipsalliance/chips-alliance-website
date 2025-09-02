@@ -5,8 +5,7 @@ categories:
   - Blog
 author: 
 images: ['news/open-source-debayerization-blocks-in-fpga/share.jpg']
-tags:
-  - project-update
+tags: [project-update, fpga]
 aliases: ['/blog/2021/11/30/open-source-debayerization-blocks-in-fpga/']
 ---
 

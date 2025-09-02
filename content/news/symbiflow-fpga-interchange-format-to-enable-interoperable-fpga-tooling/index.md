@@ -6,9 +6,8 @@ categories:
 author: 
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/09/09/symbiflow-fpga-interchange-format-to-enable-interoperable-fpga-tooling/']
-tags:
-  - project-update
-  - f4pga
+tags: [project-update, f4pga]
+
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/09/symbiflow-fpga-interchange-format/).*

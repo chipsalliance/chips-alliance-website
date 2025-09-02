@@ -6,8 +6,8 @@ categories:
 author: 
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/05/14/antmicros-arvsom-risc-v-module-announced/']
-tags:
-  - announcement
+tags: [announcement, risc-v]
+  
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/04/arv-som-announcement/).*
