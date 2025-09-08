@@ -19,7 +19,9 @@
     @include media-breakpoint-down-md {
       max-width: 600px;
     }
-
+    .first-logo-link {
+      margin-right: 20px;
+  }
     .footer-logo {
       @include media-breakpoint-down-lg {
         text-align: center;
