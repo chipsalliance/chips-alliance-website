@@ -201,3 +201,7 @@ members:
     url: https://www.synopsys.com/
     image: synopsys.svg
     level: silver    
+  - name: Block, Inc
+    url: https://block.xyz/
+    image: block-inc.svg
+    level: silver  
