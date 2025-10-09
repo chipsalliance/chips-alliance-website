@@ -12,11 +12,11 @@ CHIPS Alliance will be onsite at the [OCP Global Summit 2025](https://www.openco
 
 You can also **meet CHIPS Alliance Executive Director Rob Mains at the [OpenPOWER Foundation](https://openpowerfoundation.org/events/ocpnasummit2025/) booth (C48)** to learn more about ongoing community efforts and how to get involved. See the talk details below.
 
+
 **From Flashless to Fearless: A Rust Firmware Journey into Caliptra Streaming Boot**
 **Thu, Oct 16, 8:50 am – 9:05 am | Concourse Level – 211**
 Vishal Soni and Xiling Sun from Microsoft present a deep dive into Caliptra’s flashless, streaming boot. They’ll show how Rust and TockOS power the firmware stack and share lessons from building memory-safe firmware for secure embedded systems.
 https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
-
 
 
 **OCP LOCK/Caliptra 2.1 and MEK-MPA Use Cases**
@@ -25,19 +25,16 @@ Charles Kunzman and Jeff Andersen from Google, along with Lee Prewitt from Micro
 https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
 
 
-
 **Caliptra Update: Roadmap, Integration, and Assurance**
 **Thu, Oct 16, 10:45 am – 11:05 am | Concourse Level – 211**
 Andres Lagar-Cavilla from Google and Bryan Kelly from Microsoft share the latest Caliptra roadmap: new profiles, integration updates, performance work, and plans for assurance and PSIRT readiness.
 https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
 
 
-
 **OCP LOCK with Caliptra 2.1**
 **Thu, Oct 16, 11:10 am – 11:30 am | Concourse Level – 211**
 Jeff Andersen from Google and Emre Karabulut from Microsoft explain how Caliptra 2.1 enforces OCP LOCK policies, covering measurement, isolation, and deployment mechanics.
 https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
-
 
 
 **Caliptra Subsystem Manufacturing & Production Debug Flows**
@@ -50,7 +47,6 @@ https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
 **Thu, Oct 16, 1:35 pm – 1:50 pm | Concourse Level – 211**
 Christopher Swenson from Microsoft and Jeff Andersen from Google explore Caliptra’s cryptographic core: DICE/DPE identity, attestation, secure boot, mailbox services, and adapting for post-quantum with Adams Bridge.
 https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
-
 
 
 **Porting to Caliptra Subsystem using MCU Firmware SDK**
