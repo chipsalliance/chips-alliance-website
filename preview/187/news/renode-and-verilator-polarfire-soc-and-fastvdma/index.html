@@ -1,0 +1,377 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=5">
+<link href=/preview/187/vendor/bootstrap/bootstrap.min.css rel=stylesheet>
+<link href=/preview/187/vendor/phosphor-icons/css/phosphor.css rel=stylesheet>
+<link href=/preview/187/vendor/magnific-popup/magnific-popup.css rel=stylesheet>
+<link rel=stylesheet href=/preview/187/scss/theme.min.53fa887b01836c4fd2231659f9c9f611f2bfeb6c256dfea6461be73843594049.css>
+<link rel=icon href=/preview/187/images/favicon/cropped-favicon-1-32x32.png sizes=32x32>
+<link rel=icon href=/preview/187/images/favicon/cropped-favicon-1-192x192.png sizes=192x192>
+<link rel=apple-touch-icon href=/preview/187/images/favicon/cropped-favicon-1-180x180.png>
+<meta name=msapplication-TileImage content="/preview/187/images/favicon/cropped-favicon-1-270x270.png">
+<script src=https://cmp.osano.com/16A0DbT9yDNIaQkvZ/3b49aaa9-15ab-4d47-a8fb-96cc25b5543c/osano.js></script>
+<title>Advanced Co-simulation with Renode and Verilator: PolarFire SoC and FastVDMA | CHIPS Alliance</title>
+<meta name=description content="This post was originally published at Antmicro.
+Co-simulating HDL has been possible in Renode since the 1.7.1 release, but the functionality – …">
+<meta property="og:title" content="Advanced Co-simulation with Renode and Verilator: PolarFire SoC and FastVDMA">
+<meta property="og:description" content="This post was originally published at Antmicro.
+Co-simulating HDL has been possible in Renode since the 1.7.1 release, but the functionality – critical for hardware/software co-development as well as FPGA use cases – is constantly evolving based on the needs of our customers like Google and Microchip as well as our work in open source groups including CHIPS Alliance and RISC-V International. To quickly recap, by co-simulation we mean a scenario where a part of the system is simulated in Renode but some specific peripheral or subsystem is simulated directly from HDL, e.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chipsalliance.org/preview/187/news/renode-and-verilator-polarfire-soc-and-fastvdma/"><meta property="og:image" content="https://chipsalliance.org/preview/187/images/blog-share.jpg"><meta property="article:section" content="news">
+<meta property="article:published_time" content="2021-07-20T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-07-20T00:00:00+00:00"><meta property="og:site_name" content="CHIPS Alliance">
+<meta itemprop=name content="Advanced Co-simulation with Renode and Verilator: PolarFire SoC and FastVDMA">
+<meta itemprop=description content="This post was originally published at Antmicro.
+Co-simulating HDL has been possible in Renode since the 1.7.1 release, but the functionality – critical for hardware/software co-development as well as FPGA use cases – is constantly evolving based on the needs of our customers like Google and Microchip as well as our work in open source groups including CHIPS Alliance and RISC-V International. To quickly recap, by co-simulation we mean a scenario where a part of the system is simulated in Renode but some specific peripheral or subsystem is simulated directly from HDL, e."><meta itemprop=datePublished content="2021-07-20T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-07-20T00:00:00+00:00">
+<meta itemprop=wordCount content="1130"><meta itemprop=image content="https://chipsalliance.org/preview/187/images/blog-share.jpg">
+<meta itemprop=keywords content="project-update,verilator,"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://chipsalliance.org/preview/187/images/blog-share.jpg">
+<meta name=twitter:title content="Advanced Co-simulation with Renode and Verilator: PolarFire SoC and FastVDMA">
+<meta name=twitter:description content="This post was originally published at Antmicro.
+Co-simulating HDL has been possible in Renode since the 1.7.1 release, but the functionality – critical for hardware/software co-development as well as FPGA use cases – is constantly evolving based on the needs of our customers like Google and Microchip as well as our work in open source groups including CHIPS Alliance and RISC-V International. To quickly recap, by co-simulation we mean a scenario where a part of the system is simulated in Renode but some specific peripheral or subsystem is simulated directly from HDL, e.">
+<meta name=twitter:site content="@chipsalliance">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0KF2YZTR7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H0KF2YZTR7')</script>
+</head>
+<body>
+<header>
+<div class="lfprojects position-fixed">
+<a href=https://www.linuxfoundation.org/projects target=_blank rel="noopener noreferrer"><img src=/preview/187/images/lf-projects-banner-white.svg></a>
+</div>
+<nav class="navbar navbar-expand-lg position-fixed w-100 zindex-dropdown" id=mainnavigationBar>
+<a class=navbar-brand href=/preview/187/>
+<img src=/preview/187/images/chips_alliance.svg alt=Nav-Logo>
+</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-default><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.5" y1="5.5" x2="21.5" y2="5.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="4.5" y1="12.5" x2="21.5" y2="12.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.5" y1="19.5" x2="21.5" y2="19.5" stroke="#292d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+<span class=navbar-toggler-toggled><svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.5 6.5l-15 15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 21.5l-15-15" stroke="#404152" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav mx-auto mb-20 mb-lg-0 navbar-nav-scroll">
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+About
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/187/about/who-we-are/>Who We Are</a>
+<a class=dropdown-item href=/preview/187/about/members/>Members</a>
+<a class=dropdown-item href=/preview/187/about/governance/>Governance</a>
+<a class=dropdown-item href=/preview/187/about/faq/>FAQ</a>
+<a class=dropdown-item href=/preview/187/about/contact/>Contact</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/187/projects/>
+Projects
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/187/events/>
+Events
+</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/187/workgroups/>
+Workgroups
+</a>
+</li>
+<li class="nav-item dropdown">
+<div class="nav-link dropdown-toggle" data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+News
+</div>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=/preview/187/categories/blog/>Blog</a>
+<a class=dropdown-item href=/preview/187/categories/reports/>Reports</a>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/preview/187/join/>
+Join
+</a>
+</li>
+</ul>
+</div>
+<div class="d-none d-lg-block">
+<div class=nav-item>
+<a href=/preview/187/getting-started/ class="btn btn-sm btn-primary">Get Started</a>
+</div>
+</div>
+</nav>
+</header>
+<section class=blog-details>
+<div class=container>
+<div class=row>
+<div class=col-lg-12>
+<article class=blog-single>
+<div class=inner-blog-details>
+<h1>Advanced Co-simulation with Renode and Verilator: PolarFire SoC and FastVDMA</h1>
+<div class=inner-blog-details-meta>
+<ul class=list-unstyled>
+<li class=list-inline-item>
+<p>July 20, 2021</p>
+</li>
+<li class=list-inline-item>
+<p>6 <span>minutes</span></p>
+</li>
+<li class=list-inline-item>
+<p>1130 <span>words</span></p>
+</li>
+</ul>
+<div class=mt-2>
+<a href=https://chipsalliance.org/preview/187/tags/project-update class="badge bg-light text-dark me-1">#project-update</a>
+<a href=https://chipsalliance.org/preview/187/tags/verilator class="badge bg-light text-dark me-1">#verilator</a>
+</div>
+</div>
+</div>
+<div class="rounded-box mb-xxl-11 mb-8">
+<img src=https://chipsalliance.org/preview/187/images/blog-share.jpg class=w-100 alt=featured-image>
+</div>
+<div><p><em>This post was originally published at <a href=https://antmicro.com/blog/2021/06/advanced-co-simulation-with-renode-and-verilator/>Antmicro</a>.</em></p>
+<p><a href=https://antmicro.com/blog/2019/09/renode-verilator-hdl-co-simulation/>Co-simulating HDL has been possible in Renode since the 1.7.1 release</a>, but the functionality – critical for hardware/software co-development as well as FPGA use cases – is constantly evolving based on the needs of our customers like Google and Microchip as well as our work in open source groups including <a href=https://chipsalliance.org/>CHIPS Alliance</a> and <a href=https://riscv.org/>RISC-V International</a>. To quickly recap, by co-simulation we mean a scenario where a part of the system is simulated in Renode but some specific peripheral or subsystem is simulated directly from HDL, e.g. Verilog. To achieve this, Renode integrates with Verilator, a fast and popular open source HDL simulator, which we are helping our customers adopt as well as expanding its capabilities to cover new use cases. Peripherals simulated directly from HDL are typically called Verilated peripherals.</p>
+<h2 id=why-co-simulate>Why co-simulate?</h2>
+<p>Co-simulation is a highly effective approach to testing IP cores in complex scenarios. HDL simulation is typically much slower than functional simulation, so to cut down on development turnaround time you can partition your design into a fixed part that you can simulate fast using Renode and the IP you are developing that you can co-simulate using Verilator. Renode offers a lot of ready-to-use components – for which you do not need to have a hardware description – which can be put together to provide a complete system to test new IP core designs.</p>
+<h2 id=co-simulation-in-renode-so-far>Co-simulation in Renode so far</h2>
+<p>For more than a year now, Renode has supported using AXI4-Lite and Wishbone buses for the Verilated peripherals’ communication with the rest of the system. As can be seen with the Verilated UART examples included with Renode, these can be used not only to receive data from, but also to send data to the peripheral. Additionally, because Renode can simulate external interfaces, you can easily open a window for such a UART (with <code>showAnalyzer command</code> during simulation) and the whole interaction is driven by UART’s TX and RX signals.</p>
+<p><img src=Co-simulating-FastVDMA-PF-SoC.png alt="Diagram depicting FastVDMA co-simulation"></p>
+<p>The <code>riscv_verilated_liteuart.resc</code> script shows the interaction between the system based on the VexRiscv CPU implemented in Renode and the UART based on an HDL model simulated with Verilator that together enable users to work with Zephyr’s shell interactively.</p>
+<p>In these examples, however, all the communication is initiated from Renode’s side by either reading from or writing to UART. There is no way for the peripheral to trigger the communication, which limited use-cases where the co-simulation could have been used.</p>
+<h2 id=new-co-simulation-features>New co-simulation features</h2>
+<p>Thanks to our work with Microchip and Google, since Renode 1.12 new features are available in the VerilatorPlugin; the most important change is introducing the ability for a Verilated peripheral to trigger communication with other elements of the system. The Renode API was expanded to accommodate the new features. There are now two new actions in the co-simulating communication which enable a Verilated peripheral to initialize communication with Renode by sending data to or requesting data from the system bus.</p>
+<p>Support for the AXI4 bus was also added. This is different from the AXI4-Lite bus, which only implements a subset of AXI4 features. The Verilated peripheral can either act on AXI4 bus as a controller that requests accesses (therefore utilizing these new Renode API actions) or as a peripheral (in the AXI4 bus context) that is only requested to take some action.</p>
+<h2 id=how-it-works>How it works</h2>
+<p>Creating a Renode agent (which handles an HDL model’s connection with Renode) with a role chosen for your peripheral is as simple as including an appropriate header and connecting signals. For example, <a href=https://opensource.antmicro.com/projects/fastvdma>FastVDMA</a> acts as a controller on AXI4 bus with <a href=https://github.com/antmicro/renode-verilator-integration/blob/master/samples/fastvdma/sim_main.cpp>the following code in a file creating its Renode agent</a>:</p>
+<pre tabindex=0><code>#include &quot;src/buses/axi-slave.h&quot;
+VDMATop *top;
+
+void Init() {
+    AxiSlave* slaveBus = new AxiSlave(32, 32);
+	
+	
+    slaveBus-&gt;aclk = &amp;top-&gt;clock;
+    slaveBus-&gt;aresetn = &amp;top-&gt;reset;
+
+    slaveBus-&gt;awid = &amp;top-&gt;io_write_aw_awid;
+    slaveBus-&gt;awaddr = (uint32_t *)&amp;top-&gt;io_write_aw_awaddr;
+
+    // Connecting the rest of the signals to the bus
+</code></pre><p>Another new feature is the ability to connect the Verilated peripheral through multiple buses. For example, now it’s possible to have a peripheral connected to both AXI4 and AXI4-Lite buses, which enables even more complex HDL models to be tested with Renode. This is the case of the FastVDMA, which is connected this way:</p>
+<pre tabindex=0><code>#include &quot;src/buses/axi-slave.h&quot;
+#include &quot;src/buses/axilite.h&quot;
+
+RenodeAgent *fastvdma;
+
+void Init() {
+	AxiLite* bus = new AxiLite();
+	AxiSlave* slaveBus = new AxiSlave(32, 32);
+
+	// Initializing both buses’ signals
+
+	//=================================================
+	// Init eval function
+	//=================================================
+	bus-&gt;evaluateModel = &amp;eval;
+	slaveBus-&gt;evaluateModel = &amp;eval;
+
+	//=================================================
+	// Init peripheral
+	//=================================================
+	fastvdma = new RenodeAgent(bus);
+	fastvdma-&gt;addBus(slaveBus);
+
+	slaveBus-&gt;setAgent(fastvdma);
+}
+</code></pre><h2 id=fastvdma>FastVDMA</h2>
+<p><a href=https://opensource.antmicro.com/projects/fastvdma>Fast Versatile DMA (FastVDMA)</a> is a Direct Memory Access controller designed with portability and customizability in mind. It is an open source IP core developed by Antmicro in 2019 that is written in <a href=https://www.chisel-lang.org/>Chisel</a>. It is a very versatile DMA controller because of the range of supported buses. It can be controlled through an AXI4-Lite or Wishbone bus while the data can be transmitted through either an AXI4, AXI4-Stream or Wishbone. Since its inception it has been used in a number of projects, e.g., <a href=https://antmicro.com/blog/2020/09/gui-on-zynq-with-fastvdma-hdmi-and-snickerdoodle/>bringing a GUI to krktl’s snickerdoodle</a>. For more information it’s best to head to <a href=https://antmicro.com/blog/2019/09/fastvdma-open-dma-controller/>the original blog note about FastVDMA</a>.</p>
+<h2 id=expanding-the-polarfire-soc-ecosystem>Expanding the PolarFire SoC ecosystem</h2>
+<p>Through Antmicro’s long-term partnership with Microchip, Renode is a vital part of the <a href=https://riscv.org/blog/2020/11/polarfire-soc-and-risc-v/>PolarFire SoC</a> developer experience. Microchip customers are using the <a href=https://antmicro.com/blog/2019/04/pr-polarfire-soc-on-renode/>Renode integration with the vendor’s default SoftConsole IDE</a> to develop software for the PolarFire SoC platform and it’s development board, the Icicle Kit.</p>
+<p><img src=icicle-kit-with-antmicro-hdmi-board.jpg alt="PolarFire Icicle with Antmicro&rsquo;s HDMI breakout board"></p>
+<p>With the latest co-simulation capabilities, developers are able to explore a combination of hard and soft IP, developing their FPGA payload and verifying it within Renode. This allows them to work on advanced projects, from graphic output support similar to the one we implemented for snickerdoodle with FastVDMA (possibly employing our <a href=https://antmicro.com/blog/2020/07/polarfire-soc-with-antmicro-hdmi-board/>open-hardware HDMI board for Icicle Kit</a>), through advanced FPGA-based crypto solutions, to <a href=https://antmicro.com/blog/2020/12/precursor-and-renode/>design-space exploration and pre-silicon development</a>, with the debugging and testing capabilities native to Renode.</p>
+<p>To see how Renode allows you to simulate complex setups with multiple co-simulated IP blocks, see our tests of <a href=https://github.com/renode/renode/blob/master/tests/platforms/verilated/axi.robot>Verilated FastVDMA plus Verilated RAM</a>.</p>
+<p>It’s worth noting that as these blocks are isolated and interconnected only via Renode, you can easily prepare setups in which peripherals use different busses to connect. This gives you an ability to focus on the interesting details and to prepare your systems from building blocks more easily.</p>
+<h2 id=commercial-support>Commercial support</h2>
+<p>If you’d like to speed up the development of your ASIC or FPGA solution using the advantages of advanced co-simulation, Antmicro offers commercial support and engineering services around Renode, Verilator and other tools, as well as FPGA and ASIC design, hardware, software and cloud services. We work with organizations like <a href=https://chipsalliance.org/>CHIPS Alliance</a> and <a href=https://riscv.org/>RISC-V International</a> enable a more software-driven hardware ecosystem based by open source. For a full list of our open source activity, head to our <a href=https://opensource.antmicro.com/>open source portal</a>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="blog-related position-relative">
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<div class=blog-section>
+<h2 class=blog-section-title>Recent News</h2>
+</div>
+</div>
+</div>
+<div class=row>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/187/news/coverage-dashboards-for-veer-and-caliptra/>
+<img src=https://chipsalliance.org/preview/187/news/coverage-dashboards-for-veer-and-caliptra/Coverview--chips--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/187/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+May 22, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/187/news/coverage-dashboards-for-veer-and-caliptra/>Generating interactive coverage dashboards for VeeR and Caliptra with Coverview</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/187/news/tac-whitepaper/>
+<img src=https://chipsalliance.org/preview/187/news/tac-whitepaper/chips-alliance-whitepaper.jpg alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/187/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+April 28, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/187/news/tac-whitepaper/>The Next Chapter in Open Source Silicon- Download the CHIPS Alliance White Paper</a>
+</div>
+</div>
+</article>
+</div>
+<div class="col-lg-4 col-md-6">
+<article class=blog-post>
+<div class=blog-post-thumb>
+<a href=/preview/187/news/new-revision-of-data-center-rdimm-ddr5-tester/>
+<img src=https://chipsalliance.org/preview/187/news/new-revision-of-data-center-rdimm-ddr5-tester/ddr5-tester--blog-sm.png alt=blog-thumb loading=lazy>
+</a>
+</div>
+<div class=blog-post-content>
+<div class=blog-post-tag>
+<a href=https://chipsalliance.org/preview/187/categories/blog>Blog</a>
+</div>
+<div class=blog-post-date>
+January 30, 2025
+</div>
+<div class=blog-post-title>
+<a href=/preview/187/news/new-revision-of-data-center-rdimm-ddr5-tester/>New revision of Data Center RDIMM DDR5 Tester</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer pt-xxl-19 pt-8 pb-sm-7 pb-5" id=footer>
+<div class=container-fluid>
+<div class=footer-wrapper>
+<div class=row>
+<div class="col-12 col-lg-4 me-auto order-2 order-lg-1">
+<div class="footer-logo mt-7 mt-md-0 mb-5">
+<a href=/preview/187/ class=chips-logo-link>
+<img src=/preview/187/images/chips-logo-white.svg alt="CHIPS Allaince Logo">
+</a>
+<a href=https://www.linuxfoundation.org class=lf-logo-link>
+<img src=/preview/187/images/lf-stacked-white.svg alt="Linux Foundation Logo">
+</a>
+</div>
+<div class=social-icon>
+<ul class=list-unstyled>
+<li>
+<a href=https://twitter.com/chipsalliance> <i class=ph-twitter-logo></i> </a>
+</li>
+<li>
+<a href=https://github.com/chipsalliance> <i class=ph-github-logo></i> </a>
+</li>
+<li>
+<a href=https://www.linkedin.com/company/chipsalliance/> <i class=ph-linkedin-logo></i> </a>
+</li>
+</ul>
+</div>
+<div class="footer-logo mt-7 mt-md-0">
+<p>
+© Copyright <span>2025</span> CHIPS Alliance
+The Linux Foundation® . All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href=https://www.linuxfoundation.org/trademark-usage>Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds. <a href=http://www.linuxfoundation.org/privacy>Privacy Policy</a> and <a href=http://www.linuxfoundation.org/terms>Terms of Use</a>.
+</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>About</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/187/about/who-we-are/>Who We Are</a>
+</li>
+<li>
+<a href=/preview/187/about/members/>Members</a>
+</li>
+<li>
+<a href=https://members.chipsalliance.org/>Member Support</a>
+</li>
+<li>
+<a href=/preview/187/about/governance/>Governance</a>
+</li>
+<li>
+<a href=/preview/187/about/faq/>FAQ</a>
+</li>
+<li>
+<a href=/preview/187/about/contact/>Contact</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>Community</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/187/projects/>Projects</a>
+</li>
+<li>
+<a href=/preview/187/getting-started/>Getting Started</a>
+</li>
+<li>
+<a href=/preview/187/events/>Events</a>
+</li>
+<li>
+<a href=/preview/187/workgroups/>Workgroups</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-6 col-md-4 col-sm-4 col-lg-2 order-1">
+<div class=footer-widget>
+<h3>News</h3>
+<ul class=list-unstyled>
+<li>
+<a href=/preview/187/categories/blog/>Blog</a>
+</li>
+<li>
+<a href=/preview/187/categories/reports/>Reports</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=/preview/187/vendor/jQuery/jquery.min.js></script>
+<script src=/preview/187/vendor/bootstrap/bootstrap.bundle.min.js></script>
+<script src=/preview/187/vendor/counter-up/countup.js></script>
+<script src=/preview/187/vendor/magnific-popup/magnific-popup.min.js></script>
+<script src=/preview/187/js/script.js></script>
+</body>
+</html>
