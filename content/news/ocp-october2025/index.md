@@ -56,4 +56,4 @@ Christopher Swenson and Xiling Sun from Microsoft show how to port firmware to t
 https://2025ocpglobal.fnvirtual.app/a/schedule/#title=caliptra&view=calendar
 
 
-Keep up to date with CHIPS Alliance by connecting with the community on LinkedIn or subscribe to our quarterly newsletter here. 
+Keep up to date with CHIPS Alliance by connecting with the community on [LinkedIn](https://www.linkedin.com/company/chipsalliance/?viewAsMember=true) or subscribe to our quarterly newsletter [here](https://www.linkedin.com/newsletters/7341146987217502211/). 
