@@ -5,7 +5,7 @@ categories:
   - Blog
 tags: [announcement, caliptra]
 author: 
-images: ['/news/caliptra2.1/caliptra2.1.png']
+images: ['news/caliptra2-1/caliptra-21.png']
 aliases: ['/blog/2025/10/15/caliptra2.1/']
 ---
 
