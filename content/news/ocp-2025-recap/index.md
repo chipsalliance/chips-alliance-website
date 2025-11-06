@@ -13,8 +13,6 @@ The [OCP Global Summit](https://www.opencompute.org/blog/2025-ocp-global-summit-
 
 CHIPS Alliance had a strong presence at the OCP Global Summit, demonstrating how open source silicon development is advancing innovation across data centers, AI and custom silicon. CHIPS was prominently mentioned in a number of keynote sessions on Tuesday as well as Thursday’s detailed technical sessions as part of the overall [Caliptra](https://www.chipsalliance.org/news/caliptra2-1/) effort. These sessions helped drive attendance to the CHIPS Alliance booth, which was shared with the OpenPower Foundation, on the exhibition floor. Rob Mains, Executive Director of CHIPS Alliance, chatted with interested attendees about a wide range of topics including interoperability, open standards, and the importance of community-driven silicon innovation.  
 
-<img style="float: left;" src="booth.jpeg">
-
 Microsoft also had a live demo of Caliptra running in emulation mode at its booth, which also drove interest in the silicon security efforts in CHIPS Alliance.  
 
 Additionally, another milestone at the event, was the launch of [OpenPRoT](https://www.amd.com/en/blogs/2025/openprot--building-a-secure-and-transparent-foundation-for-platf.html), a new collaborative firmware project that broadens CHIPS Alliance’s development scope and community impact. Learn more about it and how you can get involved [here](https://www.amd.com/en/blogs/2025/openprot--building-a-secure-and-transparent-foundation-for-platf.html).  
