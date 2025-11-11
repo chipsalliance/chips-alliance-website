@@ -205,3 +205,7 @@ members:
     url: https://block.xyz/
     image: block-inc.svg
     level: silver
+  - name: Rambus, Inc
+    url: https://rambus.com/
+    image: rambus.svg
+    level: auditor
