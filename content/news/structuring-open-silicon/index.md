@@ -27,7 +27,7 @@ After three years embedded in the Asia-Pacific region, he's focused on enabling 
 
 As TAC Chair, Aaron’s focus is less on writing HDL and more on aligning people, roles, and resources. His philosophy is simple: the house must be in order before you invite people over.
 
-#### | “We need to tighten up first. Governance docs, life cycles, what sandbox means... these are scattered and unclear. That has to be fixed before we talk about growing membership.”
+##### | “We need to tighten up first. Governance docs, life cycles, what sandbox means... these are scattered and unclear. That has to be fixed before we talk about growing membership.”
 
 He sees success for CHIPS Alliance not just in releases or technical milestones, but in the predictability and reproducibility of its structure.  
 
@@ -35,7 +35,7 @@ He sees success for CHIPS Alliance not just in releases or technical milestones,
 
 Aaron has observed challenges in onboarding and messaging from across the open source landscape. At the CHIPS Alliance, he is focused on reducing friction by clarifying roles, documentation, and collaboration pathways.  
 
-#### | “We want to answer: 'If I work in this area, what license do I need, which projects do I care about, and how do I plug in?'”
+##### | “We want to answer: 'If I work in this area, what license do I need, which projects do I care about, and how do I plug in?'”
 
 He believes the key lies in simplifying contributor journeys and building toward a shared messaging framework that reflects real, bottom-up technical input.  
 
@@ -51,7 +51,7 @@ One of Aarons’s first actions as TAC Chair has been hosting one-on-one check-i
 
 For example, the Verible linting tool, widely used in SystemVerilog design flows, is in steady use, but maintained almost entirely by one individual.
 
-#### | “We get 2–4 issues a week from the community, which is great! But there's usually only one person responding. That story is common in open source, so sustainability is definitely a concern.”   
+##### | “We get 2–4 issues a week from the community, which is great! But there's usually only one person responding. That story is common in open source, so sustainability is definitely a concern.”   
 
 He says he’s working on  plans to address part of this on behalf of Google by releasing more in-depth documentation, which can help contributors better understand Verible’s behavior and potentially create a roadmap of small, impactful tasks.
 
@@ -59,7 +59,7 @@ He says he’s working on  plans to address part of this on behalf of Google by 
 
 Aaron sees an opportunity to position Verible—and projects like it—as excellent entry points for new developers, especially students.  
 
-#### | “We need a 'first pull request' list. Linting and formatting tools can be a great starting point for learning how to contribute. They may not sound exciting at first, but it’s hard to overstate their impact, like spell checkers. Everyone who writes in a language uses them!”  
+##### | “We need a 'first pull request' list. Linting and formatting tools can be a great starting point for learning how to contribute. They may not sound exciting at first, but it’s hard to overstate their impact, like spell checkers. Everyone who writes in a language uses them!”  
 
 He’s also assisting with building out an advocacy deck and documentation for:
 - How to talk to your manager about contributing
@@ -76,7 +76,7 @@ This aligns with his broader goal: making the CHIPS Alliance more discoverable, 
 
 Aaron is careful with language. He notes that phrases like “open source hardware” are often too vague to be useful.
 
-#### | “Everyone tries to define the term. That’s a trap. It means different things to different groups, depending on where they fit in the stack. Let’s just be specific about the elements we’re focusing on.”
+##### | “Everyone tries to define the term. That’s a trap. It means different things to different groups, depending on where they fit in the stack. Let’s just be specific about the elements we’re focusing on.”
 
 For CHIPS, that means prioritizing messaging around open source silicon and chip design tooling, rather than conflating hardware with embedded systems or maker boards.  
 
@@ -92,7 +92,7 @@ He envisions a more cohesive, approachable CHIPS Alliance with updated branding,
 **Closing Remarks**  
 
 Asked about what success looks like, Aaron doesn't point to big launch events or ambitious rebrands.
-#### | “If in 2026 we have a stable structure, a clean set of public docs, and a few more contributors who feel welcome and engaged, that would be a win.”  
+##### | “If in 2026 we have a stable structure, a clean set of public docs, and a few more contributors who feel welcome and engaged, that would be a win.”  
 
 Sometimes governance is infrastructure too. And like silicon, the best infrastructure is often invisible when it’s working.
 
