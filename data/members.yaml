@@ -23,7 +23,7 @@ members:
     url: https://www.microsoft.com/en-us/?ql=4
     image: microsoft.svg
     level: platinum
-    board_rep: Stephen Walli
+    board_rep: Bryan Kelly
   - name: SiFive
     url: https://www.sifive.com/
     image: sifive.png
@@ -41,7 +41,7 @@ members:
     url: https://www.iscas.ac.cn/
     image: iscas.png
     level: gold
-    board_rep: Wei Wu
+    board_rep: Hongbin Zhang
   - name: Futurewei
     url: https://www.futurewei.com/
     image: futurewei-tech.png
