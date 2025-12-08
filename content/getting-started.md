@@ -49,7 +49,7 @@ Join our [Slack](https://chipsalliance.slack.com).  You can [get an invite here]
 
 ### Subscribe to our calendar
 
-We publish our [workgroup and meeting calendar](https://calendar.google.com/calendar/embed?src=linuxfoundation.org_465l55vfutdamm1dpb4239ehjo%40group.calendar.google.com&ctz=America%2FNew_York) ([ical](https://calendar.google.com/calendar/ical/linuxfoundation.org_khmv61fld7ei6mfd1hc86gs8bo%40group.calendar.google.com/public/basic.ics)).  Please email [mailto:operations@chipsalliance.org](operations@chipsalliance.org) to request new events on the calendar, or to be added to an existing invite. 
+We publish our [workgroup and meeting calendar](https://calendar.chipsalliance.org) ([ical](https://webcal.prod.itx.linuxfoundation.org/lfx/a092M00001G4R7xQAF_sub)).  Please email [mailto:operations@chipsalliance.org](operations@chipsalliance.org) to request new events on the calendar, or to be added to an existing invite. 
 
 ## How to participate in the Technical Community
 
