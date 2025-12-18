@@ -3,7 +3,7 @@ date: 2025-12-18T00:00:00Z
 title:  Developer Spotlight- Building Trust, Tools, and the Future of Open Silicon
 categories:
   - Blog
-tags: []
+tags: [Developer Spotlight]
 author: 
 images: ['news/rob-mains-spotlight/rob-spotlight.png']
 aliases: ['/blog/2025/12/18/developer-spotlight-rob-mains/']

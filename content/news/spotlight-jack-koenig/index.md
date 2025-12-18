@@ -3,7 +3,7 @@ date: 2025-12-04T00:00:00Z
 title:  Inside the Evolution of Chisel- Jack Koenig on Open Source Silicon Design at SiFive
 categories:
   - Blog
-tags: []
+tags: [Developer Spotlight]
 author: 
 images: ['news/spotlight-jack-koenig/jack.png']
 aliases: ['/blog/2025/12/04/spotlight-jack-koenig/']
