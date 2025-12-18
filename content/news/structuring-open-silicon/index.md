@@ -6,7 +6,7 @@ categories:
 author: 
 images: ['news/structuring-open-silicon/structuring-open-silicon.png']
 aliases: ['/blog/2025/11/13/structuring-open-silicon/']
-tags: [TAC, Verible]
+tags: [TAC, Verible, Developer Spotlight]
 ---
 
 ## How a globally distributed program manager is helping define the next phase of open source silicon collaboration.
