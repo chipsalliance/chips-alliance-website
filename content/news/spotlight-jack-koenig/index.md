@@ -5,7 +5,7 @@ categories:
   - Blog
 tags: [Developer Spotlight]
 author: 
-images: ['news/spotlight-jack-koenig/jack.png']
+images: ['news/spotlight-jack-koenig/jack-koenig.png']
 aliases: ['/blog/2025/12/04/spotlight-jack-koenig/']
 ---
 

@@ -4,7 +4,7 @@ title: Structuring Open Silicon - A TAC Perspective with Aaron Cunningham
 categories:
   - Blog
 author: 
-images: ['news/structuring-open-silicon/structuring-open-silicon.png']
+images: ['news/structuring-open-silicon/aaron-cunningham.png']
 aliases: ['/blog/2025/11/13/structuring-open-silicon/']
 tags: [TAC, Verible, Developer Spotlight]
 ---

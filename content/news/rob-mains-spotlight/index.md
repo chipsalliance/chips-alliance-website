@@ -5,7 +5,7 @@ categories:
   - Blog
 tags: [Developer Spotlight]
 author: 
-images: ['news/rob-mains-spotlight/rob-spotlight.png']
+images: ['news/rob-mains-spotlight/rob-mains.png']
 aliases: ['/blog/2025/12/18/developer-spotlight-rob-mains/']
 ---
 
