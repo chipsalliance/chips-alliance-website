@@ -12,32 +12,32 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     permissions:
-      contents: write   
-      repository-projects: write        
+      contents: write
+      repository-projects: write
     concurrency:
       group: gh-pages
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: recursive  # Fetch the Docsy theme
-          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive # Fetch the Docsy theme
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.91.2'
+          hugo-version: "0.139.0"
           extended: true
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: "16"
+          cache: "npm"
           # The action defaults to search for the dependency file (package-lock.json,
           # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
           # hash as a part of the cache key.
           # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
-          cache-dependency-path: '**/package-lock.json'
+          cache-dependency-path: "**/package-lock.json"
 
       - name: Get PR metadata
         uses: 8BitJonny/gh-get-current-pr@2.2.0
@@ -70,7 +70,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: www.chipsalliance.org 
+          cname: www.chipsalliance.org
 
       # prepare metadata and upload artifacts for multi branch deployment
       - name: Move deployment to the correct preview directory
