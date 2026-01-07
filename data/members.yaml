@@ -17,8 +17,7 @@ members:
   - name: Intel
     url: https://intel.com/
     image: intel.png
-    level: platinum
-    board_rep: Max Korbel
+    level: silver
   - name: Microsoft
     url: https://www.microsoft.com/en-us/?ql=4
     image: microsoft.svg
@@ -27,7 +26,7 @@ members:
   - name: SiFive
     url: https://www.sifive.com/
     image: sifive.png
-    level: platinum 
+    level: platinum
   - name: VeriSilicon
     url: https://verisilicon.com/
     image: verisilicon.png
@@ -107,7 +106,7 @@ members:
     url: https://ucsd.edu/
     image: uc-san-diego.png
     level: associate
-    board_rep: Andrew Kahng 
+    board_rep: Andrew Kahng
   - name: UIT
     url: https://www.uit.edu/
     image: uit-merl.png
@@ -144,11 +143,11 @@ members:
     url: https://www.unb.ca/
     image: unb.png
     level: associate
-  - name: University of Toronto 
+  - name: University of Toronto
     url: https://www.utoronto.ca/
     image: university-of-toronto.png
     level: associate
-  - name: University of Hawaii 
+  - name: University of Hawaii
     url: https://www.hawaii.edu/
     image: university-of-hawaii-system.svg
     level: associate
@@ -156,12 +155,12 @@ members:
     url: https://www.ami.com/
     image: american-megatrendsinternational-llc.svg
     level: silver
-    board_rep: Stefano Righi 
-  - name: IHP 
+    board_rep: Stefano Righi
+  - name: IHP
     url: https://www.ihp-microelectronics.com/
     image: ihp.svg
     level: associate
-  - name: Københavns Universitet 
+  - name: Københavns Universitet
     url: https://www.ku.dk/
     image: kobenhavns.svg
     level: associate
@@ -172,19 +171,19 @@ members:
   - name: OpenPOWER Foundation
     url: https://openpowerfoundation.org/
     image: OpenPower.jpg
-    level: associate    
+    level: associate
   - name: NYDesign
     url: https://www.nydesign.org/
     image: NYDesign.png
-    level: associate 
-  - name: OpenSUSI 
+    level: associate
+  - name: OpenSUSI
     url: https://www.opensusi.org/
     image: opensusi.svg
-    level: associate             
-  - name: Columbia University 
+    level: associate
+  - name: Columbia University
     url: https://www.columbia.edu/
     image: columbia.svg
-    level: associate    
+    level: associate
   - name: SanDisk Corporation
     url: https://www.sandisk.com/
     image: sandiskcorporation.svg
@@ -200,7 +199,7 @@ members:
   - name: Synopsys
     url: https://www.synopsys.com/
     image: synopsys.svg
-    level: silver    
+    level: silver
   - name: Block, Inc
     url: https://block.xyz/
     image: block-inc.svg

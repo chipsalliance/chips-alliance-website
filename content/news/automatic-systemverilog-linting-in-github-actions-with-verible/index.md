@@ -7,7 +7,9 @@ author:
 images: ['images/blog-share.jpg']
 aliases: ['/blog/2021/09/08/automatic-systemverilog-linting-in-github-actions-with-verible/']
 tags:
-  - [tutorial, verible, risc-v]
+  - tutorial
+  - verible
+  - risc-v
 ---
 
 *This post was originally published at [Antmicro](https://antmicro.com/blog/2021/08/verible-integration-with-github-actions/).*

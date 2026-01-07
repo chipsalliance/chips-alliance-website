@@ -13,7 +13,7 @@
     <link href={{ relURL "vendor/phosphor-icons/css/phosphor.css"}} rel="stylesheet" />
     <link href={{ relURL "vendor/magnific-popup/magnific-popup.css"}} rel="stylesheet" />
 
-    {{ $style := resources.Get "/scss/theme.scss" | resources.ToCSS |
+    {{ $style := resources.Get "/scss/theme.scss" | css.Sass |
     resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href={{relURL $style.Permalink}} />
     <link rel="icon" href={{relURL "images/favicon/cropped-favicon-1-32x32.png"}} sizes="32x32" />
