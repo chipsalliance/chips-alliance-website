@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Abouts on CHIPS Alliance</title><link>https://chipsalliance.org/preview/200/about/</link><description>Recent content in Abouts on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://chipsalliance.org/preview/200/about/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact</title><link>https://chipsalliance.org/preview/200/about/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/200/about/contact/</guid><description>&lt;script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js">&lt;/script>
+&lt;script>
+ hbspt.forms.create({
+ region: "na1",
+ portalId: "8112310",
+ formId: "94557cae-71ce-4536-a54f-8eff19aab9f9",
+ sfdcCampaignId: "7012M000001FetwQAC"
+ });
+&lt;/script>
+&lt;h2 id="mailing-address">Mailing Address&lt;/h2>
+&lt;p>&lt;strong>CHIPS Alliance&lt;/strong>&lt;br>
+1 Letterman Drive, Building D, Suite D4700&lt;br>
+San Francisco, CA 94129&lt;/p></description></item><item><title>Frequently Asked Questions</title><link>https://chipsalliance.org/preview/200/about/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/200/about/faq/</guid><description>&lt;div class="accordion" id="accordionExample">
+ 
+&lt;div class="accordion-item">
+ &lt;span>1&lt;/span>
+ &lt;h2 class="accordion-header" id="heading1">
+ &lt;button
+ class="accordion-button collapsed"
+ type="button"
+ data-bs-toggle="collapse"
+ data-bs-target="#collapse1"
+ aria-expanded="false"
+ aria-controls="collapse1"
+ >
+ &lt;p class="header-content">What is CHIPS Alliance?&lt;/p>
+ &lt;/button>
+ &lt;/h2>
+ &lt;div
+ id="collapse1"
+ class="accordion-collapse collapse"
+ aria-labelledby="heading1"
+ data-bs-parent="#accordionExample"
+ >
+ &lt;div class="accordion-body">CHIPS Alliance, a member of the Linux Foundation, is championing open source based collaboration in the chip design community. This includes architectures, specifications, reference implementations, PDKs and EDA tooling. CHIPS Alliance hosts different workgroups to bring community members together to focus on topics of shared interest.&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+&lt;div class="accordion-item">
+ &lt;span>2&lt;/span>
+ &lt;h2 class="accordion-header" id="heading2">
+ &lt;button
+ class="accordion-button collapsed"
+ type="button"
+ data-bs-toggle="collapse"
+ data-bs-target="#collapse2"
+ aria-expanded="false"
+ aria-controls="collapse2"
+ >
+ &lt;p class="header-content">Why do we need open source hardware, chips, FPGAs, etc.?&lt;/p></description></item><item><title>Governance</title><link>https://chipsalliance.org/preview/200/about/governance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/200/about/governance/</guid><description>&lt;p>In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community. While the Technical Advisory Council (TAC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations, and would typically each adopt their own &lt;a href="https://docs.google.com/document/d/1_NeUOrl8IG7ih-Ji31LehKqv0KGT3VJcotvv4SwBmIg/edit">technical charter based on a common template&lt;/a>.&lt;/p>
+&lt;h2 id="rob-mains---general-manager">Rob Mains - General Manager&lt;/h2>
+&lt;section class="specialfeature">
+ 
+ &lt;div class="row align-items-center">
+ &lt;div class="col-lg-8 order-2 order-lg-1">
+ &lt;p>The General Manager works with the Governing Board, our members, and our projects to ensure the CHIPS Alliance is a healthy, sustainable, and neutral home for open source technical collaborations.&lt;/p></description></item><item><title>Members</title><link>https://chipsalliance.org/preview/200/about/members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/200/about/members/</guid><description>&lt;p>When an organization joins the CHIPS Alliance, they are making a tangible commitment to the success and sustainability of open source projects which help to achieve these goals. The CHIPS Alliance recognizes the critical supporting role of these organizations, and thanks them for their ongoing support of our project communities.&lt;/p>
+&lt;h2 id="chips-alliance-members">CHIPS Alliance Members&lt;/h2>
+&lt;p>
+&lt;a href="../../join/" class="btn btn-primary btn-sm"> Become a Member &lt;/a>
+&lt;/p>
+
+&lt;div class="members-listing container text-center mb-5 mt-5">
+ &lt;h3>Platinum Members&lt;/h3>
+
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.amd.com/en" target="_blank">&lt;img alt="AMD logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/amd.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://antmicro.com/" target="_blank">&lt;img alt="Antmicro logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/antmicro.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.futurewei.com/" target="_blank">&lt;img alt="Futurewei logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/futurewei-tech.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://google.com/" target="_blank">&lt;img alt="Google logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/google.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.microsoft.com/en-us/?ql=4" target="_blank">&lt;img alt="Microsoft logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/microsoft.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.sifive.com/" target="_blank">&lt;img alt="SiFive logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/sifive.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://verisilicon.com/" target="_blank">&lt;img alt="VeriSilicon logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/verisilicon.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;/div>
+ 
+
+&lt;/div>
+
+
+
+
+&lt;div class="members-listing container text-center mb-5 mt-5">
+ &lt;h3>Gold Members&lt;/h3>
+
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.iscas.ac.cn/" target="_blank">&lt;img alt="ISCAS logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/iscas.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.marvell.com/" target="_blank">&lt;img alt="Marvell logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/marvell.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;/div>
+ 
+
+&lt;/div>
+
+
+
+
+&lt;div class="members-listing container text-center mb-5 mt-5">
+ &lt;h3>Silver Members&lt;/h3>
+
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.ami.com/" target="_blank">&lt;img alt="AMI US Holdings Inc logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/american-megatrendsinternational-llc.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://block.xyz/" target="_blank">&lt;img alt="Block, Inc logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/block-inc.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.cisco.com/" target="_blank">&lt;img alt="Cisco Systems logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/cisco-systems-inc.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.etri.re.kr/eng/main/main.etri" target="_blank">&lt;img alt="Electronic and Telecommunications Research Institute logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/ETRI.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://intel.com/" target="_blank">&lt;img alt="Intel logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/intel.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.microchip.com/" target="_blank">&lt;img alt="Microchip logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/microchip.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.nvidia.com/en-us/" target="_blank">&lt;img alt="Nvidia logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/nvidia.jpg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.sandisk.com/" target="_blank">&lt;img alt="SanDisk Corporation logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/sandiskcorporation.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.synopsys.com/" target="_blank">&lt;img alt="Synopsys logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/synopsys.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.westerndigital.com/" target="_blank">&lt;img alt="Western Digital logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/western-digital.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;/div>
+ 
+
+&lt;/div>
+
+
+
+
+&lt;div class="members-listing container text-center mb-5 mt-5">
+ &lt;h3>Auditor Members&lt;/h3>
+
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://innogritcorp.com/" target="_blank">&lt;img alt="Innogrit Corporation logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/innogrit-corporation.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://precisioninno.com/" target="_blank">&lt;img alt="Precision Innovations logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/precision-innovations.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://rambus.com/" target="_blank">&lt;img alt="Rambus, Inc logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/rambus.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;/div>
+ 
+
+&lt;/div>
+
+
+
+
+&lt;div class="members-listing container text-center mb-5 mt-5">
+ &lt;h3>Associate Members&lt;/h3>
+
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://asu.edu/" target="_blank">&lt;img alt="ASU logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/arizona-state-u.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.berkeley.edu/admissions/" target="_blank">&lt;img alt="Berkeley logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/ucberkeley.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.byu.edu/" target="_blank">&lt;img alt="BYU logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/byu.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.columbia.edu/" target="_blank">&lt;img alt="Columbia University logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/columbia.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.hm.edu/" target="_blank">&lt;img alt="Hochschule logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/hochschule.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.ihp-microelectronics.com/" target="_blank">&lt;img alt="IHP logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/ihp.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.iitm.ac.in/" target="_blank">&lt;img alt="IIT logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/iit.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.ku.dk/" target="_blank">&lt;img alt="Københavns Universitet logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/kobenhavns.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://nebrija.es/" target="_blank">&lt;img alt="Nebrija logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/universidad-nebrija.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.nydesign.org/" target="_blank">&lt;img alt="NYDesign logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/NYDesign.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://openpowerfoundation.org/" target="_blank">&lt;img alt="OpenPOWER Foundation logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/OpenPower.jpg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://theopenroadproject.org/" target="_blank">&lt;img alt="OpenRoad logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/openroad.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.opensusi.org/" target="_blank">&lt;img alt="OpenSUSI logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/opensusi.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://rioslab.org/" target="_blank">&lt;img alt="Rios logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/rios.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://riscv.org/" target="_blank">&lt;img alt="RISC-V logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/risc-v.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://engineering.stanford.edu/" target="_blank">&lt;img alt="Stanford Engineering logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/stanford-eng.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.dtu.dk/" target="_blank">&lt;img alt="Technical University of Denmark logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/techincal-u-of-denmark.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://ucsd.edu/" target="_blank">&lt;img alt="UC San Diego logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/uc-san-diego.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.ucsc.edu/" target="_blank">&lt;img alt="UC Santa Cruz logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/uc-santa-cruz.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.uit.edu/" target="_blank">&lt;img alt="UIT logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/uit-merl.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://kg.ac.rs/" target="_blank">&lt;img alt="University de Kragujevac logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/university-kragujevac.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.hawaii.edu/" target="_blank">&lt;img alt="University of Hawaii logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/university-of-hawaii-system.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.manchester.ac.uk/" target="_blank">&lt;img alt="University of Manchester logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/university-of-manchester.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://micl.engin.umich.edu/" target="_blank">&lt;img alt="University of Michigan logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/university-of-michigan.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://umn.edu/" target="_blank">&lt;img alt="University of Minnesota logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/university-of-minnesota.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.unb.ca/" target="_blank">&lt;img alt="University of New Brunswick logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/unb.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.utoronto.ca/" target="_blank">&lt;img alt="University of Toronto logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/university-of-toronto.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://yale.edu/" target="_blank">&lt;img alt="Yale University logo" src="https://chipsalliance.org/preview/200/preview/200/images/members/yale-university.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;/div>
+ 
+
+&lt;/div></description></item><item><title>Who We Are</title><link>https://chipsalliance.org/preview/200/about/who-we-are/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/200/about/who-we-are/</guid><description>&lt;p>The CHIPS Alliance leverages common hardware development efforts by developing IP blocks that can be broadly used, such as RISC-V cores and neural network accelerator cores. We recognize that verification contributions benefit all who participate in the project, and prioritize joint resources for design verification.&lt;/p>
+&lt;p>The scope of the Project includes hardware and software design and development under an open source (Apache v2) license:&lt;/p>
+&lt;ul>
+&lt;li>Verified IP blocks (compute cores, accelerators etc)&lt;/li>
+&lt;li>Verified SoC designs (based on RISC-V and other open source cores)&lt;/li>
+&lt;li>Open source software development tools for ASIC development&lt;/li>
+&lt;li>High value IP including analog peripherals, mixed signal blocks and compute acceleration&lt;/li>
+&lt;li>Exploration of new design flows such as Python-based design verification.&lt;/li>
+&lt;li>The CHIPS Alliance welcomes technical contributions from members and non-members alike. We encourage everyone to use, extend, and contribute back to our projects, and to participate on the Technical Steering Committee.&lt;/li>
+&lt;/ul>
+&lt;p>We also welcome organizations and institutions who wish to participate in the CHIPS Alliance governance process by &lt;a href="../../join/">becoming members&lt;/a>. If you have questions, please reach out to &lt;a href="mailto:membership@chipsalliance.org">membership@chipsalliance.org&lt;/a>.&lt;/p></description></item></channel></rss>
