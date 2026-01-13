@@ -58,10 +58,6 @@ members:
     url: https://www.nvidia.com/en-us/
     image: nvidia.jpg
     level: silver
-  - name: Precision Innovations
-    url: https://precisioninno.com/
-    image: precision-innovations.png
-    level: auditor
   - name: ASU
     url: https://asu.edu/
     image: arizona-state-u.svg
