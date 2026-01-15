@@ -4,7 +4,7 @@ title: CHIPS Alliance 2025- A Year of Breakthroughs in Open Silicon and the Road
 categories:
   - Blog
 author: 
-images: ['/news/2025 recap/2025-recap.png']
+images: ['news/2025-recap/2025-recap.png']
 aliases: ['/blog/2026/01/15/chips-alliance-2025-a-year-of-breakthroughs-in-open-silicon-and-the-road-ahead/']
 tags: [caliptra, chisel, openprot, veer]
 ---
