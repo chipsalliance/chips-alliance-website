@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Events on CHIPS Alliance</title><link>https://chipsalliance.org/preview/202/events/</link><description>Recent content in Events on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/preview/202/events/index.xml" rel="self" type="application/rss+xml"/><item><title>CHIPS Alliance at the 2025 OCP Global Summit</title><link>https://chipsalliance.org/preview/202/events/ocp-10-2025/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/ocp-10-2025/</guid><description>&lt;p>&lt;img src="ocp-c48.png" alt="OCP Booth Card">&lt;/p>
+&lt;p>&lt;strong>CHIPS Alliance at the 2025 OCP Global Summit&lt;/strong>
+&lt;strong>October 13–16, 2025 | San Jose Convention Center&lt;/strong>&lt;/p>
+&lt;p>CHIPS Alliance will be onsite at the &lt;a href="https://www.opencompute.org/summit/global-summit">OCP Global Summit 2025&lt;/a> to explore the latest advances in open silicon and hardware security. This year’s program features talks on &lt;strong>Caliptra&lt;/strong>, the open source Root-of-Trust project highlighting its roadmap, security enhancements, cryptographic core, and integration into real-world cloud and platform environments.&lt;/p>
+&lt;p>You can also &lt;strong>meet CHIPS Alliance Executive Director Rob Mains at the OpenPOWER Foundation booth (C48)&lt;/strong> to learn more about ongoing community efforts and how to get involved. See the talk details below.&lt;/p></description></item><item><title>CHIPS Alliance at DAC 2025</title><link>https://chipsalliance.org/preview/202/events/chips-alliance-dac-06-2025/</link><pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-alliance-dac-06-2025/</guid><description>&lt;p>Check out the presentation below:&lt;/p>
+&lt;ul>
+&lt;li>Caliptra: A silicon root of trust &lt;a href="DAC_Caliptra_2025.pptx.pdf">(slides)&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>CHIPS Alliance at OCP EMEA Summit 2025</title><link>https://chipsalliance.org/preview/202/events/04-2025-chips-alliance-ocp/</link><pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/04-2025-chips-alliance-ocp/</guid><description>&lt;p>&lt;img src="speaker-card-ocp-2025.png" alt="OCP Speaker Card">&lt;/p>
+&lt;p>Heading to the Open Compute Project Foundation EMEA Summit, and looking to learn how open source silicon is accelerating chip design? Visit Rob Mains and Stefano Righi at booth A13.
+CHIPS Alliance is proud to participate as an open source partner of the event.
+We&amp;rsquo;re looking forward to insightful discussions, sharing successes and challenges in collaborative hardware and firmware development, and connecting with the open compute community.&lt;/p></description></item><item><title>Open Hardware Mini-Summit</title><link>https://chipsalliance.org/preview/202/events/chips-2024-osseu-mini-summit/</link><pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-2024-osseu-mini-summit/</guid><description>&lt;p>Check out the presentations below:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="./presentations/2024-osseu/CHIPS-Alliance-Introduction-2024.pdf">Welcome / Opening Remarks / Accelerating Innovation with Open Hardware Design&lt;/a> - Rob Mains - General Manager, CHIPS Alliance&lt;/li>
+&lt;li>&lt;a href="./presentations/2024-osseu/RISC-V-opportunity-and-innovation.pdf">RISC-V: Getting Involved, Latest Advancements&lt;/a> - Andrea Gallo - VP Technology, RISC-V&lt;/li>
+&lt;li>&lt;a href="./presentations/2024-osseu/ETISS-PerfMod-Seal5-FI_OSS3public.pdf">Open Source Simulators for Pre-Silicon Validation of Safety-critical RISC-V System-on-chip&lt;/a> - Daniel Mueller-Gritschneder, Johannes Geier - Professor, TU Wien&lt;/li>
+&lt;li>&lt;a href="./presentations/2024-osseu/OSSVienna2024-New-open-source-IP-tools-and-verification-flows-for-Caliptra-2_0.pdf">Making VeeR EL2 Caliptra 2.0-ready: enhanced functionalities, verification and documentation&lt;/a> - Karol Gugala - Engineering Manager, Antmicro&lt;/li>
+&lt;li>&lt;a href="./presentations/2024-osseu/Sandner-LF-Chips-workshop-vienna%202024-final.pdf">Value and Opportunities in Open Source for Circuit Design&lt;/a> - Christoph Sandner - Senior Principal Engineer, Infineon&lt;/li>
+&lt;li>&lt;a href="./presentations/2024-osseu/Open-Source-IC-design-for-Automotive.pdf">Open Source IC design for Automotive: Real World Experience&lt;/a> - Rob Taylor - Chief Strategy Officer, ChipFlow&lt;/li>
+&lt;/ul></description></item><item><title>Open Hardware and Software: Accelerating Beyond Moore’s Law and Enabling the Next Wave of Innovation</title><link>https://chipsalliance.org/preview/202/events/chips-2024-ossna-mini-summit/</link><pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-2024-ossna-mini-summit/</guid><description>&lt;p>Check out the presentations below:&lt;/p>
+&lt;ul>
+&lt;li>Introductions - Rob Mains, Linux Foundation (&lt;a href="https://drive.google.com/file/d/19pvCN0KhZa-wbi0P0eJ73uIp_ThnqRDr/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>How can software developers help keep Moore&amp;rsquo;s law alive? - Michael Gielda, Antmicro (&lt;a href="https://drive.google.com/file/d/1NiWgD-VeILyyTTNuF8FNYOtBIN-eREaz/view?usp=drive_link">slides&lt;/a>)&lt;!-- - Open Hardware Design: Lessons Learned from OSS - Stephano Cetola, Intel ([slides](http://xxx)) -->&lt;/li>
+&lt;li>HBOM talk - Kate Stewart, Linux Foundation (&lt;a href="https://drive.google.com/file/d/18qBdzhXKJTCAdn3O_96sIZJf04NZihC2/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Scaling hardware design: squeezing every bit of performance of the open source OpenROAD ASIC toolchain - Karol Gugula, Antmicro (&lt;a href="https://drive.google.com/file/d/1JVKM7T086l6cQbhgtCHs87qCUEd-KGkz/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Accelerating EDA Flows in the AWS Cloud - David Pellerin, AWS (&lt;a href="https://drive.google.com/file/d/1QFaLICbUyR_zNKeX7jncM7avIdTxX8v9/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>An Introduction to RISC-V - Keith Graham, Codasip (&lt;a href="https://drive.google.com/file/d/1pyWnAHPkhU9pOVM_Y5GxrgNEENdfeEpq/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Accelerating the RISC-V Software Development Ecosystem - Jeffrey Osler-Mixon, Red Hat (&lt;a href="https://drive.google.com/file/d/1uZBNKo-DbUaGPtQ10EXrfkiGKZJ8HcBN/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Caliptra open source Root of Trust - Caleb Whitehead, Microsoft (&lt;a href="https://docs.google.com/presentation/d/1YknoZ7SpdsMiv5UnWDqvByrI1qPJnUed/edit?usp=drive_link&amp;amp;ouid=117663238184989073790&amp;amp;rtpof=true&amp;amp;sd=true">slides&lt;/a>)&lt;/li>
+&lt;li>Getting “Ware” You Need to Go – Managing Open Hardware with Software (Part 1) - Maximillian Schmidt &amp;amp; Lance Albertson, Oregon State University (&lt;a href="https://drive.google.com/file/d/1M1NP-IoeDcAn4503xqCx6wtgDCWZJHv1/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Getting “Ware” You Need to Go - AI Software on Open Hardware (Part 2) - Christopher Sullivan , Oregon State University (&lt;a href="https://drive.google.com/file/d/1M1NP-IoeDcAn4503xqCx6wtgDCWZJHv1/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;/ul></description></item><item><title>Google Summer of Code 2024</title><link>https://chipsalliance.org/preview/202/events/google-summer-of-code-2024/</link><pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/google-summer-of-code-2024/</guid><description>&lt;p>As in previous years, CHIPS Alliance returns as a mentor organization for Google Summer of Code 2024.
+Become a contributor and join us in our mission to push forward open source hardware, ASIC and FPGA design.
+Explore our list of project ideas and submit by April 2:
+&lt;a href="https://github.com/chipsalliance/ideas/blob/main/gsoc-2024-ideas.md">https://github.com/chipsalliance/ideas/blob/main/gsoc-2024-ideas.md&lt;/a>&lt;/p></description></item><item><title>CHIPS Technology Update - November 2023</title><link>https://chipsalliance.org/preview/202/events/chips-2023-fall-event/</link><pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-2023-fall-event/</guid><description>&lt;p>Check out the presentations below, and &lt;a href="https://www.youtube.com/playlist?list=PLWm-dtUGVJtDPlmNDxaa3g98N4OH9_a4C">watch the replay here&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Project Open Se Cura – Kenny Vassigh, Bangfei Pan, Cindy Liu, Kai Yick, Google, Michael Gielda, Antmicro, Brian Murray, Verisilicon (&lt;a href="https://docs.google.com/presentation/d/19dsfGeRU_ec79TK5oEIw0apOJDRcHCeO/edit?usp=sharing&amp;amp;ouid=111827616379981113572&amp;amp;rtpof=true&amp;amp;sd=true">slides&lt;/a>)&lt;/li>
+&lt;li>Caliptra Workgroup Update - Andres Lagar-Cavilla, Google (&lt;a href="https://docs.google.com/presentation/d/1lnuCjGXgq6hQOuYpi2TCu2XfKhR-0u7n7M_5LnCYcQk/edit?usp=sharing&amp;amp;resourcekey=0-vUEiQr06SIA0mncC7bjQog">slides&lt;/a>)&lt;/li>
+&lt;li>Enabling UVM testbenches in Verilator - Michael Gielda, Karol Gugala, Antmicro (&lt;a href="https://drive.google.com/file/d/1GL-zKUKcHZaepM5SUJUIxnFZL7qdaJc4/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>FuseSOC: Package manager and build abstraction tool for FPGA/ASIC development - Olof Kindgren, Qamcom (&lt;a href="https://drive.google.com/file/d/1f0tjKRvHG1yfoKOzfGLSKDSdTUNxbaSv/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>CHIPYard: An Open Source RISC-V Design Frameowrk - Sagar Karandikar, U.C. Berkeley (&lt;a href="https://drive.google.com/file/d/1KNe5N_ex-aUCcs6RoVxDd1lV0OboAD6p/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://www.youtube.com/playlist?list=PLWm-dtUGVJtDPlmNDxaa3g98N4OH9_a4C">Watch the Replay&lt;/a>&lt;/p></description></item><item><title>RISC-V Summit North America 2023</title><link>https://chipsalliance.org/preview/202/events/riscv_na_2023/</link><pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/riscv_na_2023/</guid><description>&lt;p>Please join us at the RISC-V North American Summit November 7 - 8&lt;/p>
+&lt;p>Be sure to come visit us at the CHIPS Alliance booth at the event.&lt;/p>
+&lt;p>Details &lt;a href="https://events.linuxfoundation.org/riscv-summit/">here: &lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance at the Open Compute Project Global Summit</title><link>https://chipsalliance.org/preview/202/events/chips_ocp_2023/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips_ocp_2023/</guid><description>&lt;p>Please join us at the Open Compute Project Global Summit to hear about the Caliptra Root of Trust collaborative project.&lt;/p>
+&lt;p>Be sure to come visit us at booth C37 hosted by the Linux Foundation at the event.&lt;/p>
+&lt;p>Details &lt;a href="https://www.opencompute.org/summit/global-summit">here &lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance Summer Workshop 2023</title><link>https://chipsalliance.org/preview/202/events/chips-biannual-technology-update-2022_13_07/</link><pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-biannual-technology-update-2022_13_07/</guid><description>&lt;p>Check out the presentations below, and &lt;a href="https://youtu.be/L-kRRL7i28g">watch the replay here&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Caliptra &amp;amp; VeeR continuous integration ecosystem – Michael Gielda, Antmicro (&lt;a href="https://drive.google.com/file/d/1VIwPmIN69roonMOZbKvKmAQb9EFiBarO/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Caliptra: Validating firmware against multiple hardware models in CI - Kor Nielsen, Google&lt;/li>
+&lt;li>OmniXtend: coherent scaleout over commodity fabrics - Jaco Hoffman, Westen Digital (&lt;a href="https://drive.google.com/file/d/1C0TS2ToVfJ96VY9MMypWeKTn9eHGYKrk/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>CHISEL 3 and Beyond - Jack Koenig, SiFive (&lt;a href="https://docs.google.com/presentation/d/13xT3rrKjgMWJU42TAgJwxIhjOeSOZUmn/edit?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Single Source library for digital design and virtual prototyping - Mikhail Moiseev, Intel (&lt;a href="https://drive.google.com/file/d/18HZFnT4LwVx43rVIoMJj1AJUqKFmP7rS/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;li>Building Confidence in Open IC Design using OpenFASOC - Mehdi Saligane, University of Michigan (&lt;a href="https://drive.google.com/file/d/1vuVm259aIS63oI67CZHstEn-A0K2PfVk/view?usp=drive_link">slides&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://youtu.be/L-kRRL7i28g">Watch the Replay&lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance Fall Workshop 2022</title><link>https://chipsalliance.org/preview/202/events/chips-biannual-technology-update-2022-2/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-biannual-technology-update-2022-2/</guid><description>&lt;p>Check out the presentations below, and &lt;a href="https://youtube.com/playlist?list=PLWm-dtUGVJtDkvxTpThB3cAu0dNxwrlHc">watch the replay here&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Caliptra – Bryan Kelly, Microsoft&lt;/li>
+&lt;li>SBOM and HBOM / Zephyr - Kate Stewart, Linux Foundation&lt;/li>
+&lt;li>F4PGA tools in the classroom - Mike Wirthlin, Jeff Goeders, BYU (&lt;a href="https://drive.google.com/file/d/1zpINI7TaM99YFFsGjjvicwwG04jwMlvZ/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Datasets for Machine Learning for Chip Design - Aman Arora, UT-Austin (&lt;a href="https://drive.google.com/file/d/1Df-lPpZ-XhMcqfMe4hkK19ECPdtmZep5/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Open source SystemVerilog / UVM support and scaling for large designs in Verilator 5.0 and beyond, Michael Gielda, Antmicro (&lt;a href="https://drive.google.com/file/d/1YbfE5tJ7-expgfrhhGF1ep7-WsOzBDZj/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Lowering barriers to chip design using OpenFASOC, AWG activities and tapeouts, Mehdi Saligane, University of Michigan (&lt;a href="https://drive.google.com/file/d/12t_dZHL7nIFWo6OXcnw7YBujIg1fSrV-/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Global Foundries Open PDK, Karthik Chandrasekaran, Global Foundries&lt;/li>
+&lt;li>Caravel SOC Learnings, Mohammed Kassem, Efabless, (&lt;a href="https://drive.google.com/file/d/1sZ82ahy_oCg6kbkKOcZkkN1W0iQx4Ulm/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Intel Compiler for SystemC, Mikhail Moiseev, Intel (&lt;a href="https://drive.google.com/file/d/1pQ90HjaEwrfan0FN9Qk63aw5LVWqnhpI/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Renode co-simulation for Caravel, Peter Gielda, Antmicro (&lt;a href="https://drive.google.com/file/d/1miW5NGX-ee2maolsFR5ptXI6iorfv1G-/view?usp=share_link">slides&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://youtube.com/playlist?list=PLWm-dtUGVJtDkvxTpThB3cAu0dNxwrlHc">Watch the Replay&lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance First 2022 Biannual Technology Update</title><link>https://chipsalliance.org/preview/202/events/chips-biannual-technology-update-2022-1/</link><pubDate>Tue, 19 Apr 2022 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/chips-biannual-technology-update-2022-1/</guid><description>&lt;p>&lt;a href="https://www.youtube.com/watch?v=L4saSRKnMF8&amp;amp;t=411s">Watch the Replay&lt;/a>&lt;/p>
+&lt;p>Check out the presentations below:&lt;/p>
+&lt;ul>
+&lt;li>Introduction – Rob Mains, CHIPS Alliance&lt;/li>
+&lt;li>Updates of Android on RISC-V – Han Mao, Alibaba
+(&lt;a href="https://drive.google.com/file/d/1vxY0_EV5rV5K1LWDK0R6OENnpfwuXwwX/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Chisel and FIRRTL for Next-Generation SoC Designs– Jack Koenig, SiFive
+(&lt;a href="https://docs.google.com/presentation/d/1ckTNFuA3FZ02ua1ad3I-ZtKVSWG8yxsh/edit?usp=sharing&amp;amp;ouid=111827616379981113572&amp;amp;rtpof=true&amp;amp;sd=true">slides&lt;/a>)&lt;/li>
+&lt;li>Introducting the F4PGA Workgroup– Michael Gielda, Karol Gugala, Antmicro
+(&lt;a href="https://docs.google.com/presentation/d/1y9EKrt2gIXMB1R5VxyajT6yNujT1yBkZ/edit?usp=sharing&amp;amp;ouid=111827616379981113572&amp;amp;rtpof=true&amp;amp;sd=true">slides&lt;/a>)&lt;/li>
+&lt;li>Chiplet IP Protocol– Dave Kehlet, Intel
+(&lt;a href="https://drive.google.com/file/d/1hqnZRfV3kVKXuxBxccG5MStJmEE2bCfl/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>NVMe Computational Storage Processor for Edge &amp;amp; Datacenter Applications, Anand Kulkarni, Wester Digital
+(&lt;a href="https://drive.google.com/file/d/1dfz4WsyAnTCY5ZhERL7rJ3pdLcU6pqxe/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Towards Open Source Models of Cryogenic CMOS : Brian Hoskins and Pragya Shrestha, NIST
+(&lt;a href="https://docs.google.com/presentation/d/1PbAu8p3cktjwp8T_lCpkik-WDsfYXlPI/edit?usp=sharing&amp;amp;ouid=111827616379981113572&amp;amp;rtpof=true&amp;amp;sd=true">slides&lt;/a>)&lt;/li>
+&lt;li>Latest Statistics from Google’s No Cost Shuttle Program : Tim Ansell, Google :
+(&lt;a href="https://www.google.com/url?q=https://bit.ly/ca22-sky130&amp;amp;sa=D&amp;amp;source=editors&amp;amp;ust=1675105801423210&amp;amp;usg=AOvVaw1TMYq-R8UwomNAz9o2g52n">slides&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=L4saSRKnMF8&amp;amp;t=411s">Watch the Replay&lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance Fall Workshop 2021</title><link>https://chipsalliance.org/preview/202/events/fall-workshop-2021/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/fall-workshop-2021/</guid><description>&lt;p>Check out the presentations below, and &lt;a href="https://www.youtube.com/watch?v=auXZdPwYs10!">watch the replay here&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Porting Android to RISC-V Alibaba – Guoyin Chen and Han Mao, Alibaba (&lt;a href="https://youtu.be/auXZdPwYs10?t=218">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1bylTKMLdhyLa6hl3LiblnpEewrhITf5S/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Practical Adoption of Open Source System Verilog Tools – Michael Gielda, Antmicro (&lt;a href="https://youtu.be/auXZdPwYs10?t=1347">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1Xt0B2OaWsLSNc1FFc4hjKD0CC7EdMWDH/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Chisel and FIRRTL for Next-Generation SoC Designs– Jack Koenig, SiFive (&lt;a href="https://youtu.be/auXZdPwYs10?t=2958">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1hH6YBvsmxBHfYYIAuSFS8Zq_96niMoWi/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>OpenFASOC: Automated Open Source Analog and Mixed-Signals IC Generation – Mehdi Saligane, University of Michigan (UMICH) (&lt;a href="https://youtu.be/auXZdPwYs10?t=4326">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1NqEDuhuLWpJs89hqKgi2x3FQpE7fQBzO/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>FPGA Tooling Interoperability with the FPGA Interchange Format – Maciej Kurc, Antmicro (&lt;a href="https://youtu.be/auXZdPwYs10?t=6183">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1_R_HLLOSQOoAnO5p3G9782xjhbVxXFdI/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>OmniXtend: Scalability and LPC – Jaco Hofmann, Western Digital Corporation (&lt;a href="https://youtu.be/auXZdPwYs10?t=7671">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1vhXgUs4z66dqUVYg24Duk_vLLIiWl3JY/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Open Source NVME IP with AI Acceleration – Anand Kulkarni, Western Digital Corporation and Karol Gugala, Antmicro (&lt;a href="https://youtu.be/auXZdPwYs10?t=8693">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1ipk2Oq5-ykehjbD9TKz0bBBtmNozR5B3/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Automating Analog Layout using ALIGN – Sachin Sapatnekar, University of Minnesota (UMN) (&lt;a href="https://youtu.be/auXZdPwYs10?t=10073">replay&lt;/a>)
+(&lt;a href="https://drive.google.com/file/d/1NqEDuhuLWpJs89hqKgi2x3FQpE7fQBzO/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://www.youtube.com/watch?v=auXZdPwYs10">Watch the Replay&lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance Spring Workshop 2021</title><link>https://chipsalliance.org/preview/202/events/spring-workshop-2021/</link><pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/202/events/spring-workshop-2021/</guid><description>&lt;p>Check out the presentations below, and &lt;a href="https://youtu.be/bLfBFpACh2s">watch the replay here&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>Chipyard - Bora Nikolic, UC Berkeley (&lt;a href="https://drive.google.com/file/d/1-Ceb2yWoaUgZqq7RHeuTiudmyWZ5U-VC/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>RISC-V DV Workgroup Updates Tao Liu / Matt Cockrell, Google (&lt;a href="https://drive.google.com/file/d/1-pOrlH0ctzATL6Bxcu8sRoAZPb_niJqb/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Open Source Flows in ASIC &amp;amp; FPGA Development Michael Gielda, Antmicro&lt;/li>
+&lt;li>Open-Source AIB Chiplet Ecosystem David Kehlet, Intel (&lt;a href="https://drive.google.com/file/d/1-QeaTxGHASYtOCwgEvWoZAmP4plWSois/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>OmniXtend Milestone Updates Dejan Vucinic, Western Digital (&lt;a href="https://drive.google.com/file/d/1-TWL4dUQQUvghb_NfzDK2QGNKue2_XnO/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Chisel advances for next-gen SOC Designs Jack Koenig, SiFive (&lt;a href="https://drive.google.com/file/d/1-UV8gtlKfkGnDRArE7zezl89q4ZotUUz/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Codasip SweRV Core Support Package in a Nutshell Zdenek Prikyl, Codasip (&lt;a href="https://drive.google.com/file/d/1-bz1cOamEru2oo_So2G7vQc6ixRelr52/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>An Introduction to the OpenROAD project Andrew Kahng / Tom Spyrou, OpenROAD (&lt;a href="https://drive.google.com/file/d/1-daHmgNlC6yTFztQ7O3eWDJ7lDRdE1gU/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Open Source FPGA Tooling Brian Faith, Quicklogic (&lt;a href="https://drive.google.com/file/d/1-Bt6-720HuOQpw-zZoedQSGkV9msMifw/view?usp=sharing">slides&lt;/a>)&lt;/li>
+&lt;li>Fully Open Silicon Down to the Transistor Tim Ansell, Google (&lt;a href="https://j.mp/ca21-sky130">slides&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://youtu.be/bLfBFpACh2s">Watch the Replay&lt;/a>&lt;/p></description></item></channel></rss>
