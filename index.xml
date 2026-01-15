@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CHIPS Alliance</title><link>https://chipsalliance.org/</link><description>Recent content on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 18 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Developer Spotlight- Building Trust, Tools, and the Future of Open Silicon</title><link>https://chipsalliance.org/news/rob-mains-spotlight/</link><pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/rob-mains-spotlight/</guid><description>&lt;p>&lt;em>In this Developer Spotlight, Rob Mains, Executive Director of CHIPS Alliance, reflects on the lessons that shaped his career, the realities of open source silicon, and what it will take to build a sustainable, production-ready open hardware ecosystem.&lt;/em>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CHIPS Alliance</title><link>https://chipsalliance.org/</link><description>Recent content on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/index.xml" rel="self" type="application/rss+xml"/><item><title>CHIPS Alliance 2025- A Year of Breakthroughs in Open Silicon and the Road Ahead</title><link>https://chipsalliance.org/news/2025-recap/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/2025-recap/</guid><description>&lt;p>&lt;em>Author: Rob Mains, Executive Director of CHIPS Alliance&lt;/em>&lt;/p>
+&lt;p>CHIPS Alliance is a six-year-old organization that is part of the Linux Foundation, whose mission is to foster collaborative, open source development in the silicon hardware design ecosystem. CHIPS champions all aspects of hardware development including:&lt;/p>
+&lt;ul>
+&lt;li>Chip design architecture&lt;/li>
+&lt;li>Electronic design automation for design entry, design verification, and physical implementation&lt;/li>
+&lt;li>FPGA tools&lt;/li>
+&lt;li>Repository of chip designs and verification design benches&lt;/li>
+&lt;li>Firmware&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Artificial intelligence and chip design&lt;/strong>&lt;/p></description></item><item><title>Developer Spotlight- Building Trust, Tools, and the Future of Open Silicon</title><link>https://chipsalliance.org/news/rob-mains-spotlight/</link><pubDate>Thu, 18 Dec 2025 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/rob-mains-spotlight/</guid><description>&lt;p>&lt;em>In this Developer Spotlight, Rob Mains, Executive Director of CHIPS Alliance, reflects on the lessons that shaped his career, the realities of open source silicon, and what it will take to build a sustainable, production-ready open hardware ecosystem.&lt;/em>&lt;/p>
 &lt;p>From IBM to Oracle, Rob Mains has spent decades working across the full stack of silicon development. This experience has helped shape a leadership philosophy grounded in trust, respect and collaboration. At CHIPS Alliance, this perspective supports a neutral collaboration model that allows companies to jointly develop foundational technologies without blurring competitive boundaries.&lt;/p></description></item><item><title>Inside the Evolution of Chisel- Jack Koenig on Open Source Silicon Design at SiFive</title><link>https://chipsalliance.org/news/spotlight-jack-koenig/</link><pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/spotlight-jack-koenig/</guid><description>&lt;p>&lt;strong>From reluctant programmer to compiler maintainer, a decade-long journey shaping open source digital design tools.&lt;/strong>&lt;/p>
 &lt;p>Jack Koenig is a Senior Staff Engineer at SiFive and one of the longest-standing maintainers of the Chisel and FIRRTL projects.&lt;/p>
 &lt;p>Over the past decade, his contributions have helped shape the foundation of open source hardware description in Scala, bridging the worlds of compiler theory, HDL design, and functional programming.&lt;/p>
@@ -630,12 +639,12 @@ San Francisco, CA 94129&lt;/p></description></item><item><title>F4PGA Workgroup<
  
  
  
- &lt;a href="https://github.com/chipsalliance/Caliptra/blob/main/README.md" target="_blank">
+ &lt;a href="https://chipsalliance.github.io/fpga-tool-perf/" target="_blank">
  
  
  
  
- &lt;img src="https://chipsalliance.org/images/projects/caliptra.svg" loading="lazy" alt="Caliptra">
+ &lt;img src="https://chipsalliance.org/images/projects/fpga-tool-perf.svg" loading="lazy" alt="FPGA tool perf">
  
  
  &lt;/a>
@@ -643,8 +652,8 @@ San Francisco, CA 94129&lt;/p></description></item><item><title>F4PGA Workgroup<
 &lt;/div>
 
 &lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">Caliptra&lt;/h3>
- &lt;p> The Caliptra project focuses on development of HW and SW IP for the Caliptra Root of Trust &lt;/p>
+ &lt;h3 class="mt-0">FPGA tool perf&lt;/h3>
+ &lt;p> Framework for automatic FPGA toolchains benchmarking &lt;/p>
 
  &lt;ul class="list-unstyled">
  &lt;li>Repositories:&lt;/li>
@@ -655,34 +664,22 @@ San Francisco, CA 94129&lt;/p></description></item><item><title>F4PGA Workgroup<
  
  
  
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra" target="_blank">caliptra&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/fpga-tool-perf" target="_blank">fpga-tool-perf&lt;/a>&lt;/li>
  
  
  
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-rtl" target="_blank">caliptra-rtl&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-sw" target="_blank">caliptra-sw&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-ureg" target="_blank">caliptra-ureg&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-dpe" target="_blank">caliptra-dpe&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/f4pga/actions" target="_blank">actions&lt;/a>&lt;/li>
  
  &lt;/ul>
- &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/Caliptra/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/fpga-tool-perf/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
  
  
  
  
- &lt;i class="ph-link">&lt;/i> &lt;a href="https://github.com/chipsalliance/Caliptra/blob/main/README.md" target="_blank">Website&lt;/a>
+ &lt;i class="ph-link">&lt;/i> &lt;a href="https://chipsalliance.github.io/fpga-tool-perf/" target="_blank">Website&lt;/a>
  
  
- &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:andreslc@google.com" target="_blank">Contact: Andres Lagar-Cavilla&lt;/a> (&lt;a href="https://github.com/andreslagarcavilla" target="_blank">GitHub&lt;/a>)&lt;/li>
+ &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:tgorochowik@antmicro.com" target="_blank">Contact: Tomasz Gorochowik&lt;/a> (&lt;a href="https://github.com/tgorochowik" target="_blank">GitHub&lt;/a>)&lt;/li>
  
  &lt;/ul>
 &lt;/div>
@@ -690,6 +687,58 @@ San Francisco, CA 94129&lt;/p></description></item><item><title>F4PGA Workgroup<
 
  
  
+ 
+ 
+&lt;div class="projects-box mb-5">
+
+&lt;div class="projects-box-col1">
+ 
+ 
+ 
+ 
+ 
+ &lt;a href="https://openprot.github.io/openprot/" target="_blank">
+ 
+ 
+ 
+ 
+ &lt;img src="https://chipsalliance.org/images/muted-logo.svg" loading="lazy" alt="Placeholder project logo">
+ 
+ 
+ &lt;/a>
+ 
+&lt;/div>
+
+&lt;div class="projects-box-col2">
+ &lt;h3 class="mt-0">OpenPRoT&lt;/h3>
+ &lt;p> OpenPRoT is a specification and an open-source implementation of a standards-based Platform Root of Trust firmware stack. &lt;/p>
+
+ &lt;ul class="list-unstyled">
+ &lt;li>Repositories:&lt;/li>
+ &lt;ul class="list-unstyled mb-0 ms-5">
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/OpenPRoT" target="_blank">OpenPRoT&lt;/a>&lt;/li>
+ 
+ &lt;/ul>
+ &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/OpenPRoT/openprot/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
+ 
+ 
+ 
+ 
+ &lt;i class="ph-link">&lt;/i> &lt;a href="https://openprot.github.io/openprot/" target="_blank">Website&lt;/a>
+ 
+ 
+ &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:louis.ferraro@amd.com" target="_blank">Contact: Louis Ferraro&lt;/a> (&lt;a href="https://github.com/ferralCoder" target="_blank">GitHub&lt;/a>)&lt;/li>
+ 
+ &lt;/ul>
+&lt;/div>
+&lt;/div>
+
  
  
  
@@ -716,65 +765,7 @@ San Francisco, CA 94129&lt;/p></description></item><item><title>F4PGA Workgroup<
 
 &lt;div class="projects-box-col2">
  &lt;h3 class="mt-0">Surelog and UHDM&lt;/h3>
- &lt;p> SureLog is a SystemVerilog 2017 Pre-processor, Parser, UHDM Compiler providing IEEE Design/TB VPI and Python AST API. UHDM is the underlying Hardware Data Model framework. More info: https://woset-workshop.github.io/WOSET2020.html#article-10 &lt;/p>
-
- &lt;ul class="list-unstyled">
- &lt;li>Repositories:&lt;/li>
- &lt;ul class="list-unstyled mb-0 ms-5">
- 
- 
- 
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/Surelog" target="_blank">Surelog&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/UHDM" target="_blank">UHDM&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/UHDM-integration-tests" target="_blank">UHDM-integration-tests&lt;/a>&lt;/li>
- 
- &lt;/ul>
- &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/Surelog/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
- 
- 
- 
- 
- &lt;i class="ph-link">&lt;/i> &lt;a href="N/A" target="_blank">Website&lt;/a>
- 
- 
- &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:alain.dargelas@gmail.com" target="_blank">Contact: Alain Dargelas&lt;/a> (&lt;a href="https://github.com/alaindargelas" target="_blank">GitHub&lt;/a>)&lt;/li>
- 
- &lt;/ul>
-&lt;/div>
-&lt;/div>
-
- 
- 
- 
- 
-&lt;div class="projects-box mb-5">
-
-&lt;div class="projects-box-col1">
- 
- 
- 
- 
- 
- 
- 
- 
- &lt;img src="https://chipsalliance.org/images/projects/veer.svg" loading="lazy" alt="VeeR">
- 
- 
-&lt;/div>
-
-&lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">VeeR&lt;/h3>
- &lt;p> RTL designs for the VeeR (Very Efficient &amp;amp; Elegant RISC-V) cores (EH1, EH2, EL2). &lt;/p></description></item><item><title>Rocket Workgroup</title><link>https://chipsalliance.org/workgroups/rocket/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/rocket/</guid><description>&lt;p>The Rocket Chip Workgroup covers the “Rocket” pipelined implementation of a RISC-V core as well as a TileLink uncore and cache coherent memory hierarchy. The main rocket-chip repository that the group maintains is a meta-repository containing tools needed to generate and test RTL implementations of SoC designs. This repository contains code that is used to generate RTL using &lt;a href="http://chisel.eecs.berkeley.edu/">Chisel&lt;/a> and Diplomacy: the Rocket Chip generator itself is a Scala program that invokes the Diplomacy library and Chisel compiler in order to emit RTL describing a complete SoC.&lt;/p></description></item><item><title>SystemVerilog Tools Workgroup</title><link>https://chipsalliance.org/workgroups/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/tools/</guid><description>&lt;p>The SystemVerilog Tools workgroup (WG) of CHIPS Alliance covers a wide array of open source SystemVerilog tooling for ASIC and FPGA design, mostly focusing around digital design (as there is a separate Analog WG that focuses on AMS design flows). The topics covered include simulation, synthesis, place and route, IP aggregation, linting, formatting, and many more.&lt;/p></description></item><item><title>Who We Are</title><link>https://chipsalliance.org/about/who-we-are/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/who-we-are/</guid><description>&lt;p>The CHIPS Alliance leverages common hardware development efforts by developing IP blocks that can be broadly used, such as RISC-V cores and neural network accelerator cores. We recognize that verification contributions benefit all who participate in the project, and prioritize joint resources for design verification.&lt;/p>
+ &lt;p> SureLog is a SystemVerilog 2017 Pre-processor, Parser, UHDM Compiler providing IEEE Design/TB VPI and Python AST API. UHDM is the underlying Hardware Data Model framework. More info: https://woset-workshop.github.io/WOSET2020.html#article-10 &lt;/p></description></item><item><title>Rocket Workgroup</title><link>https://chipsalliance.org/workgroups/rocket/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/rocket/</guid><description>&lt;p>The Rocket Chip Workgroup covers the “Rocket” pipelined implementation of a RISC-V core as well as a TileLink uncore and cache coherent memory hierarchy. The main rocket-chip repository that the group maintains is a meta-repository containing tools needed to generate and test RTL implementations of SoC designs. This repository contains code that is used to generate RTL using &lt;a href="http://chisel.eecs.berkeley.edu/">Chisel&lt;/a> and Diplomacy: the Rocket Chip generator itself is a Scala program that invokes the Diplomacy library and Chisel compiler in order to emit RTL describing a complete SoC.&lt;/p></description></item><item><title>SystemVerilog Tools Workgroup</title><link>https://chipsalliance.org/workgroups/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/tools/</guid><description>&lt;p>The SystemVerilog Tools workgroup (WG) of CHIPS Alliance covers a wide array of open source SystemVerilog tooling for ASIC and FPGA design, mostly focusing around digital design (as there is a separate Analog WG that focuses on AMS design flows). The topics covered include simulation, synthesis, place and route, IP aggregation, linting, formatting, and many more.&lt;/p></description></item><item><title>Who We Are</title><link>https://chipsalliance.org/about/who-we-are/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/who-we-are/</guid><description>&lt;p>The CHIPS Alliance leverages common hardware development efforts by developing IP blocks that can be broadly used, such as RISC-V cores and neural network accelerator cores. We recognize that verification contributions benefit all who participate in the project, and prioritize joint resources for design verification.&lt;/p>
 &lt;p>The scope of the Project includes hardware and software design and development under an open source (Apache v2) license:&lt;/p>
 &lt;ul>
 &lt;li>Verified IP blocks (compute cores, accelerators etc)&lt;/li>
