@@ -1,6 +1,6 @@
 ---
 date: 2026-02-05T00:00:00Z
-title: CHIPS Alliance 2026 Vision Blog
+title: CHIPS Alliance 2026 Vision
 categories:
   - Blog
 author: 
