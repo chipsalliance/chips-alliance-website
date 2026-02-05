@@ -1,10 +1,10 @@
 ---
 date: 2026-02-05T00:00:00Z
-title: CHIPS Alliance 2026 Vision
+title: CHIPS Alliance: Our Vision and Priorities for 2026
 categories:
   - Blog
 author: 
-images: ['news/2026-vision/matt-cockrell.png']
+images: ['news/2026-vision/2026-vision.png']
 aliases: ['/blog/2026/02/05/chips-alliance-2026-vision-blog/']
 tags: [caliptra, systemverilog, openprot, f4pga]
 ---
