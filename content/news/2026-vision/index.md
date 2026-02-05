@@ -6,7 +6,7 @@ categories:
 author: 
 images: ['news/2026-vision/matt-cockrell.png']
 aliases: ['/blog/2026/02/05/chips-alliance-2026-vision-blog/']
-tags: [caliptra, SV tools, openprot, f4pga]
+tags: [caliptra, systemverilog, openprot, f4pga]
 ---
 
 Dear CHIPS Alliance Community,   
