@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ngspice on CHIPS Alliance</title><link>https://chipsalliance.org/preview/207/tags/ngspice/</link><description>Recent content in Ngspice on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/preview/207/tags/ngspice/index.xml" rel="self" type="application/rss+xml"/><item><title>Joint Analog Workgroup / MOS-AK Panel Session</title><link>https://chipsalliance.org/preview/207/news/joint-analog-workgroup-mos-ak-panel-session/</link><pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/preview/207/news/joint-analog-workgroup-mos-ak-panel-session/</guid><description>&lt;p>Please join us for a special joint panel webinar session for the CHIPS Alliance Analog Workgroup and MOS-AK Foundation.&lt;/p>
+&lt;p>This panel will feature speakers with 20 minute talks on the following topic areas:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="mailto:mehdi@umich.edu">@Mehdi Saligane&lt;/a> : Introduction to the open source EDA tool flow for IC design (with reference to [1])&lt;/li>
+&lt;li>&lt;a href="mailto:nmakris@gmail.com">@Makris Nikolaos&lt;/a> : EKV3 in NGSPICE using ADMSXL&lt;/li>
+&lt;li>&lt;a href="mailto:erkeite@sandia.gov">@Keiter, Eric R&lt;/a> : Xyce and its support for commercial (hSpice/spectre) libs/syntax&lt;/li>
+&lt;li>&lt;a href="mailto:tim@efabless.com">@Tim Edwards&lt;/a> : his work on the SkyWater 130 nm compatibility with ngspice&lt;/li>
+&lt;li>&lt;a href="mailto:cameron.eda@gmail.com">@Kevin Cameron&lt;/a> : update on the P1800 (SystemVerilog) AMS standardization efforts (public doc [2])
+There will be time for Q &amp;amp; A after each talk and conversation after the presentation completion.&lt;/li>
+&lt;/ul>
+&lt;p>This webinar can be accessed via the following Zoom link, and will be recorded:&lt;/p></description></item></channel></rss>
