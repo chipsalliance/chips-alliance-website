@@ -204,3 +204,8 @@ members:
     url: https://rambus.com/
     image: rambus.svg
     level: auditor
+  - name: Delos Data
+    url: https://delosdata.com/
+    image: delos-data.svg
+    level: silver
+
