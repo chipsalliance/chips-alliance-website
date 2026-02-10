@@ -48,12 +48,8 @@ San Francisco, CA 94129&lt;/p></description></item><item><title>Frequently Asked
  aria-controls="collapse2"
  >
  &lt;p class="header-content">Why do we need open source hardware, chips, FPGAs, etc.?&lt;/p></description></item><item><title>Governance</title><link>https://chipsalliance.org/about/governance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/governance/</guid><description>&lt;p>In addition to the top-level structure of The CHIPS Alliance, each hosted open source project has its own process, structure, and community. While the Technical Advisory Council (TAC) sets high-level technical policy, projects have a great deal of flexibility in day-to-day operations, and would typically each adopt their own &lt;a href="https://docs.google.com/document/d/1_NeUOrl8IG7ih-Ji31LehKqv0KGT3VJcotvv4SwBmIg/edit">technical charter based on a common template&lt;/a>.&lt;/p>
-&lt;h2 id="rob-mains---general-manager">Rob Mains - General Manager&lt;/h2>
-&lt;section class="specialfeature">
- 
- &lt;div class="row align-items-center">
- &lt;div class="col-lg-8 order-2 order-lg-1">
- &lt;p>The General Manager works with the Governing Board, our members, and our projects to ensure the CHIPS Alliance is a healthy, sustainable, and neutral home for open source technical collaborations.&lt;/p></description></item><item><title>Members</title><link>https://chipsalliance.org/about/members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/members/</guid><description>&lt;p>When an organization joins the CHIPS Alliance, they are making a tangible commitment to the success and sustainability of open source projects which help to achieve these goals. The CHIPS Alliance recognizes the critical supporting role of these organizations, and thanks them for their ongoing support of our project communities.&lt;/p>
+&lt;h2 id="governing-board">Governing Board&lt;/h2>
+&lt;p>The Governing Board sets overall policy through our participation agreement and technical charter, which describes the membership requirements and responsibilities of participants.&lt;/p></description></item><item><title>Members</title><link>https://chipsalliance.org/about/members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/members/</guid><description>&lt;p>When an organization joins the CHIPS Alliance, they are making a tangible commitment to the success and sustainability of open source projects which help to achieve these goals. The CHIPS Alliance recognizes the critical supporting role of these organizations, and thanks them for their ongoing support of our project communities.&lt;/p>
 &lt;h2 id="chips-alliance-members">CHIPS Alliance Members&lt;/h2>
 &lt;p>
 &lt;a href="../../join/" class="btn btn-primary btn-sm"> Become a Member &lt;/a>
