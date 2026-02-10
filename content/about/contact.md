@@ -14,9 +14,3 @@ image_path: images/feature/48302010402_7eef97a236_o.jpg
     sfdcCampaignId: "7012M000001FetwQAC"
   });
 </script>
-
-## Mailing Address
-
-**CHIPS Alliance**  
-1 Letterman Drive, Building D, Suite D4700  
-San Francisco, CA 94129
