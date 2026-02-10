@@ -14,6 +14,7 @@ members:
     image: google.png
     level: platinum
     board_rep: Matt Cockrell
+    role: Governing Board Chair
   - name: Intel
     url: https://intel.com/
     image: intel.png
