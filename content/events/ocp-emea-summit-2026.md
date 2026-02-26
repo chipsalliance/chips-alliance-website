@@ -5,8 +5,8 @@ date: 2026-04-29
 
 ![OCP Booth Graphic](ocp-emea-2026-booth.png)
 
-CHIPS Alliance will be onsite April 29-30 in Barcelona, Spain.
+CHIPS Alliance will be onsite April 29-30 in Barcelona, Spain.   
 
-Visit us at **Booth B54**, where we’ll be appearing alongside other Linux Foundation projects. CHIPS will have a live demo at the booth, and attendees are welcome to stop by to talk with the team about our open source silicon efforts and community collaboration.
+Visit us at **Booth B54**, where we’ll be appearing alongside other Linux Foundation projects. Representatives from Google and Antmicro will join the CHIPS Alliance team to showcase a live demo and connect with attendees about open source silicon and community collaboration.   
 
-We look forward to connecting!
+We look forward to connecting in Barcelona.   
