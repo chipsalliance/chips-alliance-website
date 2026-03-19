@@ -6,7 +6,7 @@ categories:
 author:
 images: ['news/designing-modular-and-reusable-risc-v-socs-with-topwrap-and-guineveer/ChipsAllianceSpotlight.png']
 aliases: ['/blog/2026/03/18/designing-modular-and-reusable-risc-v-socs-with-topwrap-and-guineveer']
-tags: [topwrap, risc-v, fpga]
+tags: [topwrap, risc-v, asic-design, guineveer, veer]
 ---
 
 Designing a System-on-Chip (SoC) typically involves a lot of reuse, as CPU cores and I/O peripherals are rarely built completely from scratch, but rather gradually enhanced and integrated into different configurations.
