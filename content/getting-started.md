@@ -37,7 +37,7 @@ In addition to the lists which are open to everyone, we have some special-purpos
 
 * [members@lists.chipsalliance.org](https://lists.chipsalliance.org/g/members)  - This is the main list for member information.
 * [marketing@lists.chipsalliance.org](https://lists.chipsalliance.org/g/marketing)  - This is the list for the CHIPS Alliance marketing committee, which is open to all members.
-* We also maintain a legal mailing list for members' counsel to plan meeting times.  Contact [operations@chipsalliance.org](mailto:operations@chipsalliance.org) with the name of your in-house legal counsel so we can add them to the Legal Committee list and invite.
+* We also maintain a legal mailing list for members' counsel to plan meeting times.  Contact [support@chipsalliance.org](mailto:support@chipsalliance.org) with the name of your in-house legal counsel so we can add them to the Legal Committee list and invite.
 
 ### Follow us on social
 
@@ -49,7 +49,7 @@ Join our [Slack](https://chipsalliance.slack.com).  You can [get an invite here]
 
 ### Subscribe to our calendar
 
-We publish our [workgroup and meeting calendar](https://calendar.chipsalliance.org) ([ical](https://webcal.prod.itx.linuxfoundation.org/lfx/a092M00001G4R7xQAF_sub)).  Please email [mailto:operations@chipsalliance.org](operations@chipsalliance.org) to request new events on the calendar, or to be added to an existing invite. 
+We publish our [workgroup and meeting calendar](https://calendar.chipsalliance.org) ([ical](https://webcal.prod.itx.linuxfoundation.org/lfx/a092M00001G4R7xQAF_sub)).  Please email [mailto:support@chipsalliance.org](support@chipsalliance.org) to request new events on the calendar, or to be added to an existing invite. 
 
 ## How to participate in the Technical Community
 
@@ -70,16 +70,16 @@ The TAC is comprised of technical representatives from CHIPS Alliance projects a
 
 ## How to participate as a Member
 
-The CHIPS Alliance is a **member-supported** organization.  [Our members](https://chipsalliance.org/about/members) provide 100% of the financial support for our activities. Among other things, this enables us to provide operational, marketing, and legal support for our hosted projects, enables logisitical support for the ongoing operations of the Alliance, and allows us to host technical workshops to advance the state of the art of open hardware design.
+The CHIPS Alliance is a **member-supported** organization. [Our members](https://chipsalliance.org/about/members) provide 100% of the financial support for our activities. Among other things, this enables us to provide operational, marketing, and legal support for our hosted projects, enables logisitical support for the ongoing operations of the Alliance, and allows us to host technical workshops to advance the state of the art of open hardware design.
 
 ### First steps for new members
 
 We have a number of additional lists and committees for [members](https://chipsalliance.org/about/members).  Here are a few more things you should do.
 
-* Send a vector version of your logo (.svg preferred) to [operations@chipsalliance.org](mailto:operations@chipsalliance.org)
+* Send a vector version of your logo (.svg preferred) to [support@chipsalliance.org](mailto:support@chipsalliance.org)
 * Encourage your coworkers to join the [CHIPS Alliance mailing lists](#join-our-mailing-lists).
 
-Please contact [operations@chipsalliance.org](mailto:operations@chipsalliance.org) for any questions or issues related to membership.
+Please contact [support@chipsalliance.org](mailto:support@chipsalliance.org) for any questions or issues related to membership.
 
 ### The Governing Board
 
@@ -95,24 +95,21 @@ The Governing Board meets bi-weekly.
 
 The Marketing Committee is responsible for coordinating outreach activities and for responding to inbound requests.  All CHIPS Alliance members are welcome to participate on Marketing Committee meetings and activities.
 
-Please send an email to [operations@chipsalliance.org](mailto:operations@chipsalliance.org) to be added to the mailing list and calendar invitation.
+Please send an email to [support@chipsalliance.org](mailto:support@chipsalliance.org) to be added to the mailing list and calendar invitation.
 
 ### The Legal Committee
 
 The CHIPS Alliance Legal Committee is responsible for coordinating legal activity, including document and policy reviews.  The Legal Committee makes recommendations to the Governing Board on such matters.  All CHIPS Alliance members are welcome to designate a member of their in-house legal counsel to participate on this committee.
 
-Please send an email to [operations@chipsalliance.org](mailto:operations@chipsalliance.org) to be added to the mailing list and calendar invitation.
+Please send an email to [support@chipsalliance.org](mailto:support@chipsalliance.org) to be added to the mailing list and calendar invitation.
 
-### Are you not a member, but interested in joining?
-
-* Reach out to [membership@chipsalliance.org](mailto:membership@chipsalliance.org) with any questions.
+* Reach out to [support@chipsalliance.org](mailto:support@chipsalliance.org) with any questions.
 * Organizations may complete the [membership application](https://chipsalliance.org/join).
 
 ## I have a question or a problem!
 
-* If you are a member or a participant in our technical community, email [operations@chipsalliance.org](mailto:operations@chipsalliance.org)
-* If you would like to become a member, email [membership@chipsalliance.org](mailto:membership@chipsalliance.org)
-* If you have a press inquiry, email [pr@chipsalliance.org](mailto:pr@chipsalliance.org)
-* If your question isn't covered by the above, email [info@chipsalliance.org](mailto:info@chipsalliance.org)
+Please email [support@chipsalliance.org](mailto:support@chipsalliance.org)
+
+* If your question isn't covered by the above, email [support@chipsalliance.org](mailto:support@chipsalliance.org)
 
 [help]: https://raw.githubusercontent.com/mgielda/Font-Awesome-SVG-PNG/master/black/png/16/question-circle.png

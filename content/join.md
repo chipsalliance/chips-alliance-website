@@ -20,7 +20,7 @@ You may preview these documents before signing:
 - [CHIPS Alliance participation agreement (preview)](https://cdn.platform.linuxfoundation.org/agreements/chips.pdf)
 - [The Linux Foundation membership agreement (preview)](https://cdn.platform.linuxfoundation.org/agreements/tlf.pdf)
 
-If you have any questions, please email membership@chipsalliance.org!
+If you have any questions, please email [support@chipsalliance.org](mailto:support@chipsalliance.org)!
 
 {{< button
 link="https://joinnow.platform.linuxfoundation.org/?project=chips"
