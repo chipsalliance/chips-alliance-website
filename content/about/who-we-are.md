@@ -16,7 +16,7 @@ The scope of the Project includes hardware and software design and development u
 - Exploration of new design flows such as Python-based design verification.
 - The CHIPS Alliance welcomes technical contributions from members and non-members alike.  We encourage everyone to use, extend, and contribute back to our projects, and to participate on the Technical Steering Committee.
 
-We also welcome organizations and institutions who wish to participate in the CHIPS Alliance governance process by [becoming members](../../join/).  If you have questions, please reach out to membership@chipsalliance.org.
+We also welcome organizations and institutions who wish to participate in the CHIPS Alliance governance process by [becoming members](../../join/).  If you have questions, please reach out to [support@chipsalliance.org](mailto:support@chipsalliance.org).
 
 The CHIPS Alliance is hosted by [The Linux Foundation](https://linuxfoundation.org/), a 501(c)6 non-profit organization.
 

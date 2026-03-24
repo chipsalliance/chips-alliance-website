@@ -12,7 +12,7 @@ CHIPS Alliance was founded in March 2019 to design high-quality, open source har
 
 CHIPS Alliance was incorporated by four organizations which wanted to make open source silicon a reality. Esperanto, Google, SiFive and Western Digital were the founding members. Now that one year has passed since the organization’s founding, it is fitting to look back at our progress so far. We are pleased to present this annual report detailing the many things we have accomplished collectively in this fast growing organization.
 
-Comments and feedback are welcome at info@chipsalliance.org.
+Comments and feedback are welcome at [support@chipsalliance.org](mailto:support@chipsalliance.org).
 
 “The growth behind CHIPS Alliance has been incredible. We are laying the foundation for open source hardware development to become accessible to a wider number of companies, universities and individuals.”  
 – Zvonimir Bandic, Governing Board Chair, CHIPS Alliance, and Senior Director, Western Digital

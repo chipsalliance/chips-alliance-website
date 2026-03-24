@@ -86,14 +86,14 @@ No. Our Working Group and TAC meetings, as well as mailing lists, are all open. 
 index="11"
 title="How do you join the CHIPS Alliance?"
 >}}
-Click [here](../../join/) to learn about joining CHIPS Alliance and see our membership documents, or email us at membership@chipsalliance.org.
+Click [here](../../join/) to learn about joining CHIPS Alliance and see our membership documents, or email us at [support@chipsalliance.org](mailto:support@chipsalliance.org).
 {{< /accordion >}}
 
 {{< accordion
 index="12"
 title="I represent a non-profit/academic institution, can I join CHIPS Alliance?"
 >}}
-Non-profit and academic institutions may join CHIPS Alliance as Associate members at no cost. Please reach out to membership@chipsalliance.org to share your interest in becoming an Associate member.
+Non-profit and academic institutions may join CHIPS Alliance as Associate members at no cost. Please reach out to [support@chipsalliance.org](mailto:support@chipsalliance.org) to share your interest in becoming an Associate member.
 {{< /accordion >}}
 
 {{< /accordionlist >}}
