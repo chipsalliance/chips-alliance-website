@@ -209,4 +209,13 @@ members:
     url: https://delosdata.com/
     image: delos-data.svg
     level: silver
+  - name: Drexel University
+    url: https://drexel.edu/
+    image: delos-data.svg
+    level: associate
+  - name: Qinvicta
+    url: https://qinvicta.com/
+    image: qinvicta.svg
+    level: auditor
+
 
