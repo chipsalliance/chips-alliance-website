@@ -211,7 +211,7 @@ members:
     level: silver
   - name: Drexel University
     url: https://drexel.edu/
-    image: delos-data.svg
+    image: drexel-university.svg
     level: associate
   - name: Qinvicta
     url: https://qinvicta.com/
