@@ -45,7 +45,7 @@ members:
   - name: Futurewei
     url: https://www.futurewei.com/
     image: futurewei-tech.png
-    level: platinum
+    level: silver
     board_rep: Danny Hua
   - name: Marvell
     url: https://www.marvell.com/
