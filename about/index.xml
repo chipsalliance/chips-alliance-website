@@ -69,11 +69,6 @@
  
  &lt;div class="col my-auto">
  
- &lt;a href="https://www.futurewei.com/" target="_blank">&lt;img alt="Futurewei logo" src="https://chipsalliance.org/images/members/futurewei-tech.png">&lt;/a>
- &lt;/div>
- 
- &lt;div class="col my-auto">
- 
  &lt;a href="https://google.com/" target="_blank">&lt;img alt="Google logo" src="https://chipsalliance.org/images/members/google.png">&lt;/a>
  &lt;/div>
  
@@ -153,6 +148,11 @@
  &lt;div class="col my-auto">
  
  &lt;a href="https://www.etri.re.kr/eng/main/main.etri" target="_blank">&lt;img alt="Electronic and Telecommunications Research Institute logo" src="https://chipsalliance.org/images/members/ETRI.png">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
+ &lt;a href="https://www.futurewei.com/" target="_blank">&lt;img alt="Futurewei logo" src="https://chipsalliance.org/images/members/futurewei-tech.png">&lt;/a>
  &lt;/div>
  
  &lt;div class="col my-auto">
