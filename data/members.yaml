@@ -217,5 +217,9 @@ members:
     url: https://qinvicta.com/
     image: qinvicta.svg
     level: auditor
+  - name: Silicon Motion
+    url: https://www.siliconmotion.com/
+    image: siliconmotion.svg
+    level: auditor
 
 
