@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CHIPS Alliance</title><link>https://chipsalliance.org/</link><description>Recent content on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 29 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/index.xml" rel="self" type="application/rss+xml"/><item><title>CHIPS Alliance at 2026 OCP EMEA Summit</title><link>https://chipsalliance.org/events/ocp-emea-summit-2026/</link><pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/events/ocp-emea-summit-2026/</guid><description>&lt;p>&lt;img src="ocp-emea-2026-booth.png" alt="OCP Booth Graphic">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CHIPS Alliance</title><link>https://chipsalliance.org/</link><description>Recent content on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Latch Up 2026</title><link>https://chipsalliance.org/events/latch-up-2026/</link><pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/events/latch-up-2026/</guid><description>&lt;p>&lt;img src="latch-up.png" alt="latch-up graphic">&lt;/p>
+&lt;p>CHIPS Alliance is proud to sponsor &lt;a href="https://fossi-foundation.org/latch-up/2026">&lt;strong>Latch-Up 2026&lt;/strong>&lt;/a>, taking place May 1–3, 2026 in Waterloo, Ontario, Canada.&lt;/p>
+&lt;p>Organized by the FOSSi Foundation, Latch-Up is a weekend of presentations and networking dedicated to free and open source silicon.&lt;/p>
+&lt;p>Designed for the open source digital design community, it follows the model of its European counterpart ORConf, bringing together engineers, developers, and contributors to share work and connect across the ecosystem.&lt;/p></description></item><item><title>CHIPS Alliance at 2026 OCP EMEA Summit</title><link>https://chipsalliance.org/events/ocp-emea-summit-2026/</link><pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/events/ocp-emea-summit-2026/</guid><description>&lt;p>&lt;img src="ocp-emea-2026-booth.png" alt="OCP Booth Graphic">&lt;/p>
 &lt;p>CHIPS Alliance will be onsite at 2026 OCP EMEA Summit, April 29–30, in Barcelona, Spain. Visit us at Booth B54, where we will be appearing alongside other Linux Foundation projects, SONiC and OPI. Representatives from Google and Antmicro will join the CHIPS Alliance team to discuss open source silicon development and demonstrate Guineveer, a RISC-V reference design. We look forward to connecting in Barcelona.&lt;/p>
 &lt;p>🔗 View the schedule: &lt;a href="https://2026ocpemea.fnvirtual.app/a/schedule/">https://2026ocpemea.fnvirtual.app/a/schedule/&lt;/a>&lt;/p></description></item><item><title>CHIPS Alliance launches the SV Tools Project for open source development of SystemVerilog/UVM codebases</title><link>https://chipsalliance.org/news/sv-tools-project-launch/</link><pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/sv-tools-project-launch/</guid><description>&lt;p>CHIPS Alliance, an organization operating under the Linux Foundation with the aim to foster collaborative, open source development in the silicon hardware design ecosystem, is happy to introduce the &lt;a href="https://github.com/chipsalliance/sv-tools">SV Tools Project&lt;/a> facilitating the development of high-quality, open source tooling for working with SystemVerilog (SV) codebases. With support from CHIPS Alliance members and collaborators, we&amp;rsquo;ve grouped together a suite of open source tools used for development of hardware leveraging SystemVerilog and the most common SV design verification methodology, UVM. The effort aims to provide better visibility and support for both project maintainers and users, and foster a more coherent open source tooling experience for various aspects of ASIC development and verification with SV/UVM.&lt;/p></description></item><item><title>CHIPS Alliance at 2026 OCP EMEA Summit</title><link>https://chipsalliance.org/news/chips-alliance-ocp-emea-2026/</link><pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/chips-alliance-ocp-emea-2026/</guid><description>&lt;p>CHIPS Alliance, an organization operating under the auspices of the Linux Foundation, will participate in the &lt;a href="https://www.opencompute.org/summit/emea-summit">OCP EMEA 2026 Summit&lt;/a> from April 29 to 30 in Barcelona, Spain. We&amp;rsquo;ll be located at Booth B54 alongside other Linux Foundation projects (SONiC Foundation &amp;amp; Open Programmable Infrastructure Project (OPI)), where representatives from Platinum members Google and Antmicro will engage with participants and discuss open source silicon development.&lt;/p>
 &lt;p>At the CHIPS Alliance booth, member Antmicro will be showcasing &lt;a href="https://github.com/chipsalliance/guineveer">Guineveer&lt;/a>, a simple and extensible RISC-V reference design they contributed to CHIPS Alliance, meant to serve as a baseline for creating custom SoCs. Based on the &lt;a href="https://github.com/chipsalliance/Cores-VeeR-EL2">VeeR EL2 core&lt;/a>, a tiny, 32-bit variant of the CHIPS Alliance-hosted VeeR family of open source, production-grade RISC-V cores that is used across CHIPS Alliance projects such as &lt;a href="https://github.com/chipsalliance/caliptra">Caliptra&lt;/a>, Guineveer can be easily modified with Antmicro&amp;rsquo;s open source &lt;a href="https://github.com/antmicro/topwrap">Topwrap&lt;/a> digital design aggregation framework, which lets you assemble designs from readily available building blocks.&lt;/p></description></item><item><title>Designing Modular and Reusable RISC-V SoCs with Topwrap and Guineveer</title><link>https://chipsalliance.org/news/designing-modular-and-reusable-risc-v-socs-with-topwrap-and-guineveer/</link><pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/designing-modular-and-reusable-risc-v-socs-with-topwrap-and-guineveer/</guid><description>&lt;p>Designing a System-on-Chip (SoC) typically involves a lot of reuse, as CPU cores and I/O peripherals are rarely built completely from scratch, but rather gradually enhanced and integrated into different configurations.&lt;/p>
@@ -648,12 +651,6 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
- 
- 
- 
- 
- 
- 
 &lt;div class="projects-box mb-5">
 
 &lt;div class="projects-box-col1">
@@ -769,60 +766,6 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:koenig@sifive.com" target="_blank">Contact: Jack Koenig&lt;/a> (&lt;a href="https://github.com/https://github.com/jackkoenig" target="_blank">GitHub&lt;/a>)&lt;/li>
- 
- &lt;/ul>
-&lt;/div>
-&lt;/div>
-
- 
- 
- 
- 
-&lt;div class="projects-box mb-5">
-
-&lt;div class="projects-box-col1">
- 
- 
- 
- 
- 
- &lt;a href="https://f4pga.org" target="_blank">
- 
- 
- 
- 
- &lt;img src="https://chipsalliance.org/images/projects/f4pga.svg" loading="lazy" alt="F4PGA">
- 
- 
- &lt;/a>
- 
-&lt;/div>
-
-&lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">F4PGA&lt;/h3>
- &lt;p> Free and open source toolchain for FPGA devices &lt;/p>
-
- &lt;ul class="list-unstyled">
- &lt;li>Repositories:&lt;/li>
- &lt;ul class="list-unstyled mb-0 ms-5">
- 
- 
- 
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/f4pga" target="_blank">f4pga&lt;/a>&lt;/li>
- 
- &lt;/ul>
- &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/f4pga/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
- 
- 
- 
- 
- &lt;i class="ph-link">&lt;/i> &lt;a href="https://f4pga.org" target="_blank">Website&lt;/a>
- 
- 
- &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:tmichalak@antmicro.com" target="_blank">Contact: Tomasz Michalak&lt;/a> (&lt;a href="https://github.com/tmichalak" target="_blank">GitHub&lt;/a>)&lt;/li>
  
  &lt;/ul>
 &lt;/div>
