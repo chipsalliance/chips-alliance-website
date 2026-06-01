@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CHIPS Alliance</title><link>https://chipsalliance.org/</link><description>Recent content on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Latch Up 2026</title><link>https://chipsalliance.org/events/latch-up-2026/</link><pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/events/latch-up-2026/</guid><description>&lt;p>&lt;img src="latch-up.png" alt="latch-up graphic">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CHIPS Alliance</title><link>https://chipsalliance.org/</link><description>Recent content on CHIPS Alliance</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://chipsalliance.org/index.xml" rel="self" type="application/rss+xml"/><item><title>CHIPS Alliance at Latch-Up 2026</title><link>https://chipsalliance.org/news/latch-up2026/</link><pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/news/latch-up2026/</guid><description>&lt;p>CHIPS Alliance was proud to sponsor &lt;a href="https://fossi-foundation.org/latch-up/2026">Latch-Up 2026&lt;/a>, held May 1-3, 2026, in Waterloo, Ontario, Canada. Organized by the &lt;a href="https://fossi-foundation.org/">FOSSi Foundation&lt;/a>, Latch-Up is a weekend of presentations and networking dedicated to free and open source silicon. Designed for the open source digital design community, the event brings together engineers, developers, and contributors to share technical work and connect across the ecosystem. It is the North American counterpart of the European open silicon conference with a 14-year history, &lt;a href="https://fossi-foundation.org/orconf/2026">ORCONF&lt;/a>, also organized by FOSSi, which CHIPS will be joining and sponsoring later this year.&lt;/p></description></item><item><title>Latch Up 2026</title><link>https://chipsalliance.org/events/latch-up-2026/</link><pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/events/latch-up-2026/</guid><description>&lt;p>&lt;img src="latch-up.png" alt="latch-up graphic">&lt;/p>
 &lt;p>CHIPS Alliance is proud to sponsor &lt;a href="https://fossi-foundation.org/latch-up/2026">&lt;strong>Latch-Up 2026&lt;/strong>&lt;/a>, taking place May 1–3, 2026 in Waterloo, Ontario, Canada.&lt;/p>
 &lt;p>Organized by the FOSSi Foundation, Latch-Up is a weekend of presentations and networking dedicated to free and open source silicon.&lt;/p>
 &lt;p>Designed for the open source digital design community, it follows the model of its European counterpart ORConf, bringing together engineers, developers, and contributors to share work and connect across the ecosystem.&lt;/p></description></item><item><title>CHIPS Alliance at 2026 OCP EMEA Summit</title><link>https://chipsalliance.org/events/ocp-emea-summit-2026/</link><pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/events/ocp-emea-summit-2026/</guid><description>&lt;p>&lt;img src="ocp-emea-2026-booth.png" alt="OCP Booth Graphic">&lt;/p>
@@ -661,12 +661,12 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
- &lt;a href="https://chipsalliance.github.io/fpga-tool-perf/" target="_blank">
+ &lt;a href="https://github.com/chipsalliance/Caliptra/blob/main/README.md" target="_blank">
  
  
  
  
- &lt;img src="https://chipsalliance.org/images/projects/fpga-tool-perf.svg" loading="lazy" alt="FPGA tool perf">
+ &lt;img src="https://chipsalliance.org/images/projects/caliptra.svg" loading="lazy" alt="Caliptra">
  
  
  &lt;/a>
@@ -674,8 +674,8 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
 &lt;/div>
 
 &lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">FPGA tool perf&lt;/h3>
- &lt;p> Framework for automatic FPGA toolchains benchmarking &lt;/p>
+ &lt;h3 class="mt-0">Caliptra&lt;/h3>
+ &lt;p> The Caliptra project focuses on development of HW and SW IP for the Caliptra Root of Trust &lt;/p>
 
  &lt;ul class="list-unstyled">
  &lt;li>Repositories:&lt;/li>
@@ -686,22 +686,34 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/fpga-tool-perf" target="_blank">fpga-tool-perf&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra" target="_blank">caliptra&lt;/a>&lt;/li>
  
  
  
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/f4pga/actions" target="_blank">actions&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-rtl" target="_blank">caliptra-rtl&lt;/a>&lt;/li>
+ 
+ 
+ 
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-sw" target="_blank">caliptra-sw&lt;/a>&lt;/li>
+ 
+ 
+ 
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-ureg" target="_blank">caliptra-ureg&lt;/a>&lt;/li>
+ 
+ 
+ 
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/caliptra-dpe" target="_blank">caliptra-dpe&lt;/a>&lt;/li>
  
  &lt;/ul>
- &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/fpga-tool-perf/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/Caliptra/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
  
  
  
  
- &lt;i class="ph-link">&lt;/i> &lt;a href="https://chipsalliance.github.io/fpga-tool-perf/" target="_blank">Website&lt;/a>
+ &lt;i class="ph-link">&lt;/i> &lt;a href="https://github.com/chipsalliance/Caliptra/blob/main/README.md" target="_blank">Website&lt;/a>
  
  
- &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:tgorochowik@antmicro.com" target="_blank">Contact: Tomasz Gorochowik&lt;/a> (&lt;a href="https://github.com/tgorochowik" target="_blank">GitHub&lt;/a>)&lt;/li>
+ &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:andreslc@google.com" target="_blank">Contact: Andres Lagar-Cavilla&lt;/a> (&lt;a href="https://github.com/andreslagarcavilla" target="_blank">GitHub&lt;/a>)&lt;/li>
  
  &lt;/ul>
 &lt;/div>
@@ -718,6 +730,8 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
+ 
+ &lt;a href="https://github.com/chipsalliance/systemc-compiler/wiki" target="_blank">
  
  
  
@@ -725,11 +739,13 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  &lt;img src="https://chipsalliance.org/images/muted-logo.svg" loading="lazy" alt="Placeholder project logo">
  
  
+ &lt;/a>
+ 
 &lt;/div>
 
 &lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">SV tools&lt;/h3>
- &lt;p> The mission of the Project is to develop a SystemVerilog toolchain / suite for working with SV/UVM. &lt;/p>
+ &lt;h3 class="mt-0">Intel Compiler for SystemC&lt;/h3>
+ &lt;p> Open source SystemC to SystemVerilog translation tool and SingleSource library. &lt;/p>
 
  &lt;ul class="list-unstyled">
  &lt;li>Repositories:&lt;/li>
@@ -740,69 +756,18 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/sv-tools" target="_blank">sv-tools&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/verible" target="_blank">verible&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/verible-actions-common" target="_blank">verible-actions-common&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/verible-linter-action" target="_blank">verible-linter-action&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/verible-formatter-action" target="_blank">verible-formatter-action&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/homebrew-verible" target="_blank">homebrew-verible&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/riscv-dv" target="_blank">riscv-dv&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/sv-tests" target="_blank">sv-tests&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/sv-tests-results" target="_blank">sv-tests-results&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/synlig" target="_blank">synlig&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/synlig-logs" target="_blank">synlig-logs&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/uvm-verilator" target="_blank">uvm-verilator&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/systemc-compiler" target="_blank">systemc-compiler&lt;/a>&lt;/li>
  
  &lt;/ul>
- &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="#ZgotmplZ" target="_blank">Issue Tracker&lt;/a>&lt;/li>
+ &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/intel/systemc-compiler/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
  
  
  
  
- &lt;li>Websites:&lt;/li>
- &lt;ul class="list-unstyled mb-0 ms-5">
- 
- &lt;li>&lt;i class="ph-link">&lt;/i> &lt;a href="https://chipsalliance.github.io/sv-tests-results/" target="_blank">https://chipsalliance.github.io/sv-tests-results/&lt;/a>&lt;/li>
- 
- &lt;li>&lt;i class="ph-link">&lt;/i> &lt;a href="https://chipsalliance.github.io/verible/" target="_blank">https://chipsalliance.github.io/verible/&lt;/a>&lt;/li>
- 
- &lt;/ul>
+ &lt;i class="ph-link">&lt;/i> &lt;a href="https://github.com/chipsalliance/systemc-compiler/wiki" target="_blank">Website&lt;/a>
  
  
- &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:kgugala@antmicro.com" target="_blank">Contact: Karol Gugala&lt;/a> (&lt;a href="https://github.com/kgugala" target="_blank">GitHub&lt;/a>)&lt;/li>
+ &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:mikhail.moiseev@intel.com" target="_blank">Contact: Mikhail Moiseev&lt;/a> (&lt;a href="https://github.com/mikhailmoiseev" target="_blank">GitHub&lt;/a>)&lt;/li>
  
  &lt;/ul>
 &lt;/div>
@@ -822,12 +787,12 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
- &lt;a href="https://www.chisel-lang.org/" target="_blank">
+ &lt;a href="https://openprot.github.io/openprot/" target="_blank">
  
  
  
  
- &lt;img src="https://chipsalliance.org/images/projects/chisel.svg" loading="lazy" alt="Chisel">
+ &lt;img src="https://chipsalliance.org/images/muted-logo.svg" loading="lazy" alt="Placeholder project logo">
  
  
  &lt;/a>
@@ -835,8 +800,8 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
 &lt;/div>
 
 &lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">Chisel&lt;/h3>
- &lt;p> Support the Chisel Hardware Construction Language and related projects &lt;/p></description></item><item><title>Rocket Workgroup</title><link>https://chipsalliance.org/workgroups/rocket/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/rocket/</guid><description>&lt;p>The Rocket Chip Workgroup covers the “Rocket” pipelined implementation of a RISC-V core as well as a TileLink uncore and cache coherent memory hierarchy. The main rocket-chip repository that the group maintains is a meta-repository containing tools needed to generate and test RTL implementations of SoC designs. This repository contains code that is used to generate RTL using &lt;a href="http://chisel.eecs.berkeley.edu/">Chisel&lt;/a> and Diplomacy: the Rocket Chip generator itself is a Scala program that invokes the Diplomacy library and Chisel compiler in order to emit RTL describing a complete SoC.&lt;/p></description></item><item><title>SystemVerilog Tools Workgroup</title><link>https://chipsalliance.org/workgroups/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/tools/</guid><description>&lt;p>The SystemVerilog Tools workgroup (WG) of CHIPS Alliance covers a wide array of open source SystemVerilog tooling for ASIC and FPGA design, mostly focusing around digital design (as there is a separate Analog WG that focuses on AMS design flows). The topics covered include simulation, synthesis, place and route, IP aggregation, linting, formatting, and many more.&lt;/p></description></item><item><title>Who We Are</title><link>https://chipsalliance.org/about/who-we-are/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/who-we-are/</guid><description>&lt;p>The CHIPS Alliance leverages common hardware development efforts by developing IP blocks that can be broadly used, such as RISC-V cores and neural network accelerator cores. We recognize that verification contributions benefit all who participate in the project, and prioritize joint resources for design verification.&lt;/p>
+ &lt;h3 class="mt-0">OpenPRoT&lt;/h3>
+ &lt;p> OpenPRoT is a specification and an open-source implementation of a standards-based Platform Root of Trust firmware stack. &lt;/p></description></item><item><title>Rocket Workgroup</title><link>https://chipsalliance.org/workgroups/rocket/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/rocket/</guid><description>&lt;p>The Rocket Chip Workgroup covers the “Rocket” pipelined implementation of a RISC-V core as well as a TileLink uncore and cache coherent memory hierarchy. The main rocket-chip repository that the group maintains is a meta-repository containing tools needed to generate and test RTL implementations of SoC designs. This repository contains code that is used to generate RTL using &lt;a href="http://chisel.eecs.berkeley.edu/">Chisel&lt;/a> and Diplomacy: the Rocket Chip generator itself is a Scala program that invokes the Diplomacy library and Chisel compiler in order to emit RTL describing a complete SoC.&lt;/p></description></item><item><title>SystemVerilog Tools Workgroup</title><link>https://chipsalliance.org/workgroups/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/workgroups/tools/</guid><description>&lt;p>The SystemVerilog Tools workgroup (WG) of CHIPS Alliance covers a wide array of open source SystemVerilog tooling for ASIC and FPGA design, mostly focusing around digital design (as there is a separate Analog WG that focuses on AMS design flows). The topics covered include simulation, synthesis, place and route, IP aggregation, linting, formatting, and many more.&lt;/p></description></item><item><title>Who We Are</title><link>https://chipsalliance.org/about/who-we-are/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://chipsalliance.org/about/who-we-are/</guid><description>&lt;p>The CHIPS Alliance leverages common hardware development efforts by developing IP blocks that can be broadly used, such as RISC-V cores and neural network accelerator cores. We recognize that verification contributions benefit all who participate in the project, and prioritize joint resources for design verification.&lt;/p>
 &lt;p>The scope of the Project includes hardware and software design and development under an open source (Apache v2) license:&lt;/p>
 &lt;ul>
 &lt;li>Verified IP blocks (compute cores, accelerators etc)&lt;/li>
