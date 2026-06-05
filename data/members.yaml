@@ -32,7 +32,11 @@ members:
     url: https://verisilicon.com/
     image: verisilicon.png
     level: platinum
-    board_rep: Chris Wang
+    board_rep: Wayne Dai
+  - name: Qualcomm
+    url: https://www.qualcomm.com/
+    image: qualcomm-inc.svg
+    level: platinum
   - name: Western Digital
     url: https://www.westerndigital.com/
     image: western-digital.svg
@@ -46,7 +50,6 @@ members:
     url: https://www.futurewei.com/
     image: futurewei-tech.png
     level: silver
-    board_rep: Danny Hua
   - name: Marvell
     url: https://www.marvell.com/
     image: marvell.svg
@@ -221,5 +224,3 @@ members:
     url: https://www.siliconmotion.com/
     image: siliconmotion.svg
     level: auditor
-
-
