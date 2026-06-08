@@ -200,10 +200,6 @@ members:
     url: https://www.synopsys.com/
     image: synopsys.svg
     level: silver
-  - name: Block, Inc
-    url: https://block.xyz/
-    image: block-inc.svg
-    level: silver
   - name: Rambus, Inc
     url: https://rambus.com/
     image: rambus.svg
