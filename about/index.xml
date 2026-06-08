@@ -79,6 +79,11 @@
  
  &lt;div class="col my-auto">
  
+ &lt;a href="https://www.qualcomm.com/" target="_blank">&lt;img alt="Qualcomm logo" src="https://chipsalliance.org/images/members/qualcomm-inc.svg">&lt;/a>
+ &lt;/div>
+ 
+ &lt;div class="col my-auto">
+ 
  &lt;a href="https://www.sifive.com/" target="_blank">&lt;img alt="SiFive logo" src="https://chipsalliance.org/images/members/sifive.png">&lt;/a>
  &lt;/div>
  
@@ -128,11 +133,6 @@
  &lt;div class="col my-auto">
  
  &lt;a href="https://www.ami.com/" target="_blank">&lt;img alt="AMI US Holdings Inc logo" src="https://chipsalliance.org/images/members/american-megatrendsinternational-llc.svg">&lt;/a>
- &lt;/div>
- 
- &lt;div class="col my-auto">
- 
- &lt;a href="https://block.xyz/" target="_blank">&lt;img alt="Block, Inc logo" src="https://chipsalliance.org/images/members/block-inc.svg">&lt;/a>
  &lt;/div>
  
  &lt;div class="col my-auto">
