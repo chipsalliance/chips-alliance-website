@@ -37,6 +37,7 @@ members:
     url: https://www.qualcomm.com/
     image: qualcomm-inc.svg
     level: platinum
+    board_rep: Lu Dai
   - name: Western Digital
     url: https://www.westerndigital.com/
     image: western-digital.svg
