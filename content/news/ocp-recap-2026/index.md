@@ -25,7 +25,7 @@ As always, the OCP Europe Summit’s attendance has beat anticipation, and CHIPS
 
 #### Technical Sessions and Contributions   
 
-Several technical sessions at OCP EMEA 2026 featured contributors from CHIPS Alliance member organizations and highlighted technologies developed within the community. [Check out the full playlist here.](youtube.com/watch?si=dqmJIKA8lFZ960H7&v=40TXPcnPhbs&feature=youtu.be)   
+Several technical sessions at OCP EMEA 2026 featured contributors from CHIPS Alliance member organizations and highlighted technologies developed within the community. [Check out the full playlist here.](https://youtube.com/playlist?list=PLWm-dtUGVJtDrlp3GGgvsN_6kiJ4xYOSU&si=GvjdWK7lVPnQIXdV)   
 
 - **[Keynote: The Fungible Data Center: A Blueprint for the AI Era](https://www.youtube.com/watch?v=40TXPcnPhbs)**   
   - **Speaker:** Amber Huffman (Google)   
