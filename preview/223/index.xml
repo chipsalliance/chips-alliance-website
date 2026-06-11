@@ -655,64 +655,6 @@ analysis tools for multicore SoC software development. Metrics leads the cloud-b
  
  
  
-&lt;div class="projects-box mb-5">
-
-&lt;div class="projects-box-col1">
- 
- 
- 
- 
- 
- &lt;a href="https://chipsalliance.github.io/fpga-tool-perf/" target="_blank">
- 
- 
- 
- 
- &lt;img src="https://chipsalliance.org/preview/223/preview/223/images/projects/fpga-tool-perf.svg" loading="lazy" alt="FPGA tool perf">
- 
- 
- &lt;/a>
- 
-&lt;/div>
-
-&lt;div class="projects-box-col2">
- &lt;h3 class="mt-0">FPGA tool perf&lt;/h3>
- &lt;p> Framework for automatic FPGA toolchains benchmarking &lt;/p>
-
- &lt;ul class="list-unstyled">
- &lt;li>Repositories:&lt;/li>
- &lt;ul class="list-unstyled mb-0 ms-5">
- 
- 
- 
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/chipsalliance/fpga-tool-perf" target="_blank">fpga-tool-perf&lt;/a>&lt;/li>
- 
- 
- 
- &lt;li>&lt;i class="ph-git-branch">&lt;/i> &lt;a href="https://github.com/f4pga/actions" target="_blank">actions&lt;/a>&lt;/li>
- 
- &lt;/ul>
- &lt;li>&lt;i class="ph-clipboard-text">&lt;/i> &lt;a href="https://github.com/chipsalliance/fpga-tool-perf/issues" target="_blank">Issue Tracker&lt;/a>&lt;/li>
- 
- 
- 
- 
- &lt;i class="ph-link">&lt;/i> &lt;a href="https://chipsalliance.github.io/fpga-tool-perf/" target="_blank">Website&lt;/a>
- 
- 
- &lt;li>&lt;i class="ph-user-square">&lt;/i> &lt;a href="mailto:tgorochowik@antmicro.com" target="_blank">Contact: Tomasz Gorochowik&lt;/a> (&lt;a href="https://github.com/tgorochowik" target="_blank">GitHub&lt;/a>)&lt;/li>
- 
- &lt;/ul>
-&lt;/div>
-&lt;/div>
-
- 
- 
- 
- 
  
  
 &lt;div class="projects-box mb-5">
