@@ -27,22 +27,10 @@ As always, the OCP Europe Summit’s attendance has beat anticipation, and CHIPS
 
 Several technical sessions at OCP EMEA 2026 featured contributors from CHIPS Alliance member organizations and highlighted technologies developed within the community. [Check out the full playlist here.](youtube.com/watch?si=dqmJIKA8lFZ960H7&v=40TXPcnPhbs&feature=youtu.be)   
 
-| Sesion Title | Speakers | Key Focus Areas |
-| ------------ | ----------- | ----------- |
-| [Keynote: The Fungible Data Center: A Blueprint for the AI Era](https://www.youtube.com/watch?v=40TXPcnPhbs)    | Amber Huffman (Google)  | Development of Google's "fungible data center" blueprint for the AI era, designed to support diverse accelerators, including TPUs and GPUs. The session covered the Open Compute Project Foundation Open Data Center specification, Project Deschutes liquid cooling, Mount Diablo power delivery, and Google's work across AI hardware, security, storage, and networking, including Caliptra, delivered in partnership with OCP and CHIPS Alliance.  |
-| [Keynote: Scaling Trusted AI Infrastructure](https://www.youtube.com/watch?v=7CEef0wXQ6Y)   | Bryan Kelly (Microsoft)   | Sovereign cloud architecture built on open source hardware security technologies including Caliptra, OCP SAFE, and confidential computing. The presentation also previewed OCP work on hardware partitioning and isolation for AI platforms.   |
-| [Composable Security Architecture Episode 4: Bringing Together Platform Ingredients](https://www.youtube.com/watch?v=XJR7q4OFEM0)     | Louis Ferraro (AMD), Miguel Osorio (Google), Marvin Gudel (9elements)  | Development of OpenPRoT, an open source Platform Root of Trust firmware stack. The session introduced a standardized PRoT module connector for DC-SCM boards and demonstrated configurations for Endpoint RoT and Orchestrator RoT. |
-| [Caliptra as Server Security Hub](https://www.youtube.com/watch?v=nzkUoH8ymfs)    | Phanikumar Kancharla (Marvell) and Craig Barner (Marvell)   | Hardware-managed Key Distribution Protocol (KDP) using KMTx and KMRx endpoints to provision Bus Encryption Keys and Data Encryption Keys across SoC and UCIe die-to-die connections anchored to Caliptra. |
-| [Caliptra Trademark Audit: A Practitioner's Guide](https://www.youtube.com/watch?v=UglxMq5iEio)   | Jasper van Woudenberg (Keysight Technologies)  | Practical guidance on preparing RTL, ROM, and firmware documentation for the Caliptra Trademark Audit process and navigating OCP SAFE requirements. |
-| [Secure RPMC and Flash Key Provisioning Using Caliptra‑SS](https://www.youtube.com/watch?v=MngLPrOKmpk)   | Emre Karabulut (Microsoft) and Vishal Soni (Microsoft)  | Hardware-anchored provisioning of Replay Protected Memory Block (RPMC) and flash encryption keys using the OCP LOCK mechanism and the Caliptra secure subsystem.  |
-| [Towards a European Open Infrastructure: Insights from HIGHER- CAPE- and CHORYS](https://www.youtube.com/watch?v=vAi5VQtN2bM)   | Jens Hagemeyer (University of Bielefeld), Manolis Marazakis (FORTH), and Philippe Bonnet (University of Copenhagen)   | European Horizon projects leveraging RISC-V and Arm for modular infrastructure, including a DC-SCM based on Caliptra RTM and RISC-V near-data processing in SSDs and NICs. |   
-
-
-
 <table>
   <colgroup>
-    <col style="width:24%">
-    <col style="width:16%">
+    <col style="width:20%">
+    <col style="width:20%">
     <col style="width:60%">
   </colgroup>
   <thead>
@@ -65,12 +53,12 @@ Several technical sessions at OCP EMEA 2026 featured contributors from CHIPS All
     </tr>
     <tr>
       <td><a href="https://www.youtube.com/watch?v=XJR7q4OFEM0">Composable Security Architecture Episode 4: Bringing Together Platform Ingredients</a></td>
-      <td>Louis Ferraro (AMD), Miguel Osorio (Google), Marvin Gudel (9elements)</td>
+      <td>Louis Ferraro (AMD),<br> Miguel Osorio (Google), <br> Marvin Gudel (9elements)</td>
       <td>Development of OpenPRoT, an open source Platform Root of Trust firmware stack. The session introduced a standardized PRoT module connector for DC-SCM boards and demonstrated configurations for Endpoint RoT and Orchestrator RoT.</td>
     </tr>
     <tr>
       <td><a href="https://www.youtube.com/watch?v=nzkUoH8ymfs">Caliptra as Server Security Hub</a></td>
-      <td>Phanikumar Kancharla (Marvell) and Craig Barner (Marvell)</td>
+      <td>Phanikumar Kancharla (Marvell), <br> Craig Barner (Marvell)</td>
       <td>Hardware-managed Key Distribution Protocol (KDP) using KMTx and KMRx endpoints to provision Bus Encryption Keys and Data Encryption Keys across SoC and UCIe die-to-die connections anchored to Caliptra.</td>
     </tr>
     <tr>
@@ -80,13 +68,13 @@ Several technical sessions at OCP EMEA 2026 featured contributors from CHIPS All
     </tr>
     <tr>
       <td><a href="https://www.youtube.com/watch?v=MngLPrOKmpk">Secure RPMC and Flash Key Provisioning Using Caliptra‑SS</a></td>
-      <td>Emre Karabulut (Microsoft) and Vishal Soni (Microsoft)</td>
+      <td>Emre Karabulut (Microsoft), <br> Vishal Soni (Microsoft)</td>
       <td>Hardware-anchored provisioning of Replay Protected Memory Block (RPMC) and flash encryption keys using the OCP LOCK mechanism and the Caliptra secure subsystem.</td>
     </tr>
     <tr>
       <td><a href="https://www.youtube.com/watch?v=vAi5VQtN2bM">Towards a European Open Infrastructure: Insights from HIGHER-, CAPE-, and CHORYS</a></td>
-      <td>Jens Hagemeyer (University of Bielefeld), Manolis Marazakis (FORTH), and Philippe Bonnet (University of Copenhagen)</td>
-      <td>European Horizon projects leveraging RISC-V and Arm for modular infrastructure, including a DC-SCM based on Caliptra RTM and RISC-V near-data processing in SSDs and NICs.</td>
+      <td>Jens Hagemeyer (University of Bielefeld), <br> Manolis Marazakis (FORTH),<br> Philippe Bonnet (University of Copenhagen)<br></td>
+      <td>European Horizon projects leveraging RISC-V and Arm for modular infrastructure, including a DC-SCM based on Caliptra RTM and RISC-V near-data processing in SSDs and NICs.     </td>
     </tr>
   </tbody>
 </table>
