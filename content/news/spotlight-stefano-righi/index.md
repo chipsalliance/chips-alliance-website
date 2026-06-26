@@ -11,7 +11,7 @@ aliases: ['/blog/2026/06/29/spotlight-stefano-righi/']
 
 *TL;DR: In this Developer Spotlight, Stefano Righi, Chief Security Architect at AMI, shares how a career built at the intersection of hardware and software led him to platform security, what makes Caliptra a landmark open collaboration, and why he believes security must become a default component of every design.*
 
-For Stefano Righi, one of the questions that first sparked his interest in technology was how the same software source code can run on different hardware architectures using all resources in an efficient way and how the operating system is managing the entire platform..
+For Stefano Righi, one of the questions that first sparked his interest in technology was how the same software source code can run on different hardware architectures using all resources in an efficient way and how the operating system is managing the entire platform.
 
 During his electronic engineering studies, he discovered the answer in firmware - the critical layer that bridges hardware and software. Fascinated by how software harnesses hardware resources to deliver results, Stefano found a field that perfectly matched his curiosity. Years later, that curiosity continues to drive his work and passion for technology.
 
