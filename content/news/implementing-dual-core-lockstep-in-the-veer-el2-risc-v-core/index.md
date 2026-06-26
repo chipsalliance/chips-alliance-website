@@ -1,6 +1,6 @@
 ---
 date: 2026-06-29T00:00:00Z
-title: Implementing Dual-core Lockstep in the CHIPS Alliance VeeR EL2 RISC-V core for safety-critical applications
+title: Dual-core Lockstep in the VeeR EL2 RISC-V core for safety-critical applications and side-channel access mitigation in Caliptra RoT
 categories:
   - Blog
 author: 
@@ -12,11 +12,11 @@ tags:
   - veer
 ---
 
-Safety-critical applications, especially those used in the fields of aerospace, automotive and industrial control systems, require high-reliability computing and fault-tolerant operation. Techniques such as Triple Modular Redundancy (TMR) and Dual Modular Redundancy (DMR, e.g. Dual-core Lockstep (DCLS)) provide an extra layer of protection against errors by replicating critical components of a system. TMR involves triplicating key system elements and using majority voting to determine the correct output, thereby mitigating the impact of faults. DMR, a more resource-efficient approach, relies on duplicating components and comparing their outputs to detect inconsistencies.
-
-Another DMR use case is protection against side channel attacks in security contexts like Root of Trust macros, where DMR can help detect and prevent error injection when the attacker gains physical access to the chip.
+Techniques such as Triple Modular Redundancy (TMR) and Dual Modular Redundancy (DMR, e.g. Dual-core Lockstep (DCLS)) provide an extra layer of protection against errors by replicating critical components of a system. TMR involves triplicating key system elements and using majority voting to determine the correct output, thereby mitigating the impact of faults. DMR, a more resource-efficient approach, relies on duplicating components and comparing their outputs to detect inconsistencies.
 
 DMR is particularly advantageous in applications where power, cost, and space constraints make TMR less practical, but where fault detection and mitigation still remain critical. These fault-tolerant architectures are further augmented by rigorous software validation, creating a comprehensive safety framework for systems that cannot afford failure.
+
+An example of DMR is the Dual-core Lockstep (DCLS) mechanism. Use cases include safety-critical applications such as aerospace, automotive and industrial control systems, where high-reliability computing and fault-tolerant operation are required. DCLS can also be used as protection against side-channel attacks in security contexts like Root of Trust macros, where it can help detect and prevent error injection when the attacker gains physical access to the chip. The latter case is why DCLS is now being implemented for the CHIPS Alliance [Caliptra](https://github.com/chipsalliance/Caliptra/tree/main) RoT project.
 
 This article describes the implementation of a DCLS functionality in the [VeeR EL2](https://github.com/chipsalliance/Cores-VeeR-EL2), a 32-bit core variant from the VeeR family of RISC-V cores hosted by [CHIPS Alliance](https://www.chipsalliance.org). Explained by CHIPS Alliance member Antmicro, we will discuss how the DCLS module detects errors, show how to configure DCLS in the VeeR EL2 core, and briefly describe the verification process.
 
@@ -30,7 +30,7 @@ DCLS includes multibit encoding, for its boolean status and control signals, whi
 
 If at any moment the original core produces different outputs (considering the delay) than the Shadow Core, a corruption is detected and reported. Since the Shadow Core module must replicate the behavior of the Main Core without any differences, it contains the same input and output ports; however, the input data for the Main Core is delayed before being routed to the Shadow Core, and the output data from the Shadow Core is compared with the delayed output data from the Main Core.
 
-The implementation of DCLS in VeeR EL2 can be useful for various applications, like rad-hardening or side-channel mitigation scenarios as in the case of CHICPS Alliance's [Caliptra](https://github.com/chipsalliance/Caliptra/tree/main) Root of Trust project.
+The implementation of DCLS in VeeR EL2 can be useful for various applications, like rad-hardening or side-channel mitigation scenarios as in the case of CHIPS Alliance's [Caliptra](https://github.com/chipsalliance/Caliptra/tree/main) Root of Trust project.
 
 ### Monitored registers
 
@@ -73,8 +73,8 @@ The DCLS block has been verified with tests from the [DCLS module validation pla
 
 All tests for the DCLS module are executed within the [Cores-VeeR-EL2 Continuous Integration regression flow](https://github.com/chipsalliance/Cores-VeeR-EL2/blob/main/.github/workflows/test-regression-dcls.yml) covering AXI and AHB configurations of VeeR, as well as U-mode tests.
 
-### High-reliability computing for safety-critical systems
+### High-reliability computing for security and safety
 
-By boosting error detection, DCLS can greatly enhance the security and reliability of RISC-V-based systems, making it extremely difficult to interfere with their operation. If you’re looking at using a customized RISC-V core for your next safety-critical application, CHIPS Alliance’s VeeR EL2 with its DCLS implementation is definitely worth considering.
+DCLS can enhance the security and reliability of RISC-V-based systems, making it difficult to interfere with their operation. If you’re looking at using a customized RISC-V core for your next secure and/or safety-critical application, CHIPS Alliance’s VeeR EL2 with its DCLS implementation is definitely worth considering.
 
 Follow the [Caliptra](https://github.com/chipsalliance/caliptra) and [VeeR EL2](https://github.com/chipsalliance/Cores-VeeR-EL2) projects on GitHub and subscribe to [announce@chipsalliance.org](mailto:announce@chipsalliance.org) to stay on top of recent developments.
