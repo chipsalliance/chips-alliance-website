@@ -4,7 +4,7 @@ title: Qualcomm Joins CHIPS Alliance as Platinum Member
 categories:
   - Blog
 author: 
-images: ['news/qualcomm-new-member-blog/qualcomm-platinum.jpg']
+images: ['news/qualcomm-new-member-blog/qualcomm-platinum.png']
 aliases: ['/blog/2026/06/01/qualcomm-new-member/']
 tags: []
 ---
