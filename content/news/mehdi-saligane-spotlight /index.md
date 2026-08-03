@@ -30,7 +30,7 @@ That perspective shapes both sides of his work at the intersection of AI and har
 
 #### AI as a Design Partner     
 
-![paradig shift slide](mehdi-saligane.png)
+![paradigm shift slide](paradigm-shift.png)
 *The evolution of chip-design methodologies, from manual design to open and AI-assisted workflows.*    
 
 A major focus of Saligane’s research is the use of AI to assist engineers throughout the chip design process.     
