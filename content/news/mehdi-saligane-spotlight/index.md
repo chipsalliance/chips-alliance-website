@@ -6,7 +6,7 @@ categories:
 author: 
 images: ['news/mehdi-saligane-spotlight/mehdi-saligane-spotlight.png']
 aliases: ['/blog/2026/08/03/mehdi-saligane-spotlight/']
-tags: []
+tags: [Developer Spotlight]
 ---
 
 Mehdi Saligane is working to rethink not only how chips are designed, but also who gets to design them.    
