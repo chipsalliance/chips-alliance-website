@@ -4,7 +4,7 @@ title: CHIPS Alliance Developer Spotlight - Mehdi Saligane on Rethinking Chip De
 categories:
   - Blog
 author: 
-images: ['news/mehdi-saligane-spotlight/mehdi-saligane-spotlight.png']
+images: ['news/mehdi-saligane-spotlight /mehdi-saligane-spotlight.png']
 aliases: ['/blog/2026/08/03/mehdi-saligane-spotlight/']
 tags: []
 ---
