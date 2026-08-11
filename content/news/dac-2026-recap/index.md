@@ -6,7 +6,7 @@ categories:
 author: 
 images: ['news/dac-2026-recap/dac-photo-1.png']
 aliases: ['/blog/2026/08/11/dac-2026-recap/']
-tags: []
+tags: [dac, events]
 ---
 
 **By: Dr. Yiting Liu, UC San Diego**       
