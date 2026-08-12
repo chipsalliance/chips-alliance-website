@@ -1,0 +1,212 @@
+/**********
+ 24. Newsletter Section Styles
+**********/
+
+/* Directly follows the "Sign Up to our Groups" section and reuses its
+   `feature` two column layout: copy on the left, form on the right. The form
+   card mirrors the bordered, rounded image card used in that section. */
+.newsletter {
+  &.feature {
+    padding-bottom: $base-padding * 5;
+    @include media-breakpoint-down-lg {
+      padding-bottom: $base-padding * 3;
+    }
+  }
+
+  .feature-item-content {
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      color: $color-text-light;
+      margin-bottom: 0;
+    }
+  }
+
+  /* HubSpot embedded form. The form is created with `css: ""` so that
+     HubSpot's default stylesheet is not loaded and the markup below picks
+     up the theme styles instead. */
+  &-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: $color-white;
+    border: $base-border-width solid $color-deactive;
+    border-radius: 20px;
+    padding: $base-padding * 2.5;
+    @include media-breakpoint-down-lg {
+      margin-top: $base-margin * 2.5;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 1.5;
+    }
+
+    form {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .hs-form-field {
+      margin-bottom: $base-margin * 1.25;
+    }
+
+    .form-columns-2,
+    .form-columns-3 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 $base-margin;
+      .hs-form-field {
+        flex: 1 1 220px;
+      }
+    }
+
+    .input {
+      margin: 0 !important;
+    }
+
+    label {
+      display: block;
+      color: $color-text;
+      font-size: $base-font-size * 0.95;
+      font-weight: $semibold-font-weight;
+      line-height: 1.4;
+      margin-bottom: $base-margin * 0.5;
+      .hs-form-required {
+        color: #d9534f;
+        margin-left: 2px;
+      }
+    }
+
+    .hs-field-desc {
+      display: block;
+      font-size: $base-font-size * 0.875;
+      font-weight: $regular-font-weight;
+      color: $color-text-light;
+      margin-bottom: $base-margin * 0.5;
+      padding: 0;
+    }
+
+    input.hs-input:not([type="checkbox"]):not([type="radio"]),
+    select.hs-input,
+    textarea.hs-input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: $base-padding * 0.85 $base-padding * 1.1;
+      font-family: $font-primary;
+      font-size: $base-font-size;
+      font-weight: $regular-font-weight;
+      line-height: 1.6;
+      color: $color-text;
+      background-color: $color-white;
+      border: $base-border-width solid $color-primary-transparent;
+      border-radius: $base-border-radius * 1.5;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      &:focus {
+        outline: 0;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 3px rgba(20, 36, 172, 0.12);
+      }
+      &::placeholder {
+        color: $color-deactive;
+      }
+    }
+
+    textarea.hs-input {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    /* Checkbox and radio rows (including opt-in / consent boxes) */
+    .hs-form-booleancheckbox,
+    .hs-form-checkbox,
+    .hs-form-radio {
+      margin-bottom: $base-margin * 0.5;
+      label {
+        display: flex;
+        align-items: flex-start;
+        font-size: $base-font-size * 0.9375;
+        font-weight: $regular-font-weight;
+        color: $color-text-light;
+        margin-bottom: 0;
+      }
+      input {
+        flex: 0 0 auto;
+        margin-top: 5px;
+        margin-right: $base-margin * 0.5;
+      }
+    }
+
+    .legal-consent-container {
+      font-size: $base-font-size * 0.875;
+      color: $color-text-light;
+      margin-bottom: $base-margin;
+      p {
+        font-size: $base-font-size * 0.875;
+        line-height: 1.6;
+        color: $color-text-light;
+        margin-bottom: $base-margin * 0.5;
+      }
+    }
+
+    .hs-error-msgs {
+      margin-top: $base-margin * 0.375;
+      label {
+        font-size: $base-font-size * 0.875;
+        font-weight: $regular-font-weight;
+        color: #d9534f;
+        margin-bottom: 0;
+      }
+    }
+
+    .hs_recaptcha {
+      margin-bottom: $base-margin;
+    }
+
+    .hs_submit .actions {
+      margin-top: $base-margin * 1.5;
+      padding: 0;
+    }
+
+    .hs-button {
+      display: inline-block;
+      cursor: pointer;
+      color: $color-white;
+      background: $color-primary;
+      border: $base-border-width solid $color-primary;
+      border-radius: 12px;
+      font-family: $font-primary;
+      font-size: $base-font-size * 1.1;
+      font-weight: $semibold-font-weight;
+      line-height: 1.5;
+      padding: $base-padding * 0.9 $base-padding * 1.9;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:focus {
+        color: $color-primary;
+        background: $color-white;
+        border-color: $color-primary;
+        text-decoration: none;
+      }
+      &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+    }
+
+    .submitted-message {
+      text-align: center;
+      font-size: $base-font-size * 1.125;
+      color: $color-text;
+      p {
+        font-size: $base-font-size * 1.125;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
