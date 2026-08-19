@@ -13,7 +13,9 @@ With a growing variety and number of peripherals, such as power management ICs, 
 
 To address these constraints, the [MIPI I3C specification](https://www.mipi.org/specifications/i3c-sensor-specification) was developed. The I3C protocol is the backwards-compatible successor to I2C. It incorporates its key capabilities, maintains the usage of only two wires, yet in many cases provides significant improvements over I2C. Based on the MIPI I3C, [CHIPS Alliance](https://www.chipsalliance.org), part of Linux Foundation, introduced an [open source I3C Core](https://github.com/chipsalliance/i3c-core). The Core is already used in the likewise CHIPS-hosted [Caliptra](https://github.com/chipsalliance/caliptra) Root-of-Trust project and the SoC reference design [Guineveer](https://antmicro.com/blog/2025/12/custom-risc-v-soc-design-topwrap-guineveer) based on the [VeeR EL2 RISC-V core](https://github.com/chipsalliance/Cores-VeeR-EL2).    
 
-Initially, the I3C Core only supported Target mode. To further improve its functionality, CHIPS Alliance member Antmicro has now implemented a set of features for Host Controller support. This article describes the benefits of using the I3C protocol as well as the addition of Host Controller support to the I3C Core.    
+Initially, the I3C Core only supported Target mode. To further improve its functionality, CHIPS Alliance member Antmicro has now implemented a set of features for Host Controller support. This article describes the benefits of using the I3C protocol as well as the addition of Host Controller support to the I3C Core.   
+
+![implementing ic3](implementing-ic3.png)    
 
 #### I3C Protocol features and its improvements over I2C    
 
@@ -82,6 +84,11 @@ Of course, hardware is only as useful as the software that drives it. To support
 
 The addition of the Host Controller support to the open source I3C Core is an interesting improvement, allowing it to now direct networks of peripheral devices. The I3C protocol significantly decreases power usage, eliminates the need for additional wiring required using Legacy I2C, and allows for dynamically changing addresses of Targets.     
 
+##### Get involved     
+
+Join [VeeR Technical Steering Committee meetings](https://github.com/chipsalliance/VeeR), held biweekly on Fridays at 5:00 PM CET (8:00 AM PST).     
+
+Subscribe to announce@chipsalliance.org to stay up to date on recent CHIPS Alliance developments.     
 
 
 
