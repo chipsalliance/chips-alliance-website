@@ -11,7 +11,7 @@ tags: [ocp, events]
 
 [2026 OCP Global Summit](https://www.opencompute.org/summit/global-summit), themed “Scaling Innovation for the AI Era,” will be held October 12-15 in San Jose, California. The event brings together industry leaders, researchers, and members of the open compute community to share technical progress, address emerging challenges, and advance efficient, scalable, and sustainable open hardware and software.   
 
-Several sessions relate to the CHIPS Alliance Caliptra and VeeR projects, covering silicon roots of trust, device identity, secure key distribution, design verification, streaming boot, package-aware integrity and package-granular attestation, manageability, and certificate refresh. Speakers represent CHIPS Alliance member organizations including AMD, Google, Intel, lowRISC, Marvell, Microsoft, NVIDIA, and Research Institutes of Sweden.    
+Several sessions relate to the CHIPS Alliance Caliptra and VeeR projects, covering silicon roots of trust, device identity, secure key distribution, design verification, streaming boot, package-aware integrity and package-granular attestation, manageability, and certificate refresh. Speakers represent CHIPS Alliance member organizations including AMD, Google, Intel, Marvell, Microsoft, and NVIDIA.      
 
 [View the full schedule here](https://www.opencompute.org/summit/global-summit/schedule-at-a-glance) and explore the CHIPS Alliance-related sessions below.    
 
