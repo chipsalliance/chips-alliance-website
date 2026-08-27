@@ -15,13 +15,13 @@ Several sessions relate to the CHIPS Alliance Caliptra and VeeR projects, coveri
 
 [View the full schedule here](https://www.opencompute.org/summit/global-summit/schedule-at-a-glance) and explore the CHIPS Alliance-related sessions below.    
 
-**Bridging the AI Continuum: Trust, Orchestration, and Open Standards:**     
+**Bridging the AI Continuum: Trust, Orchestration, and Open Standards**     
 *Tue, October 13, 4:35 PM–5:00 PM | SJCC, Concourse Level, 211*     
 **Speakers:** Dirk Blevins (Intel — Silver Member); Çağatay Yilmaz, moderator (Research Institutes of Sweden); Johan Kristiansson (Luleå University of Technology); Steven Yates (Federant); Raúl Álvarez (Open Compute Project Foundation); and Vincent Nguyen (Hewlett Packard Enterprise)       
 **Project(s):** Caliptra    
 **Session Abstract:** AI inference is moving out of the hyperscale data center toward regional, colocation, telco, enterprise, and far-edge sites, forming an AI compute continuum that spans independently managed administrative and trust domains. This panel discusses where AI workloads will reside in the near term and how open infrastructures can contribute to trustworthiness across the continuum. We address three critical challenges: heterogeneous multi-provider orchestration without shared control planes, the hard problem of moving data and models into untrusted environments, and how hardware-anchored trust through Trusted Execution Environments, the Caliptra silicon root of trust, and OpenBMC can provide end-to-end attestation of AI workloads. Panel discusses open meta-operating systems for cross-domain orchestration and how the continuum can be rigorously validated on open standards-aligned platforms.    
 
-**OCP Device Identity Provisioning over SPDM:**    
+**OCP Device Identity Provisioning over SPDM**    
 *Thu, October 15, 9:10 AM–9:30 AM | SJCC, Concourse Level, 212*   
 **Speakers:** Jeff Andersen (Google — Platinum Member) and Fabrizio Damato (AMD — Platinum Member)    
 **Project(s):** Caliptra
@@ -31,13 +31,13 @@ The Device Identity Provisioning specification defines an Attested CSR that cryp
 
 In parallel, OCP is driving this capability toward DMTF SPDM, where it is anticipated for addition in SPDM 1.5. Open-source RoTs such as Caliptra are expected to adopt the specification, enabling consistent operator and tenant enrollment.    
 
-**USB to Rule Them All: One Manageability Interface for AI Platforms:**    
+**USB to Rule Them All: One Manageability Interface for AI Platforms**    
 *Thu, October 15, 9:45 AM–10:10 AM | SJCC, Concourse Level, 220B*    
 **Speakers:** Mariusz Oriol (NVIDIA — Silver Member); Bharat Pillili (Microsoft — Platinum Member); Supreeth Venkatesh (AMD — Platinum Member); Kasper Wszolek, moderator (NVIDIA — Silver Member); Samer El-Haj-Mahmoud (Arm); and Mohan Kumar (Oracle Cloud Infrastructure)        
 **Project(s):** Caliptra    
 **Session Abstract:** As AI racks become denser and more complex, manageability is becoming a critical factor in scalability challenge. In this panel, NVIDIA will be joined by AMD, Arm, Microsoft and OCI to discuss how the industry can align on open, interoperable management models for next-generation AI infrastructure. Panelists will explore reducing proprietary sideband fragmentation, accelerating OCP specification adoption, and converging around approaches such as USB-based manageability, OCP Recovery over USB, Caliptra workflows, OBMF, MCTP over USB, and emerging NC-SI use cases. The discussion will focus on what vendors must do together to make AI racks more reliable, manageable, and scalable.    
 
-**OCP L.O.C.K. and FIPS:**    
+**OCP L.O.C.K. and FIPS**    
 *Thu, October 15, 10:05 AM–10:25 AM | SJCC, Concourse Level, 212*    
 **Speakers:** Gwangbae Choi (Samsung) and Minhyup Park (Samsung Electronics)       
 **Project(s):** Caliptra    
@@ -47,7 +47,7 @@ We focus on key differences from a FIPS validation perspective between Caliptra 
 
 This talk highlights the importance of bridging open security architectures with formal validation frameworks, enabling certifiable, scalable, and trustworthy deployment of secure storage solutions.    
 
-**Advancing Caliptra Security Through Open-Source DV Infrastructure:**     
+**Advancing Caliptra Security Through Open-Source DV Infrastructure**     
 *Thu, October 15, 11:10 AM–11:30 AM | SJCC, Concourse Level, 212*    
 **Speakers:** Miguel Osorio (Google — Platinum Member) and Andreas Kurth (lowRISC) 
 **Project(s):** Caliptra and VeeR    
@@ -57,7 +57,7 @@ We discuss expanded block-level DV coverage for components like AES, KMAC, CSRNG
 
 Finally, we share lessons learned and present a reusable framework for verifying security-critical IP, fostering a robust, community-accessible DV ecosystem for open-source silicon.    
 
-**Secure Key Distribution Protocol for SoC Hardware Blocks:**    
+**Secure Key Distribution Protocol for SoC Hardware Blocks**    
 *Thu, October 15, 1:15 PM–1:30 PM | SJCC, Concourse Level, 212*    
 **Speakers:** Craig Barner (Marvell — Gold Member) and Phanikumar Kancharla (Altera)    
 **Project(s):** Caliptra    
@@ -67,7 +67,7 @@ We present a hardware-only architecture extending Caliptra HRoT as the sole FIPS
 
 We will cover specification status, key lifecycle management, and the v1.0 release at the summit, and invite the community to collaborate within the Caliptra as Security Hub Sub Working Group.    
 
-**Package-Aware Integrity: From Source-Agnostic Publication to Full-System Attestation:**    
+**Package-Aware Integrity: From Source-Agnostic Publication to Full-System Attestation**    
 *Thu, October 15, 1:55 PM–2:10 PM | SJCC, Concourse Level, 212*    
 **Speakers:** Dhananjay Phadke (Microsoft — Platinum Member) and Felipe Zimmerle da Nobrega Costa (KonaSense)    
 **Project(s):** Caliptra    
@@ -77,7 +77,7 @@ We make the package the unit of trust. On the publishing side, each package beco
 
 We elaborate on Yocto build to demonstrate package-granular attestation from build through boot, and integrate with OCP Security Project artifacts and firmware update ecosystem.    
 
-**Caliptra Subsystem 2.2: USB 2.0 and OCP Streaming Boot:**     
+**Caliptra Subsystem 2.2: USB 2.0 and OCP Streaming Boot**     
 *Thu, October 15, 3:05 PM–3:20 PM | SJCC, Concourse Level, 212*    
 **Speakers:** Caleb Whitehead (Microsoft — Platinum Member) and Cristiano Castello (NXP Semiconductors)    
 **Project(s):** Caliptra    
@@ -89,7 +89,7 @@ Caliptra 2.2 Subsystem also adds a capability to transfer the control of USB fro
 
 In this talk, we present the architectural overview of USB 2.0 enhancements and discuss the anticipated firmware development model for SoC integrators. We also highlight the updated interfaces between SoC microcontroller and Caliptra Subsystem MCU through submission/completion queues for faster processing.
 
-**Beyond Static Identity: Enabling Secure Certificate Refresh in Silicon Roots of Trust:**    
+**Beyond Static Identity: Enabling Secure Certificate Refresh in Silicon Roots of Trust**    
 *Thu, October 15, 3:45 PM–4:00 PM | SJCC, Concourse Level, 212*    
 **Speakers:** Emre Karabulut (Microsoft — Platinum Member) and Vishal Mhatre (Microsoft — Platinum Member)    
 **Project(s):** Caliptra    
