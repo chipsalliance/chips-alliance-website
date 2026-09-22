@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<section class="feature-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="feature-hero-content">
+            <h1 class="">{{.Title}}</h1>
+            <p>{{.Params.brief_summary | markdownify}}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="projects-box-col1">
+            {{ partial "project-logo.html" .Params }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="page-details">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <article class="blog-single">
+                {{.Content}}
+
+                <h2 class="mt-3">Project resources</h2>
+                {{ partial "project-links.html" .Params }}
+             </article>
+          </div>
+       </div>
+    </div>
+ </section>
+
+{{ end }}

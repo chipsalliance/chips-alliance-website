@@ -98,10 +98,16 @@
                   <a class="dropdown-item {{ if strings.Contains $current.RelPermalink "about/contact" }}active{{ end }}" href={{ relURL "about/contact/"}}>Contact</a>
                </div>
             </li>
-            <li class="nav-item">
-               <a class="nav-link {{ if strings.Contains $current.RelPermalink "projects" }}active{{ end }}" href={{ relURL "projects/"}}>
+            <li class="nav-item dropdown">
+               <div class="nav-link dropdown-toggle {{ if strings.Contains $current.RelPermalink "/projects/" }}active{{ end }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Projects
-               </a>
+               </div>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item {{ if eq $current.RelPermalink (relURL "projects/") }}active{{ end }}" href={{ relURL "projects/"}}>All Projects</a>
+                  {{ range (where site.RegularPages "Section" "projects").ByTitle }}
+                  <a class="dropdown-item {{ if eq $current.RelPermalink .RelPermalink }}active{{ end }}" href={{ .RelPermalink }}>{{ .Title }}</a>
+                  {{ end }}
+               </div>
             </li>
             <li class="nav-item">
                <a class="nav-link {{ if strings.Contains $current.RelPermalink "events" }}active{{ end }}" href={{ relURL "events/"}}>
