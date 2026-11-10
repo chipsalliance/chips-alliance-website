@@ -1,5 +1,5 @@
 ---
-date: 2026-11-11 T00:00:00Z
+date: 2026-11-11T00:00:00Z
 title: CHIPS Alliance at ORConf 2026
 categories:
   - Blog
