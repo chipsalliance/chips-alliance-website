@@ -22,12 +22,11 @@ Maciej Dudek (Antmicro) presented “Open source radiation hardening and fault i
 <br>  
 {{<youtube YK1CpucgUKw>}}    
 <br>
-<br>       
+<br>     
 Karol Gugala (Antmicro) presented “Improving silicon productivity with tools and cores hosted by CHIPS Alliance and OpenROAD Initiative,” outlining the activities and objectives of CHIPS Alliance and the newly formed OpenROAD Initiative, including restructured SV Tools and VeeR projects as well as new developments in tools and cores hosted within CHIPS Alliance.    
 <br>
 {{<youtube i5HwnKlpU50>}}    
 <br>
-<br>     
 CHIPS Alliance was honored to sponsor and participate in the 12th edition of ORConf. We look forward to continued collaboration with FOSSi Foundation in 2027 at annual installments of ORConf and Latch Up.    
 
 [2027 FOSSi Foundation Events >](https://fossi-foundation.org/events)    
