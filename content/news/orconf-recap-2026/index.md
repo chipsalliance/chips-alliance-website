@@ -16,13 +16,11 @@ ORConf is a weekend of presentations and networking dedicated to free and open s
 Krzysztof Biegański (Antmicro) presented “Closing in on full SystemVerilog support in Verilator: Four-state, UVM, SVA, and Coverage,” sharing the latest on the ongoing effort to expand Verilator’s verification capabilities, including four-state logic, constrained randomization, UVM, SVA, and coverage. Watch here:    
 <br>
 {{<youtube ZsNfJP_w2zg>}}     
-<br>
-<br>     
+<br>    
 Maciej Dudek (Antmicro) presented “Open source radiation hardening and fault injection in VeeR and Verilator,” covering the ongoing work on a Triple Modular Redundancy configuration of the VeeR-EL2 core and new open source tooling around Verilator built to enable fault injection testing and used for verifying the VeeR-EL2 TMR configuration.    
 <br>  
 {{<youtube YK1CpucgUKw>}}    
-<br>
-<br>     
+<br>   
 Karol Gugala (Antmicro) presented “Improving silicon productivity with tools and cores hosted by CHIPS Alliance and OpenROAD Initiative,” outlining the activities and objectives of CHIPS Alliance and the newly formed OpenROAD Initiative, including restructured SV Tools and VeeR projects as well as new developments in tools and cores hosted within CHIPS Alliance.    
 <br>
 {{<youtube i5HwnKlpU50>}}    
