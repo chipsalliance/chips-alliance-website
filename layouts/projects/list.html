@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<section class="feature-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="feature-hero-content">
+            <h1 class="">{{.Title}}</h1>
+            <p>{{.Description | markdownify}}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="feature-hero-banner">
+            <img src={{relURL .Params.image_path}} alt="banner-image" height="469px" width="500px"/>
+            <div class="shape">
+              <img
+                src={{relURL "images/feature/effect-2.png"}}
+                alt="shape"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="page-details">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <article class="blog-single">
+                {{.Content}}
+                <h2 class="mt-3">Graduated Projects</h2>
+                {{ range .Pages.ByTitle }}
+                  {{ partial "projects-card.html" . }}
+                {{ end }}
+             </article>
+          </div>
+       </div>
+    </div>
+ </section>
+
+{{ end }}

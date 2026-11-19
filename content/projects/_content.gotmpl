@@ -1,0 +1,21 @@
+{{/*
+  Generates a landing page for each graduated project from the TAC data files
+  (themes/tac/projects/project-data-files/*.yml, mounted into data/).
+  An optional hand-written body can be added at assets/projects/<data-file-name>.md.
+*/}}
+{{ range $key, $p := site.Data }}
+  {{ if and (reflect.IsMap $p) (eq (index $p "status") "graduated") }}
+    {{ $content := dict "mediaType" "text/markdown" "value" "" }}
+    {{ with resources.Get (printf "projects/%s.md" $key) }}
+      {{ $content = dict "mediaType" "text/markdown" "value" .Content }}
+    {{ end }}
+    {{ $params := merge $p (dict "data_key" $key "description" $p.brief_summary) }}
+    {{ $.AddPage (dict
+      "path" $key
+      "kind" "page"
+      "title" $p.name
+      "params" $params
+      "content" $content
+    ) }}
+  {{ end }}
+{{ end }}

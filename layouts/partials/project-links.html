@@ -1,0 +1,31 @@
+{{/* Expects a map/params with the TAC project data fields */}}
+<ul class="list-unstyled">
+  <li>Repositories:</li>
+  <ul class="list-unstyled mb-0 ms-5">
+    <!-- since .repositories can be a single string we need to convert it to slice to iterate over it-->
+    {{ $repos := slice }}
+    {{ $repos = $repos | append .repositories }}
+    {{ range $repo := $repos }}
+      {{ $repo_url := split $repo "/" }}
+      {{ $repo_name := last 1 $repo_url }}
+      <li><i class="ph-git-branch"></i> <a href="{{$repo}}" target="_blank">{{ delimit $repo_name "" }}</a></li>
+    {{ end }}
+  </ul>
+  <li><i class="ph-clipboard-text"></i> <a href="{{.issue_tracker_link}}" target="_blank">Issue Tracker</a></li>
+  <!-- .website_link can be either a single link or list of links -->
+  {{ $websites := slice }}
+  {{ $websites = $websites | append .website_link }}
+  {{ if (gt ($websites | len) 1 )}}
+    <li>Websites:</li>
+    <ul class="list-unstyled mb-0 ms-5">
+    {{ range $website := $websites }}
+      <li><i class="ph-link"></i> <a href="{{$website}}" target="_blank">{{ $website }}</a></li>
+    {{end}}
+    </ul>
+  {{ else }}
+    <li><i class="ph-link"></i> <a href="{{.website_link}}" target="_blank">Website</a></li>
+  {{ end }}
+  {{ with .primary_contact }}
+  <li><i class="ph-user-square"></i> <a href="mailto:{{.email}}" target="_blank">Contact: {{ .name }}</a> (<a href="https://github.com/{{.github_handle}}" target="_blank">GitHub</a>)</li>
+  {{ end }}
+</ul>

@@ -1,0 +1,8 @@
+{{/* Expects a map/params with .name */}}
+{{ $image_url := printf "images/projects/%s.svg" (urlize .name) }}
+{{ $imagefile := printf "themes/tac/projects/logos/%s.svg" (urlize .name) }}
+{{ if fileExists $imagefile }}
+  <img src="{{ relURL $image_url }}" loading="lazy" alt="{{ .name }}">
+{{ else }}
+  <img src="{{ relURL "images/muted-logo.svg" }}" loading="lazy" alt="Placeholder project logo">
+{{ end }}
